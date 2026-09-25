@@ -1,6 +1,6 @@
-# Green Car Service Tenerife — Taller de chapa, pintura y mecánica
+# Green Car Service Tenerife — Taller de chapa y pintura
 
-Sitio web estático y bilingüe de Green Car Service Tenerife (105 páginas en español y 105 en inglés), con la estructura y la maquetación del sitio de Retuerto y Asociados: inicio, empresa, servicios por especialidad con fichas detalladas, siniestros y guías, teléfonos de asistencia, coches de ocasión, blog, diccionario del motor, preguntas frecuentes, formularios de cita y presupuesto y páginas legales.
+Sitio web estático y bilingüe de Green Car Service Tenerife (104 páginas en español y 104 en inglés), con la estructura y la maquetación del sitio de Retuerto y Asociados: inicio, empresa, fichas de chapa y pintura, páginas para particulares, empresas y flotas y aseguradoras, revisión de coches antes de comprar o vender, siniestros y guías, teléfonos de asistencia, coches de ocasión, blog (41 artículos), diccionario de chapa y pintura, preguntas frecuentes, formularios de cita y presupuesto y páginas legales.
 
 - `*.html` — versión en español (raíz del sitio).
 - `en/*.html` — versión en inglés, con los mismos nombres de archivo.

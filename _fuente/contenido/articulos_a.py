@@ -1,1196 +1,1830 @@
-# Artículos del blog (bloque A): mantenimiento, chapa y pintura, seguridad vial y Tenerife.
+"""Artículos del blog (ES/EN), primera tanda."""
 
-ARTICULOS = []
-
-# ---------------------------------------------------------------- mantenimiento
-ARTICULOS += [
-{
-    "slug": "articulo-cada-cuanto-revisar-el-coche",
-    "cat": "mantenimiento",
-    "fecha": "2023-02-14",
-    "es": {
-        "titulo": "¿Cada cuánto hay que revisar el coche?",
-        "resumen": "No hay una cifra única: manda el plan del fabricante. Te explicamos cómo leerlo y por qué el clima del sur de Tenerife puede adelantar algunas tareas.",
-        "cuerpo": [
-            ("p", "Es una de las preguntas que más nos hacen en el taller: «¿cada cuánto le toca la revisión?». La respuesta honesta es que depende del coche. Cada fabricante define un plan de mantenimiento para cada modelo y motor, y ese plan es la referencia buena. Lo que te cuente un vecino sobre su coche puede no servir para el tuyo."),
-            ("h2", "Dónde está la información"),
-            ("p", "El plan de mantenimiento suele venir en el libro de mantenimiento o en el manual del propietario. En muchos coches recientes ya no hay libro de papel: el historial es digital y el propio coche avisa en el cuadro cuando se acerca la revisión. Si has comprado el coche de segunda mano y no tienes el libro, en el taller podemos consultar las especificaciones del fabricante para tu modelo."),
-            ("p", "Fíjate en que casi siempre hay **dos límites**: kilómetros y tiempo. Toca la revisión cuando se cumple lo primero que llegue. Un coche que se mueve poco también envejece: el aceite se degrada, los líquidos absorben humedad y las gomas se resecan aunque el cuentakilómetros apenas avance."),
-            ("h2", "Qué suele incluir una revisión"),
-            ("p", "Cada plan es distinto, pero en la mayoría aparecen tareas como estas:"),
-            ("ul", [
-                "Cambio de aceite del motor y del [[filtro-de-aceite|filtro de aceite]].",
-                "Revisión o sustitución del [[filtro-de-aire|filtro de aire]] y del filtro de habitáculo.",
-                "Comprobación de frenos, niveles de líquidos, luces, escobillas y neumáticos.",
-                "Tareas de largo plazo: correa de distribución, bujías, líquido de frenos o refrigerante, cada una con su propio intervalo.",
-            ]),
-            ("p", "Esas tareas de largo plazo son las que más se olvidan y las que más caro salen si se pasan. Por eso conviene revisar el plan entero y no solo el «cambio de aceite»."),
-            ("h2", "Uso normal y uso severo"),
-            ("p", "Muchos fabricantes distinguen entre condiciones normales y **condiciones severas**. Suelen considerar severo, por ejemplo, conducir mucho por ciudad con trayectos cortos, circular por zonas con polvo, remolcar o hacer muchas subidas y bajadas de montaña. Si tu uso encaja ahí, el plan puede indicar intervalos más cortos para algunos elementos."),
-            ("p", "En el sur de Tenerife es fácil entrar en esa descripción: calor, episodios de calima con polvo en suspensión, carreteras con fuertes pendientes y muchos trayectos cortos entre pueblos y urbanizaciones. No significa que tengas que ir al taller cada mes, pero sí que merece la pena leer esa parte del manual."),
-            ("h2", "Revisar en un taller independiente"),
-            ("p", "Si tu coche está en garantía, puedes hacer el mantenimiento en un taller independiente sin perderla, siempre que se sigan las especificaciones del fabricante y se usen piezas adecuadas. Lo recoge la normativa europea de competencia en el sector del automóvil (Reglamento UE 461/2010). Lo importante es que quede constancia: factura detallada y, si hay libro, el sello correspondiente."),
-            ("h2", "Entre revisión y revisión"),
-            ("p", "Hay cosas que puedes vigilar tú mismo sin herramientas:"),
-            ("ol", [
-                "Nivel de aceite, con el motor frío y el coche en llano, una vez al mes.",
-                "Presión de los neumáticos, en frío, también cada mes.",
-                "Luces y testigos del cuadro al arrancar.",
-                "Ruidos nuevos, olores raros o manchas debajo del coche aparcado.",
-            ]),
-            ("p", "Si notas algo fuera de lo normal, no esperes a la próxima revisión. Un aviso a tiempo suele ahorrar averías mayores."),
-            ("nota", "Los intervalos cambian mucho entre marcas, modelos y años. Esta guía es orientativa: la referencia siempre es el plan del fabricante de tu coche."),
-            ("p", "En Green Car Service Tenerife hacemos la [revisión y mantenimiento](servicio-revision-y-mantenimiento.html) según el plan de tu marca y te decimos qué toca ahora y qué puede esperar. Si quieres, [pide cita](pedir-cita.html) y te lo explicamos con tu coche delante."),
-        ],
-    },
-    "en": {
-        "titulo": "How often should your car be serviced?",
-        "resumen": "There is no single number: the manufacturer's schedule is what counts. Here is how to read it, and why the south Tenerife climate can bring some jobs forward.",
-        "cuerpo": [
-            ("p", "It is one of the questions we hear most at the workshop: 'when is my car due a service?'. The honest answer is that it depends on the car. Every manufacturer sets a maintenance schedule for each model and engine, and that schedule is the one to follow. What worked for your neighbour's car may not apply to yours."),
-            ("h2", "Where to find the information"),
-            ("p", "The schedule is usually in the service book or the owner's manual. Many recent cars no longer have a paper book: the service history is digital and the car itself shows a reminder on the dashboard when a service is coming up. If you bought the car second-hand and have no book, we can look up the manufacturer's specifications for your model."),
-            ("p", "Notice that there are almost always **two limits**: mileage and time. The service is due when you reach whichever comes first. A car that is rarely driven still ages: oil degrades, fluids absorb moisture and rubber parts dry out even if the odometer barely moves."),
-            ("h2", "What a service usually includes"),
-            ("p", "Every schedule is different, but most include jobs like these:"),
-            ("ul", [
-                "Engine oil change and a new [[filtro-de-aceite|oil filter]].",
-                "Checking or replacing the [[filtro-de-aire|air filter]] and the cabin filter.",
-                "Checks on brakes, fluid levels, lights, wiper blades and tyres.",
-                "Longer-term jobs: timing belt, spark plugs, brake fluid or coolant, each with its own interval.",
-            ]),
-            ("p", "Those longer-term jobs are the ones people forget, and the ones that cost most when they are overdue. That is why it pays to read the whole schedule, not just the 'oil change' line."),
-            ("h2", "Normal use and severe use"),
-            ("p", "Many manufacturers distinguish between normal and **severe conditions**. Severe often means, for example, lots of short town journeys, driving in dusty areas, towing, or frequent mountain climbs and descents. If your driving fits that description, the schedule may give shorter intervals for some items."),
-            ("p", "In the south of Tenerife it is easy to fall into that category: heat, episodes of calima with dust in the air, steep roads and plenty of short trips between towns and resorts. It does not mean you need a garage visit every month, but it is worth reading that part of the manual."),
-            ("h2", "Servicing at an independent garage"),
-            ("p", "If your car is under warranty, you can have it serviced at an independent garage without losing that warranty, as long as the manufacturer's specifications are followed and suitable parts are used. This is set out in EU competition rules for the motor sector (Regulation EU 461/2010). What matters is keeping a record: a detailed invoice and, if there is a book, the relevant stamp."),
-            ("h2", "Between services"),
-            ("p", "There are things you can keep an eye on yourself, no tools needed:"),
-            ("ol", [
-                "Engine oil level, with the engine cold and the car on level ground, once a month.",
-                "Tyre pressures, checked cold, also monthly.",
-                "Lights and the [[testigo-de-averia|warning lights]] on the dashboard when you start the car.",
-                "New noises, strange smells or drips under the car when it is parked.",
-            ]),
-            ("p", "If you notice anything unusual, do not wait for the next service. Acting early usually prevents bigger faults."),
-            ("nota", "Intervals vary widely between makes, models and years. This article is a general guide: the reference is always your car's manufacturer schedule."),
-            ("p", "At Green Car Service Tenerife we carry out [servicing and maintenance](servicio-revision-y-mantenimiento.html) following your manufacturer's schedule, and we tell you what is due now and what can wait. [Book an appointment](pedir-cita.html) and we will go through it with your car in front of us."),
-        ],
-    },
-},
-{
-    "slug": "articulo-senales-de-que-los-frenos-piden-cambio",
-    "cat": "mantenimiento",
-    "fecha": "2023-06-08",
-    "es": {
-        "titulo": "Señales de que tus frenos piden cambio",
-        "resumen": "Ruidos, vibraciones, un pedal que se hunde o un testigo encendido. Cómo reconocer los avisos de los frenos antes de que el problema vaya a más.",
-        "cuerpo": [
-            ("p", "Los frenos se desgastan poco a poco y por eso cuesta notar el cambio. Te acostumbras a frenar un poco antes, a pisar un poco más, y un día te das cuenta de que el coche no para como antes. La buena noticia es que casi siempre avisan. Solo hay que saber escucharlos."),
-            ("h2", "Ruidos al frenar"),
-            ("p", "Un **chirrido agudo** al frenar suele ser la primera pista. Muchas [[pastillas-de-freno|pastillas de freno]] llevan un pequeño avisador metálico que roza el disco cuando queda poco material, justo para que lo oigas. Si el ruido pasa a ser un **roce metálico grave**, como de metal contra metal, es posible que la pastilla esté agotada y esté dañando el disco. Ahí no conviene esperar."),
-            ("p", "Ojo: un chirrido leve por la mañana, con humedad, que desaparece tras las primeras frenadas, puede ser simplemente óxido superficial en el disco. Si se repite durante todo el trayecto, entonces sí conviene revisarlo."),
-            ("h2", "Vibraciones en el volante o el pedal"),
-            ("p", "Si al frenar notas que el volante tiembla o el pedal «late» bajo el pie, lo más habitual es que el [[disco-de-freno|disco de freno]] tenga una deformación o un desgaste irregular. Es frecuente en coches que hacen muchas bajadas largas, donde los frenos se calientan mucho. No lo confundas con el latido del ABS, que solo aparece en frenadas fuertes o sobre suelo deslizante."),
-            ("h2", "El pedal se siente distinto"),
-            ("ul", [
-                "**Pedal esponjoso o que baja más de lo normal**: puede haber aire en el circuito o un [[liquido-de-frenos|líquido de frenos]] viejo que ha absorbido humedad.",
-                "**Pedal que se hunde poco a poco** manteniéndolo pisado: posible fuga o fallo en la bomba. Es motivo para no circular y revisarlo cuanto antes.",
-                "**Pedal muy duro**: puede ser un problema en la asistencia de frenado.",
-            ]),
-            ("h2", "El coche se va hacia un lado"),
-            ("p", "Si al frenar el coche tira hacia la izquierda o la derecha, puede que una pinza no trabaje bien o que el desgaste sea desigual entre ruedas. También puede influir la presión de los neumáticos o la alineación, así que merece la pena revisar el conjunto."),
-            ("h2", "Testigos y otras pistas"),
-            ("p", "Muchos coches tienen un testigo que se enciende cuando las pastillas llegan al límite o cuando baja el nivel de líquido de frenos. Si se enciende el testigo rojo de frenos con el freno de mano quitado, para en un sitio seguro y consulta el manual. Otras pistas: olor a quemado tras una bajada, polvo negro excesivo en las llantas o un nivel de líquido que baja de forma visible en el depósito."),
-            ("h2", "Cada cuánto revisarlos"),
-            ("p", "No hay una cifra fija de kilómetros para cambiar pastillas o discos: depende del coche, del peso, de cómo conduces y de por dónde. En zonas con muchas pendientes, como buena parte de Tenerife, el desgaste suele ser mayor. Lo sensato es revisar los frenos en cada mantenimiento y seguir el intervalo del fabricante para el cambio del líquido."),
-            ("quote", "Un freno que avisa es un freno que todavía te deja elegir cuándo arreglarlo. Si esperas a que falle, ya no eliges tú."),
-            ("nota", "Estas señales orientan, pero no sustituyen a una revisión. Algunos problemas de frenos no dan síntomas claros hasta que están avanzados."),
-            ("p", "Si notas cualquiera de estos avisos, en Green Car Service Tenerife revisamos el sistema completo en nuestro [servicio de frenos](servicio-frenos.html) y te damos un presupuesto claro antes de tocar nada. Puedes [pedir cita](pedir-cita.html) por teléfono o WhatsApp."),
-        ],
-    },
-    "en": {
-        "titulo": "Signs your brakes need attention",
-        "resumen": "Noises, vibrations, a sinking pedal or a warning light. How to recognise what your brakes are telling you before the problem gets worse.",
-        "cuerpo": [
-            ("p", "Brakes wear gradually, which is why the change is hard to notice. You get used to braking a little earlier and pressing a little harder, and one day you realise the car does not stop the way it used to. The good news is that brakes almost always give warning signs. You just need to know what to listen for."),
-            ("h2", "Noises when braking"),
-            ("p", "A **high-pitched squeal** when braking is often the first clue. Many [[pastillas-de-freno|brake pads]] have a small metal wear indicator that touches the disc when the pad is getting thin, precisely so you hear it. If the noise turns into a **deep metallic grinding**, like metal on metal, the pad may be worn through and damaging the disc. Do not put that off."),
-            ("p", "Bear in mind that a light squeak on a damp morning that disappears after the first few stops can simply be surface rust on the disc. If it carries on for the whole journey, it is worth having it checked."),
-            ("h2", "Vibration through the wheel or pedal"),
-            ("p", "If the steering wheel shakes or the pedal pulses under your foot when you brake, the most common cause is a [[disco-de-freno|brake disc]] that has warped or worn unevenly. It is common on cars that do a lot of long descents, where the brakes get very hot. Do not confuse it with the ABS pulsing, which only happens under hard braking or on slippery surfaces."),
-            ("h2", "The pedal feels different"),
-            ("ul", [
-                "**Spongy pedal or one that travels further than usual**: there may be air in the system, or old [[liquido-de-frenos|brake fluid]] that has absorbed moisture.",
-                "**Pedal that slowly sinks** while you hold it down: a possible leak or master cylinder fault. That is a reason to stop driving and get it checked as soon as possible.",
-                "**Very hard pedal**: there may be a problem with the brake servo.",
-            ]),
-            ("h2", "The car pulls to one side"),
-            ("p", "If the car pulls left or right under braking, a caliper may be sticking or wear may be uneven between wheels. Tyre pressures and wheel alignment can also play a part, so it makes sense to check the whole system."),
-            ("h2", "Warning lights and other clues"),
-            ("p", "Many cars have a light that comes on when the pads reach their limit or the brake fluid level drops. If the red brake warning light comes on with the handbrake off, stop somewhere safe and check the manual. Other clues: a burning smell after a descent, a lot of black dust on the wheels, or a fluid level that visibly drops in the reservoir."),
-            ("h2", "How often to check them"),
-            ("p", "There is no fixed mileage for replacing pads or discs: it depends on the car, its weight, how you drive and where. In hilly areas, like much of Tenerife, wear is usually higher. The sensible approach is to have the brakes checked at every service and follow the manufacturer's interval for changing the fluid."),
-            ("quote", "Brakes that give a warning still let you choose when to fix them. If you wait until they fail, you no longer get to choose."),
-            ("nota", "These signs are a guide, not a substitute for an inspection. Some brake problems show no clear symptoms until they are advanced."),
-            ("p", "If you notice any of these signs, our [brake service](servicio-frenos.html) at Green Car Service Tenerife covers the whole system, and you get a clear estimate before we touch anything. You can [book an appointment](pedir-cita.html) by phone or WhatsApp."),
-        ],
-    },
-},
-{
-    "slug": "articulo-como-leer-los-testigos-del-cuadro",
-    "cat": "mantenimiento",
-    "fecha": "2024-01-22",
-    "es": {
-        "titulo": "Cómo leer los testigos del cuadro",
-        "resumen": "Rojo, amarillo, verde o azul: cada color significa algo distinto. Guía práctica para saber cuándo parar y cuándo basta con pedir cita.",
-        "cuerpo": [
-            ("p", "El cuadro de instrumentos es la forma que tiene el coche de hablarte. Cuando algo no va bien, enciende un [[testigo-de-averia|testigo de avería]]. El problema es que hay muchos símbolos y no todos son igual de urgentes. La clave para no asustarte de más, ni de menos, está en el color."),
-            ("h2", "El código de colores"),
-            ("p", "La mayoría de fabricantes siguen una lógica parecida a la de un semáforo:"),
-            ("ul", [
-                "**Rojo**: problema serio o riesgo para la seguridad. Para en cuanto puedas hacerlo con seguridad y apaga el motor si el manual lo indica.",
-                "**Amarillo o ámbar**: aviso. Algo necesita revisión, pero normalmente puedes seguir con precaución hasta el taller.",
-                "**Verde o azul**: información. Te dicen que algo está funcionando, como las luces cortas, las largas o el control de crucero.",
-            ]),
-            ("p", "Si un testigo **parpadea**, suele indicar algo más urgente que si está fijo. Por ejemplo, el testigo de motor parpadeando puede indicar fallos de encendido que pueden dañar el [[catalizador|catalizador]]."),
-            ("h2", "Testigos rojos que no debes ignorar"),
-            ("ul", [
-                "**Presión de aceite** (una aceitera): el motor puede estar sin lubricación suficiente. Para y apaga el motor.",
-                "**Temperatura del motor** (un termómetro): riesgo de sobrecalentamiento. Para, deja enfriar y no abras el depósito del refrigerante en caliente.",
-                "**Frenos** (un círculo con un signo de exclamación): puede ser el freno de mano puesto o nivel bajo de líquido. Si no es el freno de mano, no sigas circulando.",
-                "**Carga de la batería** (una batería): el alternador puede no estar cargando. El coche funcionará un tiempo con la batería, pero acabará parándose.",
-                "**Airbag** o **cinturón**: el sistema de retención puede no funcionar como debe.",
-            ]),
-            ("h2", "Testigos amarillos más habituales"),
-            ("ul", [
-                "**Motor** (silueta de un motor): fallo detectado en la gestión del motor o las emisiones. Puede ser algo menor o no, así que conviene revisarlo pronto.",
-                "**ABS** o **control de estabilidad**: los frenos normales funcionan, pero las ayudas pueden estar desactivadas.",
-                "**Presión de neumáticos**: una o más ruedas han perdido presión. Compruébalas en cuanto puedas.",
-                "**Precalentamiento** en diésel (una espiral): si se queda encendido o parpadea en marcha, hay que revisarlo.",
-                "**Filtro de partículas** en algunos diésel: suele pedir un trayecto a velocidad constante para regenerarse; mira el manual.",
-            ]),
-            ("h2", "Qué hacer cuando se enciende uno"),
-            ("ol", [
-                "Fíjate en el color y en si está fijo o parpadea.",
-                "Mira si el coche se comporta distinto: pérdida de potencia, ruidos, olores, humo.",
-                "Consulta el manual: cada modelo explica sus símbolos y qué hacer.",
-                "Si es rojo, para en un lugar seguro. Si es amarillo, pide cita pronto y evita trayectos largos.",
-            ]),
-            ("p", "Al arrancar, es normal que muchos testigos se enciendan un momento y se apaguen. Es una comprobación del sistema. Lo que no es normal es que alguno se quede encendido."),
-            ("h2", "Por qué hace falta una diagnosis"),
-            ("p", "Un testigo te dice **dónde** hay un problema, no **cuál** es. Cuando se enciende, la [[centralita|centralita]] guarda un código de avería que se lee con un equipo de [[diagnosis-obd|diagnosis OBD]]. Ese código orienta, pero luego hay que comprobar la causa real: un mismo código puede deberse a un sensor, un cable o una pieza mecánica."),
-            ("nota", "Borrar el código para que se apague la luz no arregla nada. Si la causa sigue ahí, el testigo volverá a encenderse."),
-            ("p", "En Green Car Service Tenerife contamos con equipos electrónicos de diagnosis para localizar el origen de la avería. Si tienes un testigo encendido, consulta nuestro servicio de [testigos de avería](servicio-testigos-de-averia.html) o [pide cita](pedir-cita.html)."),
-        ],
-    },
-    "en": {
-        "titulo": "How to read your dashboard warning lights",
-        "resumen": "Red, amber, green or blue: each colour means something different. A practical guide to knowing when to stop and when booking a visit is enough.",
-        "cuerpo": [
-            ("p", "The instrument cluster is how your car talks to you. When something is wrong, it switches on a [[testigo-de-averia|warning light]]. The trouble is that there are lots of symbols and not all of them are equally urgent. The key to not over- or under-reacting is the colour."),
-            ("h2", "The colour code"),
-            ("p", "Most manufacturers follow a logic similar to traffic lights:"),
-            ("ul", [
-                "**Red**: a serious problem or a safety risk. Stop as soon as it is safe to do so and switch off the engine if the manual says so.",
-                "**Yellow or amber**: a warning. Something needs checking, but you can usually carry on carefully to a garage.",
-                "**Green or blue**: information. They tell you something is on, such as dipped headlights, main beam or cruise control.",
-            ]),
-            ("p", "A **flashing** light usually means something more urgent than a steady one. For example, a flashing engine light can indicate misfires that may damage the [[catalizador|catalytic converter]]."),
-            ("h2", "Red lights you should never ignore"),
-            ("ul", [
-                "**Oil pressure** (an oil can): the engine may not be getting enough lubrication. Stop and switch off.",
-                "**Engine temperature** (a thermometer): risk of overheating. Stop, let it cool, and never open the coolant reservoir while hot.",
-                "**Brakes** (a circle with an exclamation mark): it may be the handbrake, or low fluid. If it is not the handbrake, do not keep driving.",
-                "**Battery charge** (a battery): the alternator may not be charging. The car will run on the battery for a while, but will eventually stop.",
-                "**Airbag** or **seatbelt**: the restraint system may not work as it should.",
-            ]),
-            ("h2", "Common amber lights"),
-            ("ul", [
-                "**Engine** (an engine outline): a fault has been detected in engine management or emissions. It may or may not be minor, so get it checked soon.",
-                "**ABS** or **stability control**: normal braking works, but the driver aids may be switched off.",
-                "**Tyre pressure**: one or more tyres have lost pressure. Check them as soon as you can.",
-                "**Glow plug** on diesels (a coil): if it stays on or flashes while driving, it needs checking.",
-                "**Particulate filter** on some diesels: it usually needs a steady-speed drive to regenerate; check the manual.",
-            ]),
-            ("h2", "What to do when one comes on"),
-            ("ol", [
-                "Note the colour and whether it is steady or flashing.",
-                "Check whether the car behaves differently: loss of power, noises, smells, smoke.",
-                "Look in the manual: each model explains its symbols and what to do.",
-                "If it is red, stop somewhere safe. If it is amber, book a visit soon and avoid long trips.",
-            ]),
-            ("p", "When you start the car it is normal for many lights to come on briefly and then go out. That is a system check. What is not normal is for one to stay on."),
-            ("h2", "Why a diagnostic check is needed"),
-            ("p", "A warning light tells you **where** there is a problem, not **what** it is. When it comes on, the [[centralita|engine control unit (ECU)]] stores a fault code that is read with [[diagnosis-obd|OBD diagnostics]] equipment. The code points in the right direction, but the real cause still has to be confirmed: the same code can come from a sensor, a wire or a mechanical part."),
-            ("nota", "Clearing the code to turn off the light fixes nothing. If the cause is still there, the light will come back on."),
-            ("p", "At Green Car Service Tenerife we have electronic diagnostic equipment to track down the source of the fault. If you have a warning light on, see our [warning light](servicio-testigos-de-averia.html) service or [book an appointment](pedir-cita.html)."),
-        ],
-    },
-},
-]
-
-ARTICULOS += [
-{
-    "slug": "articulo-preparar-el-coche-antes-de-la-itv",
-    "cat": "mantenimiento",
-    "fecha": "2024-09-10",
-    "es": {
-        "titulo": "Cómo preparar el coche antes de la ITV",
-        "resumen": "Una revisión sencilla en casa y una visita previa al taller pueden ahorrarte una segunda visita a la estación. Esto es lo que conviene mirar.",
-        "cuerpo": [
-            ("p", "Pasar la [[itv|ITV]] no tiene por qué ser un mal trago. La mayoría de los rechazos se deben a cosas pequeñas que se podían haber detectado antes: una bombilla fundida, una escobilla gastada o un neumático al límite. Con un poco de preparación, lo normal es ir tranquilo y salir con la pegatina."),
-            ("h2", "Lo que puedes revisar tú"),
-            ("p", "Antes de ir, dedica diez minutos a dar una vuelta al coche. Mejor con ayuda de otra persona para ver las luces traseras."),
-            ("ul", [
-                "**Luces**: cortas, largas, posición, intermitentes delanteros, laterales y traseros, luces de freno (también la tercera), marcha atrás, antiniebla y luz de matrícula.",
-                "**Neumáticos**: sin cortes ni bultos en los flancos, con dibujo suficiente y del tamaño que figura en la documentación. La profundidad mínima legal del dibujo es de 1,6 mm.",
-                "**Limpiaparabrisas**: escobillas que limpien sin dejar franjas y depósito de agua con líquido.",
-                "**Parabrisas**: sin grietas ni impactos en la zona de visión del conductor.",
-                "**Claxon**, **cinturones** que enganchen y se recojan bien, y **retrovisores** en buen estado.",
-                "**Testigos del cuadro**: ninguno encendido tras arrancar, en especial motor, airbag o ABS.",
-            ]),
-            ("h2", "Lo que conviene que mire un taller"),
-            ("p", "Hay puntos que no se ven a simple vista y en los que la estación es exigente:"),
-            ("ul", [
-                "**Frenos**: eficacia y equilibrio entre ruedas, estado de [[pastillas-de-freno|pastillas]] y discos, freno de mano.",
-                "**Dirección y suspensión**: holguras en rótulas, guardapolvos rotos, [[amortiguador|amortiguadores]] con fugas.",
-                "**Emisiones**: en gasolina se mide la composición de los gases; en diésel, la opacidad del humo. Un mantenimiento atrasado o un fallo en sensores puede hacer que no pase.",
-                "**Escape**: sin fugas, con los soportes en su sitio y sin ruido excesivo.",
-                "**Bajos**: fugas de aceite o de líquidos y corrosión en zonas estructurales.",
-            ]),
-            ("h2", "La documentación"),
-            ("p", "Lleva el permiso de circulación y la tarjeta de inspección técnica (o su equivalente electrónico, según el caso). Si has hecho reformas en el coche, como enganche de remolque o cambios de llantas fuera de las homologadas, comprueba que estén legalizadas y anotadas; si no, pueden dar problemas en la inspección."),
-            ("h2", "Consejos para el día de la inspección"),
-            ("ol", [
-                "Pide cita con antelación: en algunas épocas hay más demanda.",
-                "Ve con el motor caliente, sobre todo si es diésel. Un trayecto previo ayuda en la prueba de emisiones.",
-                "Lleva el coche razonablemente limpio y sin trastos en el maletero que tapen elementos.",
-                "Si tienes un testigo encendido, resuélvelo antes: es motivo habitual de problemas.",
-            ]),
-            ("h2", "Si no la pasas"),
-            ("p", "Los defectos se clasifican en leves, graves y muy graves. Con defectos leves pasas, aunque debes corregirlos. Con graves, el resultado es desfavorable y tendrás que repararlos y volver dentro del plazo que te indique la estación. Con muy graves, el coche no debe circular salvo para ir al taller o a la estación en las condiciones que se indiquen. Guarda el informe: dice exactamente qué hay que corregir y facilita la reparación."),
-            ("quote", "La mejor forma de pasar la ITV es no dejarlo todo para la semana anterior: un coche bien mantenido la pasa casi solo."),
-            ("nota", "Los criterios de inspección se basan en un manual oficial que se actualiza de vez en cuando. Ante cualquier duda, la estación de ITV es la que tiene la última palabra."),
-            ("p", "En Green Car Service Tenerife hacemos una [revisión pre-ITV](servicio-pre-itv.html) en la que comprobamos los puntos que se inspeccionan y te decimos qué conviene arreglar antes de ir. Si quieres dejarlo listo, [pide cita](pedir-cita.html)."),
-        ],
-    },
-    "en": {
-        "titulo": "How to get your car ready for the ITV",
-        "resumen": "A quick check at home and a visit to the garage beforehand can save you a second trip to the test centre. Here is what to look at.",
-        "cuerpo": [
-            ("p", "The [[itv|ITV (MOT)]], Spain's periodic roadworthiness test, does not have to be stressful. Most failures come down to small things that could have been spotted earlier: a blown bulb, a worn wiper blade or a tyre at its limit. With a little preparation, you can go in relaxed and come out with the sticker."),
-            ("h2", "What you can check yourself"),
-            ("p", "Before you go, spend ten minutes walking around the car. It helps to have someone with you to check the rear lights."),
-            ("ul", [
-                "**Lights**: dipped, main beam, sidelights, front, side and rear indicators, brake lights (including the third one), reversing lights, fog lights and number plate light.",
-                "**Tyres**: no cuts or bulges on the sidewalls, enough tread and the size shown in the vehicle documents. The legal minimum tread depth is 1.6 mm.",
-                "**Wipers**: blades that clear without streaking, and screenwash in the reservoir.",
-                "**Windscreen**: no cracks or chips in the driver's field of vision.",
-                "**Horn**, **seatbelts** that latch and retract properly, and **mirrors** in good condition.",
-                "**Dashboard**: no warning lights left on after starting, especially engine, airbag or ABS.",
-            ]),
-            ("h2", "What a garage should look at"),
-            ("p", "Some items cannot be seen at a glance, and the test centre is strict about them:"),
-            ("ul", [
-                "**Brakes**: efficiency and balance between wheels, condition of [[pastillas-de-freno|pads]] and discs, handbrake.",
-                "**Steering and suspension**: play in ball joints, torn boots, leaking [[amortiguador|shock absorbers]].",
-                "**Emissions**: petrol cars have their exhaust gases measured; diesels have smoke opacity tested. Overdue maintenance or a faulty sensor can cause a fail.",
-                "**Exhaust**: no leaks, mountings in place and no excessive noise.",
-                "**Underside**: oil or fluid leaks and corrosion in structural areas.",
-            ]),
-            ("h2", "Documents"),
-            ("p", "Take the registration certificate (permiso de circulación) and the technical inspection card (ficha técnica), or its electronic equivalent where applicable. If the car has been modified, for example with a tow bar or non-approved wheels, check that the changes are legalised and recorded; otherwise they may cause problems at the test."),
-            ("h2", "Tips for test day"),
-            ("ol", [
-                "Book in advance: some times of year are busier.",
-                "Arrive with the engine warm, especially with a diesel. A drive beforehand helps with the emissions test.",
-                "Bring the car reasonably clean, with nothing in the boot blocking items that need inspecting.",
-                "If a warning light is on, sort it out first: it is a common source of problems.",
-            ]),
-            ("h2", "If the car fails"),
-            ("p", "Defects are classed as minor, major or dangerous. With minor defects the car passes, although you should fix them. With major defects the result is unfavourable, and you will need to repair them and return within the period the test centre gives you. With dangerous defects, the car should not be driven except to a garage or the test centre under the conditions indicated. Keep the report: it states exactly what needs fixing and makes the repair easier."),
-            ("quote", "The best way to pass the ITV is not to leave everything to the week before: a well-maintained car practically passes on its own."),
-            ("nota", "Inspection criteria follow an official manual that is updated from time to time. If in doubt, the ITV station has the final say."),
-            ("p", "At Green Car Service Tenerife we offer a [pre-ITV check](servicio-pre-itv.html), going over the items that are inspected and telling you what is worth fixing before you go. If you want it ready, [book an appointment](pedir-cita.html)."),
-        ],
-    },
-},
-{
-    "slug": "articulo-mantenimiento-del-aire-acondicionado",
-    "cat": "mantenimiento",
-    "fecha": "2025-05-06",
-    "es": {
-        "titulo": "Mantenimiento del aire acondicionado del coche",
-        "resumen": "En el sur de Tenerife el aire acondicionado trabaja casi todo el año. Cómo cuidarlo, qué señales indican un problema y por qué no basta con «recargar el gas».",
-        "cuerpo": [
-            ("p", "En el sur de Tenerife el [[aire-acondicionado|aire acondicionado]] no es un lujo de agosto: se usa buena parte del año. Y como cualquier sistema que trabaja mucho, necesita atención. Un aire que enfría poco, que huele mal o que hace ruido te está diciendo algo."),
-            ("h2", "Cómo funciona, en pocas palabras"),
-            ("p", "El sistema es un circuito cerrado por el que circula un gas refrigerante. Un compresor, movido normalmente por la correa del motor o eléctrico en algunos coches, lo comprime; el condensador, delante del radiador, le quita calor; y el evaporador, escondido detrás del salpicadero, enfría el aire que entra al habitáculo. El refrigerante lleva además un aceite que lubrica el compresor."),
-            ("p", "Al ser un circuito cerrado, en teoría no debería perder gas. En la práctica, con los años las juntas y los tubos pueden dejar escapar pequeñas cantidades, y si baja mucho, el sistema enfría menos y el compresor sufre."),
-            ("h2", "Señales de que algo no va bien"),
-            ("ul", [
-                "Enfría menos que antes o tarda mucho en hacerlo.",
-                "Mal olor, a humedad o a cerrado, al encenderlo.",
-                "Ruidos nuevos al activar el aire: chasquidos, zumbidos o silbidos.",
-                "Los cristales se empañan y no se desempañan bien.",
-                "Agua dentro del habitáculo, normalmente en la zona de los pies del acompañante.",
-            ]),
-            ("h2", "El filtro de habitáculo, el gran olvidado"),
-            ("p", "Todo el aire que entra por las rejillas pasa por el [[filtro-de-habitaculo|filtro de habitáculo]]. Retiene polvo, polen y partículas. Cuando está saturado, sale menos aire y puede aparecer mal olor. En una zona con calima, donde el aire lleva polvo en suspensión, puede ensuciarse antes de lo previsto. Muchos fabricantes indican cambiarlo en cada revisión o cada cierto tiempo; mira tu plan de mantenimiento."),
-            ("h2", "Por qué no basta con recargar"),
-            ("p", "Si el sistema ha perdido gas, es porque hay una fuga en algún punto. Recargar sin buscarla es poner un parche: el gas volverá a irse. Lo correcto es comprobar la presión, buscar fugas, reparar lo que haga falta y después cargar la cantidad exacta que indica el fabricante, con el aceite adecuado. El tipo de gas depende del coche: los más antiguos suelen usar un refrigerante y muchos modernos otro distinto, y no se deben mezclar."),
-            ("p", "Además, los gases refrigerantes no deben liberarse a la atmósfera. Su manipulación requiere equipos específicos para recuperarlos y reciclarlos. Es un tema que nos importa, porque forma parte de trabajar de forma sostenible."),
-            ("h2", "Consejos de uso diario"),
-            ("ol", [
-                "Si el coche ha estado al sol, abre las ventanillas un momento al arrancar para sacar el aire caliente y luego ciérralas.",
-                "Enciende el aire de vez en cuando también en invierno: ayuda a mantener lubricado el compresor y las juntas.",
-                "Unos minutos antes de llegar, apaga el aire y deja solo el ventilador: así se seca el evaporador y se reducen olores.",
-                "Mantén limpio el frontal del coche: hojas, insectos o polvo sobre el condensador le quitan eficacia.",
-            ]),
-            ("nota", "Si notas olor dulzón dentro del coche o vapor por las rejillas, podría no ser el aire acondicionado sino el circuito de [[anticongelante|refrigerante del motor]]. En ese caso, conviene revisarlo cuanto antes."),
-            ("p", "En Green Car Service Tenerife revisamos el circuito completo en nuestro servicio de [aire acondicionado](servicio-aire-acondicionado.html): presión, fugas, filtro y funcionamiento. Si quieres llegar al verano con el coche fresco, [pide cita](pedir-cita.html)."),
-        ],
-    },
-    "en": {
-        "titulo": "Looking after your car's air conditioning",
-        "resumen": "In the south of Tenerife the air conditioning works almost all year round. How to look after it, which signs point to a problem and why 'regassing' alone is not enough.",
-        "cuerpo": [
-            ("p", "In the south of Tenerife, [[aire-acondicionado|air conditioning]] is not just for August: it is used for much of the year. And like any system that works hard, it needs attention. Air con that barely cools, smells bad or makes noise is telling you something."),
-            ("h2", "How it works, briefly"),
-            ("p", "The system is a sealed circuit through which a refrigerant gas flows. A compressor, usually driven by the engine belt or electric on some cars, compresses it; the condenser, in front of the radiator, removes heat from it; and the evaporator, hidden behind the dashboard, cools the air entering the cabin. The refrigerant also carries oil that lubricates the compressor."),
-            ("p", "Because it is a sealed circuit, in theory it should not lose gas. In practice, over the years seals and pipes can let small amounts escape, and if the level drops too far, the system cools less and the compressor suffers."),
-            ("h2", "Signs that something is wrong"),
-            ("ul", [
-                "It cools less than before or takes a long time to do so.",
-                "A musty or damp smell when you switch it on.",
-                "New noises when the air con kicks in: clicks, humming or whistling.",
-                "Windows mist up and do not clear properly.",
-                "Water inside the cabin, usually in the front passenger footwell.",
-            ]),
-            ("h2", "The cabin filter, the forgotten part"),
-            ("p", "All the air coming through the vents passes through the [[filtro-de-habitaculo|cabin filter]]. It traps dust, pollen and particles. When it is clogged, less air comes out and bad smells can appear. In an area with calima, when the air carries suspended dust, it can get dirty sooner than expected. Many manufacturers specify replacing it at every service or after a set time; check your schedule."),
-            ("h2", "Why regassing alone is not enough"),
-            ("p", "If the system has lost gas, there is a leak somewhere. Refilling without finding it is just a patch: the gas will escape again. The right approach is to check the pressure, look for leaks, repair what is needed and then charge the exact amount the manufacturer specifies, with the correct oil. The type of gas depends on the car: older ones usually use one refrigerant and many newer ones a different type, and they must not be mixed."),
-            ("p", "Refrigerant gases must also not be released into the atmosphere. Handling them requires specific equipment to recover and recycle them. It is something we care about, because it is part of working sustainably."),
-            ("h2", "Everyday tips"),
-            ("ol", [
-                "If the car has been parked in the sun, open the windows briefly when you set off to let the hot air out, then close them.",
-                "Run the air con now and then in winter too: it helps keep the compressor and seals lubricated.",
-                "A few minutes before you arrive, switch the air con off and leave just the fan running: this dries the evaporator and reduces smells.",
-                "Keep the front of the car clean: leaves, insects or dust on the condenser reduce its efficiency.",
-            ]),
-            ("nota", "If you notice a sweet smell inside the car or steam from the vents, it may not be the air con but the engine's [[anticongelante|coolant]] circuit. In that case, have it checked as soon as possible."),
-            ("p", "At Green Car Service Tenerife our [air conditioning](servicio-aire-acondicionado.html) service checks the whole circuit: pressure, leaks, filter and performance. If you want a cool car for the summer, [book an appointment](pedir-cita.html)."),
-        ],
-    },
-},
-]
-
-# ---------------------------------------------------------------- chapa y pintura
-ARTICULOS += [
-{
-    "slug": "articulo-que-hacer-con-un-aranazo",
-    "cat": "chapa-pintura",
-    "fecha": "2023-04-18",
-    "es": {
-        "titulo": "Qué hacer con un arañazo en la pintura",
-        "resumen": "No todos los arañazos son iguales. Te enseñamos a saber cuánto de profundo es y cuándo basta con un pulido y cuándo hay que repintar.",
-        "cuerpo": [
-            ("p", "Un roce con una columna del garaje, una rama en un camino estrecho o alguien que pasa demasiado cerca con el carro de la compra. Los arañazos son casi inevitables. La pregunta es qué hacer con ellos, y la respuesta depende de lo profundo que sea."),
-            ("h2", "Las capas de la pintura"),
-            ("p", "La pintura de un coche no es una sola capa. Sobre la chapa hay una protección anticorrosión y una [[imprimacion|imprimación]]; encima, la capa de color; y por último el [[barniz|barniz]], transparente, que da brillo y protege el color del sol y la intemperie. Cuanto más abajo llegue el arañazo, más trabajo tiene arreglarlo."),
-            ("h2", "Cómo saber lo profundo que es"),
-            ("ol", [
-                "**Lava y seca la zona.** Muchas marcas son restos de pintura o goma de otro objeto y salen con agua o con un limpiador suave.",
-                "**Pasa la uña suavemente** en perpendicular al arañazo. Si no se engancha, probablemente solo afecta al barniz.",
-                "**Mira el color del fondo.** Si ves el mismo color del coche, está en barniz o color. Si ves un tono gris o blanquecino, ha llegado a la imprimación. Si ves metal brillante, ha llegado a la chapa.",
-            ]),
-            ("h2", "Qué se puede hacer en cada caso"),
-            ("ul", [
-                "**Arañazo superficial en el barniz**: a menudo se mejora mucho, o desaparece, con un [[pulido|pulido]] profesional. El pulido elimina una capa muy fina de barniz, así que no conviene abusar de él.",
-                "**Arañazo que llega al color**: el pulido lo disimula pero no lo borra. Suele necesitar un retoque o repintar la zona.",
-                "**Arañazo hasta la imprimación o la chapa**: hay que preparar la superficie, aplicar imprimación, color y barniz. Si se ve metal, conviene no dejarlo mucho tiempo.",
-            ]),
-            ("h2", "Por qué no dejarlo para más adelante"),
-            ("p", "Un arañazo que deja la chapa a la vista es una puerta abierta a la [[corrosion|corrosión]]. En zonas de costa, con humedad y salitre, el óxido puede empezar antes de lo que parece y extenderse por debajo de la pintura sana. Lo que hoy es una línea fina puede convertirse en una burbuja de óxido que obliga a reparar una superficie mucho mayor."),
-            ("h2", "Con los productos de bricolaje, cuidado"),
-            ("p", "Los lápices de retoque y los pulimentos de gran superficie pueden servir para una marca pequeña, sobre todo para proteger el metal mientras llevas el coche al taller. Pero conviene tener en cuenta algunas cosas:"),
-            ("ul", [
-                "Un pulimento muy abrasivo, aplicado a mano sin experiencia, puede dejar la zona mate o con marcas circulares.",
-                "Un lápiz de retoque rara vez iguala el tono exacto, sobre todo en colores metalizados.",
-                "Si luego se repinta la zona, hay que retirar esos productos y el trabajo es algo mayor.",
-            ]),
-            ("h2", "Repintar solo una parte"),
-            ("p", "Cuando hay que repintar, no siempre es necesario pintar la pieza entera. A veces se puede reparar la zona y difuminar el color y el barniz hacia las zonas vecinas para que la transición no se note. Si es posible o no depende del tamaño del daño, de dónde esté y del color."),
-            ("quote", "Un arañazo pequeño y reciente casi siempre se arregla mejor, y con menos trabajo, que uno que lleva meses a la intemperie."),
-            ("nota", "Solo viendo el arañazo se puede decir qué solución tiene. Lo que aquí contamos es orientativo."),
-            ("p", "En Green Car Service Tenerife valoramos el daño y te decimos si basta con un [pulido y abrillantado](servicio-pulido-y-abrillantado.html) o conviene una [pintura parcial](servicio-pintura-parcial.html). Mándanos una foto por WhatsApp o [pide un presupuesto](presupuesto.html)."),
-        ],
-    },
-    "en": {
-        "titulo": "What to do about a scratch in your paint",
-        "resumen": "Not all scratches are the same. Here is how to tell how deep one is, and when polishing is enough and when it needs repainting.",
-        "cuerpo": [
-            ("p", "A brush against a pillar in the car park, a branch on a narrow track or someone passing too close with a shopping trolley. Scratches are almost unavoidable. The question is what to do about them, and the answer depends on how deep they go."),
-            ("h2", "The layers of paint"),
-            ("p", "Car paint is not a single layer. On top of the metal there is anti-corrosion protection and a [[imprimacion|primer]]; above that, the colour coat; and finally the transparent [[barniz|clear coat]], which gives gloss and protects the colour from sun and weather. The deeper a scratch goes, the more work it takes to fix."),
-            ("h2", "How to tell how deep it is"),
-            ("ol", [
-                "**Wash and dry the area.** Many marks are paint or rubber transferred from another object and come off with water or a mild cleaner.",
-                "**Run a fingernail gently** across the scratch. If it does not catch, it probably only affects the clear coat.",
-                "**Look at the colour at the bottom.** If you see the car's own colour, it is in the clear coat or colour coat. If you see grey or whitish, it has reached the primer. If you see shiny metal, it has reached the panel.",
-            ]),
-            ("h2", "What can be done in each case"),
-            ("ul", [
-                "**Light scratch in the clear coat**: it can often be greatly reduced, or removed, with professional [[pulido|polishing]]. Polishing removes a very thin layer of clear coat, so it should not be overdone.",
-                "**Scratch into the colour coat**: polishing disguises it but does not remove it. It usually needs a touch-up or repainting of the area.",
-                "**Scratch down to primer or metal**: the surface has to be prepared and primer, colour and clear coat applied. If metal is showing, do not leave it for long.",
-            ]),
-            ("h2", "Why not to leave it"),
-            ("p", "A scratch that exposes bare metal is an open door to [[corrosion|corrosion]]. In coastal areas, with humidity and salt in the air, rust can start sooner than you might think and spread beneath healthy paint. Today's thin line can become a rust bubble that means repairing a much larger area."),
-            ("h2", "Be careful with DIY products"),
-            ("p", "Touch-up pens and supermarket polishes can help with a small mark, especially to protect bare metal until you get the car to a workshop. But bear a few things in mind:"),
-            ("ul", [
-                "A very abrasive polish, applied by hand without experience, can leave the area dull or with swirl marks.",
-                "A touch-up pen rarely matches the exact shade, especially with metallic colours.",
-                "If the area is repainted later, those products have to be removed first, which adds a little work.",
-            ]),
-            ("h2", "Repainting only part of a panel"),
-            ("p", "When repainting is needed, it is not always necessary to paint the whole panel. Sometimes the damaged area can be repaired and the colour and clear coat blended into the surrounding area so the transition does not show. Whether that is possible depends on the size of the damage, where it is and the colour."),
-            ("quote", "A small, recent scratch is nearly always easier, and less work, to fix than one that has been out in the weather for months."),
-            ("nota", "Only by seeing the scratch can we tell you the right fix. What we describe here is a general guide."),
-            ("p", "At Green Car Service Tenerife we assess the damage and tell you whether [polishing](servicio-pulido-y-abrillantado.html) is enough or a [partial respray](servicio-pintura-parcial.html) makes more sense. Send us a photo on WhatsApp or [ask for an estimate](presupuesto.html)."),
-        ],
-    },
-},
-]
-
-ARTICULOS += [
-{
-    "slug": "articulo-por-que-el-color-debe-igualarse",
-    "cat": "chapa-pintura",
-    "fecha": "2024-05-27",
-    "es": {
-        "titulo": "Por qué el color de una pieza repintada debe igualarse",
-        "resumen": "El código de color del coche es solo el punto de partida. Te contamos qué es la colorimetría y por qué una puerta repintada puede no casar si no se ajusta el tono.",
-        "cuerpo": [
-            ("p", "Seguro que alguna vez has visto un coche con una puerta o un paragolpes de un tono ligeramente distinto al resto. Con cierta luz apenas se nota; con otra, salta a la vista. Casi siempre es una reparación en la que el color no se igualó bien. Evitarlo es el trabajo de la [[colorimetria|colorimetría]]."),
-            ("h2", "El código de color no basta"),
-            ("p", "Todos los coches tienen un código de color de fábrica, normalmente en una etiqueta en el marco de la puerta, en el vano motor o en la documentación. Ese código indica la fórmula original. El problema es que el coche que tienes delante ya no es exactamente igual al que salió de fábrica, por varias razones:"),
-            ("ul", [
-                "**Variaciones de fabricación**: un mismo código puede tener pequeñas diferencias de tono entre lotes o plantas de producción.",
-                "**Envejecimiento**: el sol, la lluvia, los lavados y los años cambian ligeramente el aspecto de la pintura. En un clima con tanta radiación como el de Tenerife, se nota.",
-                "**Reparaciones anteriores**: si el coche ya se ha pintado antes, puede haber zonas con matices distintos.",
-            ]),
-            ("h2", "Cómo se iguala el color"),
-            ("p", "El proceso combina medición, experiencia y pruebas. A grandes rasgos:"),
-            ("ol", [
-                "Se parte del código de color y de sus posibles variantes.",
-                "Se compara con el coche real, a menudo con ayuda de equipos de medición y cartas de color, y siempre bajo buena luz.",
-                "Se ajusta la mezcla y se pinta una muestra de prueba que se compara con la pieza, desde varios ángulos.",
-                "Si hace falta, se corrige la fórmula hasta que el tono encaja.",
-            ]),
-            ("h2", "Los metalizados y nacarados, más delicados"),
-            ("p", "En una [[metalizado|pintura metalizada]] el color lleva pequeñas partículas que reflejan la luz. En una [[nacarado|pintura nacarada]], los pigmentos dan reflejos que cambian con el ángulo. En estos acabados no solo importa el tono: también cómo se orientan esas partículas, que depende de la forma de aplicar la pintura. Por eso una pieza metalizada puede verse igual de frente y distinta de lado si no se trabaja con cuidado."),
-            ("h2", "El difuminado"),
-            ("p", "Aunque el color esté bien ajustado, el ojo es muy sensible a los cambios bruscos. Por eso, a menudo, en lugar de pintar solo la pieza dañada se difumina el color hacia las piezas vecinas. Así la transición es gradual y no se aprecia un corte. Es una técnica habitual, especialmente en colores metalizados y claros, y es la razón por la que a veces el presupuesto incluye trabajo en una pieza que no estaba dañada."),
-            ("h2", "La luz también cuenta"),
-            ("p", "Un mismo color puede verse distinto bajo luz de taller, a la sombra o a pleno sol. Por eso las comparaciones se hacen con buena iluminación y, cuando es posible, revisando el resultado con luz natural. Un taller bien equipado, con [[cabina-de-pintura|cabina de pintura]] e iluminación adecuada, trabaja con más garantías."),
-            ("quote", "Un color bien igualado es el que nadie nota. Si el cliente no sabe decir qué pieza se ha pintado, el trabajo está bien hecho."),
-            ("nota", "En algunos casos, sobre todo en coches muy envejecidos o con colores especiales, la igualación perfecta es difícil. Si es así, te lo explicamos antes de empezar."),
-            ("p", "En Green Car Service Tenerife trabajamos colores sólidos y metalizados con pintura ecológica «eco-balance». Puedes ver más en [colores y acabados](servicio-colores-y-acabados.html) o [pedir un presupuesto](presupuesto.html) para tu reparación."),
-        ],
-    },
-    "en": {
-        "titulo": "Why a repainted panel has to be colour-matched",
-        "resumen": "Your car's paint code is only the starting point. Here is what colour matching involves, and why a repainted door may not match unless the shade is adjusted.",
-        "cuerpo": [
-            ("p", "You have probably seen a car with a door or bumper in a slightly different shade from the rest. In some light it barely shows; in other light it stands out a mile. It is almost always a repair where the colour was not matched properly. Avoiding that is the job of [[colorimetria|colour matching]]."),
-            ("h2", "The paint code is not enough"),
-            ("p", "Every car has a factory paint code, usually on a label in the door frame, in the engine bay or in the paperwork. That code gives the original formula. The problem is that the car in front of you is no longer exactly the same as the one that left the factory, for several reasons:"),
-            ("ul", [
-                "**Production variation**: the same code can show small differences in shade between batches or factories.",
-                "**Ageing**: sun, rain, washing and time slightly change the look of the paint. In a climate with as much sunshine as Tenerife's, it shows.",
-                "**Previous repairs**: if the car has been painted before, some areas may have a different tint.",
-            ]),
-            ("h2", "How the colour is matched"),
-            ("p", "The process combines measurement, experience and testing. Broadly speaking:"),
-            ("ol", [
-                "It starts from the paint code and its possible variants.",
-                "This is compared with the actual car, often with the help of measuring equipment and colour charts, and always in good light.",
-                "The mix is adjusted and a test card is sprayed and compared with the panel from several angles.",
-                "If needed, the formula is corrected until the shade matches.",
-            ]),
-            ("h2", "Metallic and pearlescent paints are trickier"),
-            ("p", "In [[metalizado|metallic paint]] the colour contains tiny particles that reflect light. In [[nacarado|pearlescent paint]], the pigments give reflections that change with the viewing angle. With these finishes it is not only the shade that matters, but also how those particles lie, which depends on how the paint is applied. That is why a metallic panel can look right head-on and different from the side if it is not done carefully."),
-            ("h2", "Blending"),
-            ("p", "Even when the colour is well matched, the eye is very sensitive to sudden changes. So rather than painting only the damaged panel, the colour is often blended into the neighbouring panels. That makes the transition gradual, with no visible edge. It is a standard technique, especially with metallic and light colours, and it is why an estimate sometimes includes work on a panel that was not damaged."),
-            ("h2", "Light matters too"),
-            ("p", "The same colour can look different under workshop lighting, in the shade or in full sun. That is why comparisons are made in good light and, where possible, the result is checked in daylight. A well-equipped workshop, with a [[cabina-de-pintura|paint booth]] and proper lighting, can work with more confidence."),
-            ("quote", "A well-matched colour is one nobody notices. If the customer cannot tell which panel was painted, the job has been done right."),
-            ("nota", "In some cases, especially with heavily aged cars or special colours, a perfect match is hard to achieve. If that applies, we will explain it before we start."),
-            ("p", "At Green Car Service Tenerife we work with solid and metallic colours using eco-friendly «eco-balance» paint. Find out more about [colours and finishes](servicio-colores-y-acabados.html) or [ask for an estimate](presupuesto.html) for your repair."),
-        ],
-    },
-},
-{
-    "slug": "articulo-proteger-la-pintura-del-sol",
-    "cat": "chapa-pintura",
-    "fecha": "2025-07-15",
-    "es": {
-        "titulo": "Cómo proteger la pintura del sol de Tenerife",
-        "resumen": "La radiación solar intensa apaga el brillo y puede llegar a pelar el barniz. Hábitos sencillos para que la pintura de tu coche aguante más años.",
-        "cuerpo": [
-            ("p", "El sol es una de las grandes razones para vivir en el sur de Tenerife, pero para la pintura del coche es un enemigo constante. La radiación ultravioleta y el calor trabajan todos los días sobre el techo, el capó y el maletero, que son las superficies más horizontales y las que más castigo reciben."),
-            ("h2", "Qué le hace el sol a la pintura"),
-            ("p", "La capa que da la cara es el [[barniz|barniz]]. Está pensado precisamente para proteger el color, pero con los años la radiación lo va degradando. El proceso suele seguir unas fases reconocibles:"),
-            ("ol", [
-                "**Pérdida de brillo**: la pintura se ve más apagada, como sin vida.",
-                "**Decoloración**: el color pierde intensidad. Se nota mucho en rojos y en tonos oscuros.",
-                "**Barniz cuarteado o pelado**: aparecen manchas blanquecinas o zonas donde el barniz se levanta en escamas.",
-            ]),
-            ("p", "En las dos primeras fases, un [[pulido|pulido]] y una buena protección pueden recuperar bastante el aspecto. Cuando el barniz ya se ha pelado, no hay pulido que lo arregle: hay que repintar la zona."),
-            ("h2", "Aparcar con cabeza"),
-            ("p", "Es el consejo más sencillo y el que más ayuda:"),
-            ("ul", [
-                "Si puedes, usa garaje o aparcamiento cubierto.",
-                "En la calle, busca sombra, pero cuidado con algunos árboles: la resina y los excrementos de pájaro son agresivos con la pintura.",
-                "Si aparcas siempre en el mismo sitio y orientación, ten en cuenta hacia dónde da el sol las horas centrales.",
-                "Una funda de calidad, transpirable y bien ajustada, puede ayudar si el coche pasa mucho tiempo parado. Una funda que roce o atrape polvo puede hacer más mal que bien.",
-            ]),
-            ("h2", "Lavar bien, y a tiempo"),
-            ("p", "Los restos que se quedan sobre la pintura se «cuecen» con el calor. Excrementos de pájaro, insectos, resina o polvo de calima con humedad pueden marcar el barniz si se dejan días al sol. Retíralos pronto, con agua abundante y sin frotar en seco."),
-            ("ul", [
-                "Lava a la sombra y con la carrocería fría, no a mediodía con el capó ardiendo.",
-                "Usa champú específico para coches, no lavavajillas: quita las protecciones de la pintura.",
-                "Aclara primero para arrastrar el polvo y evitar rayar al pasar la esponja.",
-                "Seca con una microfibra limpia para evitar marcas de cal.",
-            ]),
-            ("h2", "Ceras y protecciones"),
-            ("p", "Una cera o un sellante crean una capa sacrificable sobre el barniz: se desgastan ellos antes que la pintura. Hay productos de muchos tipos y duraciones, así que sigue las indicaciones del fabricante del producto. Lo importante es la constancia: una protección aplicada cada cierto tiempo protege más que un tratamiento puntual que luego se olvida."),
-            ("h2", "No te olvides de faros y plásticos"),
-            ("p", "El sol no solo afecta a la pintura. Los faros de policarbonato se amarillean y se vuelven opacos, y los plásticos exteriores negros se quedan grisáceos. Los faros opacos iluminan peor, lo que ya es un tema de seguridad y puede dar problemas en la [[itv|ITV]]."),
-            ("nota", "Si el barniz ya está pelado, conviene no esperar: sin esa capa, el color queda expuesto y el deterioro se acelera."),
-            ("p", "En Green Car Service Tenerife podemos devolver el brillo con un [pulido y abrillantado](servicio-pulido-y-abrillantado.html), [restaurar los faros](servicio-restauracion-de-faros.html) o repintar la zona dañada. Nuestra pintura cuenta con [garantía vitalicia](servicio-garantia-vitalicia-en-pintura.html)."),
-        ],
-    },
-    "en": {
-        "titulo": "Protecting your paint from the Tenerife sun",
-        "resumen": "Strong sunshine dulls the shine and can eventually make the clear coat peel. Simple habits to help your car's paint last longer.",
-        "cuerpo": [
-            ("p", "The sun is one of the big reasons for living in the south of Tenerife, but for your car's paint it is a constant enemy. Ultraviolet radiation and heat work every day on the roof, bonnet and boot lid, which are the most horizontal surfaces and take the most punishment."),
-            ("h2", "What the sun does to paint"),
-            ("p", "The outermost layer is the [[barniz|clear coat]]. It is designed precisely to protect the colour, but over the years sunlight breaks it down. The process usually follows recognisable stages:"),
-            ("ol", [
-                "**Loss of gloss**: the paint looks duller, lifeless.",
-                "**Fading**: the colour loses intensity. It is very noticeable on reds and dark shades.",
-                "**Cracked or peeling clear coat**: whitish patches appear, or areas where the clear coat lifts in flakes.",
-            ]),
-            ("p", "In the first two stages, [[pulido|polishing]] and good protection can bring back much of the look. Once the clear coat has peeled, no amount of polishing will fix it: the area has to be repainted."),
-            ("h2", "Park wisely"),
-            ("p", "It is the simplest tip and the one that helps most:"),
-            ("ul", [
-                "Use a garage or covered parking if you can.",
-                "On the street, look for shade, but be careful with some trees: sap and bird droppings are harsh on paint.",
-                "If you always park in the same spot and direction, think about where the sun falls in the middle of the day.",
-                "A good-quality cover, breathable and well fitted, can help if the car is left unused for long periods. A cover that rubs or traps dust can do more harm than good.",
-            ]),
-            ("h2", "Wash properly, and promptly"),
-            ("p", "Whatever sits on the paint gets 'baked' by the heat. Bird droppings, insects, sap or calima dust mixed with moisture can mark the clear coat if left for days in the sun. Remove them quickly, with plenty of water and without rubbing them dry."),
-            ("ul", [
-                "Wash in the shade with the bodywork cool, not at midday with a scorching bonnet.",
-                "Use a proper car shampoo, not washing-up liquid: it strips the paint's protection.",
-                "Rinse first to lift the dust so the sponge does not scratch.",
-                "Dry with a clean microfibre cloth to avoid water spots.",
-            ]),
-            ("h2", "Waxes and sealants"),
-            ("p", "A wax or sealant creates a sacrificial layer on top of the clear coat: it wears away before the paint does. There are many types with different lifespans, so follow the product maker's instructions. What matters is consistency: protection applied regularly does more than a one-off treatment that is then forgotten. A simple test: if water no longer beads on the paint after a wash, the protection has probably worn off."),
-            ("h2", "Do not forget headlights and plastics"),
-            ("p", "The sun does not only affect paint. Polycarbonate headlights turn yellow and cloudy, and black exterior plastics go grey. Cloudy headlights give less light, which is a safety matter and can cause problems at the [[itv|ITV (MOT)]]."),
-            ("nota", "If the clear coat is already peeling, do not wait: without that layer the colour is exposed and deterioration speeds up."),
-            ("p", "At Green Car Service Tenerife we can bring back the shine with [polishing](servicio-pulido-y-abrillantado.html), [restore your headlights](servicio-restauracion-de-faros.html) or repaint the damaged area. Our paintwork comes with a [lifetime paint warranty](servicio-garantia-vitalicia-en-pintura.html)."),
-        ],
-    },
-},
-{
-    "slug": "articulo-salitre-y-corrosion-en-coches-de-costa",
-    "cat": "chapa-pintura",
-    "fecha": "2026-02-03",
-    "es": {
-        "titulo": "El salitre y la corrosión en coches de costa",
-        "resumen": "Vivir cerca del mar tiene un precio para la chapa. Dónde ataca el salitre, cómo detectar el óxido a tiempo y qué puedes hacer para frenarlo.",
-        "cuerpo": [
-            ("p", "Buena parte de la vida en el sur de Tenerife pasa cerca del mar. Y el ambiente marino, con su humedad y las partículas de sal que lleva el viento, es uno de los factores que más aceleran la [[corrosion|corrosión]] de un coche. No hace falta aparcar en primera línea de playa: el salitre llega bastante hacia el interior."),
-            ("h2", "Por qué la sal acelera el óxido"),
-            ("p", "El óxido aparece cuando el acero está en contacto con oxígeno y humedad. La sal disuelta en esa humedad hace que la reacción vaya más rápido. Además, la sal atrae la humedad del aire, así que las superficies con restos de salitre tardan más en secarse. Es la combinación perfecta para que el metal se deteriore."),
-            ("h2", "Dónde suele empezar"),
-            ("ul", [
-                "**Bajos del coche**: suelo, largueros, anclajes de [[suspension|suspensión]] y sistema de escape.",
-                "**Pasos de rueda**: se acumulan barro, arena y sal.",
-                "**Bordes inferiores de puertas y portón**, donde se queda el agua si los desagües están tapados.",
-                "**Zonas con la pintura dañada**: arañazos, picotazos de piedras o golpes que dejan la chapa a la vista.",
-                "**Tornillería, frenos y elementos metálicos** sin pintar.",
-            ]),
-            ("h2", "Cómo detectarlo a tiempo"),
-            ("p", "La corrosión suele avisar antes de ser grave. Fíjate en:"),
-            ("ul", [
-                "Pequeñas burbujas o ampollas bajo la pintura: suele ser óxido avanzando por debajo.",
-                "Manchas marrones o anaranjadas en bordes, juntas o alrededor de molduras.",
-                "Pintura que se levanta en escamas en los bajos de las puertas.",
-                "Ruidos metálicos o holguras en el escape por soportes oxidados.",
-            ]),
-            ("p", "Cuanto antes se trate, más sencilla es la reparación. Una burbuja pequeña se puede sanear; una zona perforada puede requerir cambiar o soldar chapa."),
-            ("h2", "Hábitos que ayudan"),
-            ("ol", [
-                "**Lava el coche con regularidad**, incluidos los bajos y los pasos de rueda, sobre todo después de ir a la playa o de circular por la costa con viento.",
-                "**Aclara con agua dulce abundante**. Un lavado sin aclarado deja restos de sal.",
-                "**Revisa los desagües** de puertas y del hueco del techo solar si lo tienes, para que el agua no se quede dentro.",
-                "**Repara pronto los arañazos** que llegan a la chapa. Mientras tanto, protégelos para que no les dé la humedad.",
-                "**Aspira la arena del interior**: la que entra con toallas y sillas de playa acaba en moquetas y rincones y retiene humedad.",
-            ]),
-            ("h2", "Tratamientos de protección"),
-            ("p", "Además de la protección de fábrica, se pueden aplicar tratamientos anticorrosión en bajos y en cavidades interiores de la [[carroceria|carrocería]], como los huecos de largueros y puertas. Crean una barrera frente a la humedad y la sal. No hacen al coche inmune, pero ayudan a alargar la vida de la chapa, sobre todo en coches que viven junto al mar. Qué tratamiento conviene depende del coche, de su edad y de su estado."),
-            ("quote", "El óxido no descansa. Lo que hoy es una mancha en el bajo de una puerta, en unos meses puede ser un agujero."),
-            ("nota", "Si la corrosión afecta a elementos estructurales o de anclaje, no es solo estética: puede afectar a la seguridad del coche y conviene revisarla cuanto antes."),
-            ("p", "En Green Car Service Tenerife revisamos el estado de la chapa y aplicamos el [tratamiento anticorrosión](servicio-tratamiento-anticorrosion.html) adecuado a cada caso. Si ya hay daños, nos encargamos de la [reparación de chapa](servicio-reparacion-de-chapa.html). [Pide cita](pedir-cita.html) y le echamos un vistazo."),
-        ],
-    },
-    "en": {
-        "titulo": "Salt air and corrosion on coastal cars",
-        "resumen": "Living near the sea comes at a price for your bodywork. Where salt attacks, how to spot rust early and what you can do to slow it down.",
-        "cuerpo": [
-            ("p", "Much of life in the south of Tenerife happens close to the sea. And the marine environment, with its humidity and the salt particles carried by the wind, is one of the factors that most speeds up [[corrosion|corrosion]] on a car. You do not need to park on the seafront: salt air travels a fair way inland."),
-            ("h2", "Why salt speeds up rust"),
-            ("p", "Rust forms when steel is in contact with oxygen and moisture. Salt dissolved in that moisture makes the reaction go faster. Salt also draws moisture from the air, so surfaces with salt residue take longer to dry. It is the perfect combination for metal to deteriorate."),
-            ("h2", "Where it usually starts"),
-            ("ul", [
-                "**Underside**: floor pan, chassis rails, [[suspension|suspension]] mountings and exhaust system.",
-                "**Wheel arches**: mud, sand and salt build up there.",
-                "**Bottom edges of doors and tailgate**, where water collects if the drain holes are blocked.",
-                "**Areas with damaged paint**: scratches, stone chips or dents that leave bare metal.",
-                "**Bolts, brakes and unpainted metal parts.**",
-            ]),
-            ("h2", "How to spot it early"),
-            ("p", "Corrosion usually gives warning before it becomes serious. Look out for:"),
-            ("ul", [
-                "Small bubbles or blisters under the paint: often rust creeping underneath.",
-                "Brown or orange stains on edges, seams or around trims.",
-                "Paint flaking off along the bottom of the doors.",
-                "Metallic rattles or play in the exhaust from rusty brackets.",
-            ]),
-            ("p", "The sooner it is dealt with, the simpler the repair. A small bubble can be treated; a rusted-through area may need metal replaced or welded."),
-            ("h2", "Habits that help"),
-            ("ol", [
-                "**Wash the car regularly**, including the underside and wheel arches, especially after a trip to the beach or driving along the coast on a windy day.",
-                "**Rinse with plenty of fresh water.** A wash without a proper rinse leaves salt behind.",
-                "**Check the drain holes** in the doors and around the sunroof if you have one, so water does not collect inside.",
-                "**Repair scratches down to bare metal promptly.** In the meantime, protect them from moisture.",
-                "**Vacuum sand out of the interior**: sand brought in on towels and beach chairs ends up in carpets and corners and holds moisture.",
-            ]),
-            ("h2", "Protective treatments"),
-            ("p", "On top of factory protection, anti-corrosion treatments can be applied to the underside and to inner cavities of the [[carroceria|bodywork]], such as inside chassis rails and doors. They create a barrier against moisture and salt. They do not make the car immune, but they help extend the life of the metal, especially on cars that live by the sea. Which treatment suits depends on the car, its age and its condition."),
-            ("quote", "Rust never rests. Today's stain at the bottom of a door can be a hole in a few months."),
-            ("nota", "If corrosion affects structural parts or mountings, it is not just cosmetic: it can affect the car's safety and should be checked as soon as possible."),
-            ("p", "At Green Car Service Tenerife we check the condition of the bodywork and apply the right [anti-corrosion treatment](servicio-tratamiento-anticorrosion.html) for each case. If there is already damage, we take care of the [panel repair](servicio-reparacion-de-chapa.html). [Book an appointment](pedir-cita.html) and we will take a look."),
-        ],
-    },
-},
-]
-
-# ---------------------------------------------------------------- seguridad vial
-ARTICULOS += [
-{
-    "slug": "articulo-neumaticos-y-presion",
-    "cat": "seguridad-vial",
-    "fecha": "2023-10-12",
-    "es": {
-        "titulo": "Neumáticos y presión: lo que conviene revisar",
-        "resumen": "Los neumáticos son lo único que une el coche al asfalto. Cómo comprobar la presión, el dibujo y la edad, y qué señales indican que toca cambiarlos.",
-        "cuerpo": [
-            ("p", "Frenar, girar, acelerar: todo lo que hace el coche pasa por cuatro superficies de goma del tamaño de una mano. Por eso el estado del [[neumatico|neumático]] es una de las cosas que más influyen en la seguridad, y también una de las más fáciles de revisar tú mismo."),
-            ("h2", "La presión correcta"),
-            ("p", "La presión adecuada no la decide el neumático sino el coche. El fabricante la indica en una etiqueta, normalmente en el marco de la puerta del conductor, en la tapa del depósito de combustible o en el manual. Suele haber valores distintos según la carga: no es lo mismo ir solo que con cuatro personas y el maletero lleno para una semana de vacaciones."),
-            ("ul", [
-                "**Mídela en frío**, antes de hacer muchos kilómetros. Con el neumático caliente la lectura sale más alta.",
-                "**Hazlo una vez al mes** y antes de un viaje largo o con carga.",
-                "**No te olvides de la rueda de repuesto**, si la llevas.",
-                "Si una rueda pierde presión una y otra vez, busca la causa: un clavo, una válvula o una llanta dañada.",
-            ]),
-            ("h2", "Qué pasa si la presión no es la correcta"),
-            ("p", "Con **poca presión**, el neumático se deforma más, se calienta, se gasta por los hombros, el coche consume más y la respuesta de la dirección empeora. En casos extremos puede llegar a dañarse la estructura del neumático. Con **demasiada presión**, se apoya menos superficie, se gasta por el centro y el agarre disminuye, sobre todo en mojado."),
-            ("h2", "El dibujo"),
-            ("p", "El dibujo evacua el agua para que la goma siga en contacto con el asfalto. En España, la profundidad mínima legal es de 1,6 mm, y muchos neumáticos llevan unos pequeños resaltes dentro de las ranuras, los testigos de desgaste, que marcan ese límite. Pero que sea legal no significa que sea óptimo: con poco dibujo, la capacidad de evacuar agua baja mucho y el riesgo de aquaplaning aumenta."),
-            ("h2", "Desgaste irregular: una pista de otros problemas"),
-            ("p", "Mira cómo se gasta cada rueda. El desgaste irregular suele señalar algo más:"),
-            ("ul", [
-                "Gastado solo por un lado: posible problema de [[alineacion|alineación de la dirección]].",
-                "Gastado por los dos hombros: falta de presión habitual.",
-                "Gastado por el centro: exceso de presión.",
-                "Zonas con «calvas» o dientes de sierra: posibles [[amortiguador|amortiguadores]] o elementos de suspensión en mal estado.",
-            ]),
-            ("h2", "La edad del neumático"),
-            ("p", "La goma envejece aunque no se use. En el flanco hay un código con cuatro cifras que indica la semana y el año de fabricación: por ejemplo, 2321 sería la semana 23 de 2021. Con el tiempo, el sol y el calor, la goma se endurece y pueden aparecer grietas finas en los flancos o entre los tacos. Un neumático endurecido agarra menos aunque tenga dibujo. En un clima con tanto sol como el de Tenerife, merece la pena vigilarlo, sobre todo en coches que duermen en la calle."),
-            ("h2", "Cuándo cambiarlos"),
-            ("ol", [
-                "Cuando el dibujo se acerque al límite legal, y mejor antes si conduces mucho con lluvia.",
-                "Si hay cortes, bultos o deformaciones en los flancos: no se deben reparar, hay que sustituir.",
-                "Si hay grietas por envejecimiento.",
-                "Lo ideal es cambiarlos por parejas en el mismo eje, con la misma medida y características.",
-            ]),
-            ("nota", "Las medidas y los índices de carga y velocidad deben coincidir con los que figuran en la documentación del coche. Montar otros puede dar problemas en la ITV y afectar al comportamiento."),
-            ("p", "Si notas vibraciones, que el coche tira hacia un lado o un desgaste raro, en Green Car Service Tenerife revisamos la [suspensión y dirección](servicio-suspension-y-direccion.html) para encontrar la causa. Puedes [pedir cita](pedir-cita.html) cuando te venga bien."),
-        ],
-    },
-    "en": {
-        "titulo": "Tyres and pressures: what to check",
-        "resumen": "Tyres are the only thing connecting your car to the road. How to check pressure, tread and age, and the signs that it is time to replace them.",
-        "cuerpo": [
-            ("p", "Braking, steering, accelerating: everything your car does goes through four patches of rubber the size of your hand. That is why the condition of each [[neumatico|tyre]] has such a big effect on safety, and it is also one of the easiest things to check yourself."),
-            ("h2", "The right pressure"),
-            ("p", "The correct pressure is set by the car, not by the tyre. The manufacturer shows it on a label, usually on the driver's door frame, inside the fuel filler flap or in the manual. There are often different values depending on load: driving alone is not the same as carrying four people and a boot packed for a week's holiday."),
-            ("ul", [
-                "**Check it cold**, before driving any distance. A warm tyre gives a higher reading.",
-                "**Do it once a month**, and before a long journey or when carrying a load.",
-                "**Do not forget the spare**, if you have one.",
-                "If one tyre keeps losing pressure, find out why: a nail, a valve or a damaged wheel rim.",
-            ]),
-            ("h2", "What happens when the pressure is wrong"),
-            ("p", "With **too little pressure**, the tyre flexes more, heats up, wears on the shoulders, fuel consumption rises and steering response gets worse. In extreme cases the tyre's structure can be damaged. With **too much pressure**, less rubber touches the road, the centre wears faster and grip drops, especially in the wet."),
-            ("h2", "Tread depth"),
-            ("p", "The tread clears water so the rubber stays in contact with the road. In Spain the legal minimum tread depth is 1.6 mm, and many tyres have small raised bars inside the grooves, called tread wear indicators, that mark that limit. But legal does not mean ideal: with little tread left, the tyre's ability to clear water drops sharply and the risk of aquaplaning increases."),
-            ("h2", "Uneven wear: a clue to other problems"),
-            ("p", "Look at how each tyre is wearing. Uneven wear usually points to something else:"),
-            ("ul", [
-                "Worn on one edge only: a possible [[alineacion|wheel alignment]] problem.",
-                "Worn on both shoulders: regularly under-inflated.",
-                "Worn in the centre: over-inflated.",
-                "Patchy or saw-tooth wear: possibly worn [[amortiguador|shock absorbers]] or suspension parts.",
-            ]),
-            ("h2", "Tyre age"),
-            ("p", "Rubber ages even when it is not used. On the sidewall there is a four-digit code showing the week and year of manufacture: for example, 2321 would be week 23 of 2021. With time, sun and heat, the rubber hardens and fine cracks can appear on the sidewalls or between the tread blocks. A hardened tyre grips less even if it still has tread. In a climate as sunny as Tenerife's, it is worth keeping an eye on, especially on cars parked outdoors."),
-            ("h2", "When to replace them"),
-            ("ol", [
-                "When the tread is approaching the legal limit, and sooner if you drive a lot in the rain.",
-                "If there are cuts, bulges or deformation on the sidewalls: these should not be repaired, the tyre must be replaced.",
-                "If there is cracking from age.",
-                "Ideally, replace them in pairs on the same axle, with the same size and specification.",
-            ]),
-            ("nota", "Tyre sizes and load and speed ratings must match those in the car's documents. Fitting others can cause problems at the ITV and affect handling."),
-            ("p", "If you notice vibration, the car pulling to one side or odd wear, at Green Car Service Tenerife we check the [suspension and steering](servicio-suspension-y-direccion.html) to find the cause. You can [book an appointment](pedir-cita.html) whenever suits you."),
-        ],
-    },
-},
-{
-    "slug": "articulo-ninos-en-el-coche-sistemas-de-retencion",
-    "cat": "seguridad-vial",
-    "fecha": "2025-01-20",
-    "es": {
-        "titulo": "Niños en el coche: sistemas de retención infantil",
-        "resumen": "Qué dice la norma en España, cómo elegir la silla adecuada y los errores de instalación más comunes. También si vienes de visita y alquilas coche.",
-        "cuerpo": [
-            ("p", "El cinturón de seguridad está diseñado para adultos. En un niño, la banda puede quedar a la altura del cuello o del abdomen y, en un impacto, hacer más daño que bien. Por eso existen los sistemas de retención infantil, conocidos como sillitas, elevadores o capazos. Usarlos bien es una de las cosas que más protegen a los pequeños en el coche."),
-            ("h2", "Qué dice la norma en España"),
-            ("p", "La regla general es que los menores de **135 cm de estatura** deben viajar en un sistema de retención adecuado a su talla y peso, y hacerlo en los asientos traseros. Hay excepciones concretas, por ejemplo cuando el coche no tiene asientos traseros o cuando estos ya están ocupados por otros niños con su propio sistema. Si un niño va delante en una silla orientada hacia atrás, el [[airbag|airbag]] frontal del acompañante debe estar desactivado."),
-            ("p", "Entre 135 y 150 cm pueden usar el cinturón del coche o seguir en un sistema de retención. Muchas veces conviene seguir con el elevador hasta que el cinturón quede bien colocado: por encima de la clavícula, no del cuello, y sobre la cadera, no sobre la tripa."),
-            ("h2", "Cómo elegir la silla"),
-            ("ul", [
-                "Debe estar **homologada** según la normativa europea. En la etiqueta verás la referencia de homologación; las más recientes siguen la norma i-Size (R129), que clasifica las sillas por estatura.",
-                "Elige según la **estatura y el peso** del niño, no solo la edad.",
-                "Comprueba que es **compatible con tu coche**. No todas las sillas encajan bien en todos los asientos.",
-                "Si el coche tiene anclajes **ISOFIX**, facilitan una instalación correcta y reducen errores.",
-            ]),
-            ("h2", "A contramarcha, mejor"),
-            ("p", "Para los más pequeños, viajar mirando hacia atrás es la opción más protectora: en un choque frontal, el respaldo reparte la fuerza por toda la espalda y sujeta la cabeza, que en los bebés pesa mucho en proporción al cuerpo. Las recomendaciones de seguridad vial aconsejan mantener la contramarcha el mayor tiempo posible, dentro de los límites de la silla."),
-            ("h2", "Errores frecuentes"),
-            ("ol", [
-                "**Arneses flojos.** Si puedes pellizcar la cinta a la altura del hombro, está demasiado suelta.",
-                "**Abrigos gruesos** debajo del arnés: crean holgura. Mejor quitar el abrigo y taparlo encima.",
-                "**Silla mal anclada**, que se mueve más de lo que indica el fabricante.",
-                "**Cinturón mal pasado** por las guías del elevador.",
-                "**Pasar al niño a la siguiente etapa demasiado pronto.**",
-                "**Objetos sueltos** en el habitáculo: en un frenazo, cualquier cosa puede convertirse en un proyectil.",
-            ]),
-            ("h2", "Si vienes de visita y alquilas coche"),
-            ("p", "Muchos visitantes del sur de Tenerife alquilan coche con niños. Reserva la silla con antelación, revisa al recogerla que es adecuada para la talla de tu hijo y que está en buen estado, y tómate unos minutos para instalarla con calma siguiendo el manual. Si traes tu propia silla, comprueba que es compatible con el coche de alquiler."),
-            ("nota", "La normativa puede cambiar y cada silla tiene sus propias instrucciones. Ante la duda, consulta la información de la DGT y el manual del fabricante de la silla y del coche."),
-            ("h2", "El airbag del acompañante"),
-            ("p", "Si alguna vez necesitas llevar una silla a contramarcha delante, aprende cómo se desactiva el airbag en tu coche: en unos es un interruptor con llave, en otros se hace desde el menú. Comprueba siempre en el cuadro el indicador que confirma que está desactivado, y vuelve a activarlo cuando viaje un adulto. Si se queda encendido el [[testigo-de-averia|testigo de avería]] del airbag, el sistema puede no funcionar como debe y conviene revisarlo pronto."),
-            ("p", "Si dejas tu coche en Green Car Service Tenerife y usas nuestro [[vehiculo-de-sustitucion|vehículo de sustitución]], recuerda pasar la silla de un coche a otro. Y si tienes cualquier aviso del airbag o de los cinturones, revisamos el sistema en nuestro servicio de [testigos de avería](servicio-testigos-de-averia.html). Puedes [pedir cita](pedir-cita.html) por teléfono o WhatsApp."),
-        ],
-    },
-    "en": {
-        "titulo": "Children in the car: child restraint systems",
-        "resumen": "What Spanish rules say, how to choose the right seat and the most common fitting mistakes. Plus tips if you are visiting and hiring a car.",
-        "cuerpo": [
-            ("p", "Seatbelts are designed for adults. On a child, the belt can sit across the neck or the stomach and, in a crash, do more harm than good. That is why child restraint systems exist: child seats, booster seats and baby carriers. Using them properly is one of the things that best protects children in the car."),
-            ("h2", "What the rules say in Spain"),
-            ("p", "The general rule is that children under **135 cm tall** must travel in a restraint system suited to their height and weight, and must sit in the rear seats. There are specific exceptions, for example when the car has no rear seats or when they are already occupied by other children in their own restraints. If a child travels in the front in a rear-facing seat, the passenger's front [[airbag|airbag]] must be switched off."),
-            ("p", "Between 135 and 150 cm, children can use the car's seatbelt or stay in a restraint system. It is often best to keep using a booster until the belt fits properly: across the collarbone, not the neck, and over the hips, not the tummy."),
-            ("h2", "Choosing a seat"),
-            ("ul", [
-                "It must be **approved** under European rules. The label shows the approval reference; the most recent seats follow the i-Size standard (R129), which classifies seats by the child's height.",
-                "Choose according to the child's **height and weight**, not just age.",
-                "Check it is **compatible with your car**. Not every seat fits well in every vehicle.",
-                "If your car has **ISOFIX** anchor points, they make correct fitting easier and reduce mistakes.",
-            ]),
-            ("h2", "Rear-facing is safer"),
-            ("p", "For the youngest children, travelling rear-facing is the most protective option: in a frontal crash, the seat back spreads the force across the whole back and supports the head, which in babies is heavy relative to the body. Road safety advice is to keep children rear-facing for as long as possible, within the seat's limits."),
-            ("h2", "Common mistakes"),
-            ("ol", [
-                "**Loose harness straps.** If you can pinch the strap at shoulder height, it is too loose.",
-                "**Thick coats** under the harness: they create slack. Take the coat off and put it over the child instead.",
-                "**Seat not firmly fitted**, moving more than the manufacturer allows.",
-                "**Seatbelt routed wrongly** through the booster's guides.",
-                "**Moving the child up to the next stage too early.**",
-                "**Loose objects** in the cabin: under hard braking, anything can become a projectile.",
-            ]),
-            ("h2", "Visiting and hiring a car"),
-            ("p", "Many visitors to the south of Tenerife hire a car and travel with children. Book the seat in advance, check when you collect it that it suits your child's size and is in good condition, and take a few minutes to fit it calmly following the instructions. If you bring your own seat, check it is compatible with the hire car."),
-            ("nota", "Rules can change and every seat has its own instructions. If in doubt, check the DGT (Spanish traffic authority) information and the manuals for both the seat and the car."),
-            ("h2", "The passenger airbag"),
-            ("p", "If you ever need to fit a rear-facing seat in the front, learn how the airbag is switched off in your car: on some it is a key switch, on others it is done through the menu. Always check the dashboard indicator confirming it is off, and switch it back on when an adult sits there. If the airbag [[testigo-de-averia|warning light]] stays on, the system may not work as it should and should be checked soon."),
-            ("p", "If you leave your car with Green Car Service Tenerife and use our [[vehiculo-de-sustitucion|courtesy car]], remember to move the child seat across. And if you have any airbag or seatbelt warning, we check the system through our [warning light](servicio-testigos-de-averia.html) service. You can [book an appointment](pedir-cita.html) by phone or WhatsApp."),
-        ],
-    },
-},
-]
-
-ARTICULOS += [
-{
-    "slug": "articulo-fatiga-al-volante",
-    "cat": "seguridad-vial",
-    "fecha": "2026-09-08",
-    "es": {
-        "titulo": "Fatiga al volante: cómo reconocerla y evitarla",
-        "resumen": "El cansancio llega poco a poco y engaña. Las señales de alarma, los mitos que no funcionan y lo único que de verdad lo soluciona: parar y descansar.",
-        "cuerpo": [
-            ("p", "La fatiga es traicionera porque no se nota de golpe. Empiezas un trayecto bien y, sin darte cuenta, tus reacciones se vuelven más lentas, te cuesta mantener la atención y tomas peores decisiones. En el peor de los casos llega el microsueño: unos segundos en los que el cerebro se «desconecta» con los ojos casi abiertos. A velocidad de autovía, en esos segundos el coche recorre muchos metros sin control."),
-            ("h2", "Señales de alarma"),
-            ("p", "Si notas cualquiera de estas señales, tu cuerpo te está pidiendo parar:"),
-            ("ul", [
-                "Bostezos frecuentes y parpadeo pesado.",
-                "Picor de ojos o sensación de tener que frotártelos.",
-                "Te cuesta mantener la cabeza erguida.",
-                "No recuerdas los últimos kilómetros.",
-                "Te pasas una salida o no ves una señal.",
-                "Te desvías del carril o pisas la línea sin querer.",
-                "Cambias de velocidad sin motivo o te acercas demasiado al coche de delante.",
-            ]),
-            ("h2", "Situaciones de más riesgo"),
-            ("ul", [
-                "Conducir después de dormir poco o mal.",
-                "Las primeras horas de la tarde, después de comer, y la madrugada.",
-                "Trayectos largos y monótonos, como una autovía recta con poco tráfico.",
-                "Volver de un día de playa o de montaña: el sol, el calor y el esfuerzo cansan más de lo que parece.",
-                "Después de un vuelo largo o con cambio de hora, algo habitual en quien acaba de aterrizar en el aeropuerto del sur y recoge un coche de alquiler.",
-                "Tomar medicamentos que producen somnolencia. Mira el prospecto: muchos llevan un pictograma de advertencia para la conducción.",
-            ]),
-            ("h2", "Lo que no funciona"),
-            ("p", "Bajar la ventanilla, subir la música o poner el aire frío te despejan unos minutos, pero no quitan el sueño. El café o las bebidas con cafeína pueden ayudar un rato, aunque tardan en hacer efecto y no sustituyen al descanso. Hablar con el acompañante ayuda, pero tampoco es la solución si el cuerpo pide dormir."),
-            ("h2", "Lo que sí funciona"),
-            ("ol", [
-                "**Descansar bien antes de salir**, sobre todo si el viaje es largo.",
-                "**Parar con regularidad.** La recomendación habitual de la DGT es hacer una pausa cada dos horas o unos 200 km, aunque no te sientas cansado.",
-                "**Si notas las señales, para ya**, en un lugar seguro. Una siesta corta, de unos 15 o 20 minutos, puede marcar la diferencia.",
-                "**Comer ligero** y beber agua. Las comidas copiosas dan sueño.",
-                "**Compartir la conducción** en trayectos largos, si es posible.",
-            ]),
-            ("h2", "Un coche en buen estado también ayuda"),
-            ("p", "Conducir cansado ya es difícil; hacerlo con un coche que no responde bien lo es más. Un [[aire-acondicionado|aire acondicionado]] que no funciona convierte el habitáculo en un horno en verano, y el calor aumenta la somnolencia. Unas escobillas gastadas o unos faros opacos obligan a forzar la vista. Y muchos coches recientes incorporan sistemas [[adas|ADAS]] como el aviso de salida de carril o el detector de fatiga: son una ayuda útil, pero no sustituyen a tu atención ni a una parada a tiempo."),
-            ("quote", "Llegar diez minutos más tarde no es un problema. No llegar sí lo es."),
-            ("nota", "Si tienes somnolencia frecuente durante el día aunque duermas suficiente, coméntalo con tu médico: algunos trastornos del sueño afectan a la conducción y tienen tratamiento."),
-            ("p", "Si tu coche ha tenido un golpe en la luna o en el frontal, recuerda que tras algunas reparaciones es necesario un [[calibrado-adas|calibrado de ADAS]] para que esas ayudas funcionen bien. En Green Car Service Tenerife revisamos también el [aire acondicionado](servicio-aire-acondicionado.html) para que viajes cómodo. [Pide cita](pedir-cita.html) cuando lo necesites."),
-        ],
-    },
-    "en": {
-        "titulo": "Driver fatigue: how to recognise and avoid it",
-        "resumen": "Tiredness creeps up on you and is deceptive. The warning signs, the myths that do not work, and the only thing that really helps: stopping to rest.",
-        "cuerpo": [
-            ("p", "Fatigue is treacherous because it does not hit you all at once. You start a journey feeling fine and, without noticing, your reactions slow down, it gets harder to stay focused and you make worse decisions. At worst comes the microsleep: a few seconds when the brain 'switches off' with the eyes almost open. At motorway speed, the car covers a long distance out of control in those seconds."),
-            ("h2", "Warning signs"),
-            ("p", "If you notice any of these signs, your body is telling you to stop:"),
-            ("ul", [
-                "Frequent yawning and heavy blinking.",
-                "Itchy eyes or wanting to rub them.",
-                "Struggling to keep your head up.",
-                "Not remembering the last few kilometres.",
-                "Missing an exit or a road sign.",
-                "Drifting out of your lane or touching the line without meaning to.",
-                "Changing speed for no reason or getting too close to the car in front.",
-            ]),
-            ("h2", "Higher-risk situations"),
-            ("ul", [
-                "Driving after too little or poor sleep.",
-                "Early afternoon, after lunch, and the small hours of the night.",
-                "Long, monotonous drives, such as a straight motorway with little traffic.",
-                "Coming back from a day at the beach or in the mountains: sun, heat and exercise are more tiring than they seem.",
-                "After a long flight or a time-zone change, common for anyone landing at Tenerife South airport and picking up a hire car.",
-                "Taking medicines that cause drowsiness. Check the leaflet: in Spain many carry a warning pictogram about driving.",
-            ]),
-            ("h2", "What does not work"),
-            ("p", "Opening the window, turning up the music or blasting cold air will perk you up for a few minutes, but they do not cure sleepiness. Coffee or caffeinated drinks can help for a while, although they take time to kick in and are no substitute for rest. Chatting to a passenger helps, but it is not the answer if your body needs sleep."),
-            ("h2", "What does work"),
-            ("ol", [
-                "**Get a good rest before setting off**, especially for a long trip.",
-                "**Stop regularly.** The usual advice from the DGT, Spain's traffic authority, is to take a break every two hours or around 200 km, even if you do not feel tired.",
-                "**If you notice the signs, stop now**, somewhere safe. A short nap of around 15 to 20 minutes can make all the difference.",
-                "**Eat light** and drink water. Heavy meals make you drowsy.",
-                "**Share the driving** on long journeys if you can.",
-            ]),
-            ("h2", "A car in good condition helps too"),
-            ("p", "Driving tired is hard enough; doing it in a car that does not respond well is harder. [[aire-acondicionado|Air conditioning]] that does not work turns the cabin into an oven in summer, and heat increases drowsiness. Worn wiper blades or cloudy headlights make you strain your eyes. And many recent cars include [[adas|ADAS]] such as lane departure warning or driver fatigue detection: they are a useful aid, but they do not replace your attention or a timely stop."),
-            ("quote", "Arriving ten minutes late is not a problem. Not arriving at all is."),
-            ("nota", "If you often feel sleepy during the day despite getting enough sleep, talk to your doctor: some sleep disorders affect driving and can be treated."),
-            ("p", "If your car has had windscreen or front-end damage, remember that some repairs require [[calibrado-adas|ADAS calibration]] so those aids work properly. At Green Car Service Tenerife we also check your [air conditioning](servicio-aire-acondicionado.html) so you travel in comfort. [Book an appointment](pedir-cita.html) whenever you need to."),
-        ],
-    },
-},
-]
-
-# ---------------------------------------------------------------- conducir en Tenerife
-ARTICULOS += [
-{
-    "slug": "articulo-bajar-del-teide-con-freno-motor",
-    "cat": "tenerife",
-    "fecha": "2023-08-29",
-    "es": {
-        "titulo": "Bajar del Teide usando el freno motor",
-        "resumen": "Las bajadas largas de montaña calientan los frenos más de lo que imaginas. Cómo usar el freno motor para bajar del Teide con seguridad y sin castigar el coche.",
-        "cuerpo": [
-            ("p", "Subir al Teide es una de las excursiones imprescindibles de Tenerife. Las carreteras que llegan a Las Cañadas, como la TF-21, la TF-24 o la TF-38, salvan un gran desnivel en pocos kilómetros, con curvas continuas y pendientes pronunciadas. Subir exige al motor; bajar exige a los frenos. Y es en la bajada donde se cometen más errores."),
-            ("h2", "Qué le pasa a un freno que se calienta"),
-            ("p", "Los frenos convierten el movimiento en calor. En una frenada normal, [[pastillas-de-freno|pastillas]] y discos se calientan y se enfrían enseguida. En una bajada larga frenando sin parar, no les da tiempo a enfriarse. Cuando la temperatura sube demasiado aparece la **fatiga de frenos**: el coche frena cada vez menos aunque pises más fuerte. Además, el calor puede hacer que el [[liquido-de-frenos|líquido de frenos]], sobre todo si es viejo y ha absorbido humedad, llegue a hervir, y entonces el pedal se vuelve blando y largo."),
-            ("h2", "El freno motor, tu mejor aliado"),
-            ("p", "Cuando levantas el pie del acelerador con una marcha metida, el propio motor retiene el coche. Es el freno motor. Cuanto más corta es la marcha, más retiene. Usarlo en las bajadas permite controlar la velocidad frenando mucho menos, así que los frenos se mantienen frescos para cuando de verdad los necesitas."),
-            ("h2", "Cómo bajar, paso a paso"),
-            ("ol", [
-                "**Elige la marcha antes de empezar a bajar.** Una regla sencilla: baja en la misma marcha en la que subirías esa pendiente.",
-                "**Deja que el motor retenga.** Si aun así el coche coge velocidad, reduce una marcha más.",
-                "**Frena de forma firme y breve**, en lugar de ir rozando el pedal todo el rato. Así los frenos se enfrían entre frenada y frenada.",
-                "**Frena antes de las curvas**, en recta, y tómalas a velocidad constante.",
-                "**No bajes en punto muerto.** Pierdes el freno motor y dependes solo de los frenos.",
-            ]),
-            ("p", "No te preocupes si el motor sube de vueltas: dentro de la zona normal del cuentarrevoluciones, es precisamente lo que tiene que hacer. Lo que no debes es pasarte de la zona roja al reducir."),
-            ("h2", "Si tu coche es automático"),
-            ("p", "La mayoría de cambios automáticos permiten seleccionar marchas manualmente, con la palanca o con levas, o tienen una posición para bajadas. Úsala. Mira el manual de tu coche, porque cada fabricante lo resuelve de una forma. Si es un coche de alquiler y no lo conoces, dedica un minuto a averiguarlo antes de empezar la bajada."),
-            ("h2", "Señales de que los frenos están demasiado calientes"),
-            ("ul", [
-                "Olor a quemado.",
-                "Pedal más largo o esponjoso de lo normal.",
-                "El coche frena menos aunque pises más.",
-                "Humo en las ruedas.",
-            ]),
-            ("p", "Si notas algo de esto, para en un lugar seguro, fuera de la calzada, y deja que los frenos se enfríen un buen rato. No eches agua sobre los discos calientes."),
-            ("h2", "Otros consejos para la montaña"),
-            ("ul", [
-                "Hay muchos ciclistas en estas carreteras. Adelanta solo con visibilidad y dejando el espacio lateral que marca la norma.",
-                "Al subir, vigila la temperatura del motor, sobre todo en días de calor.",
-                "Puedes encontrar niebla o el mar de nubes: enciende las luces y reduce la velocidad.",
-                "Aparca solo en zonas habilitadas y no pares en las curvas para hacer fotos.",
-            ]),
-            ("nota", "Si después de una bajada notas vibraciones al frenar, ruidos o que el pedal ha cambiado, conviene revisar los frenos."),
-            ("p", "En Green Car Service Tenerife revisamos pastillas, discos y líquido en nuestro [servicio de frenos](servicio-frenos.html). Si tienes pensado subir al Teide y hace tiempo que no los miras, [pide cita](pedir-cita.html) antes."),
-        ],
-    },
-    "en": {
-        "titulo": "Coming down from Teide using engine braking",
-        "resumen": "Long mountain descents heat your brakes more than you might think. How to use engine braking to come down from Teide safely and without punishing the car.",
-        "cuerpo": [
-            ("p", "Driving up Mount Teide is one of the must-do trips in Tenerife. The roads to Las Cañadas, such as the TF-21, TF-24 or TF-38, climb a huge height in relatively few kilometres, with constant bends and steep gradients. Going up works the engine; coming down works the brakes. And it is on the way down that most mistakes are made."),
-            ("h2", "What happens when brakes overheat"),
-            ("p", "Brakes turn movement into heat. In normal braking, [[pastillas-de-freno|brake pads]] and discs heat up and cool down quickly. On a long descent with constant braking, they do not have time to cool. When the temperature climbs too high you get **brake fade**: the car stops less and less however hard you press. Heat can also make the [[liquido-de-frenos|brake fluid]] boil, especially if it is old and has absorbed moisture, and then the pedal goes soft and long."),
-            ("h2", "Engine braking is your best friend"),
-            ("p", "When you lift off the accelerator with a gear engaged, the engine itself holds the car back. That is engine braking. The lower the gear, the stronger the effect. Using it on descents lets you control your speed while braking much less, so the brakes stay cool for when you really need them."),
-            ("h2", "How to drive down, step by step"),
-            ("ol", [
-                "**Choose your gear before you start descending.** A simple rule: go down in the same gear you would use to climb that slope.",
-                "**Let the engine hold the car.** If it still picks up speed, drop another gear.",
-                "**Brake firmly and briefly**, rather than dragging the pedal all the way. That way the brakes cool between applications.",
-                "**Brake before the bends**, in a straight line, and take them at a steady speed.",
-                "**Never coast in neutral.** You lose engine braking and depend on the brakes alone.",
-            ]),
-            ("p", "Do not worry if the engine revs rise: within the normal range of the rev counter, that is exactly what it is meant to do. What you must avoid is going into the red zone when changing down."),
-            ("h2", "If your car is an automatic"),
-            ("p", "Most automatic gearboxes let you select gears manually, with the lever or paddles, or have a setting for descents. Use it. Check your car's manual, as every manufacturer does it differently. If it is a hire car you do not know, spend a minute finding out before you start the descent."),
-            ("h2", "Signs your brakes are too hot"),
-            ("ul", [
-                "A burning smell.",
-                "A longer or spongier pedal than usual.",
-                "The car stops less even though you press harder.",
-                "Smoke coming from the wheels.",
-            ]),
-            ("p", "If you notice any of these, stop somewhere safe, off the carriageway, and let the brakes cool for a good while. Do not pour water over hot discs."),
-            ("h2", "More mountain tips"),
-            ("ul", [
-                "There are many cyclists on these roads. Only overtake with clear visibility and leave the side clearance the rules require.",
-                "On the way up, keep an eye on engine temperature, especially on hot days.",
-                "You may run into fog or the famous sea of clouds: switch your lights on and slow down.",
-                "Only park in designated areas and never stop on bends to take photos.",
-            ]),
-            ("nota", "If after a descent you notice vibration when braking, noises or a change in the pedal, it is worth having the brakes checked."),
-            ("p", "At Green Car Service Tenerife our [brake service](servicio-frenos.html) covers pads, discs and fluid. If you are planning a drive up Teide and have not had them checked for a while, [book an appointment](pedir-cita.html) first."),
-        ],
-    },
-},
-]
-
-ARTICULOS += [
-{
-    "slug": "articulo-la-calima-y-los-filtros",
-    "cat": "tenerife",
-    "fecha": "2024-12-03",
-    "es": {
-        "titulo": "La calima y los filtros del coche",
-        "resumen": "El polvo en suspensión que llega del Sáhara se cuela por todas partes, también en el coche. Qué filtros sufren más, cómo limpiar sin rayar y cómo conducir con poca visibilidad.",
-        "cuerpo": [
-            ("p", "Quien vive en Canarias conoce bien la calima: esos días en que el cielo se vuelve amarillento, el aire se llena de polvo fino y todo, desde las terrazas hasta los coches, amanece cubierto de una capa ocre. Ese polvo, que llega arrastrado por el viento desde el continente africano, no solo ensucia. También afecta al funcionamiento del coche y a cómo conducimos."),
-            ("h2", "El filtro de aire del motor"),
-            ("p", "El motor necesita aire limpio para funcionar. El [[filtro-de-aire|filtro de aire]] retiene el polvo antes de que llegue a los cilindros, donde podría causar desgaste. En episodios de calima intensa, el filtro trabaja mucho más de lo habitual y puede saturarse antes de lo que marca el plan de mantenimiento. Un filtro colmatado deja pasar menos aire, lo que puede notarse en el rendimiento y en el consumo."),
-            ("p", "Por eso, si has pasado varios episodios de calima fuerte, conviene pedir que lo revisen, aunque no toque todavía cambiarlo. Es una comprobación sencilla."),
-            ("h2", "El filtro de habitáculo"),
-            ("p", "El [[filtro-de-habitaculo|filtro de habitáculo]] limpia el aire que entra al interior por las rejillas. Es el que protege tus pulmones del polvo mientras conduces, algo importante si tienes alergias o problemas respiratorios. Con la calima se llena rápido. Si notas que sale menos aire por las rejillas, que los cristales se empañan más o que hay olor a polvo, puede ser el momento de cambiarlo."),
-            ("p", "Durante un episodio de calima, activa la **recirculación del aire** para que no entre tanto polvo desde fuera, pero no la dejes puesta todo el trayecto: con el tiempo, el aire interior se carga y los cristales pueden empañarse."),
-            ("h2", "Otros puntos que sufren"),
-            ("ul", [
-                "**Radiador y condensador del aire acondicionado**: el polvo, mezclado con insectos y suciedad, se queda en sus láminas y dificulta que disipen el calor.",
-                "**Escobillas y parabrisas**: el polvo actúa como una lija fina.",
-                "**Pintura**: el polvo mezclado con la humedad de la noche forma una capa que, si se frota en seco, raya el [[barniz|barniz]].",
-            ]),
-            ("h2", "Cómo limpiar el coche después de la calima"),
-            ("ol", [
-                "**No pases la mano ni un trapo en seco** sobre la carrocería o los cristales: arrastrarías el polvo y dejarías microarañazos.",
-                "**No uses el limpiaparabrisas sin agua.** Echa primero abundante líquido limpiacristales para arrastrar el polvo.",
-                "**Aclara con mucha agua** antes de lavar, para que el polvo se vaya sin frotar.",
-                "Después, lava con champú y seca con microfibra limpia.",
-            ]),
-            ("h2", "Conducir con calima"),
-            ("p", "En episodios intensos, la visibilidad puede bajar bastante, sobre todo en carreteras abiertas o de montaña."),
-            ("ul", [
-                "Enciende las luces de cruce aunque sea de día, para ver y para que te vean.",
-                "Aumenta la distancia de seguridad y reduce la velocidad.",
-                "Las antiniebla solo se deben usar cuando las condiciones de visibilidad lo justifican: si las enciendes sin necesidad, deslumbras.",
-                "Ten en cuenta que la calima suele venir con calor y viento. Cuidado con las rachas laterales en zonas expuestas.",
-                "Si tienes problemas respiratorios, sigue las recomendaciones de las autoridades sanitarias y evita desplazamientos innecesarios.",
-            ]),
-            ("nota", "Tras un episodio de calima fuerte, es buena idea revisar el nivel de líquido limpiaparabrisas: se gasta mucho más de lo normal."),
-            ("p", "En Green Car Service Tenerife revisamos y cambiamos los filtros en nuestro servicio de [cambio de aceite y filtros](servicio-cambio-de-aceite-y-filtros.html), y cuidamos el sistema de [aire acondicionado](servicio-aire-acondicionado.html). Además, entregamos el coche limpio por dentro y por fuera. [Pide cita](pedir-cita.html) cuando pase la calima."),
-        ],
-    },
-    "en": {
-        "titulo": "Calima and your car's filters",
-        "resumen": "The dust carried from the Sahara gets everywhere, including into your car. Which filters suffer most, how to clean without scratching and how to drive in poor visibility.",
-        "cuerpo": [
-            ("p", "Anyone living in the Canary Islands knows calima: those days when the sky turns yellowish, the air fills with fine dust and everything, from terraces to cars, wakes up under an ochre coating. That dust, blown in from the African continent, does more than make things dirty. It also affects how your car works and how we drive."),
-            ("h2", "The engine air filter"),
-            ("p", "The engine needs clean air to run. The [[filtro-de-aire|air filter]] traps dust before it reaches the cylinders, where it could cause wear. During heavy calima, the filter works much harder than usual and can clog sooner than the maintenance schedule suggests. A clogged filter lets less air through, which can show up in performance and fuel consumption."),
-            ("p", "So if you have been through several strong calima episodes, it is worth having it checked, even if it is not yet due for replacement. It is a quick job."),
-            ("h2", "The cabin filter"),
-            ("p", "The [[filtro-de-habitaculo|cabin filter]] cleans the air coming into the interior through the vents. It is what protects your lungs from dust while you drive, which matters if you have allergies or breathing problems. During calima it fills up quickly. If you notice less air coming from the vents, windows misting up more or a dusty smell, it may be time to replace it."),
-            ("p", "During a calima episode, switch on **air recirculation** so less dust comes in from outside, but do not leave it on for the whole journey: over time, the air inside gets stale and the windows can mist up."),
-            ("h2", "Other parts that suffer"),
-            ("ul", [
-                "**Radiator and air conditioning condenser**: dust, mixed with insects and grime, lodges in their fins and makes it harder for them to shed heat.",
-                "**Wiper blades and windscreen**: the dust acts like fine sandpaper.",
-                "**Paintwork**: dust mixed with overnight moisture forms a film that, if rubbed dry, scratches the [[barniz|clear coat]].",
-            ]),
-            ("h2", "How to clean your car after calima"),
-            ("ol", [
-                "**Do not wipe the bodywork or windows dry** with your hand or a cloth: you would drag the dust and leave fine scratches.",
-                "**Do not use the wipers without washer fluid.** Spray plenty of screenwash first to carry the dust away.",
-                "**Rinse with lots of water** before washing, so the dust comes off without rubbing.",
-                "Then wash with car shampoo and dry with a clean microfibre cloth.",
-            ]),
-            ("h2", "Driving in calima"),
-            ("p", "In heavy episodes, visibility can drop considerably, especially on open or mountain roads."),
-            ("ul", [
-                "Switch on dipped headlights even in daytime, to see and be seen.",
-                "Increase your following distance and slow down.",
-                "Fog lights should only be used when visibility genuinely justifies it: switching them on unnecessarily dazzles other drivers.",
-                "Calima often comes with heat and wind. Watch out for side gusts in exposed areas.",
-                "If you have breathing problems, follow health authority advice and avoid unnecessary trips.",
-            ]),
-            ("nota", "After a strong calima episode, it is a good idea to check the screenwash level: it gets used up much faster than usual."),
-            ("p", "At Green Car Service Tenerife we check and replace filters in our [oil and filter change](servicio-cambio-de-aceite-y-filtros.html) service, and look after your [air conditioning](servicio-aire-acondicionado.html). We also hand your car back clean inside and out. [Book an appointment](pedir-cita.html) once the calima clears."),
-        ],
-    },
-},
-{
-    "slug": "articulo-conducir-con-lluvia-tras-meses-secos",
-    "cat": "tenerife",
-    "fecha": "2025-11-11",
-    "es": {
-        "titulo": "Conducir con lluvia tras meses secos",
-        "resumen": "En el sur de Tenerife llueve poco, y por eso las primeras lluvias sorprenden. Por qué el asfalto se vuelve tan resbaladizo y cómo adaptar tu conducción.",
-        "cuerpo": [
-            ("p", "En el sur de Tenerife pasamos buena parte del año sin ver una gota. Por eso, cuando llegan las primeras lluvias, muchos conductores se sorprenden: el coche no frena igual, las curvas se sienten distintas y parece que el asfalto se ha vuelto jabón. No es una impresión. Tiene una explicación."),
-            ("h2", "Por qué el firme resbala tanto"),
-            ("p", "Durante los meses secos, sobre la carretera se van acumulando restos de aceite, gasóleo, goma de los neumáticos, polvo y, en nuestro caso, la arena fina de la calima. Mientras está seco, apenas se nota. Pero con las primeras gotas, esa mezcla forma una película grasienta sobre el asfalto que reduce mucho la adherencia. Es especialmente peligrosa al principio del chaparrón: cuando llueve de forma continuada durante un rato, el agua termina arrastrando parte de esa suciedad."),
-            ("p", "Hay zonas donde el efecto es mayor: rotondas, cruces, zonas de frenada antes de semáforos, pasos de peatones pintados, tapas de alcantarilla y juntas metálicas de los puentes."),
-            ("h2", "Cómo adaptar la conducción"),
-            ("ol", [
-                "**Reduce la velocidad** más de lo que te parecería necesario, sobre todo en los primeros minutos de lluvia.",
-                "**Aumenta mucho la distancia de seguridad.** En mojado necesitas más metros para frenar.",
-                "**Suaviza todos los movimientos**: acelera, frena y gira con suavidad. Los cambios bruscos son los que hacen perder la adherencia.",
-                "**Frena en recta**, antes de la curva, no dentro de ella.",
-                "**Enciende las luces de cruce** para que te vean.",
-                "**Evita pisar las marcas viales** y las tapas metálicas, sobre todo al frenar o girar.",
-            ]),
-            ("h2", "Aquaplaning"),
-            ("p", "Cuando hay una capa de agua sobre la carretera, el [[neumatico|neumático]] puede no ser capaz de evacuarla y el coche «flota» sobre ella. Notarás que la dirección se vuelve ligera. Si te pasa, no frenes de golpe ni gires el volante con brusquedad: levanta el pie del acelerador, sujeta el volante recto y espera a que las ruedas recuperen el contacto. Llevar neumáticos con buen dibujo y la presión correcta reduce mucho este riesgo."),
-            ("h2", "Barrancos y zonas inundadas"),
-            ("p", "En Canarias, una lluvia fuerte puede convertir un barranco seco en un cauce de agua en muy poco tiempo. **Nunca cruces una carretera o un paso inundado**: no sabes la profundidad ni la fuerza de la corriente, y basta poca agua en movimiento para arrastrar un coche. Busca otra ruta o espera."),
-            ("h2", "Prepara el coche antes de las lluvias"),
-            ("p", "Después de meses sin usar ciertas cosas, conviene revisarlas:"),
-            ("ul", [
-                "**Escobillas**: con el sol y el calor la goma se reseca y se agrieta. Si dejan franjas o hacen ruido, cámbialas.",
-                "**Líquido limpiaparabrisas** con el depósito lleno.",
-                "**Neumáticos**: dibujo y presión.",
-                "**Luces**: que funcionen todas.",
-                "**Desempañado**: el [[aire-acondicionado|aire acondicionado]] ayuda mucho a desempañar los cristales porque seca el aire. Si no funciona bien, revísalo antes de que empiece la temporada de lluvias.",
-                "**Frenos**: si ya notabas algo raro en seco, en mojado se nota más.",
-            ]),
-            ("quote", "La primera lluvia después del verano no es la más fuerte, pero sí una de las más traicioneras."),
-            ("nota", "Las ayudas electrónicas como el [[abs|ABS]] o el control de estabilidad ayudan a mantener el control, pero no pueden crear adherencia donde no la hay."),
-            ("p", "En Green Car Service Tenerife podemos revisar el coche antes de la temporada de lluvias: [frenos](servicio-frenos.html), [suspensión y dirección](servicio-suspension-y-direccion.html) y aire acondicionado. [Pide cita](pedir-cita.html) y conduce más tranquilo."),
-        ],
-    },
-    "en": {
-        "titulo": "Driving in the rain after months of dry weather",
-        "resumen": "It rarely rains in the south of Tenerife, which is why the first showers catch people out. Why the road gets so slippery and how to adapt your driving.",
-        "cuerpo": [
-            ("p", "In the south of Tenerife we go through much of the year without seeing a drop of rain. So when the first showers arrive, many drivers are caught out: the car does not stop the same way, bends feel different and the road seems to have turned to soap. It is not your imagination. There is a reason."),
-            ("h2", "Why the road gets so slippery"),
-            ("p", "During the dry months, residues build up on the road: oil, diesel, tyre rubber, dust and, in our case, the fine sand from calima. While it is dry, you barely notice. But with the first drops, that mix forms a greasy film on the tarmac that greatly reduces grip. It is most dangerous at the start of a downpour: when it rains steadily for a while, the water eventually washes some of that grime away."),
-            ("p", "Some spots are worse than others: roundabouts, junctions, braking zones before traffic lights, painted pedestrian crossings, manhole covers and metal expansion joints on bridges."),
-            ("h2", "How to adapt your driving"),
-            ("ol", [
-                "**Slow down** more than you think you need to, especially in the first minutes of rain.",
-                "**Greatly increase your following distance.** In the wet you need more distance to stop.",
-                "**Make every input smooth**: accelerate, brake and steer gently. Sudden changes are what break traction.",
-                "**Brake in a straight line**, before the bend, not in it.",
-                "**Switch on dipped headlights** so others can see you.",
-                "**Avoid road markings** and metal covers, especially when braking or turning.",
-            ]),
-            ("h2", "Aquaplaning"),
-            ("p", "When there is a layer of water on the road, a [[neumatico|tyre]] may not be able to clear it and the car 'floats' on top. You will feel the steering go light. If it happens, do not brake hard or jerk the wheel: lift off the accelerator, hold the steering straight and wait for the tyres to regain contact. Tyres with good tread at the correct pressure greatly reduce this risk."),
-            ("h2", "Ravines and flooded roads"),
-            ("p", "In the Canary Islands, heavy rain can turn a dry ravine (barranco) into a flowing watercourse very quickly. **Never drive through a flooded road or crossing**: you cannot tell the depth or the strength of the current, and a small amount of moving water is enough to sweep a car away. Find another route or wait."),
-            ("h2", "Get the car ready before the rain"),
-            ("p", "After months without using certain things, it is worth checking them:"),
-            ("ul", [
-                "**Wiper blades**: sun and heat dry the rubber out and crack it. If they streak or squeak, replace them.",
-                "**Screenwash**, with the reservoir full.",
-                "**Tyres**: tread and pressure.",
-                "**Lights**: make sure they all work.",
-                "**Demisting**: [[aire-acondicionado|air conditioning]] is a great help for clearing misted windows because it dries the air. If it is not working properly, have it checked before the rainy season.",
-                "**Brakes**: if you already noticed something odd in the dry, it will be more noticeable in the wet.",
-            ]),
-            ("quote", "The first rain after summer is not the heaviest, but it is one of the most treacherous."),
-            ("nota", "Electronic aids such as [[abs|ABS]] or stability control help you keep control, but they cannot create grip where there is none."),
-            ("p", "At Green Car Service Tenerife we can check your car before the rainy season: [brakes](servicio-frenos.html), [suspension and steering](servicio-suspension-y-direccion.html) and air conditioning. [Book an appointment](pedir-cita.html) and drive with more peace of mind."),
-        ],
-    },
-},
-]
+ARTICULOS = [{'slug': 'articulo-que-hacer-con-un-aranazo',
+  'cat': 'chapa-pintura',
+  'fecha': '2023-04-18',
+  'es': {'titulo': 'Qué hacer con un arañazo en la pintura',
+         'resumen': 'No todos los arañazos son iguales. Te enseñamos a saber cuánto de profundo es y cuándo '
+                    'basta con un pulido y cuándo hay que repintar.',
+         'cuerpo': [('p',
+                     'Un roce con una columna del garaje, una rama en un camino estrecho o alguien que pasa '
+                     'demasiado cerca con el carro de la compra. Los arañazos son casi inevitables. La '
+                     'pregunta es qué hacer con ellos, y la respuesta depende de lo profundo que sea.'),
+                    ('h2', 'Las capas de la pintura'),
+                    ('p',
+                     'La pintura de un coche no es una sola capa. Sobre la chapa hay una protección '
+                     'anticorrosión y una [[imprimacion|imprimación]]; encima, la capa de color; y por '
+                     'último el [[barniz|barniz]], transparente, que da brillo y protege el color del sol y '
+                     'la intemperie. Cuanto más abajo llegue el arañazo, más trabajo tiene arreglarlo.'),
+                    ('h2', 'Cómo saber lo profundo que es'),
+                    ('ol',
+                     ['**Lava y seca la zona.** Muchas marcas son restos de pintura o goma de otro objeto y '
+                      'salen con agua o con un limpiador suave.',
+                      '**Pasa la uña suavemente** en perpendicular al arañazo. Si no se engancha, '
+                      'probablemente solo afecta al barniz.',
+                      '**Mira el color del fondo.** Si ves el mismo color del coche, está en barniz o color. '
+                      'Si ves un tono gris o blanquecino, ha llegado a la imprimación. Si ves metal '
+                      'brillante, ha llegado a la chapa.']),
+                    ('h2', 'Qué se puede hacer en cada caso'),
+                    ('ul',
+                     ['**Arañazo superficial en el barniz**: a menudo se mejora mucho, o desaparece, con un '
+                      '[[pulido|pulido]] profesional. El pulido elimina una capa muy fina de barniz, así que '
+                      'no conviene abusar de él.',
+                      '**Arañazo que llega al color**: el pulido lo disimula pero no lo borra. Suele '
+                      'necesitar un retoque o repintar la zona.',
+                      '**Arañazo hasta la imprimación o la chapa**: hay que preparar la superficie, aplicar '
+                      'imprimación, color y barniz. Si se ve metal, conviene no dejarlo mucho tiempo.']),
+                    ('h2', 'Por qué no dejarlo para más adelante'),
+                    ('p',
+                     'Un arañazo que deja la chapa a la vista es una puerta abierta a la '
+                     '[[corrosion|corrosión]]. En zonas de costa, con humedad y salitre, el óxido puede '
+                     'empezar antes de lo que parece y extenderse por debajo de la pintura sana. Lo que hoy '
+                     'es una línea fina puede convertirse en una burbuja de óxido que obliga a reparar una '
+                     'superficie mucho mayor.'),
+                    ('h2', 'Con los productos de bricolaje, cuidado'),
+                    ('p',
+                     'Los lápices de retoque y los pulimentos de gran superficie pueden servir para una '
+                     'marca pequeña, sobre todo para proteger el metal mientras llevas el coche al taller. '
+                     'Pero conviene tener en cuenta algunas cosas:'),
+                    ('ul',
+                     ['Un pulimento muy abrasivo, aplicado a mano sin experiencia, puede dejar la zona mate '
+                      'o con marcas circulares.',
+                      'Un lápiz de retoque rara vez iguala el tono exacto, sobre todo en colores '
+                      'metalizados.',
+                      'Si luego se repinta la zona, hay que retirar esos productos y el trabajo es algo '
+                      'mayor.']),
+                    ('h2', 'Repintar solo una parte'),
+                    ('p',
+                     'Cuando hay que repintar, no siempre es necesario pintar la pieza entera. A veces se '
+                     'puede reparar la zona y difuminar el color y el barniz hacia las zonas vecinas para '
+                     'que la transición no se note. Si es posible o no depende del tamaño del daño, de dónde '
+                     'esté y del color.'),
+                    ('quote',
+                     'Un arañazo pequeño y reciente casi siempre se arregla mejor, y con menos trabajo, que '
+                     'uno que lleva meses a la intemperie.'),
+                    ('nota',
+                     'Solo viendo el arañazo se puede decir qué solución tiene. Lo que aquí contamos es '
+                     'orientativo.'),
+                    ('p',
+                     'En Green Car Service Tenerife valoramos el daño y te decimos si basta con un [pulido y '
+                     'abrillantado](servicio-pulido-y-abrillantado.html) o conviene una [pintura '
+                     'parcial](servicio-pintura-parcial.html). Mándanos una foto por WhatsApp o [pide un '
+                     'presupuesto](presupuesto.html).')]},
+  'en': {'titulo': 'What to do about a scratch in your paint',
+         'resumen': 'Not all scratches are the same. Here is how to tell how deep one is, and when polishing '
+                    'is enough and when it needs repainting.',
+         'cuerpo': [('p',
+                     'A brush against a pillar in the car park, a branch on a narrow track or someone '
+                     'passing too close with a shopping trolley. Scratches are almost unavoidable. The '
+                     'question is what to do about them, and the answer depends on how deep they go.'),
+                    ('h2', 'The layers of paint'),
+                    ('p',
+                     'Car paint is not a single layer. On top of the metal there is anti-corrosion '
+                     'protection and a [[imprimacion|primer]]; above that, the colour coat; and finally the '
+                     'transparent [[barniz|clear coat]], which gives gloss and protects the colour from sun '
+                     'and weather. The deeper a scratch goes, the more work it takes to fix.'),
+                    ('h2', 'How to tell how deep it is'),
+                    ('ol',
+                     ['**Wash and dry the area.** Many marks are paint or rubber transferred from another '
+                      'object and come off with water or a mild cleaner.',
+                      '**Run a fingernail gently** across the scratch. If it does not catch, it probably '
+                      'only affects the clear coat.',
+                      "**Look at the colour at the bottom.** If you see the car's own colour, it is in the "
+                      'clear coat or colour coat. If you see grey or whitish, it has reached the primer. If '
+                      'you see shiny metal, it has reached the panel.']),
+                    ('h2', 'What can be done in each case'),
+                    ('ul',
+                     ['**Light scratch in the clear coat**: it can often be greatly reduced, or removed, '
+                      'with professional [[pulido|polishing]]. Polishing removes a very thin layer of clear '
+                      'coat, so it should not be overdone.',
+                      '**Scratch into the colour coat**: polishing disguises it but does not remove it. It '
+                      'usually needs a touch-up or repainting of the area.',
+                      '**Scratch down to primer or metal**: the surface has to be prepared and primer, '
+                      'colour and clear coat applied. If metal is showing, do not leave it for long.']),
+                    ('h2', 'Why not to leave it'),
+                    ('p',
+                     'A scratch that exposes bare metal is an open door to [[corrosion|corrosion]]. In '
+                     'coastal areas, with humidity and salt in the air, rust can start sooner than you might '
+                     "think and spread beneath healthy paint. Today's thin line can become a rust bubble "
+                     'that means repairing a much larger area.'),
+                    ('h2', 'Be careful with DIY products'),
+                    ('p',
+                     'Touch-up pens and supermarket polishes can help with a small mark, especially to '
+                     'protect bare metal until you get the car to a workshop. But bear a few things in '
+                     'mind:'),
+                    ('ul',
+                     ['A very abrasive polish, applied by hand without experience, can leave the area dull '
+                      'or with swirl marks.',
+                      'A touch-up pen rarely matches the exact shade, especially with metallic colours.',
+                      'If the area is repainted later, those products have to be removed first, which adds a '
+                      'little work.']),
+                    ('h2', 'Repainting only part of a panel'),
+                    ('p',
+                     'When repainting is needed, it is not always necessary to paint the whole panel. '
+                     'Sometimes the damaged area can be repaired and the colour and clear coat blended into '
+                     'the surrounding area so the transition does not show. Whether that is possible depends '
+                     'on the size of the damage, where it is and the colour.'),
+                    ('quote',
+                     'A small, recent scratch is nearly always easier, and less work, to fix than one that '
+                     'has been out in the weather for months.'),
+                    ('nota',
+                     'Only by seeing the scratch can we tell you the right fix. What we describe here is a '
+                     'general guide.'),
+                    ('p',
+                     'At Green Car Service Tenerife we assess the damage and tell you whether '
+                     '[polishing](servicio-pulido-y-abrillantado.html) is enough or a [partial '
+                     'respray](servicio-pintura-parcial.html) makes more sense. Send us a photo on WhatsApp '
+                     'or [ask for an estimate](presupuesto.html).')]}},
+ {'slug': 'articulo-por-que-el-color-debe-igualarse',
+  'cat': 'chapa-pintura',
+  'fecha': '2024-05-27',
+  'es': {'titulo': 'Por qué el color de una pieza repintada debe igualarse',
+         'resumen': 'El código de color del coche es solo el punto de partida. Te contamos qué es la '
+                    'colorimetría y por qué una puerta repintada puede no casar si no se ajusta el tono.',
+         'cuerpo': [('p',
+                     'Seguro que alguna vez has visto un coche con una puerta o un paragolpes de un tono '
+                     'ligeramente distinto al resto. Con cierta luz apenas se nota; con otra, salta a la '
+                     'vista. Casi siempre es una reparación en la que el color no se igualó bien. Evitarlo '
+                     'es el trabajo de la [[colorimetria|colorimetría]].'),
+                    ('h2', 'El código de color no basta'),
+                    ('p',
+                     'Todos los coches tienen un código de color de fábrica, normalmente en una etiqueta en '
+                     'el marco de la puerta, bajo el capó o en la documentación. Ese código indica la '
+                     'fórmula original. El problema es que el coche que tienes delante ya no es exactamente '
+                     'igual al que salió de fábrica, por varias razones:'),
+                    ('ul',
+                     ['**Variaciones de fabricación**: un mismo código puede tener pequeñas diferencias de '
+                      'tono entre lotes o plantas de producción.',
+                      '**Envejecimiento**: el sol, la lluvia, los lavados y los años cambian ligeramente el '
+                      'aspecto de la pintura. En un clima con tanta radiación como el de Tenerife, se nota.',
+                      '**Reparaciones anteriores**: si el coche ya se ha pintado antes, puede haber zonas '
+                      'con matices distintos.']),
+                    ('h2', 'Cómo se iguala el color'),
+                    ('p', 'El proceso combina medición, experiencia y pruebas. A grandes rasgos:'),
+                    ('ol',
+                     ['Se parte del código de color y de sus posibles variantes.',
+                      'Se compara con el coche real, a menudo con ayuda de equipos de medición y cartas de '
+                      'color, y siempre bajo buena luz.',
+                      'Se ajusta la mezcla y se pinta una muestra de prueba que se compara con la pieza, '
+                      'desde varios ángulos.',
+                      'Si hace falta, se corrige la fórmula hasta que el tono encaja.']),
+                    ('h2', 'Los metalizados y nacarados, más delicados'),
+                    ('p',
+                     'En una [[metalizado|pintura metalizada]] el color lleva pequeñas partículas que '
+                     'reflejan la luz. En una [[nacarado|pintura nacarada]], los pigmentos dan reflejos que '
+                     'cambian con el ángulo. En estos acabados no solo importa el tono: también cómo se '
+                     'orientan esas partículas, que depende de la forma de aplicar la pintura. Por eso una '
+                     'pieza metalizada puede verse igual de frente y distinta de lado si no se trabaja con '
+                     'cuidado.'),
+                    ('h2', 'El difuminado'),
+                    ('p',
+                     'Aunque el color esté bien ajustado, el ojo es muy sensible a los cambios bruscos. Por '
+                     'eso, a menudo, en lugar de pintar solo la pieza dañada se difumina el color hacia las '
+                     'piezas vecinas. Así la transición es gradual y no se aprecia un corte. Es una técnica '
+                     'habitual, especialmente en colores metalizados y claros, y es la razón por la que a '
+                     'veces el presupuesto incluye trabajo en una pieza que no estaba dañada.'),
+                    ('h2', 'La luz también cuenta'),
+                    ('p',
+                     'Un mismo color puede verse distinto bajo luz de taller, a la sombra o a pleno sol. Por '
+                     'eso las comparaciones se hacen con buena iluminación y, cuando es posible, revisando '
+                     'el resultado con luz natural. Un taller bien equipado, con [[cabina-de-pintura|cabina '
+                     'de pintura]] e iluminación adecuada, trabaja con más garantías.'),
+                    ('quote',
+                     'Un color bien igualado es el que nadie nota. Si el cliente no sabe decir qué pieza se '
+                     'ha pintado, el trabajo está bien hecho.'),
+                    ('nota',
+                     'En algunos casos, sobre todo en coches muy envejecidos o con colores especiales, la '
+                     'igualación perfecta es difícil. Si es así, te lo explicamos antes de empezar.'),
+                    ('p',
+                     'En Green Car Service Tenerife trabajamos colores sólidos y metalizados con pintura '
+                     'ecológica «eco-balance». Puedes ver más en [colores y '
+                     'acabados](servicio-colores-y-acabados.html) o [pedir un presupuesto](presupuesto.html) '
+                     'para tu reparación.')]},
+  'en': {'titulo': 'Why a repainted panel has to be colour-matched',
+         'resumen': "Your car's paint code is only the starting point. Here is what colour matching "
+                    'involves, and why a repainted door may not match unless the shade is adjusted.',
+         'cuerpo': [('p',
+                     'You have probably seen a car with a door or bumper in a slightly different shade from '
+                     'the rest. In some light it barely shows; in other light it stands out a mile. It is '
+                     'almost always a repair where the colour was not matched properly. Avoiding that is the '
+                     'job of [[colorimetria|colour matching]].'),
+                    ('h2', 'The paint code is not enough'),
+                    ('p',
+                     'Every car has a factory paint code, usually on a label in the door frame, in the '
+                     'bonnet or in the paperwork. That code gives the original formula. The problem is '
+                     'that the car in front of you is no longer exactly the same as the one that left the '
+                     'factory, for several reasons:'),
+                    ('ul',
+                     ['**Production variation**: the same code can show small differences in shade between '
+                      'batches or factories.',
+                      '**Ageing**: sun, rain, washing and time slightly change the look of the paint. In a '
+                      "climate with as much sunshine as Tenerife's, it shows.",
+                      '**Previous repairs**: if the car has been painted before, some areas may have a '
+                      'different tint.']),
+                    ('h2', 'How the colour is matched'),
+                    ('p', 'The process combines measurement, experience and testing. Broadly speaking:'),
+                    ('ol',
+                     ['It starts from the paint code and its possible variants.',
+                      'This is compared with the actual car, often with the help of measuring equipment and '
+                      'colour charts, and always in good light.',
+                      'The mix is adjusted and a test card is sprayed and compared with the panel from '
+                      'several angles.',
+                      'If needed, the formula is corrected until the shade matches.']),
+                    ('h2', 'Metallic and pearlescent paints are trickier'),
+                    ('p',
+                     'In [[metalizado|metallic paint]] the colour contains tiny particles that reflect '
+                     'light. In [[nacarado|pearlescent paint]], the pigments give reflections that change '
+                     'with the viewing angle. With these finishes it is not only the shade that matters, but '
+                     'also how those particles lie, which depends on how the paint is applied. That is why a '
+                     'metallic panel can look right head-on and different from the side if it is not done '
+                     'carefully.'),
+                    ('h2', 'Blending'),
+                    ('p',
+                     'Even when the colour is well matched, the eye is very sensitive to sudden changes. So '
+                     'rather than painting only the damaged panel, the colour is often blended into the '
+                     'neighbouring panels. That makes the transition gradual, with no visible edge. It is a '
+                     'standard technique, especially with metallic and light colours, and it is why an '
+                     'estimate sometimes includes work on a panel that was not damaged.'),
+                    ('h2', 'Light matters too'),
+                    ('p',
+                     'The same colour can look different under workshop lighting, in the shade or in full '
+                     'sun. That is why comparisons are made in good light and, where possible, the result is '
+                     'checked in daylight. A well-equipped workshop, with a [[cabina-de-pintura|paint '
+                     'booth]] and proper lighting, can work with more confidence.'),
+                    ('quote',
+                     'A well-matched colour is one nobody notices. If the customer cannot tell which panel '
+                     'was painted, the job has been done right.'),
+                    ('nota',
+                     'In some cases, especially with heavily aged cars or special colours, a perfect match '
+                     'is hard to achieve. If that applies, we will explain it before we start.'),
+                    ('p',
+                     'At Green Car Service Tenerife we work with solid and metallic colours using '
+                     'eco-friendly «eco-balance» paint. Find out more about [colours and '
+                     'finishes](servicio-colores-y-acabados.html) or [ask for an estimate](presupuesto.html) '
+                     'for your repair.')]}},
+ {'slug': 'articulo-proteger-la-pintura-del-sol',
+  'cat': 'chapa-pintura',
+  'fecha': '2025-07-15',
+  'es': {'titulo': 'Cómo proteger la pintura del sol de Tenerife',
+         'resumen': 'La radiación solar intensa apaga el brillo y puede llegar a pelar el barniz. Hábitos '
+                    'sencillos para que la pintura de tu coche aguante más años.',
+         'cuerpo': [('p',
+                     'El sol es una de las grandes razones para vivir en el sur de Tenerife, pero para la '
+                     'pintura del coche es un enemigo constante. La radiación ultravioleta y el calor '
+                     'trabajan todos los días sobre el techo, el capó y el maletero, que son las superficies '
+                     'más horizontales y las que más castigo reciben.'),
+                    ('h2', 'Qué le hace el sol a la pintura'),
+                    ('p',
+                     'La capa que da la cara es el [[barniz|barniz]]. Está pensado precisamente para '
+                     'proteger el color, pero con los años la radiación lo va degradando. El proceso suele '
+                     'seguir unas fases reconocibles:'),
+                    ('ol',
+                     ['**Pérdida de brillo**: la pintura se ve más apagada, como sin vida.',
+                      '**Decoloración**: el color pierde intensidad. Se nota mucho en rojos y en tonos '
+                      'oscuros.',
+                      '**Barniz cuarteado o pelado**: aparecen manchas blanquecinas o zonas donde el barniz '
+                      'se levanta en escamas.']),
+                    ('p',
+                     'En las dos primeras fases, un [[pulido|pulido]] y una buena protección pueden '
+                     'recuperar bastante el aspecto. Cuando el barniz ya se ha pelado, no hay pulido que lo '
+                     'arregle: hay que repintar la zona.'),
+                    ('h2', 'Aparcar con cabeza'),
+                    ('p', 'Es el consejo más sencillo y el que más ayuda:'),
+                    ('ul',
+                     ['Si puedes, usa garaje o aparcamiento cubierto.',
+                      'En la calle, busca sombra, pero cuidado con algunos árboles: la resina y los '
+                      'excrementos de pájaro son agresivos con la pintura.',
+                      'Si aparcas siempre en el mismo sitio y orientación, ten en cuenta hacia dónde da el '
+                      'sol las horas centrales.',
+                      'Una funda de calidad, transpirable y bien ajustada, puede ayudar si el coche pasa '
+                      'mucho tiempo parado. Una funda que roce o atrape polvo puede hacer más mal que '
+                      'bien.']),
+                    ('h2', 'Lavar bien, y a tiempo'),
+                    ('p',
+                     'Los restos que se quedan sobre la pintura se «cuecen» con el calor. Excrementos de '
+                     'pájaro, insectos, resina o polvo de calima con humedad pueden marcar el barniz si se '
+                     'dejan días al sol. Retíralos pronto, con agua abundante y sin frotar en seco.'),
+                    ('ul',
+                     ['Lava a la sombra y con la carrocería fría, no a mediodía con el capó ardiendo.',
+                      'Usa champú específico para coches, no lavavajillas: quita las protecciones de la '
+                      'pintura.',
+                      'Aclara primero para arrastrar el polvo y evitar rayar al pasar la esponja.',
+                      'Seca con una microfibra limpia para evitar marcas de cal.']),
+                    ('h2', 'Ceras y protecciones'),
+                    ('p',
+                     'Una cera o un sellante crean una capa sacrificable sobre el barniz: se desgastan ellos '
+                     'antes que la pintura. Hay productos de muchos tipos y duraciones, así que sigue las '
+                     'indicaciones del fabricante del producto. Lo importante es la constancia: una '
+                     'protección aplicada cada cierto tiempo protege más que un tratamiento puntual que '
+                     'luego se olvida.'),
+                    ('h2', 'No te olvides de faros y plásticos'),
+                    ('p',
+                     'El sol no solo afecta a la pintura. Los faros de policarbonato se amarillean y se '
+                     'vuelven opacos, y los plásticos exteriores negros se quedan grisáceos. Los faros '
+                     'opacos iluminan peor, lo que ya es un tema de seguridad y puede dar problemas en la '
+                     '[[itv|ITV]].'),
+                    ('nota',
+                     'Si el barniz ya está pelado, conviene no esperar: sin esa capa, el color queda '
+                     'expuesto y el deterioro se acelera.'),
+                    ('p',
+                     'En Green Car Service Tenerife podemos devolver el brillo con un [pulido y '
+                     'abrillantado](servicio-pulido-y-abrillantado.html), [restaurar los '
+                     'faros](servicio-restauracion-de-faros.html) o repintar la zona dañada. Nuestra pintura '
+                     'cuenta con [garantía vitalicia](servicio-garantia-vitalicia-en-pintura.html).')]},
+  'en': {'titulo': 'Protecting your paint from the Tenerife sun',
+         'resumen': 'Strong sunshine dulls the shine and can eventually make the clear coat peel. Simple '
+                    "habits to help your car's paint last longer.",
+         'cuerpo': [('p',
+                     'The sun is one of the big reasons for living in the south of Tenerife, but for your '
+                     "car's paint it is a constant enemy. Ultraviolet radiation and heat work every day on "
+                     'the roof, bonnet and boot lid, which are the most horizontal surfaces and take the '
+                     'most punishment.'),
+                    ('h2', 'What the sun does to paint'),
+                    ('p',
+                     'The outermost layer is the [[barniz|clear coat]]. It is designed precisely to protect '
+                     'the colour, but over the years sunlight breaks it down. The process usually follows '
+                     'recognisable stages:'),
+                    ('ol',
+                     ['**Loss of gloss**: the paint looks duller, lifeless.',
+                      '**Fading**: the colour loses intensity. It is very noticeable on reds and dark '
+                      'shades.',
+                      '**Cracked or peeling clear coat**: whitish patches appear, or areas where the clear '
+                      'coat lifts in flakes.']),
+                    ('p',
+                     'In the first two stages, [[pulido|polishing]] and good protection can bring back much '
+                     'of the look. Once the clear coat has peeled, no amount of polishing will fix it: the '
+                     'area has to be repainted.'),
+                    ('h2', 'Park wisely'),
+                    ('p', 'It is the simplest tip and the one that helps most:'),
+                    ('ul',
+                     ['Use a garage or covered parking if you can.',
+                      'On the street, look for shade, but be careful with some trees: sap and bird droppings '
+                      'are harsh on paint.',
+                      'If you always park in the same spot and direction, think about where the sun falls in '
+                      'the middle of the day.',
+                      'A good-quality cover, breathable and well fitted, can help if the car is left unused '
+                      'for long periods. A cover that rubs or traps dust can do more harm than good.']),
+                    ('h2', 'Wash properly, and promptly'),
+                    ('p',
+                     "Whatever sits on the paint gets 'baked' by the heat. Bird droppings, insects, sap or "
+                     'calima dust mixed with moisture can mark the clear coat if left for days in the sun. '
+                     'Remove them quickly, with plenty of water and without rubbing them dry.'),
+                    ('ul',
+                     ['Wash in the shade with the bodywork cool, not at midday with a scorching bonnet.',
+                      "Use a proper car shampoo, not washing-up liquid: it strips the paint's protection.",
+                      'Rinse first to lift the dust so the sponge does not scratch.',
+                      'Dry with a clean microfibre cloth to avoid water spots.']),
+                    ('h2', 'Waxes and sealants'),
+                    ('p',
+                     'A wax or sealant creates a sacrificial layer on top of the clear coat: it wears away '
+                     'before the paint does. There are many types with different lifespans, so follow the '
+                     "product maker's instructions. What matters is consistency: protection applied "
+                     'regularly does more than a one-off treatment that is then forgotten. A simple test: if '
+                     'water no longer beads on the paint after a wash, the protection has probably worn '
+                     'off.'),
+                    ('h2', 'Do not forget headlights and plastics'),
+                    ('p',
+                     'The sun does not only affect paint. Polycarbonate headlights turn yellow and cloudy, '
+                     'and black exterior plastics go grey. Cloudy headlights give less light, which is a '
+                     'safety matter and can cause problems at the [[itv|ITV (MOT)]].'),
+                    ('nota',
+                     'If the clear coat is already peeling, do not wait: without that layer the colour is '
+                     'exposed and deterioration speeds up.'),
+                    ('p',
+                     'At Green Car Service Tenerife we can bring back the shine with '
+                     '[polishing](servicio-pulido-y-abrillantado.html), [restore your '
+                     'headlights](servicio-restauracion-de-faros.html) or repaint the damaged area. Our '
+                     'paintwork comes with a [lifetime paint '
+                     'warranty](servicio-garantia-vitalicia-en-pintura.html).')]}},
+ {'slug': 'articulo-salitre-y-corrosion-en-coches-de-costa',
+  'cat': 'chapa-pintura',
+  'fecha': '2026-02-03',
+  'es': {'titulo': 'El salitre y la corrosión en coches de costa',
+         'resumen': 'Vivir cerca del mar tiene un precio para la chapa. Dónde ataca el salitre, cómo '
+                    'detectar el óxido a tiempo y qué puedes hacer para frenarlo.',
+         'cuerpo': [('p',
+                     'Buena parte de la vida en el sur de Tenerife pasa cerca del mar. Y el ambiente marino, '
+                     'con su humedad y las partículas de sal que lleva el viento, es uno de los factores que '
+                     'más aceleran la [[corrosion|corrosión]] de un coche. No hace falta aparcar en primera '
+                     'línea de playa: el salitre llega bastante hacia el interior.'),
+                    ('h2', 'Por qué la sal acelera el óxido'),
+                    ('p',
+                     'El óxido aparece cuando el acero está en contacto con oxígeno y humedad. La sal '
+                     'disuelta en esa humedad hace que la reacción vaya más rápido. Además, la sal atrae la '
+                     'humedad del aire, así que las superficies con restos de salitre tardan más en secarse. '
+                     'Es la combinación perfecta para que el metal se deteriore.'),
+                    ('h2', 'Dónde suele empezar'),
+                    ('ul',
+                     ['**Bajos del coche**: suelo, largueros, travesaños y uniones con '
+                      '[[sellador|sellador]].',
+                      '**Pasos de rueda**: se acumulan barro, arena y sal.',
+                      '**Bordes inferiores de puertas y portón**, donde se queda el agua si los desagües '
+                      'están tapados.',
+                      '**Zonas con la pintura dañada**: arañazos, picotazos de piedras o golpes que dejan la '
+                      'chapa a la vista.',
+                      '**Tornillería, soportes y elementos metálicos** sin pintar.']),
+                    ('h2', 'Cómo detectarlo a tiempo'),
+                    ('p', 'La corrosión suele avisar antes de ser grave. Fíjate en:'),
+                    ('ul',
+                     ['Pequeñas burbujas o ampollas bajo la pintura: suele ser óxido avanzando por debajo.',
+                      'Manchas marrones o anaranjadas en bordes, juntas o alrededor de molduras.',
+                      'Pintura que se levanta en escamas en los bajos de las puertas.',
+                      'Sellador de juntas agrietado o despegado, que deja pasar agua a la chapa.']),
+                    ('p',
+                     'Cuanto antes se trate, más sencilla es la reparación. Una burbuja pequeña se puede '
+                     'sanear; una zona perforada puede requerir cambiar o soldar chapa.'),
+                    ('h2', 'Hábitos que ayudan'),
+                    ('ol',
+                     ['**Lava el coche con regularidad**, incluidos los bajos y los pasos de rueda, sobre '
+                      'todo después de ir a la playa o de circular por la costa con viento.',
+                      '**Aclara con agua dulce abundante**. Un lavado sin aclarado deja restos de sal.',
+                      '**Revisa los desagües** de puertas y del hueco del techo solar si lo tienes, para que '
+                      'el agua no se quede dentro.',
+                      '**Repara pronto los arañazos** que llegan a la chapa. Mientras tanto, protégelos para '
+                      'que no les dé la humedad.',
+                      '**Aspira la arena del interior**: la que entra con toallas y sillas de playa acaba en '
+                      'moquetas y rincones y retiene humedad.']),
+                    ('h2', 'Tratamientos de protección'),
+                    ('p',
+                     'Además de la protección de fábrica, se pueden aplicar tratamientos anticorrosión en '
+                     'bajos y en cavidades interiores de la [[carroceria|carrocería]], como los huecos de '
+                     'largueros y puertas. Crean una barrera frente a la humedad y la sal. No hacen al coche '
+                     'inmune, pero ayudan a alargar la vida de la chapa, sobre todo en coches que viven '
+                     'junto al mar. Qué tratamiento conviene depende del coche, de su edad y de su estado.'),
+                    ('quote',
+                     'El óxido no descansa. Lo que hoy es una mancha en el bajo de una puerta, en unos meses '
+                     'puede ser un agujero.'),
+                    ('nota',
+                     'Si la corrosión afecta a elementos estructurales o de anclaje, no es solo estética: '
+                     'puede afectar a la seguridad del coche y conviene revisarla cuanto antes.'),
+                    ('p',
+                     'En Green Car Service Tenerife revisamos el estado de la chapa y aplicamos el '
+                     '[tratamiento anticorrosión](servicio-tratamiento-anticorrosion.html) adecuado a cada '
+                     'caso. Si ya hay daños, nos encargamos de la [reparación de '
+                     'chapa](servicio-reparacion-de-chapa.html). [Pide cita](pedir-cita.html) y le echamos '
+                     'un vistazo.')]},
+  'en': {'titulo': 'Salt air and corrosion on coastal cars',
+         'resumen': 'Living near the sea comes at a price for your bodywork. Where salt attacks, how to spot '
+                    'rust early and what you can do to slow it down.',
+         'cuerpo': [('p',
+                     'Much of life in the south of Tenerife happens close to the sea. And the marine '
+                     'environment, with its humidity and the salt particles carried by the wind, is one of '
+                     'the factors that most speeds up [[corrosion|corrosion]] on a car. You do not need to '
+                     'park on the seafront: salt air travels a fair way inland.'),
+                    ('h2', 'Why salt speeds up rust'),
+                    ('p',
+                     'Rust forms when steel is in contact with oxygen and moisture. Salt dissolved in that '
+                     'moisture makes the reaction go faster. Salt also draws moisture from the air, so '
+                     'surfaces with salt residue take longer to dry. It is the perfect combination for metal '
+                     'to deteriorate.'),
+                    ('h2', 'Where it usually starts'),
+                    ('ul',
+                     ['**Underside**: floor pan, chassis rails, crossmembers and joints with '
+                      '[[sellador|seam sealer]].',
+                      '**Wheel arches**: mud, sand and salt build up there.',
+                      '**Bottom edges of doors and tailgate**, where water collects if the drain holes are '
+                      'blocked.',
+                      '**Areas with damaged paint**: scratches, stone chips or dents that leave bare metal.',
+                      '**Bolts, brackets and unpainted metal parts.**']),
+                    ('h2', 'How to spot it early'),
+                    ('p', 'Corrosion usually gives warning before it becomes serious. Look out for:'),
+                    ('ul',
+                     ['Small bubbles or blisters under the paint: often rust creeping underneath.',
+                      'Brown or orange stains on edges, seams or around trims.',
+                      'Paint flaking off along the bottom of the doors.',
+                      'Cracked or lifting seam sealer that lets water reach the metal.']),
+                    ('p',
+                     'The sooner it is dealt with, the simpler the repair. A small bubble can be treated; a '
+                     'rusted-through area may need metal replaced or welded.'),
+                    ('h2', 'Habits that help'),
+                    ('ol',
+                     ['**Wash the car regularly**, including the underside and wheel arches, especially '
+                      'after a trip to the beach or driving along the coast on a windy day.',
+                      '**Rinse with plenty of fresh water.** A wash without a proper rinse leaves salt '
+                      'behind.',
+                      '**Check the drain holes** in the doors and around the sunroof if you have one, so '
+                      'water does not collect inside.',
+                      '**Repair scratches down to bare metal promptly.** In the meantime, protect them from '
+                      'moisture.',
+                      '**Vacuum sand out of the interior**: sand brought in on towels and beach chairs ends '
+                      'up in carpets and corners and holds moisture.']),
+                    ('h2', 'Protective treatments'),
+                    ('p',
+                     'On top of factory protection, anti-corrosion treatments can be applied to the '
+                     'underside and to inner cavities of the [[carroceria|bodywork]], such as inside chassis '
+                     'rails and doors. They create a barrier against moisture and salt. They do not make the '
+                     'car immune, but they help extend the life of the metal, especially on cars that live '
+                     'by the sea. Which treatment suits depends on the car, its age and its condition.'),
+                    ('quote',
+                     "Rust never rests. Today's stain at the bottom of a door can be a hole in a few "
+                     'months.'),
+                    ('nota',
+                     'If corrosion affects structural parts or mountings, it is not just cosmetic: it can '
+                     "affect the car's safety and should be checked as soon as possible."),
+                    ('p',
+                     'At Green Car Service Tenerife we check the condition of the bodywork and apply the '
+                     'right [anti-corrosion treatment](servicio-tratamiento-anticorrosion.html) for each '
+                     'case. If there is already damage, we take care of the [panel '
+                     'repair](servicio-reparacion-de-chapa.html). [Book an appointment](pedir-cita.html) and '
+                     'we will take a look.')]}},
+ {'slug': 'articulo-ninos-en-el-coche-sistemas-de-retencion',
+  'cat': 'seguridad-vial',
+  'fecha': '2025-01-20',
+  'es': {'titulo': 'Niños en el coche: sistemas de retención infantil',
+         'resumen': 'Qué dice la norma en España, cómo elegir la silla adecuada y los errores de instalación '
+                    'más comunes. También si vienes de visita y alquilas coche.',
+         'cuerpo': [('p',
+                     'El cinturón de seguridad está diseñado para adultos. En un niño, la banda puede quedar '
+                     'a la altura del cuello o del abdomen y, en un impacto, hacer más daño que bien. Por '
+                     'eso existen los sistemas de retención infantil, conocidos como sillitas, elevadores o '
+                     'capazos. Usarlos bien es una de las cosas que más protegen a los pequeños en el '
+                     'coche.'),
+                    ('h2', 'Qué dice la norma en España'),
+                    ('p',
+                     'La regla general es que los menores de **135 cm de estatura** deben viajar en un '
+                     'sistema de retención adecuado a su talla y peso, y hacerlo en los asientos traseros. '
+                     'Hay excepciones concretas, por ejemplo cuando el coche no tiene asientos traseros o '
+                     'cuando estos ya están ocupados por otros niños con su propio sistema. Si un niño va '
+                     'delante en una silla orientada hacia atrás, el airbag frontal del '
+                     'acompañante debe estar desactivado.'),
+                    ('p',
+                     'Entre 135 y 150 cm pueden usar el cinturón del coche o seguir en un sistema de '
+                     'retención. Muchas veces conviene seguir con el elevador hasta que el cinturón quede '
+                     'bien colocado: por encima de la clavícula, no del cuello, y sobre la cadera, no sobre '
+                     'la tripa.'),
+                    ('h2', 'Cómo elegir la silla'),
+                    ('ul',
+                     ['Debe estar **homologada** según la normativa europea. En la etiqueta verás la '
+                      'referencia de homologación; las más recientes siguen la norma i-Size (R129), que '
+                      'clasifica las sillas por estatura.',
+                      'Elige según la **estatura y el peso** del niño, no solo la edad.',
+                      'Comprueba que es **compatible con tu coche**. No todas las sillas encajan bien en '
+                      'todos los asientos.',
+                      'Si el coche tiene anclajes **ISOFIX**, facilitan una instalación correcta y reducen '
+                      'errores.']),
+                    ('h2', 'A contramarcha, mejor'),
+                    ('p',
+                     'Para los más pequeños, viajar mirando hacia atrás es la opción más protectora: en un '
+                     'choque frontal, el respaldo reparte la fuerza por toda la espalda y sujeta la cabeza, '
+                     'que en los bebés pesa mucho en proporción al cuerpo. Las recomendaciones de seguridad '
+                     'vial aconsejan mantener la contramarcha el mayor tiempo posible, dentro de los límites '
+                     'de la silla.'),
+                    ('h2', 'Errores frecuentes'),
+                    ('ol',
+                     ['**Arneses flojos.** Si puedes pellizcar la cinta a la altura del hombro, está '
+                      'demasiado suelta.',
+                      '**Abrigos gruesos** debajo del arnés: crean holgura. Mejor quitar el abrigo y taparlo '
+                      'encima.',
+                      '**Silla mal anclada**, que se mueve más de lo que indica el fabricante.',
+                      '**Cinturón mal pasado** por las guías del elevador.',
+                      '**Pasar al niño a la siguiente etapa demasiado pronto.**',
+                      '**Objetos sueltos** en el habitáculo: en un frenazo, cualquier cosa puede convertirse '
+                      'en un proyectil.']),
+                    ('h2', 'Si vienes de visita y alquilas coche'),
+                    ('p',
+                     'Muchos visitantes del sur de Tenerife alquilan coche con niños. Reserva la silla con '
+                     'antelación, revisa al recogerla que es adecuada para la talla de tu hijo y que está en '
+                     'buen estado, y tómate unos minutos para instalarla con calma siguiendo el manual. Si '
+                     'traes tu propia silla, comprueba que es compatible con el coche de alquiler.'),
+                    ('nota',
+                     'La normativa puede cambiar y cada silla tiene sus propias instrucciones. Ante la duda, '
+                     'consulta la información de la DGT y el manual del fabricante de la silla y del coche.'),
+                    ('h2', 'El airbag del acompañante'),
+                    ('p',
+                     'Si alguna vez necesitas llevar una silla a contramarcha delante, aprende cómo se '
+                     'desactiva el airbag en tu coche: en unos es un interruptor con llave, en otros se hace '
+                     'desde el menú. Comprueba siempre en el cuadro el indicador que confirma que está '
+                     'desactivado, y vuelve a activarlo cuando viaje un adulto. Si tienes dudas, el manual '
+                     'del coche explica el procedimiento exacto para tu modelo.'),
+                    ('p',
+                     'Si dejas tu coche en Green Car Service Tenerife y usas nuestro '
+                     '[[vehiculo-de-sustitucion|vehículo de sustitución]], recuerda pasar la silla de un '
+                     'coche a otro. Y si tu coche ha tenido un accidente con la silla instalada, consulta el '
+                     'manual de la silla: muchos fabricantes recomiendan sustituirla aunque no se vean daños. '
+                     'Para todo lo relacionado con el golpe, tienes información en '
+                     '[siniestros](siniestros.html) y puedes [pedir cita](pedir-cita.html) por teléfono o '
+                     'WhatsApp.')]},
+  'en': {'titulo': 'Children in the car: child restraint systems',
+         'resumen': 'What Spanish rules say, how to choose the right seat and the most common fitting '
+                    'mistakes. Plus tips if you are visiting and hiring a car.',
+         'cuerpo': [('p',
+                     'Seatbelts are designed for adults. On a child, the belt can sit across the neck or the '
+                     'stomach and, in a crash, do more harm than good. That is why child restraint systems '
+                     'exist: child seats, booster seats and baby carriers. Using them properly is one of the '
+                     'things that best protects children in the car.'),
+                    ('h2', 'What the rules say in Spain'),
+                    ('p',
+                     'The general rule is that children under **135 cm tall** must travel in a restraint '
+                     'system suited to their height and weight, and must sit in the rear seats. There are '
+                     'specific exceptions, for example when the car has no rear seats or when they are '
+                     'already occupied by other children in their own restraints. If a child travels in the '
+                     "front in a rear-facing seat, the passenger's front airbag must be switched "
+                     'off.'),
+                    ('p',
+                     "Between 135 and 150 cm, children can use the car's seatbelt or stay in a restraint "
+                     'system. It is often best to keep using a booster until the belt fits properly: across '
+                     'the collarbone, not the neck, and over the hips, not the tummy.'),
+                    ('h2', 'Choosing a seat'),
+                    ('ul',
+                     ['It must be **approved** under European rules. The label shows the approval reference; '
+                      'the most recent seats follow the i-Size standard (R129), which classifies seats by '
+                      "the child's height.",
+                      "Choose according to the child's **height and weight**, not just age.",
+                      'Check it is **compatible with your car**. Not every seat fits well in every vehicle.',
+                      'If your car has **ISOFIX** anchor points, they make correct fitting easier and reduce '
+                      'mistakes.']),
+                    ('h2', 'Rear-facing is safer'),
+                    ('p',
+                     'For the youngest children, travelling rear-facing is the most protective option: in a '
+                     'frontal crash, the seat back spreads the force across the whole back and supports the '
+                     'head, which in babies is heavy relative to the body. Road safety advice is to keep '
+                     "children rear-facing for as long as possible, within the seat's limits."),
+                    ('h2', 'Common mistakes'),
+                    ('ol',
+                     ['**Loose harness straps.** If you can pinch the strap at shoulder height, it is too '
+                      'loose.',
+                      '**Thick coats** under the harness: they create slack. Take the coat off and put it '
+                      'over the child instead.',
+                      '**Seat not firmly fitted**, moving more than the manufacturer allows.',
+                      "**Seatbelt routed wrongly** through the booster's guides.",
+                      '**Moving the child up to the next stage too early.**',
+                      '**Loose objects** in the cabin: under hard braking, anything can become a '
+                      'projectile.']),
+                    ('h2', 'Visiting and hiring a car'),
+                    ('p',
+                     'Many visitors to the south of Tenerife hire a car and travel with children. Book the '
+                     "seat in advance, check when you collect it that it suits your child's size and is in "
+                     'good condition, and take a few minutes to fit it calmly following the instructions. If '
+                     'you bring your own seat, check it is compatible with the hire car.'),
+                    ('nota',
+                     'Rules can change and every seat has its own instructions. If in doubt, check the DGT '
+                     '(Spanish traffic authority) information and the manuals for both the seat and the '
+                     'car.'),
+                    ('h2', 'The passenger airbag'),
+                    ('p',
+                     'If you ever need to fit a rear-facing seat in the front, learn how the airbag is '
+                     'switched off in your car: on some it is a key switch, on others it is done through the '
+                     'menu. Always check the dashboard indicator confirming it is off, and switch it back on '
+                     'when an adult sits there. If in doubt, the car\'s handbook explains the exact procedure '
+                     'for your model.'),
+                    ('p',
+                     'If you leave your car with Green Car Service Tenerife and use our '
+                     '[[vehiculo-de-sustitucion|courtesy car]], remember to move the child seat across. And '
+                     'if your car has been in an accident with the seat fitted, check the seat\'s manual: many '
+                     'manufacturers recommend replacing it even if no damage is visible. For everything to '
+                     'do with the accident itself, see our [claims](siniestros.html) page, and you can [book '
+                     'an appointment](pedir-cita.html) by phone or WhatsApp.')]}},
+ {'slug': 'articulo-fatiga-al-volante',
+  'cat': 'seguridad-vial',
+  'fecha': '2026-09-08',
+  'es': {'titulo': 'Fatiga al volante: cómo reconocerla y evitarla',
+         'resumen': 'El cansancio llega poco a poco y engaña. Las señales de alarma, los mitos que no '
+                    'funcionan y lo único que de verdad lo soluciona: parar y descansar.',
+         'cuerpo': [('p',
+                     'La fatiga es traicionera porque no se nota de golpe. Empiezas un trayecto bien y, sin '
+                     'darte cuenta, tus reacciones se vuelven más lentas, te cuesta mantener la atención y '
+                     'tomas peores decisiones. En el peor de los casos llega el microsueño: unos segundos en '
+                     'los que el cerebro se «desconecta» con los ojos casi abiertos. A velocidad de autovía, '
+                     'en esos segundos el coche recorre muchos metros sin control.'),
+                    ('h2', 'Señales de alarma'),
+                    ('p', 'Si notas cualquiera de estas señales, tu cuerpo te está pidiendo parar:'),
+                    ('ul',
+                     ['Bostezos frecuentes y parpadeo pesado.',
+                      'Picor de ojos o sensación de tener que frotártelos.',
+                      'Te cuesta mantener la cabeza erguida.',
+                      'No recuerdas los últimos kilómetros.',
+                      'Te pasas una salida o no ves una señal.',
+                      'Te desvías del carril o pisas la línea sin querer.',
+                      'Cambias de velocidad sin motivo o te acercas demasiado al coche de delante.']),
+                    ('h2', 'Situaciones de más riesgo'),
+                    ('ul',
+                     ['Conducir después de dormir poco o mal.',
+                      'Las primeras horas de la tarde, después de comer, y la madrugada.',
+                      'Trayectos largos y monótonos, como una autovía recta con poco tráfico.',
+                      'Volver de un día de playa o de montaña: el sol, el calor y el esfuerzo cansan más de '
+                      'lo que parece.',
+                      'Después de un vuelo largo o con cambio de hora, algo habitual en quien acaba de '
+                      'aterrizar en el aeropuerto del sur y recoge un coche de alquiler.',
+                      'Tomar medicamentos que producen somnolencia. Mira el prospecto: muchos llevan un '
+                      'pictograma de advertencia para la conducción.']),
+                    ('h2', 'Lo que no funciona'),
+                    ('p',
+                     'Bajar la ventanilla, subir la música o poner el aire frío te despejan unos minutos, '
+                     'pero no quitan el sueño. El café o las bebidas con cafeína pueden ayudar un rato, '
+                     'aunque tardan en hacer efecto y no sustituyen al descanso. Hablar con el acompañante '
+                     'ayuda, pero tampoco es la solución si el cuerpo pide dormir.'),
+                    ('h2', 'Lo que sí funciona'),
+                    ('ol',
+                     ['**Descansar bien antes de salir**, sobre todo si el viaje es largo.',
+                      '**Parar con regularidad.** La recomendación habitual de la DGT es hacer una pausa '
+                      'cada dos horas o unos 200 km, aunque no te sientas cansado.',
+                      '**Si notas las señales, para ya**, en un lugar seguro. Una siesta corta, de unos 15 o '
+                      '20 minutos, puede marcar la diferencia.',
+                      '**Comer ligero** y beber agua. Las comidas copiosas dan sueño.',
+                      '**Compartir la conducción** en trayectos largos, si es posible.']),
+                    ('h2', 'Un coche en buen estado también ayuda'),
+                    ('p',
+                     'Conducir cansado ya es difícil; hacerlo viendo mal lo es más. Unos faros amarillentos '
+                     'y opacos iluminan menos y dispersan la luz, así que de noche obligan a forzar la vista. '
+                     'Una luna con impactos o rayada por la calima deslumbra con el sol bajo, y unos '
+                     'retrovisores sucios o mal ajustados te hacen girar la cabeza más de la cuenta. Todo '
+                     'eso suma cansancio. Y muchos coches recientes incorporan avisos de salida de carril o '
+                     'detectores de fatiga: son una ayuda útil, pero no sustituyen a tu atención ni a una '
+                     'parada a tiempo.'),
+                    ('quote', 'Llegar diez minutos más tarde no es un problema. No llegar sí lo es.'),
+                    ('nota',
+                     'Si tienes somnolencia frecuente durante el día aunque duermas suficiente, coméntalo '
+                     'con tu médico: algunos trastornos del sueño afectan a la conducción y tienen '
+                     'tratamiento.'),
+                    ('p',
+                     'Si tus faros han perdido transparencia con el sol, en Green Car Service Tenerife los '
+                     'pulimos y protegemos con nuestra [restauración de faros](servicio-restauracion-de-faros.html), '
+                     'y si el frontal ha sufrido un golpe, lo reparamos en nuestro taller de [chapa y '
+                     'pintura](chapa-y-pintura.html). [Pide cita](pedir-cita.html) cuando lo necesites.')]},
+  'en': {'titulo': 'Driver fatigue: how to recognise and avoid it',
+         'resumen': 'Tiredness creeps up on you and is deceptive. The warning signs, the myths that do not '
+                    'work, and the only thing that really helps: stopping to rest.',
+         'cuerpo': [('p',
+                     'Fatigue is treacherous because it does not hit you all at once. You start a journey '
+                     'feeling fine and, without noticing, your reactions slow down, it gets harder to stay '
+                     'focused and you make worse decisions. At worst comes the microsleep: a few seconds '
+                     "when the brain 'switches off' with the eyes almost open. At dual-carriageway speed, the car "
+                     'covers a long distance out of control in those seconds.'),
+                    ('h2', 'Warning signs'),
+                    ('p', 'If you notice any of these signs, your body is telling you to stop:'),
+                    ('ul',
+                     ['Frequent yawning and heavy blinking.',
+                      'Itchy eyes or wanting to rub them.',
+                      'Struggling to keep your head up.',
+                      'Not remembering the last few kilometres.',
+                      'Missing an exit or a road sign.',
+                      'Drifting out of your lane or touching the line without meaning to.',
+                      'Changing speed for no reason or getting too close to the car in front.']),
+                    ('h2', 'Higher-risk situations'),
+                    ('ul',
+                     ['Driving after too little or poor sleep.',
+                      'Early afternoon, after lunch, and the small hours of the night.',
+                      'Long, monotonous drives, such as a straight dual carriageway with little traffic.',
+                      'Coming back from a day at the beach or in the mountains: sun, heat and exercise are '
+                      'more tiring than they seem.',
+                      'After a long flight or a time-zone change, common for anyone landing at Tenerife '
+                      'South airport and picking up a hire car.',
+                      'Taking medicines that cause drowsiness. Check the leaflet: in Spain many carry a '
+                      'warning pictogram about driving.']),
+                    ('h2', 'What does not work'),
+                    ('p',
+                     'Opening the window, turning up the music or blasting cold air will perk you up for a '
+                     'few minutes, but they do not cure sleepiness. Coffee or caffeinated drinks can help '
+                     'for a while, although they take time to kick in and are no substitute for rest. '
+                     'Chatting to a passenger helps, but it is not the answer if your body needs sleep.'),
+                    ('h2', 'What does work'),
+                    ('ol',
+                     ['**Get a good rest before setting off**, especially for a long trip.',
+                      "**Stop regularly.** The usual advice from the DGT, Spain's traffic authority, is to "
+                      'take a break every two hours or around 200 km, even if you do not feel tired.',
+                      '**If you notice the signs, stop now**, somewhere safe. A short nap of around 15 to 20 '
+                      'minutes can make all the difference.',
+                      '**Eat light** and drink water. Heavy meals make you drowsy.',
+                      '**Share the driving** on long journeys if you can.']),
+                    ('h2', 'A car in good condition helps too'),
+                    ('p',
+                     'Driving tired is hard enough; doing it when you cannot see well is harder. Yellowed, '
+                     'cloudy headlights give less light and scatter the beam, so at night you strain your '
+                     'eyes. A windscreen with chips or scratched by calima dust dazzles you when the sun is '
+                     'low, and dirty or badly adjusted mirrors make you turn your head more than you should. '
+                     'It all adds to fatigue. Many recent cars also include lane departure warnings or '
+                     'fatigue detection: they are a useful aid, but they do not replace your attention or a '
+                     'timely stop.'),
+                    ('quote', 'Arriving ten minutes late is not a problem. Not arriving at all is.'),
+                    ('nota',
+                     'If you often feel sleepy during the day despite getting enough sleep, talk to your '
+                     'doctor: some sleep disorders affect driving and can be treated.'),
+                    ('p',
+                     'If your headlights have gone cloudy in the sun, at Green Car Service Tenerife we polish '
+                     'and protect them with our [headlight restoration](servicio-restauracion-de-faros.html) '
+                     'service, and if the front end has taken a knock, we repair it in our [bodywork and '
+                     'paint](chapa-y-pintura.html) workshop. [Book an appointment](pedir-cita.html) whenever '
+                     'you need to.')]}},
+ {'slug': 'articulo-que-hacer-justo-despues-de-un-accidente',
+  'cat': 'seguros-siniestros',
+  'fecha': '2026-01-27',
+  'es': {'titulo': 'Qué hacer justo después de un accidente',
+         'resumen': 'Los primeros minutos tras un accidente son de nervios. Tener claro el orden de los '
+                    'pasos te ayuda a protegerte y a que después el seguro funcione sin sorpresas.',
+         'cuerpo': [('p',
+                     'Nadie sale de casa pensando en tener un accidente, y por eso cuando ocurre es fácil '
+                     'bloquearse. Aunque sea un golpe pequeño en una rotonda de Las Américas o un alcance en '
+                     'la TF-1, seguir un orden sencillo evita errores que luego complican el '
+                     '[[siniestro|siniestro]]. Primero la seguridad, después los datos y, por último, el '
+                     'seguro.'),
+                    ('h2', '1. Protégete y protege a los demás'),
+                    ('ol',
+                     ['Enciende las luces de emergencia.',
+                      'Ponte el chaleco reflectante antes de salir del coche.',
+                      'Señaliza el vehículo. En España, desde enero de 2026 la señal obligatoria es la '
+                      'baliza luminosa V-16 conectada, que se coloca en el techo sin tener que caminar por '
+                      'la calzada.',
+                      'Si el coche puede moverse y no hay heridos, apártalo a un lugar seguro. Si no, sal '
+                      'por el lado contrario al tráfico y ponte detrás de la barrera o fuera de la vía.']),
+                    ('h2', '2. Comprueba si hay heridos'),
+                    ('p',
+                     'Si alguien está herido, aunque parezca leve, llama al 112. No muevas a un herido salvo '
+                     'que corra un peligro inmediato. También conviene llamar si el accidente bloquea la '
+                     'vía, si hay implicados que no colaboran o si sospechas que algún conductor va bajo los '
+                     'efectos del alcohol u otras sustancias. En esos casos, la actuación de los agentes '
+                     'deja constancia oficial de lo ocurrido.'),
+                    ('h2', '3. Recoge información'),
+                    ('p', 'Con todos a salvo, toca documentar. Hazlo con calma y con el móvil:'),
+                    ('ul',
+                     ['Fotos de los vehículos, de los daños, de las matrículas y de la posición en la que '
+                      'quedaron.',
+                      'Fotos de la vía: señales, marcas de frenada, visibilidad.',
+                      'Nombre, teléfono, DNI o pasaporte y permiso de conducir del otro conductor.',
+                      'Aseguradora y número de póliza del otro vehículo.',
+                      'Datos de contacto de testigos, si los hay.']),
+                    ('p',
+                     'Si el otro vehículo es de alquiler, algo muy habitual en el sur de la isla, anota '
+                     'también la empresa de alquiler: su contrato suele indicar la aseguradora.'),
+                    ('h2', '4. Rellena el parte amistoso'),
+                    ('p',
+                     'Si hay acuerdo sobre lo ocurrido, el [[parte-amistoso|parte amistoso]] (Declaración '
+                     'Amistosa de Accidente) es la forma más rápida de que las aseguradoras gestionen el '
+                     'caso. Rellenadlo juntos, revisadlo antes de firmar y quedaos cada uno con su copia. Si '
+                     'no hay acuerdo, no firmes: cada uno comunica su versión a su aseguradora y, si hace '
+                     'falta, se pide la intervención de los agentes.'),
+                    ('h2', '5. Evita lo que complica las cosas'),
+                    ('ul',
+                     ['No discutas ni reconozcas culpas de palabra: lo que cuenta es lo que queda por '
+                      'escrito.',
+                      'No firmes documentos que no entiendas; si el otro conductor no habla tu idioma, '
+                      'buscad una versión del parte en el idioma de cada uno, que tiene el mismo formato.',
+                      'No abandones el lugar sin haber intercambiado los datos.']),
+                    ('h2', '6. Avisa a tu aseguradora'),
+                    ('p',
+                     'Comunica el siniestro cuanto antes. La ley y las pólizas fijan un plazo de pocos días '
+                     'para hacerlo. Envía el parte y las fotos, y pregunta por los pasos siguientes: grúa si '
+                     'la necesitas, [[peritacion|peritación]] y taller. Recuerda que, en general, puedes '
+                     'elegir dónde reparar tu coche; revisa lo que dice tu póliza.'),
+                    ('nota',
+                     'Si te duele algo en los días siguientes, acude al médico aunque en el momento te '
+                     'encontraras bien. Algunas lesiones leves aparecen más tarde y es importante que queden '
+                     'documentadas.'),
+                    ('p',
+                     'En Green Car Service Tenerife te ayudamos después del accidente: coordinamos la '
+                     'peritación, tramitamos la reparación con tu compañía y, cuando es posible, te '
+                     'ofrecemos vehículo de sustitución. Consulta nuestra [guía de qué hacer tras un '
+                     'accidente](guia-que-hacer-tras-un-accidente.html), los [teléfonos de '
+                     'asistencia](telefonos-de-asistencia.html) y nuestro servicio de [gestión con '
+                     'aseguradoras](servicio-gestion-con-aseguradoras.html).')]},
+  'en': {'titulo': 'What to do straight after an accident',
+         'resumen': 'The first minutes after an accident are stressful. Knowing the order of the steps helps '
+                    'you stay safe and makes sure the insurance works without surprises later.',
+         'cuerpo': [('p',
+                     'Nobody leaves home expecting to have an accident, which is why it’s easy to freeze '
+                     'when it happens. Whether it’s a small knock on a roundabout in Las Américas or a '
+                     'rear-end shunt on the TF-1, following a simple order avoids mistakes that later '
+                     'complicate the [[siniestro|claim]]. Safety first, then information, and finally the '
+                     'insurance.'),
+                    ('h2', '1. Protect yourself and others'),
+                    ('ol',
+                     ['Switch on your hazard lights.',
+                      'Put on your reflective vest before getting out of the car.',
+                      'Signal the vehicle. In Spain, since January 2026 the mandatory warning device is the '
+                      'connected V-16 beacon, which goes on the roof so you don’t have to walk along the '
+                      'carriageway.',
+                      'If the car can be moved and nobody is hurt, move it somewhere safe. If not, get out '
+                      'on the side away from traffic and stand behind the barrier or off the road.']),
+                    ('h2', '2. Check for injuries'),
+                    ('p',
+                     'If anyone is injured, even if it seems minor, call 112. Don’t move an injured person '
+                     'unless they are in immediate danger. It’s also worth calling if the accident blocks '
+                     'the road, if someone involved won’t cooperate, or if you suspect a driver is under the '
+                     'influence of alcohol or other substances. In those cases, the police attendance '
+                     'creates an official record of what happened.'),
+                    ('h2', '3. Gather information'),
+                    ('p', 'Once everyone is safe, it’s time to document. Take your time and use your phone:'),
+                    ('ul',
+                     ['Photos of the vehicles, the damage, the number plates and where the cars ended up.',
+                      'Photos of the road: signs, skid marks, visibility.',
+                      'The other driver’s name, phone number, ID or passport and driving licence.',
+                      'The other vehicle’s insurer and policy number.',
+                      'Contact details of any witnesses.']),
+                    ('p',
+                     'If the other car is a hire car, which is very common in the south of the island, also '
+                     'note the rental company: its contract usually names the insurer.'),
+                    ('h2', '4. Fill in the accident report form'),
+                    ('p',
+                     'If you agree on what happened, the [[parte-amistoso|accident report form]] (the '
+                     'European Accident Statement, known in Spain as the ‘parte amistoso’) is the quickest '
+                     'way for the insurers to handle the case. Fill it in together, check it before signing '
+                     'and each keep your copy. If you don’t agree, don’t sign: each driver reports their '
+                     'version to their own insurer and, if necessary, the police are called.'),
+                    ('h2', '5. Avoid what makes things harder'),
+                    ('ul',
+                     ['Don’t argue or admit fault verbally: what counts is what is written down.',
+                      'Don’t sign anything you don’t understand; if the other driver doesn’t speak your '
+                      'language, use a version of the form in each language, which has the same layout.',
+                      'Don’t leave the scene without exchanging details.']),
+                    ('h2', '6. Tell your insurer'),
+                    ('p',
+                     'Report the claim as soon as possible. The law and policies set a deadline of just a '
+                     'few days. Send the form and the photos, and ask about the next steps: recovery truck '
+                     'if you need one, [[peritacion|loss assessment]] and garage. Remember that, in general, '
+                     'you can choose where your car is repaired; check what your policy says.'),
+                    ('nota',
+                     'If you feel pain in the following days, see a doctor even if you felt fine at the '
+                     'time. Some minor injuries appear later and it’s important they are documented.'),
+                    ('p',
+                     'At Green Car Service Tenerife we help you after an accident: we coordinate the '
+                     'assessment, handle the repair with your insurer and, where possible, offer a courtesy '
+                     'car. See our [guide on what to do after an '
+                     'accident](guia-que-hacer-tras-un-accidente.html), the [assistance phone '
+                     'numbers](telefonos-de-asistencia.html) and our [insurance handling '
+                     'service](servicio-gestion-con-aseguradoras.html).')]}},
+ {'slug': 'articulo-como-rellenar-el-parte-amistoso',
+  'cat': 'seguros-siniestros',
+  'fecha': '2023-11-07',
+  'es': {'titulo': 'Cómo rellenar el parte amistoso sin errores',
+         'resumen': 'El parte amistoso es sencillo, pero un par de casillas mal marcadas pueden cambiar cómo '
+                    'se reparte la responsabilidad. Lo repasamos apartado por apartado.',
+         'cuerpo': [('p',
+                     'El [[parte-amistoso|parte amistoso]], cuyo nombre oficial es Declaración Amistosa de '
+                     'Accidente, es un documento con el mismo formato en toda Europa. Sirve para que los dos '
+                     'conductores implicados en un accidente describan juntos lo ocurrido y lo firmen. Con '
+                     'él, las aseguradoras pueden resolver el [[siniestro|siniestro]] mucho más rápido. '
+                     'Lleva siempre uno en la guantera, y si vas a alquilar, comprueba que el coche también '
+                     'lo tiene.'),
+                    ('h2', 'Antes de empezar'),
+                    ('ul',
+                     ['Usa un solo juego: es un documento autocopiativo, con una hoja para cada conductor.',
+                      'Escribe con bolígrafo y apretando, para que se lea bien la copia.',
+                      'Cada conductor rellena su columna: el vehículo A a un lado y el B al otro. No importa '
+                      'quién sea A o B.',
+                      'Si no habláis el mismo idioma, las casillas numeradas son iguales en todas las '
+                      'versiones, lo que ayuda a entenderse.']),
+                    ('h2', 'Los datos comunes'),
+                    ('p',
+                     'La parte superior recoge la fecha, la hora, el lugar exacto, si hubo heridos, si hubo '
+                     'daños a otros vehículos u objetos y los datos de los testigos. Sé preciso con el '
+                     'lugar: nombre de la calle o carretera, punto kilométrico si lo sabes, y municipio.'),
+                    ('h2', 'Tu columna'),
+                    ('p',
+                     'Cada conductor anota los datos del tomador del seguro, del vehículo, de la aseguradora '
+                     '(nombre, número de póliza y validez) y del conductor (permiso de conducir). Tenlo a '
+                     'mano: la documentación del coche y el recibo o certificado del seguro facilitan mucho '
+                     'este paso.'),
+                    ('h2', 'Las circunstancias: la parte más importante'),
+                    ('p',
+                     'En el centro hay una lista de situaciones numeradas: estaba estacionado, salía de un '
+                     'aparcamiento, cambiaba de carril, circulaba en el mismo sentido, no respetó un stop, '
+                     'etc. Cada conductor marca las que describen lo que hacía en el momento del choque. Al '
+                     'final se anota el número total de casillas marcadas en cada columna.'),
+                    ('p',
+                     'Ese número evita que alguien añada cruces después. Y esas casillas son lo primero que '
+                     'miran las aseguradoras para repartir responsabilidades, así que tómate tu tiempo. Si '
+                     'ninguna encaja del todo, no marques una que no corresponde.'),
+                    ('h2', 'El croquis'),
+                    ('p',
+                     'Dibuja la vía, los carriles, el sentido de circulación de cada coche con flechas, la '
+                     'posición en el momento del choque y las señales de tráfico relevantes. No hace falta '
+                     'ser un artista, pero sí que se entienda. Indica también el punto de impacto inicial en '
+                     'cada vehículo, en el pequeño dibujo del coche.'),
+                    ('h2', 'Daños y observaciones'),
+                    ('p',
+                     'Describe los daños visibles de tu vehículo. En observaciones puedes añadir lo que '
+                     'consideres importante, por ejemplo que el otro conductor reconoce que no respetó la '
+                     'preferencia. Evita opiniones o frases largas.'),
+                    ('h2', 'Firmar y repartir'),
+                    ('ol',
+                     ['Revisa todo antes de firmar. Una vez firmado, no se debe modificar.',
+                      'Firman los dos conductores.',
+                      'Separad las hojas: cada uno se queda con una.',
+                      'Haz una foto del parte por si acaso.',
+                      'Envíalo a tu aseguradora en el plazo de pocos días que marca tu póliza.']),
+                    ('quote',
+                     'Si no estás de acuerdo con lo que el otro quiere escribir, no firmes. Es mejor que '
+                     'cada uno dé su versión por separado que firmar algo que no refleja lo ocurrido.'),
+                    ('nota',
+                     'El parte amistoso está pensado sobre todo para accidentes sin heridos entre dos '
+                     'vehículos. Si hay heridos, llama al 112.'),
+                    ('p',
+                     'Tienes una explicación más detallada en nuestra [guía del parte '
+                     'amistoso](guia-parte-amistoso.html). Y si tu coche ha sufrido daños, en Green Car '
+                     'Service Tenerife nos encargamos de la [peritación](guia-peritacion.html) y de la '
+                     '[gestión con tu aseguradora](servicio-gestion-con-aseguradoras.html).')]},
+  'en': {'titulo': 'How to fill in the accident report form correctly',
+         'resumen': 'The Spanish accident report form is simple, but a couple of wrongly ticked boxes can '
+                    'change how liability is shared. We go through it section by section.',
+         'cuerpo': [('p',
+                     'The [[parte-amistoso|accident report form]], known in Spain as the ‘parte amistoso’ '
+                     'and officially the ‘Declaración Amistosa de Accidente’, uses the same layout '
+                     'throughout Europe. It lets the two drivers involved in an accident describe together '
+                     'what happened and sign it. With it, the insurers can settle the [[siniestro|claim]] '
+                     'much faster. Always keep one in the glovebox, and if you hire a car, check it has one '
+                     'too.'),
+                    ('h2', 'Before you start'),
+                    ('ul',
+                     ['Use a single set: it is a carbonless form, with one sheet for each driver.',
+                      'Write in ballpoint pen and press firmly so the copy is legible.',
+                      'Each driver fills in their own column: vehicle A on one side and B on the other. It '
+                      'doesn’t matter who is A or B.',
+                      'If you don’t share a language, the numbered boxes are the same in every version, '
+                      'which helps you understand each other.']),
+                    ('h2', 'Shared details'),
+                    ('p',
+                     'The top section records the date, time, exact location, whether anyone was hurt, '
+                     'whether other vehicles or objects were damaged, and witness details. Be precise about '
+                     'the location: street or road name, kilometre marker if you know it, and municipality.'),
+                    ('h2', 'Your column'),
+                    ('p',
+                     'Each driver writes down the details of the policyholder, the vehicle, the insurer '
+                     '(name, policy number and validity) and the driver (driving licence). Keep them to '
+                     'hand: the car’s documents and the insurance receipt or certificate make this step much '
+                     'easier.'),
+                    ('h2', 'Circumstances: the most important part'),
+                    ('p',
+                     'In the middle there is a list of numbered situations: parked, leaving a car park, '
+                     'changing lanes, travelling in the same direction, failed to stop at a stop sign, and '
+                     'so on. Each driver ticks the ones that describe what they were doing at the moment of '
+                     'impact. At the end, the total number of boxes ticked in each column is written down.'),
+                    ('p',
+                     'That number prevents anyone adding crosses later. And those boxes are the first thing '
+                     'insurers look at to share out liability, so take your time. If none fits exactly, '
+                     'don’t tick one that doesn’t apply.'),
+                    ('h2', 'The sketch'),
+                    ('p',
+                     'Draw the road, the lanes, each car’s direction of travel with arrows, their positions '
+                     'at the moment of impact and any relevant road signs. You don’t need to be an artist, '
+                     'but it does need to be clear. Also mark the initial point of impact on each vehicle, '
+                     'on the small drawing of the car.'),
+                    ('h2', 'Damage and remarks'),
+                    ('p',
+                     'Describe the visible damage to your vehicle. Under remarks you can add anything you '
+                     'consider important, for example that the other driver accepts they failed to give way. '
+                     'Avoid opinions or long sentences.'),
+                    ('h2', 'Signing and splitting'),
+                    ('ol',
+                     ['Check everything before signing. Once signed, it should not be changed.',
+                      'Both drivers sign.',
+                      'Separate the sheets: each keeps one.',
+                      'Take a photo of the form just in case.',
+                      'Send it to your insurer within the few days your policy allows.']),
+                    ('quote',
+                     'If you don’t agree with what the other driver wants to write, don’t sign. It’s better '
+                     'for each of you to give your own version separately than to sign something that '
+                     'doesn’t reflect what happened.'),
+                    ('nota',
+                     'The form is mainly intended for accidents between two vehicles with no injuries. If '
+                     'anyone is hurt, call 112.'),
+                    ('p',
+                     'You’ll find a more detailed explanation in our [accident report form '
+                     'guide](guia-parte-amistoso.html). And if your car has been damaged, at Green Car '
+                     'Service Tenerife we take care of the [loss assessment](guia-peritacion.html) and '
+                     '[dealing with your insurer](servicio-gestion-con-aseguradoras.html).')]}},
+ {'slug': 'articulo-puedo-elegir-taller',
+  'cat': 'seguros-siniestros',
+  'fecha': '2024-02-27',
+  'es': {'titulo': '¿Puedo elegir taller aunque la aseguradora me mande a otro?',
+         'resumen': 'Tras un siniestro, muchas compañías te proponen un taller concertado. En la mayoría de '
+                    'los casos puedes elegir otro. Te explicamos cuándo y qué conviene revisar en tu póliza.',
+         'cuerpo': [('p',
+                     'Es una escena habitual: llamas a tu aseguradora para dar parte y, casi en la misma '
+                     'frase, te indican a qué taller debes llevar el coche. Muchos conductores entienden que '
+                     'es obligatorio. En general no lo es. La [[libre-eleccion-de-taller|libre elección de '
+                     'taller]] es un principio muy extendido en los seguros de automóvil, aunque cómo se '
+                     'aplica depende de tu póliza y de quién tenga la culpa del accidente.'),
+                    ('h2', 'Si la culpa es del otro'),
+                    ('p',
+                     'Cuando el accidente lo causa otro conductor, reclamas los daños a su aseguradora. En '
+                     'ese caso, lo razonable es que puedas reparar donde tú decidas: la compañía contraria '
+                     'debe indemnizarte por los daños, no imponerte dónde se arreglan. Un [[perito|perito]] '
+                     'valorará la reparación y el taller que elijas trabajará sobre esa valoración.'),
+                    ('h2', 'Si reclamas a tu propio seguro'),
+                    ('p',
+                     'Cuando el daño lo cubre tu propia póliza, por ejemplo un [[todo-riesgo|seguro a todo '
+                     'riesgo]] en un golpe en el que la culpa es tuya, lo que manda es el contrato. Hay '
+                     'pólizas que dejan elegir cualquier taller sin condiciones. Otras ofrecen ventajas si '
+                     'usas su red de talleres, como no pagar la franquicia o recibir un coche de '
+                     'sustitución. Y algunas, sobre todo las más económicas, limitan la reparación a '
+                     'talleres concertados o reducen la cobertura si vas a otro.'),
+                    ('p',
+                     'Por eso merece la pena buscar en las condiciones de tu póliza frases como «libre '
+                     'elección de taller», «talleres concertados» o «red de talleres». Si no lo encuentras o '
+                     'no lo entiendes, pregunta a tu mediador o a la compañía y pide la respuesta por '
+                     'escrito.'),
+                    ('h2', 'Por qué te proponen un taller'),
+                    ('p',
+                     'Las aseguradoras tienen acuerdos con talleres para agilizar trámites y controlar '
+                     'costes. No tiene nada de malo y puede ser una buena opción. Pero tú eres quien conoce '
+                     'tu coche y quien va a convivir con la reparación. Puede que prefieras un taller de '
+                     'confianza, más cerca de casa o con servicios que te interesan.'),
+                    ('h2', 'Qué hacer si quieres ir a tu taller'),
+                    ('ol',
+                     ['Comunica el siniestro a tu aseguradora como siempre, dentro de plazo.',
+                      'Indica que quieres reparar en el taller que tú elijas y facilita sus datos.',
+                      'Lleva el coche al taller: desde allí se coordina la visita del perito.',
+                      'Revisa el presupuesto y la valoración antes de autorizar la reparación.']),
+                    ('h2', 'Preguntas que conviene hacer'),
+                    ('ul',
+                     ['¿Mi póliza permite la libre elección de taller? ¿Con alguna condición?',
+                      '¿Pierdo alguna ventaja, como el vehículo de sustitución, si no voy al concertado?',
+                      '¿Tengo franquicia? ¿Se aplica igual en cualquier taller?',
+                      '¿Quién paga al taller: la aseguradora directamente o yo, y luego me reembolsan?']),
+                    ('nota',
+                     'Las condiciones varían entre compañías y pólizas. Lo que te contamos aquí es general; '
+                     'la referencia es siempre tu contrato.'),
+                    ('p',
+                     'En Green Car Service Tenerife trabajamos con tu compañía de seguros y nos encargamos '
+                     'de coordinar la peritación y los trámites. Lee nuestra [guía de libre elección de '
+                     'taller](guia-libre-eleccion-de-taller.html) y conoce nuestro servicio de [gestión con '
+                     'aseguradoras](servicio-gestion-con-aseguradoras.html).')]},
+  'en': {'titulo': 'Can I choose my garage if the insurer sends me elsewhere?',
+         'resumen': 'After a claim, many insurers suggest one of their approved garages. In most cases you '
+                    'can choose another. We explain when, and what to check in your policy.',
+         'cuerpo': [('p',
+                     'It’s a familiar scene: you call your insurer to report an accident and, almost in the '
+                     'same breath, they tell you which garage to take the car to. Many drivers assume it’s '
+                     'compulsory. Generally, it isn’t. [[libre-eleccion-de-taller|Free choice of repairer]] '
+                     'is a widespread principle in Spanish car insurance, although how it applies depends '
+                     'on your policy and on who was at fault.'),
+                    ('h2', 'If the other driver was at fault'),
+                    ('p',
+                     'When another driver causes the accident, you claim for the damage from their insurer. '
+                     'In that case, it’s reasonable that you should be able to have the repair done wherever '
+                     'you choose: the other insurer has to compensate you for the damage, not dictate where '
+                     'it gets fixed. A [[perito|loss adjuster]] will assess the repair and the garage you '
+                     'choose works from that assessment.'),
+                    ('h2', 'If you claim on your own policy'),
+                    ('p',
+                     'When the damage is covered by your own policy, for example [[todo-riesgo|comprehensive '
+                     'insurance]] after a bump that was your fault, the contract is what counts. Some '
+                     'policies let you use any garage without conditions. Others offer advantages if you use '
+                     'their network, such as not paying the excess or getting a courtesy car. And some, '
+                     'especially the cheaper ones, limit repairs to approved garages or reduce cover if you '
+                     'go elsewhere.'),
+                    ('p',
+                     'So it’s worth searching your policy terms for phrases like ‘libre elección de taller’ '
+                     '(free choice of repairer), ‘talleres concertados’ (approved garages) or ‘red de '
+                     'talleres’ (garage network). If you can’t find it or don’t understand it, ask your '
+                     'broker or the insurer and get the answer in writing.'),
+                    ('h2', 'Why they suggest a garage'),
+                    ('p',
+                     'Insurers have agreements with garages to speed up paperwork and control costs. There’s '
+                     'nothing wrong with that and it can be a good option. But you’re the one who knows your '
+                     'car and who will live with the repair. You may prefer a garage you trust, one closer '
+                     'to home or one offering services you value.'),
+                    ('h2', 'What to do if you want to use your garage'),
+                    ('ol',
+                     ['Report the claim to your insurer as usual, within the deadline.',
+                      'Say that you want the repair done at the garage of your choice and give its details.',
+                      'Take the car to the garage: the adjuster’s visit is arranged from there.',
+                      'Check the estimate and the assessment before authorising the repair.']),
+                    ('h2', 'Questions worth asking'),
+                    ('ul',
+                     ['Does my policy allow free choice of repairer? Are there conditions?',
+                      'Do I lose any benefits, such as a courtesy car, if I don’t use an approved garage?',
+                      'Do I have an excess? Does it apply the same at any garage?',
+                      'Who pays the garage: the insurer directly, or me with a refund later?']),
+                    ('nota',
+                     'Terms vary between insurers and policies. What we describe here is general; your '
+                     'contract is always the reference.'),
+                    ('p',
+                     'At Green Car Service Tenerife we work with your insurance company and take care of '
+                     'coordinating the assessment and paperwork. Read our [free choice of repairer '
+                     'guide](guia-libre-eleccion-de-taller.html) and find out about our [insurance handling '
+                     'service](servicio-gestion-con-aseguradoras.html).')]}},
+ {'slug': 'articulo-franquicia-cuando-compensa',
+  'cat': 'seguros-siniestros',
+  'fecha': '2024-10-15',
+  'es': {'titulo': 'Qué es la franquicia y cuándo compensa',
+         'resumen': 'El seguro a todo riesgo con franquicia es más barato, pero cada siniestro te cuesta '
+                    'algo. Te explicamos cómo funciona y cómo decidir si te conviene.',
+         'cuerpo': [('p',
+                     'Cuando comparas seguros de coche aparece enseguida la palabra '
+                     '[[franquicia|franquicia]]. Es la parte de cada siniestro que pagas tú. Si tu póliza '
+                     'tiene una franquicia de una cantidad determinada y la reparación cuesta más, tú pagas '
+                     'esa cantidad y la aseguradora el resto. Si la reparación cuesta menos, la pagas entera '
+                     'tú y normalmente no merece la pena dar parte.'),
+                    ('h2', 'Dónde se aplica'),
+                    ('p',
+                     'La franquicia es típica de los seguros a todo riesgo, y se aplica sobre todo a los '
+                     'daños propios, es decir, a la reparación de tu coche cuando la culpa es tuya o no hay '
+                     'un tercero identificado. No afecta a la responsabilidad civil: si dañas otro coche, la '
+                     'aseguradora paga al perjudicado completo. Y si el accidente lo causa otro conductor, '
+                     'reclamas a su seguro y no deberías pagar franquicia por tu reparación.'),
+                    ('p',
+                     'Algunas pólizas tienen franquicias distintas según la cobertura (lunas, robo, daños '
+                     'propios) o la reducen si reparas en un taller de su red. Revisa las condiciones para '
+                     'saber exactamente cuánto y cuándo pagas.'),
+                    ('h2', 'Por qué es más barato'),
+                    ('p',
+                     'Al asumir tú los daños pequeños, la aseguradora se ahorra gestionar muchos partes de '
+                     'poco importe. Por eso el precio del [[todo-riesgo|todo riesgo]] con franquicia suele '
+                     'ser bastante menor que el del todo riesgo sin ella, y suele quedar por encima del '
+                     'seguro a terceros ampliado.'),
+                    ('h2', 'Cuándo compensa'),
+                    ('ul',
+                     ['Si conduces con cuidado y rara vez tienes golpes, porque pagarás la franquicia pocas '
+                      'veces.',
+                      'Si tu coche tiene cierto valor y quieres protección ante un siniestro grande, sin '
+                      'pagar el todo riesgo completo.',
+                      'Si tienes margen para asumir la franquicia de una vez si hace falta.',
+                      'Si aparcas en la calle y te preocupan daños importantes, más que los pequeños '
+                      'roces.']),
+                    ('h2', 'Cuándo quizá no'),
+                    ('ul',
+                     ['Si tienes pequeños golpes con frecuencia, por ejemplo aparcando en zonas muy '
+                      'concurridas.',
+                      'Si pagar la franquicia de golpe te supondría un problema.',
+                      'Si el coche es antiguo y de poco valor: a veces es más razonable un seguro a terceros '
+                      'ampliado.']),
+                    ('h2', 'Un cálculo sencillo'),
+                    ('p',
+                     'Compara la diferencia anual entre el todo riesgo sin franquicia y el que la tiene. '
+                     'Luego piensa cuántos siniestros con culpa propia sueles tener al año. Si la diferencia '
+                     'de precio es mayor que lo que te costaría pagar la franquicia en esos siniestros, la '
+                     'franquicia te compensa. No es una ciencia exacta, pero ayuda a decidir con datos '
+                     'propios y no por intuición.'),
+                    ('h2', 'En el taller'),
+                    ('p',
+                     'Cuando llega el momento de reparar, el taller cobra a la aseguradora lo que le '
+                     'corresponde y a ti la franquicia. Pide que la cantidad quede clara en el '
+                     '[[presupuesto|presupuesto]] y en la factura. Si el daño es pequeño y quizá no compense '
+                     'dar parte, pide un presupuesto antes de decidir: así sabrás si la reparación supera o '
+                     'no tu franquicia.'),
+                    ('nota',
+                     'Dar parte de un siniestro puede afectar a tu bonificación en la renovación, según la '
+                     'política de cada compañía. Pregunta antes si tienes dudas.'),
+                    ('p',
+                     'En Green Car Service Tenerife te damos un [presupuesto](presupuesto.html) claro para '
+                     'que decidas con información si dar parte o no, y cuando lo das, nos encargamos de la '
+                     '[gestión con tu aseguradora](servicio-gestion-con-aseguradoras.html).')]},
+  'en': {'titulo': 'What an insurance excess is and when it pays off',
+         'resumen': 'Comprehensive cover with an excess is cheaper, but every claim costs you something. We '
+                    'explain how it works and how to decide whether it suits you.',
+         'cuerpo': [('p',
+                     'When you compare car insurance, the word [[franquicia|excess]] (‘franquicia’ in '
+                     'Spanish) crops up straight away. It’s the part of each claim you pay yourself. If your '
+                     'policy has an excess of a certain amount and the repair costs more, you pay that '
+                     'amount and the insurer pays the rest. If the repair costs less, you pay it all '
+                     'yourself and it usually isn’t worth making a claim.'),
+                    ('h2', 'Where it applies'),
+                    ('p',
+                     'An excess is typical of comprehensive policies, and applies mainly to own damage, '
+                     'meaning the repair of your car when you were at fault or there is no identified third '
+                     'party. It doesn’t affect third-party liability: if you damage another car, the insurer '
+                     'pays the other party in full. And if another driver causes the accident, you claim on '
+                     'their insurance and shouldn’t pay an excess for your repair.'),
+                    ('p',
+                     'Some policies have different excesses depending on the cover (glass, theft, own '
+                     'damage) or reduce it if you use one of their network garages. Check the terms to know '
+                     'exactly how much and when you pay.'),
+                    ('h2', 'Why it’s cheaper'),
+                    ('p',
+                     'Because you take on the small damage, the insurer avoids handling lots of low-value '
+                     'claims. That’s why [[todo-riesgo|comprehensive insurance]] with an excess is usually '
+                     'noticeably cheaper than without one, and usually sits above extended third-party '
+                     'cover.'),
+                    ('h2', 'When it pays off'),
+                    ('ul',
+                     ['If you drive carefully and rarely have bumps, because you’ll seldom pay the excess.',
+                      'If your car has some value and you want protection against a major claim without '
+                      'paying for full comprehensive.',
+                      'If you could afford to pay the excess in one go if needed.',
+                      'If you park on the street and worry more about serious damage than small scrapes.']),
+                    ('h2', 'When it might not'),
+                    ('ul',
+                     ['If you often have small knocks, for example parking in very busy areas.',
+                      'If paying the excess all at once would be a problem.',
+                      'If the car is old and worth little: sometimes extended third-party cover makes more '
+                      'sense.']),
+                    ('h2', 'A simple calculation'),
+                    ('p',
+                     'Compare the yearly difference between comprehensive with no excess and with one. Then '
+                     'think about how many at-fault claims you usually have per year. If the price '
+                     'difference is greater than what you would pay in excess for those claims, the excess '
+                     'pays off. It isn’t an exact science, but it helps you decide based on your own figures '
+                     'rather than gut feeling.'),
+                    ('h2', 'At the garage'),
+                    ('p',
+                     'When it comes to the repair, the garage charges the insurer its share and charges you '
+                     'the excess. Ask for the amount to be clear on the [[presupuesto|repair estimate]] and '
+                     'the invoice. If the damage is small and a claim may not be worth it, ask for an '
+                     'estimate before deciding: you’ll know whether the repair exceeds your excess or not.'),
+                    ('nota',
+                     'Making a claim can affect your no-claims discount at renewal, depending on each '
+                     'insurer’s policy. Ask beforehand if in doubt.'),
+                    ('p',
+                     'At Green Car Service Tenerife we give you a clear [estimate](presupuesto.html) so you '
+                     'can make an informed decision about claiming, and when you do claim, we take care of '
+                     '[dealing with your insurer](servicio-gestion-con-aseguradoras.html).')]}},
+ {'slug': 'articulo-que-es-la-perdida-total',
+  'cat': 'seguros-siniestros',
+  'fecha': '2025-05-06',
+  'es': {'titulo': 'Qué es la pérdida total y qué opciones tienes',
+         'resumen': 'Que la aseguradora declare tu coche siniestro total no siempre significa que no se '
+                    'pueda reparar. Te explicamos cómo se decide, qué te pagan y qué puedes hacer.',
+         'cuerpo': [('p',
+                     'Pocas llamadas sientan peor que la de la aseguradora diciendo que tu coche es '
+                     '[[perdida-total|pérdida total]], también llamado siniestro total. Mucha gente entiende '
+                     'que el coche ha quedado destrozado, pero no siempre es así. En la mayoría de los casos '
+                     'es una decisión económica: repararlo costaría más de lo que la compañía considera que '
+                     'vale el coche.'),
+                    ('h2', 'Cómo se decide'),
+                    ('p',
+                     'Tras el accidente, un [[perito|perito]] valora los daños y calcula cuánto costaría la '
+                     'reparación. Esa cifra se compara con el valor que se atribuye al vehículo. Si la '
+                     'reparación supera ese valor, o el porcentaje de él que marque tu póliza, se declara la '
+                     'pérdida total. También puede declararse cuando el daño afecta a la estructura de tal '
+                     'forma que no es seguro repararlo.'),
+                    ('h2', 'Qué valor tiene tu coche para el seguro'),
+                    ('p', 'Aquí está la clave, y depende de quién tenga la culpa y de tu contrato:'),
+                    ('ul',
+                     ['**Valor venal:** lo que costaría comprar un coche igual, de la misma antigüedad y en '
+                      'estado parecido, justo antes del accidente. Es el valor más bajo.',
+                      '**Valor de mercado:** similar, basado en lo que se paga por coches equivalentes en el '
+                      'mercado de segunda mano.',
+                      '**Valor a nuevo:** algunas pólizas de todo riesgo lo pagan durante los primeros años '
+                      'del coche.']),
+                    ('p',
+                     'Cuando el accidente lo causa otro y reclamas a su seguro, es habitual que la '
+                     'indemnización incluya el valor venal más una cantidad adicional por los perjuicios de '
+                     'tener que buscar otro coche, lo que se conoce como valor de afección. Cómo se calcula '
+                     'depende del caso; si no estás de acuerdo con la cifra, puedes discutirla.'),
+                    ('h2', 'Tus opciones'),
+                    ('ol',
+                     ['**Aceptar la indemnización y entregar el coche.** La aseguradora se queda con el '
+                      'vehículo y gestiona su baja o su venta como restos.',
+                      '**Aceptar la indemnización y quedarte el coche.** Muchas compañías lo permiten '
+                      'descontando el valor de los restos. Luego puedes repararlo por tu cuenta si te '
+                      'compensa.',
+                      '**No estar de acuerdo con la valoración.** Puedes aportar pruebas del valor real de '
+                      'tu coche: anuncios de coches equivalentes, facturas de mantenimiento, extras, estado '
+                      'general. Y, si hace falta, pedir una segunda valoración con un perito propio.']),
+                    ('h2', '¿Cuándo tiene sentido repararlo igualmente?'),
+                    ('p',
+                     'A veces la cifra de la aseguradora se queda corta respecto a lo que te costaría '
+                     'encontrar un coche igual de fiable, sobre todo si el tuyo está muy cuidado o tiene '
+                     'pocos kilómetros. Si te quedas con el coche, conviene pedir un '
+                     '[[presupuesto|presupuesto]] realista y valorar si la reparación, con recambios nuevos '
+                     'o de calidad equivalente, deja el coche en condiciones seguras. Si la estructura está '
+                     'afectada, la reparación debe hacerse en [[bancada|bancada]] y con garantías.'),
+                    ('h2', 'Qué no hacer'),
+                    ('ul',
+                     ['No firmes el finiquito sin leer bien qué cantidad aceptas y qué pasa con el coche.',
+                      'No des por buena la primera cifra si te parece baja: pregunta cómo se ha calculado.',
+                      'No olvides retirar tus objetos personales del coche y, si hay equipamiento añadido, '
+                      'avisar a la compañía.']),
+                    ('nota',
+                     'Las condiciones concretas dependen de tu póliza y de si reclamas a tu aseguradora o a '
+                     'la del contrario. Cada caso es distinto.'),
+                    ('p',
+                     'En Green Car Service Tenerife te ayudamos a entender la valoración, te damos un '
+                     'presupuesto independiente y, si decides reparar, lo hacemos con bancada y equipamiento '
+                     'adecuados. Tienes más detalles en nuestra [guía de pérdida '
+                     'total](guia-perdida-total.html) y en nuestra [guía de la '
+                     'peritación](guia-peritacion.html).')]},
+  'en': {'titulo': 'What a total loss is and what your options are',
+         'resumen': 'An insurer writing your car off doesn’t always mean it can’t be repaired. We explain '
+                    'how the decision is made, what you get paid and what you can do.',
+         'cuerpo': [('p',
+                     'Few phone calls feel worse than the insurer telling you your car is a '
+                     '[[perdida-total|total loss]], or a write-off. Many people assume the car has been '
+                     'wrecked, but that isn’t always the case. Usually it’s an economic decision: repairing '
+                     'it would cost more than the insurer considers the car to be worth.'),
+                    ('h2', 'How it’s decided'),
+                    ('p',
+                     'After the accident, a [[perito|loss adjuster]] assesses the damage and works out what '
+                     'the repair would cost. That figure is compared with the value attributed to the '
+                     'vehicle. If the repair exceeds that value, or the percentage of it set in your policy, '
+                     'the car is declared a total loss. It can also be declared when the damage affects the '
+                     'structure in a way that makes repair unsafe.'),
+                    ('h2', 'What your car is worth to the insurer'),
+                    ('p', 'This is the key point, and it depends on who was at fault and on your contract:'),
+                    ('ul',
+                     ['**Pre-accident value (‘valor venal’):** what it would cost to buy an identical car of '
+                      'the same age and in similar condition just before the accident. It is the lowest '
+                      'value.',
+                      '**Market value:** similar, based on what equivalent cars sell for on the used market.',
+                      '**New-for-old value:** some comprehensive policies pay this during the first few '
+                      'years of the car’s life.']),
+                    ('p',
+                     'When another driver caused the accident and you claim on their insurance, compensation '
+                     'commonly includes the pre-accident value plus an additional amount for the '
+                     'inconvenience of having to find another car, known in Spain as ‘valor de afección’. '
+                     'How it’s worked out depends on the case; if you don’t agree with the figure, you can '
+                     'challenge it.'),
+                    ('h2', 'Your options'),
+                    ('ol',
+                     ['**Accept the payout and hand over the car.** The insurer keeps the vehicle and '
+                      'handles its deregistration or sale as salvage.',
+                      '**Accept the payout and keep the car.** Many insurers allow this, deducting the '
+                      'salvage value. You can then repair it yourself if it’s worth it.',
+                      '**Dispute the valuation.** You can provide evidence of your car’s real value: adverts '
+                      'for equivalent cars, service invoices, extras, overall condition. And, if necessary, '
+                      'ask for a second assessment by your own adjuster.']),
+                    ('h2', 'When does it still make sense to repair?'),
+                    ('p',
+                     'Sometimes the insurer’s figure falls short of what it would cost to find an equally '
+                     'reliable car, especially if yours is well looked after or has low mileage. If you keep '
+                     'the car, get a realistic [[presupuesto|repair estimate]] and consider whether the '
+                     'repair, with new or equivalent-quality parts, leaves the car safe. If the structure is '
+                     'affected, the repair must be done on a [[bancada|chassis jig]] and with proper '
+                     'guarantees.'),
+                    ('h2', 'What not to do'),
+                    ('ul',
+                     ['Don’t sign the settlement without reading carefully what amount you’re accepting and '
+                      'what happens to the car.',
+                      'Don’t accept the first figure if it seems low: ask how it was calculated.',
+                      'Don’t forget to remove your personal belongings and, if you’ve added equipment, tell '
+                      'the insurer.']),
+                    ('nota',
+                     'The exact terms depend on your policy and on whether you’re claiming from your own '
+                     'insurer or the other party’s. Every case is different.'),
+                    ('p',
+                     'At Green Car Service Tenerife we help you understand the valuation, give you an '
+                     'independent estimate and, if you decide to repair, do it with the right jig and '
+                     'equipment. There’s more detail in our [total loss guide](guia-perdida-total.html) and '
+                     'our [loss assessment guide](guia-peritacion.html).')]}},
+ {'slug': 'articulo-que-hace-el-perito',
+  'cat': 'seguros-siniestros',
+  'fecha': '2025-11-25',
+  'es': {'titulo': 'Qué hace el perito del seguro y cómo prepararte',
+         'resumen': 'El perito decide qué se repara y cómo tras un siniestro. Entender su trabajo te ayuda a '
+                    'que la valoración sea completa y a saber qué hacer si no estás de acuerdo.',
+         'cuerpo': [('p',
+                     'Después de dar parte de un accidente, casi siempre aparece una figura clave: el '
+                     '[[perito|perito]]. Es un profesional especializado en valorar daños de vehículos que, '
+                     'normalmente, trabaja para la aseguradora. Su informe determina qué piezas se reparan o '
+                     'se cambian, cuántas horas de mano de obra se reconocen y, en los casos graves, si el '
+                     'coche es pérdida total.'),
+                    ('h2', 'Qué hace exactamente'),
+                    ('ul',
+                     ['Inspecciona el vehículo, normalmente en el taller, y en algunos casos de forma remota '
+                      'a partir de fotos y vídeos.',
+                      'Comprueba que los daños son coherentes con el accidente declarado.',
+                      'Decide qué piezas se reparan y cuáles se sustituyen.',
+                      'Valora la mano de obra de chapa y pintura según [[baremo|baremos]] y tiempos de '
+                      'referencia.',
+                      'Emite un informe que la aseguradora usa para autorizar la reparación o la '
+                      'indemnización.']),
+                    ('h2', 'Por qué es mejor que el coche esté en el taller'),
+                    ('p',
+                     'Muchos daños no se ven a simple vista. Tras un golpe en el paragolpes delantero, por '
+                     'ejemplo, puede haber soportes rotos, refuerzos doblados o el frente interior deformado. Si la '
+                     '[[peritacion|peritación]] se hace con el coche en el taller, se pueden desmontar '
+                     'piezas y enseñar al perito todo lo que hay detrás. Si aparecen daños ocultos después, '
+                     'el taller informa a la aseguradora y se hace una ampliación de la peritación.'),
+                    ('h2', 'Cómo prepararte'),
+                    ('ol',
+                     ['Guarda las fotos que hiciste en el lugar del accidente y el parte amistoso.',
+                      'Anota todo lo que notes raro desde el golpe: puertas que cierran mal, ruidos de '
+                      'carrocería, piezas sueltas.',
+                      'Si tu coche tiene extras o equipamiento especial, tenlo documentado.',
+                      'Si tenías daños previos sin relación con el accidente, dilo con claridad. Evita '
+                      'malentendidos.',
+                      'Lleva el coche a tu taller de confianza: sabe qué revisar y habla el mismo idioma '
+                      'técnico que el perito.']),
+                    ('h2', 'Recambios: original o equivalente'),
+                    ('p',
+                     'El perito puede valorar la reparación con [[recambio-original|recambios originales]] o '
+                     'con recambios de calidad equivalente, según la póliza y el tipo de pieza. Pregunta qué '
+                     'se ha previsto en tu caso, sobre todo en coches nuevos o en piezas de seguridad.'),
+                    ('h2', 'Si no estás de acuerdo'),
+                    ('p',
+                     'Puede ocurrir que la valoración te parezca insuficiente: que no se reconozca una pieza '
+                     'dañada, que se proponga reparar algo que crees que debería cambiarse o que el valor '
+                     'del coche en una pérdida total te parezca bajo. En ese caso:'),
+                    ('ul',
+                     ['Pide que te expliquen el criterio y, si es posible, el informe por escrito.',
+                      'Aporta pruebas: fotos, presupuesto del taller, facturas o anuncios de coches '
+                      'equivalentes.',
+                      'Si no hay acuerdo, la ley permite en muchos casos acudir a una peritación '
+                      'contradictoria con un perito designado por ti. Consulta las condiciones y costes en '
+                      'tu póliza.']),
+                    ('nota',
+                     'El perito valora los daños; la decisión de cómo se repara con calidad es del taller. '
+                     'Un buen diálogo entre los dos es lo que mejor protege tu coche.'),
+                    ('p',
+                     'En Green Car Service Tenerife trabajamos a diario con peritos: preparamos el coche, '
+                     'mostramos los daños y defendemos una reparación correcta. Lee nuestra [guía de la '
+                     'peritación](guia-peritacion.html) y conoce nuestro servicio de [gestión con '
+                     'aseguradoras](servicio-gestion-con-aseguradoras.html).')]},
+  'en': {'titulo': 'What the insurance loss adjuster does and how to prepare',
+         'resumen': 'The loss adjuster decides what gets repaired and how after a claim. Understanding their '
+                    'job helps you get a complete assessment and know what to do if you disagree.',
+         'cuerpo': [('p',
+                     'After you report an accident, a key figure almost always appears: the [[perito|loss '
+                     'adjuster]] (‘perito’). They are a specialist in assessing vehicle damage and normally '
+                     'work for the insurer. Their report determines which parts are repaired or replaced, '
+                     'how many hours of labour are accepted and, in serious cases, whether the car is a '
+                     'total loss.'),
+                    ('h2', 'What exactly they do'),
+                    ('ul',
+                     ['Inspect the vehicle, usually at the garage and sometimes remotely using photos and '
+                      'videos.',
+                      'Check that the damage is consistent with the reported accident.',
+                      'Decide which parts are repaired and which are replaced.',
+                      'Assess bodywork and paint labour using [[baremo|standard schedules]] and reference '
+                      'times.',
+                      'Issue a report the insurer uses to authorise the repair or payout.']),
+                    ('h2', 'Why it’s better for the car to be at the garage'),
+                    ('p',
+                     'A lot of damage can’t be seen at a glance. After a hit on the front bumper, for '
+                     'example, there may be broken brackets, bent reinforcements or a distorted inner front panel. If '
+                     'the [[peritacion|loss assessment]] is done with the car at the garage, parts can be '
+                     'removed to show the adjuster everything behind them. If hidden damage turns up later, '
+                     'the garage informs the insurer and the assessment is extended.'),
+                    ('h2', 'How to prepare'),
+                    ('ol',
+                     ['Keep the photos you took at the scene and the accident report form.',
+                      'Note anything odd since the impact: doors that do not shut properly, body rattles, loose parts.',
+                      'If your car has extras or special equipment, have it documented.',
+                      'If there was previous damage unrelated to the accident, say so clearly. It avoids '
+                      'misunderstandings.',
+                      'Take the car to a garage you trust: it knows what to check and speaks the same '
+                      'technical language as the adjuster.']),
+                    ('h2', 'Parts: original or equivalent'),
+                    ('p',
+                     'The adjuster may base the repair on [[recambio-original|original parts]] or on '
+                     'equivalent-quality parts, depending on the policy and the type of part. Ask what has '
+                     'been allowed in your case, especially on newer cars or safety-related parts.'),
+                    ('h2', 'If you disagree'),
+                    ('p',
+                     'The assessment may seem insufficient to you: a damaged part not accepted, a repair '
+                     'proposed where you think a replacement is needed, or the value given to your car in a '
+                     'total loss seems low. In that case:'),
+                    ('ul',
+                     ['Ask them to explain their reasoning and, if possible, to give you the report in '
+                      'writing.',
+                      'Provide evidence: photos, the garage’s estimate, invoices or adverts for equivalent '
+                      'cars.',
+                      'If you still can’t agree, Spanish law in many cases allows an independent '
+                      'counter-assessment with an adjuster you appoint. Check the conditions and costs in '
+                      'your policy.']),
+                    ('nota',
+                     'The adjuster assesses the damage; how to carry out a quality repair is the garage’s '
+                     'call. Good communication between the two is what best protects your car.'),
+                    ('p',
+                     'At Green Car Service Tenerife we work with loss adjusters every day: we prepare the '
+                     'car, show the damage and argue for a proper repair. Read our [loss assessment '
+                     'guide](guia-peritacion.html) and find out about our [insurance handling '
+                     'service](servicio-gestion-con-aseguradoras.html).')]}},
+ {'slug': 'articulo-tus-derechos-en-el-taller',
+  'cat': 'particulares',
+  'fecha': '2024-05-14',
+  'es': {'titulo': 'Tus derechos en el taller: presupuesto, resguardo y garantía',
+         'resumen': 'La normativa sobre talleres te da derecho a un presupuesto por escrito, a un resguardo '
+                    'cuando dejas el coche y a una garantía mínima en la reparación. Te lo contamos en '
+                    'claro.',
+         'cuerpo': [('p',
+                     'Dejar el coche en un taller implica confiar. Pero esa confianza no tiene por qué ser a '
+                     'ciegas: en España, el Real Decreto 1457/1986, que regula la actividad de los talleres '
+                     'de reparación, reconoce una serie de derechos a los usuarios. Las comunidades '
+                     'autónomas pueden desarrollarlo con normas propias, pero lo esencial es común. '
+                     'Conocerlo te ayuda a saber qué pedir y qué esperar.'),
+                    ('h2', 'Derecho a un presupuesto por escrito'),
+                    ('p',
+                     'Antes de que el taller empiece a trabajar, tienes derecho a un '
+                     '[[presupuesto|presupuesto]] por escrito que detalle las operaciones, las piezas y la '
+                     'mano de obra. Solo puedes renunciar a él de forma expresa, también por escrito, por '
+                     'ejemplo firmando esa renuncia en la orden de trabajo. Si aceptas el presupuesto, lo '
+                     'normal es que lo firmes para dar tu conformidad.'),
+                    ('p',
+                     'Hacer un presupuesto puede requerir desmontar piezas para ver el daño completo. En ese '
+                     'caso, el taller puede cobrarlo si te lo advierte antes. Pregunta siempre.'),
+                    ('h2', 'Derecho al resguardo de depósito'),
+                    ('p',
+                     'Cuando dejas el coche en el taller, te deben entregar un '
+                     '[[resguardo-de-deposito|resguardo de depósito]]. Es el documento que acredita que el '
+                     'vehículo está allí y en qué condiciones lo dejaste. Suele incluir tus datos, los del '
+                     'coche, la fecha, los kilómetros y el trabajo solicitado. Guárdalo: lo necesitarás para '
+                     'recoger el coche y te protege ante cualquier discrepancia.'),
+                    ('h2', 'Qué pasa si surge algo nuevo'),
+                    ('p',
+                     'A veces, al desmontar, aparece un daño que no estaba previsto. El taller no debería '
+                     'hacer trabajos no incluidos en el presupuesto aceptado sin tu autorización. Lo '
+                     'correcto es que te avise, te explique qué ha encontrado y te pida conformidad antes de '
+                     'continuar.'),
+                    ('h2', 'La factura'),
+                    ('p',
+                     'Al terminar, el taller debe entregarte una factura detallada, con las piezas, la mano '
+                     'de obra y los precios desglosados, que se corresponda con el presupuesto aceptado. '
+                     'También puedes pedir que te entreguen las piezas sustituidas, salvo en los casos en '
+                     'que deban devolverse al fabricante o gestionarse como residuo; indícalo al dejar el '
+                     'coche.'),
+                    ('h2', 'Garantía de la reparación'),
+                    ('p',
+                     'Las reparaciones tienen una [[garantia-de-reparacion|garantía]] mínima de tres meses o '
+                     '2.000 kilómetros, lo que ocurra antes, en condiciones normales de uso. Cubre la mano '
+                     'de obra y las piezas que se hayan puesto. Algunos talleres ofrecen más. Si el fallo '
+                     'vuelve a aparecer dentro de ese periodo, vuelve al mismo taller con tu factura.'),
+                    ('h2', 'Resumen práctico'),
+                    ('ul',
+                     ['Pide siempre presupuesto por escrito y léelo antes de firmar.',
+                      'Guarda el resguardo de depósito hasta recoger el coche.',
+                      'No autorices trabajos por teléfono sin que te expliquen el motivo y el coste.',
+                      'Revisa la factura y compárala con el presupuesto.',
+                      'Guarda la factura: es tu garantía.']),
+                    ('p',
+                     'Si algo no se cumple, habla primero con el taller. Si no se resuelve, los talleres '
+                     'deben tener a tu disposición la hoja de reclamaciones.'),
+                    ('nota',
+                     'Esta es una explicación general. La normativa de talleres puede tener desarrollos '
+                     'autonómicos y detalles que dependen de cada caso.'),
+                    ('p',
+                     'En Green Car Service Tenerife te damos presupuesto por escrito y te mantenemos '
+                     'informado del estado de tu coche. Puedes solicitar un [presupuesto](presupuesto.html) '
+                     'o conocer nuestro [presupuesto sin '
+                     'compromiso](servicio-presupuesto-sin-compromiso.html).')]},
+  'en': {'titulo': 'Your rights at the garage: estimate, receipt and warranty',
+         'resumen': 'Spanish garage regulations give you the right to a written estimate, a receipt when you '
+                    'leave your car and a minimum warranty on the repair. Here it is in plain terms.',
+         'cuerpo': [('p',
+                     'Leaving your car at a garage involves trust. But that trust doesn’t have to be blind: '
+                     'in Spain, Royal Decree 1457/1986, which regulates vehicle repair workshops, gives '
+                     'customers a series of rights. The regional governments can add their own rules, but '
+                     'the essentials are the same everywhere. Knowing them helps you know what to ask for '
+                     'and what to expect.'),
+                    ('h2', 'The right to a written estimate'),
+                    ('p',
+                     'Before the garage starts work, you are entitled to a written [[presupuesto|repair '
+                     'estimate]] detailing the operations, parts and labour. You can only waive it '
+                     'expressly, also in writing, for example by signing that waiver on the work order. If '
+                     'you accept the estimate, you normally sign it to show your agreement.'),
+                    ('p',
+                     'Preparing an estimate may require removing parts to see the full damage. In that case, '
+                     'the garage can charge for it if it tells you beforehand. Always ask.'),
+                    ('h2', 'The right to a deposit receipt'),
+                    ('p',
+                     'When you leave the car at the garage, you should be given a '
+                     '[[resguardo-de-deposito|vehicle deposit receipt]]. It proves that the vehicle is there '
+                     'and in what condition you left it. It usually includes your details, the car’s '
+                     'details, the date, the mileage and the work requested. Keep it: you’ll need it to '
+                     'collect the car and it protects you if there is any disagreement.'),
+                    ('h2', 'If something new comes up'),
+                    ('p',
+                     'Sometimes, when parts are removed, unexpected damage appears. The garage should not '
+                     'carry out work not included in the accepted estimate without your authorisation. The '
+                     'right thing is to let you know, explain what they’ve found and ask for your agreement '
+                     'before going on.'),
+                    ('h2', 'The invoice'),
+                    ('p',
+                     'When the job is finished, the garage must give you a detailed invoice with parts, '
+                     'labour and prices broken down, matching the accepted estimate. You can also ask for '
+                     'the replaced parts to be returned to you, except where they have to go back to the '
+                     'manufacturer or be disposed of as waste; say so when you drop off the car.'),
+                    ('h2', 'Repair warranty'),
+                    ('p',
+                     'Repairs carry a minimum [[garantia-de-reparacion|repair warranty]] of three months or '
+                     '2,000 kilometres, whichever comes first, under normal use. It covers the labour and '
+                     'the parts fitted. Some garages offer more. If the fault returns within that period, go '
+                     'back to the same garage with your invoice.'),
+                    ('h2', 'Practical summary'),
+                    ('ul',
+                     ['Always ask for a written estimate and read it before signing.',
+                      'Keep the deposit receipt until you collect the car.',
+                      'Don’t authorise work over the phone without being told why it’s needed and what it '
+                      'costs.',
+                      'Check the invoice against the estimate.',
+                      'Keep the invoice: it’s your warranty.']),
+                    ('p',
+                     'If something isn’t respected, talk to the garage first. If it isn’t resolved, garages '
+                     'must have an official complaints form available to you.'),
+                    ('nota',
+                     'This is a general explanation. Garage regulations may have regional variations and '
+                     'details that depend on each case.'),
+                    ('p',
+                     'At Green Car Service Tenerife we give you a written estimate and keep you informed '
+                     'about your car’s progress. You can request an [estimate](presupuesto.html) or find out '
+                     'about our [no-obligation estimate](servicio-presupuesto-sin-compromiso.html).')]}},
+ {'slug': 'articulo-alquiler-o-coche-propio-en-tenerife',
+  'cat': 'tenerife',
+  'fecha': '2025-08-12',
+  'es': {'titulo': 'Coche de alquiler o coche propio si vives en Tenerife',
+         'resumen': 'Si pasas temporadas largas en la isla o acabas de mudarte, tarde o temprano te planteas '
+                    'si seguir alquilando o comprar un coche. Estas son las cuestiones que conviene pesar.',
+         'cuerpo': [('p',
+                     'El sur de Tenerife está lleno de coches de alquiler, y muchos residentes extranjeros '
+                     'empiezan así: alquilan unas semanas, luego unos meses, y un día se dan cuenta de que '
+                     'llevan un año pagando alquiler. No hay una respuesta única, pero sí una forma ordenada '
+                     'de decidir.'),
+                    ('h2', 'Lo que te da el alquiler'),
+                    ('ul',
+                     ['Flexibilidad total: lo devuelves cuando te vas y no te preocupas de nada más.',
+                      'El seguro, la [[itv|ITV]], los papeles y las reparaciones son cosa de la empresa.',
+                      'Puedes cambiar de tamaño de coche según la temporada o las visitas.']),
+                    ('p',
+                     'A cambio, el coste se acumula mes a mes, en temporada alta los precios y la '
+                     'disponibilidad empeoran, y hay condiciones que conviene leer: kilometraje, conductores '
+                     'autorizados, qué cubre el seguro y qué franquicia se aplica en caso de daños, o si '
+                     'puedes llevarlo en ferry a otra isla.'),
+                    ('h2', 'Lo que te da el coche propio'),
+                    ('ul',
+                     ['A partir de cierto tiempo de uso, suele salir más a cuenta que alquilar de forma '
+                      'continua.',
+                      'Lo eliges a tu medida y lo cuidas a tu manera.',
+                      'No dependes de la disponibilidad de las empresas de alquiler.']),
+                    ('p',
+                     'A cambio, asumes tú el seguro, la ITV, los impuestos municipales, el cuidado del coche y '
+                     'las reparaciones. Y cuando te vas una temporada, el coche se queda parado, algo que '
+                     'también requiere cuidados.'),
+                    ('h2', 'Preguntas para decidir'),
+                    ('ol',
+                     ['¿Cuántos meses al año vas a estar en la isla? Cuanto más tiempo, más sentido tiene el '
+                      'coche propio.',
+                      '¿Vas a residir legalmente en España? Si es así, infórmate de tus obligaciones con el '
+                      'permiso de conducir y, si traes un coche con matrícula extranjera, sobre su '
+                      'matriculación en España.',
+                      '¿Tienes dónde aparcarlo de forma segura, sobre todo si pasas temporadas fuera?',
+                      '¿Tienes a alguien de confianza que lo mueva o lo revise cuando no estás?']),
+                    ('h2', 'Si te decides por comprar'),
+                    ('p',
+                     'Un coche de segunda mano bien revisado es una opción muy habitual. Antes de comprar, '
+                     'pide las facturas de reparaciones anteriores, comprueba que la ITV está en vigor y que no '
+                     'tiene cargas, y haz que un taller revise su carrocería y su estructura. Al contratar el seguro, compara coberturas: un '
+                     '[[terceros|seguro a terceros]] ampliado puede ser suficiente para un coche de cierta '
+                     'edad, mientras que en uno más nuevo quizá te interese un todo riesgo con '
+                     '[[franquicia|franquicia]].'),
+                    ('h2', 'Si te vas temporadas'),
+                    ('ul',
+                     ['Déjalo a cubierto si puedes, o con una funda transpirable: el sol y el salitre '
+                      'castigan la pintura aunque el coche no se mueva.',
+                      'Lávalo antes de irte, incluidos los bajos, para que no se quede sal pegada a la chapa.',
+                      'Pide a alguien de confianza que le eche un vistazo y lo mueva de vez en cuando.',
+                      'Revisa la fecha de la ITV y del seguro para que no caduquen mientras estás fuera.',
+                      'A la vuelta, lava cuanto antes la resina, los excrementos de pájaro o el polvo de '
+                      'calima: al sol, pueden marcar el barniz.']),
+                    ('nota',
+                     'Las obligaciones administrativas para residentes extranjeros dependen de tu '
+                     'nacionalidad y de tu situación. Consulta con la administración o con un gestor.'),
+                    ('p',
+                     'En Green Car Service Tenerife vendemos [coches de ocasión](coches-de-ocasion.html) y '
+                     'cuidamos la chapa y la pintura de tu coche en Las Chafiras, con [recogida y '
+                     'entrega](servicio-recogida-y-entrega.html). Si dudas entre varios coches, podemos '
+                     'revisar su carrocería con nuestra [revisión antes de '
+                     'comprar](revision-antes-de-comprar.html).')]},
+  'en': {'titulo': 'Hire car or your own car if you live in Tenerife',
+         'resumen': 'If you spend long stretches on the island or have just moved here, sooner or later '
+                    'you’ll wonder whether to keep renting or buy a car. These are the questions worth '
+                    'weighing up.',
+         'cuerpo': [('p',
+                     'The south of Tenerife is full of hire cars, and many foreign residents start that way: '
+                     'they rent for a few weeks, then a few months, and one day realise they’ve been paying '
+                     'rental for a year. There’s no single answer, but there is an orderly way to decide.'),
+                    ('h2', 'What renting gives you'),
+                    ('ul',
+                     ['Complete flexibility: you hand it back when you leave and don’t worry about anything '
+                      'else.',
+                      'Insurance, the [[itv|ITV (MOT)]], paperwork and repairs are the company’s '
+                      'problem.',
+                      'You can change the size of car depending on the season or visitors.']),
+                    ('p',
+                     'On the other hand, the cost adds up month after month, prices and availability get '
+                     'worse in high season, and there are conditions worth reading: mileage, authorised '
+                     'drivers, what the insurance covers and what excess applies if there’s damage, or '
+                     'whether you can take it on a ferry to another island.'),
+                    ('h2', 'What your own car gives you'),
+                    ('ul',
+                     ['After a certain amount of use, it usually works out cheaper than renting '
+                      'continuously.',
+                      'You choose it to suit you and look after it your way.',
+                      'You don’t depend on rental companies’ availability.']),
+                    ('p',
+                     'In return, you take on the insurance, ITV, local vehicle tax, upkeep and repairs. '
+                     'And when you’re away for a while, the car sits unused, which also needs looking '
+                     'after.'),
+                    ('h2', 'Questions to help you decide'),
+                    ('ol',
+                     ['How many months a year will you be on the island? The longer, the more sense your own '
+                      'car makes.',
+                      'Will you be legally resident in Spain? If so, find out about your obligations '
+                      'regarding your driving licence and, if you bring a foreign-registered car, about '
+                      'registering it in Spain.',
+                      'Do you have somewhere safe to park it, especially if you spend time away?',
+                      'Is there someone you trust who can move it or check it while you’re gone?']),
+                    ('h2', 'If you decide to buy'),
+                    ('p',
+                     'A well-checked used car is a very common choice. Before buying, ask for invoices for '
+                     'previous repairs, check that the ITV is valid and that there are no outstanding charges '
+                     'on it, and have a garage inspect its bodywork and structure. When taking out insurance, compare cover: extended '
+                     '[[terceros|third-party insurance]] may be enough for an older car, while for a newer '
+                     'one comprehensive cover with an [[franquicia|excess]] may suit you better.'),
+                    ('h2', 'If you’re away for long periods'),
+                    ('ul',
+                     ['Leave it under cover if you can, or use a breathable cover: sun and salt air wear '
+                      'down the paint even when the car is not moving.',
+                      'Wash it before you leave, underbody included, so no salt is left on the metal.',
+                      'Ask someone you trust to keep an eye on it and move it now and then.',
+                      'Check the ITV and insurance dates so they don’t expire while you’re away.',
+                      'When you’re back, wash off tree sap, bird droppings or calima dust as soon as you can: '
+                      'left in the sun, they can mark the clear coat.']),
+                    ('nota',
+                     'Administrative obligations for foreign residents depend on your nationality and '
+                     'circumstances. Check with the authorities or a ‘gestor’ (administrative agent).'),
+                    ('p',
+                     'At Green Car Service Tenerife we sell [used cars](coches-de-ocasion.html) and look '
+                     'after your car’s bodywork and paint in Las Chafiras, with [collection and '
+                     'delivery](servicio-recogida-y-entrega.html). If you’re torn between several cars, we '
+                     'can check their bodywork with our [pre-purchase '
+                     'inspection](revision-antes-de-comprar.html).')]}}]

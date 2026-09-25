@@ -125,7 +125,7 @@ def md(texto, lang):
         nombre = GLOSARIO_TERMINOS[clave][0 if lang == "es" else 1]
         defin = GLOSARIO.get(clave, {}).get(lang, "")
         defin = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", defin).replace("**", "")
-        return (f'<a class="dic" href="diccionario-del-motor.html#t-{clave}" '
+        return (f'<a class="dic" href="diccionario-de-chapa-y-pintura.html#t-{clave}" '
                 f'data-def="{esc(defin)}" data-term="{esc(nombre)}">{visible}</a>')
 
     s = re.sub(r"\[\[([^\]|]+)\|([^\]]+)\]\]", dic, s)
@@ -307,9 +307,9 @@ def bloque_aseguradora(lang, con_boton=True):
 
 def mitos(lang, clase="alt"):
     M = [
-        (t(lang, "«Si no voy al concesionario, pierdo la garantía.»", "“If I don't go to the main dealer, I lose my warranty.”"),
-         t(lang, "La normativa europea permite hacer el mantenimiento en un taller independiente sin perder la garantía del fabricante, siempre que se sigan sus especificaciones y se usen recambios adecuados.",
-           "European rules let you service your car at an independent garage without losing the manufacturer's warranty, as long as its specifications are followed and suitable parts are used.")),
+        (t(lang, "«Un coche que ha tenido un accidente nunca vuelve a quedar bien.»", "“A car that's been in an accident is never right again.”"),
+         t(lang, "Si la estructura se devuelve a sus medidas en bancada y las uniones, sellados y protecciones se reproducen como en fábrica, la reparación queda correcta y segura.",
+           "If the structure is brought back to its measurements on a jig and joints, sealing and protection are reproduced as at the factory, the repair is sound and safe.")),
         (t(lang, "«La aseguradora decide dónde se repara mi coche.»", "“My insurer decides where my car is repaired.”"),
          t(lang, "Por regla general puedes elegir taller. Algunas pólizas ofrecen ventajas en sus talleres concertados: te ayudamos a leer la tuya antes de decidir.",
            "As a rule you can choose the garage. Some policies offer perks at their partner garages: we help you read yours before you decide.")),
@@ -319,12 +319,12 @@ def mitos(lang, clase="alt"):
         (t(lang, "«La pintura ecológica es de peor calidad.»", "“Eco-friendly paint is lower quality.”"),
          t(lang, "Una pintura con menos disolventes puede dar un acabado igual de duradero. Lo que marca la diferencia es la preparación y la aplicación.",
            "A paint with fewer solvents can give an equally durable finish. What makes the difference is the preparation and the application.")),
-        (t(lang, "«Un eléctrico no necesita pasar por el taller.»", "“An electric car doesn't need a garage.”"),
-         t(lang, "Tiene menos piezas que desgastar, pero frenos, neumáticos, suspensión, climatización y la refrigeración de la batería siguen necesitando revisión.",
-           "It has fewer wearing parts, but brakes, tyres, suspension, air conditioning and battery cooling still need checking.")),
-        (t(lang, "«Solo hay que mirar el coche antes de la ITV.»", "“You only need to check the car before the MOT.”"),
-         t(lang, "La ITV comprueba unos mínimos en un momento concreto. El mantenimiento periódico es lo que evita averías caras y sustos en carretera.",
-           "The ITV checks minimum standards at a given moment. Regular maintenance is what prevents costly breakdowns and nasty surprises on the road.")),
+        (t(lang, "«Un coche de segunda mano con buena pinta no ha tenido golpes.»", "“A used car that looks good has never been in a crash.”"),
+         t(lang, "Un repintado bien pulido puede pasar desapercibido a simple vista. Un medidor de espesores y una revisión de holguras, sellados y soldaduras lo delatan.",
+           "A well-polished respray can go unnoticed at first glance. A paint thickness gauge and a check of panel gaps, sealing and welds give it away.")),
+        (t(lang, "«Da igual dónde se pinte: pintura es pintura.»", "“It doesn't matter where it's painted: paint is paint.”"),
+         t(lang, "Lo que no se ve —preparación de fondos, protección anticorrosiva y pintado en cabina— es lo que decide cuánto dura la reparación.",
+           "What you can't see —surface preparation, anti-corrosion protection and painting in a booth— is what decides how long the repair lasts.")),
     ]
     items = "".join(f'<div class="mito"><p class="mito-falso">{esc(a)}</p><p class="mito-real">{esc(b)}</p></div>' for a, b in M)
     return seccion(section_head(
@@ -381,7 +381,7 @@ def formulario(lang, tipo="contacto", servicio_sel=None, opciones_servicio=()):
     if tipo == "presupuesto":
         campos += f"""    <label class="check-linea"><input type="checkbox" name="seguro" data-label="{L("Reparación a cargo del seguro", "Repair covered by insurance")}"> <span>{L("La reparación la cubre mi seguro", "My insurance covers the repair")}</span></label>
 """
-    campos += f"""    <div class="field"><label for="msg">{L("Cuéntanos", "Tell us more")}</label><textarea id="msg" name="mensaje" placeholder="{L("Qué le pasa al coche, desde cuándo, qué ruido hace, dónde está el golpe…", "What's wrong, since when, what noise it makes, where the damage is…")}"></textarea></div>
+    campos += f"""    <div class="field"><label for="msg">{L("Cuéntanos", "Tell us more")}</label><textarea id="msg" name="mensaje" placeholder="{L("Qué le pasa al coche, desde cuándo, dónde está el golpe, cómo ocurrió…", "What happened, where the damage is, since when…")}"></textarea></div>
     <label class="consent"><input type="checkbox" name="consent" required> <span>{L("He leído y acepto la", "I have read and accept the")} <a href="politica-de-privacidad.html">{L("política de privacidad", "privacy policy")}</a> {L("y el tratamiento de mis datos para responder a esta solicitud.", "and the processing of my data to answer this request.")}</span></label>
     <button class="btn btn-primary" type="submit">{ico("mail")}{L("Enviar solicitud", "Send request")}</button>
     <p class="form-msg">{L("Se abrirá tu programa de correo con la solicitud ya redactada. Si no ocurre nada, escríbenos a", "Your email program will open with the request ready to send. If nothing happens, write to us at")} <a href="mailto:{E["email"]}">{E["email"]}</a>.</p>
@@ -403,8 +403,10 @@ NAV = [
     ("conocenos", "Conócenos", "About us"),
     ("servicios", "Servicios", "Services"),
     ("chapa-y-pintura", "Chapa y pintura", "Bodywork & paint"),
-    ("mecanica", "Mecánica", "Mechanics"),
-    ("electricos-e-hibridos", "Eléctricos", "Electric"),
+    ("particulares", "Particulares", "Private"),
+    ("empresas-y-flotas", "Empresas", "Businesses"),
+    ("aseguradoras", "Aseguradoras", "Insurers"),
+    ("revision-compraventa", "Compraventa", "Buy & sell check"),
     ("coches-de-ocasion", "Ocasión", "Used cars"),
     ("siniestros", "Siniestros", "Accidents"),
     ("blog", "Blog", "Blog"),
@@ -484,14 +486,15 @@ def pie(lang):
     ])
     servicios = "".join([
         _fl("chapa-y-pintura.html", "spray", L("Chapa y pintura", "Bodywork & paint")),
-        _fl("mecanica.html", "wrench", L("Mecánica", "Mechanics")),
-        _fl("diagnosis-y-electronica.html", "chip", L("Diagnosis y electrónica", "Diagnostics & electronics")),
-        _fl("electricos-e-hibridos.html", "bolt", L("Eléctricos e híbridos", "Electric & hybrid")),
+        _fl("servicio-reparacion-tras-accidente.html", "hammer", L("Reparación tras accidente", "Accident repair")),
+        _fl("particulares.html", "users", L("Particulares", "Private customers")),
+        _fl("empresas-y-flotas.html", "truck", L("Empresas y flotas", "Businesses & fleets")),
+        _fl("aseguradoras.html", "shield", L("Aseguradoras y peritos", "Insurers & adjusters")),
+        _fl("revision-compraventa.html", "search", L("Revisión antes de comprar o vender", "Pre-purchase & pre-sale check")),
         _fl("servicio-pintura-ecologica.html", "leaf", L("Pintura ecológica", "Eco-friendly paint")),
         _fl("servicio-garantia-vitalicia-en-pintura.html", "award", L("Garantía vitalicia en pintura", "Lifetime paint warranty")),
         _fl("servicio-recogida-y-entrega.html", "truck", L("Recogida y entrega a domicilio", "Collection & delivery")),
         _fl("servicio-gestion-con-aseguradoras.html", "handshake", L("Trabajamos con tu aseguradora", "We work with your insurer")),
-        _fl("servicio-pre-itv.html", "clipboard", L("Revisión pre-ITV", "Pre-ITV check")),
         _fl("coches-de-ocasion.html", "car", L("Coches de ocasión", "Used cars")),
         _fl("sostenibilidad.html", "recycle", L("Sostenibilidad", "Sustainability")),
     ])
@@ -500,7 +503,7 @@ def pie(lang):
         _fl("presupuesto.html", "doc", L("Presupuesto sin compromiso", "Free estimate")),
         _fl("siniestros.html", "alert", L("¿Has tenido un accidente?", "Had an accident?")),
         _fl("telefonos-de-asistencia.html", "phone", L("Teléfonos de asistencia en carretera", "Roadside assistance numbers")),
-        _fl("diccionario-del-motor.html", "book", L("Diccionario del motor", "Motoring glossary")),
+        _fl("diccionario-de-chapa-y-pintura.html", "book", L("Diccionario de chapa y pintura", "Bodywork & paint glossary")),
         _fl("preguntas-frecuentes.html", "info", L("Preguntas frecuentes", "FAQ")),
         _fl("opiniones.html", "star", L("Opiniones de clientes", "Customer reviews")),
         _fl("blog.html", "chat", "Blog"),
@@ -514,7 +517,7 @@ def pie(lang):
     <div>
       <img class="foot-logo" src="{a}assets/logo-blanco.svg" alt="Green Car Service Tenerife" width="182" height="74">
       <div class="foot-social"><a class="foot-social-link" href="{E["instagram"]}" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">{IG_SVG}</a><a class="foot-social-link" href="https://wa.me/{E["whatsapp_wa"]}" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">{WA_SVG}</a></div>
-      <p>{L("Taller de chapa, pintura y mecánica en Las Chafiras, en el sur de Tenerife, desde 2019. Un servicio integral y sostenible: más que un simple taller.", "Bodywork, paint and mechanics workshop in Las Chafiras, in the south of Tenerife, since 2019. A complete, sustainable service: more than just a garage.")}</p>
+      <p>{L("Taller de chapa y pintura en Las Chafiras, en el sur de Tenerife, desde 2019, para particulares, empresas y compañías de seguros. Un servicio integral y sostenible: más que un simple taller.", "Body and paint shop in Las Chafiras, in the south of Tenerife, since 2019, for private customers, businesses and insurers. A complete, sustainable service: more than just a garage.")}</p>
       <ul class="foot-links">{contacto}</ul>
     </div>
     <div><h4>{L("Servicios", "Services")}</h4><ul class="foot-links">{servicios}</ul></div>

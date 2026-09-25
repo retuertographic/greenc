@@ -6,12 +6,13 @@ Cada texto existe en español (`"es"`) y en inglés (`"en"`). Tras escribir, val
     cd /home/user/greenc && python3 _fuente/validar.py NOMBRE_MODULO
 
 ## Datos reales de la empresa (NO inventes otros)
-- Green Car Service Tenerife: taller de chapa, pintura y mecánica en Las Chafiras (San Miguel de Abona, sur de Tenerife).
+- Green Car Service Tenerife: taller de CHAPA Y PINTURA en Las Chafiras (San Miguel de Abona, sur de Tenerife). Da servicio a particulares, a empresas (flotas, vehículos comerciales, renting, rent a car) y a siniestros de compañías de seguros. También revisa coches antes de su compra o su venta (carrocería, pintura, estructura, documentación) y vende coches de segunda mano.
+- **PROHIBIDO mencionar** mecánica, diagnosis/electrónica, vehículos eléctricos o híbridos, ni trabajos de motor, frenos, aceite, filtros, neumáticos, suspensión, embrague, batería, aire acondicionado, etc. El sitio habla solo de chapa, pintura, estructura/carrocería, lunas/faros/plásticos exteriores, siniestros, revisión de compraventa y las ventajas del taller.
 - Empezó en 2019 con el propósito de ganarse la confianza de clientes que buscan "algo más que un simple taller". Objetivo: servicio integral y sostenible.
 - Tres pilares: calidad, confianza y compromiso. Compromiso con el medio ambiente y la actividad sostenible.
-- Instalaciones amplias: taller de chapa, pintura y almacén de recambios; bancadas y todo el equipamiento para trabajar con los estándares que exigen todas las marcas; equipos electrónicos de diagnosis para cualquier avería mecánica.
+- Instalaciones amplias: taller de chapa, pintura y almacén de recambios; bancadas y todo el equipamiento para trabajar con los estándares que exigen todas las marcas.
 - Pintura ecológica «eco-balance», con beneficios directos para el medio ambiente. Colores sólidos y metalizados.
-- Servicios: recogida y entrega a domicilio, garantía vitalicia en pintura, estado del vehículo en tiempo real, reparación de vehículos eléctricos. Trabajan con tu compañía de seguros. Los clientes destacan que entregan el coche limpio (por dentro también), presupuestos rápidos y vehículo de sustitución.
+- Servicios: recogida y entrega a domicilio, garantía vitalicia en pintura, estado del vehículo en tiempo real. Trabajan con tu compañía de seguros. Los clientes destacan que entregan el coche limpio (por dentro también), presupuestos rápidos y vehículo de sustitución.
 - También venden coches de segunda mano.
 - Horario: lunes a viernes 07:00–16:00. Tel. 922 73 64 47 · WhatsApp 674 06 13 71 · info@greencarservicetenerife.com
 - Dirección: Av. Siete Islas Canarias, 34, Pol. Ind. Llano del Camello, 38639 Las Chafiras.
@@ -60,4 +61,4 @@ ARTICULOS = [{
   "en": {...},
 }]
 ```
-Categorías: mantenimiento, chapa-pintura, electricos, seguridad-vial, seguros-siniestros, tenerife.
+Categorías: chapa-pintura, particulares, empresas-flotas, seguros-siniestros, compraventa, tenerife, seguridad-vial.

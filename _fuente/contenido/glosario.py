@@ -1,77 +1,53 @@
-"""Definiciones del diccionario del motor (ES/EN). Claves = comun.GLOSARIO_TERMINOS."""
+"""Definiciones del diccionario de chapa y pintura (ES/EN). Claves = comun.GLOSARIO_TERMINOS."""
 
 GLOSARIO = {
-    "abs": {
-        "es": "Sistema antibloqueo de frenos. Evita que las ruedas se bloqueen en una frenada fuerte para que puedas seguir girando el volante. Si se enciende su testigo, conviene revisarlo cuanto antes.",
-        "en": "Anti-lock braking system. It stops the wheels locking under hard braking so you can still steer. If its warning light comes on, have it checked as soon as possible.",
+    "antigravilla": {
+        "es": "Recubrimiento texturado y elástico que se aplica en bajos, taloneras y zonas bajas de la carrocería. Amortigua el impacto de piedras y gravilla y protege la chapa de la corrosión.",
+        "en": "A textured, elastic coating applied to the underbody, sills and lower body areas. It absorbs the impact of stones and grit and protects the metal from corrosion.",
     },
-    "adas": {
-        "es": "Sistemas avanzados de ayuda a la conducción: frenada de emergencia, aviso de cambio de carril, control de crucero adaptativo, etc. Funcionan con cámaras, radares y sensores.",
-        "en": "Advanced driver assistance systems: emergency braking, lane departure warning, adaptive cruise control and so on. They rely on cameras, radars and sensors.",
-    },
-    "airbag": {
-        "es": "Bolsa que se infla en milésimas de segundo en un choque para amortiguar el golpe de los ocupantes. Tras un accidente en el que se ha disparado, hay que sustituirlo junto con sus componentes.",
-        "en": "A bag that inflates in milliseconds during a crash to cushion the occupants. Once it has deployed, it must be replaced together with its related components.",
-    },
-    "aire-acondicionado": {
-        "es": "Sistema que enfría y deshumidifica el aire del habitáculo mediante un gas refrigerante y un compresor. Necesita revisiones periódicas de carga, fugas y filtro.",
-        "en": "The system that cools and dries the cabin air using a refrigerant gas and a compressor. It needs periodic checks for gas level, leaks and the cabin filter.",
-    },
-    "alineacion": {
-        "es": "Ajuste de los ángulos de las ruedas para que vayan rectas y paralelas. Una mala alineación desgasta los neumáticos de forma irregular y hace que el coche «tire» hacia un lado.",
-        "en": "Adjusting the wheel angles so they run straight and parallel. Poor alignment wears tyres unevenly and makes the car pull to one side.",
-    },
-    "amortiguador": {
-        "es": "Pieza de la suspensión que frena los rebotes del muelle y mantiene la rueda pegada al suelo. Unos amortiguadores gastados alargan la frenada y restan estabilidad.",
-        "en": "A suspension component that damps the spring's bouncing and keeps the tyre on the road. Worn shock absorbers lengthen braking distances and reduce stability.",
-    },
-    "anticongelante": {
-        "es": "Líquido que circula por el circuito de refrigeración del motor. Evita el sobrecalentamiento, la congelación y la corrosión interna. Se revisa su nivel y se cambia según el fabricante.",
-        "en": "The fluid in the engine cooling system. It prevents overheating, freezing and internal corrosion. Its level should be checked and it should be replaced as the manufacturer specifies.",
+    "aparejo": {
+        "es": "Capa de fondo que se aplica sobre la masilla y la imprimación. Rellena las marcas de lija, nivela la superficie y la sella para que el color quede uniforme.",
+        "en": "An undercoat applied over the filler and primer. It fills sanding marks, levels the surface and seals it so the colour goes on evenly.",
     },
     "bancada": {
         "es": "Equipo de taller que sujeta el coche y permite medir y enderezar el chasis o la estructura tras un golpe fuerte, devolviendo las cotas originales del fabricante.",
         "en": "Workshop equipment that holds the car and lets technicians measure and straighten the chassis or body structure after a heavy impact, back to the manufacturer's dimensions.",
     },
+    "baremo": {
+        "es": "Tabla de tiempos de referencia que fija cuántas horas de mano de obra se reconocen para cada operación de reparación o sustitución. Las aseguradoras y los peritos lo usan para valorar los daños.",
+        "en": "A table of reference times setting how many labour hours are allowed for each repair or replacement operation. Insurers and loss adjusters use it to value the damage.",
+    },
     "barniz": {
         "es": "Capa transparente que se aplica sobre el color. Da brillo y protege la pintura del sol, la lluvia y los arañazos leves.",
         "en": "The transparent layer applied over the colour coat. It adds gloss and protects the paint from sun, rain and light scratches.",
     },
-    "bateria-12v": {
-        "es": "Batería que arranca el motor y alimenta la electrónica del coche. Incluso los eléctricos llevan una. El calor acorta su vida útil.",
-        "en": "The battery that starts the engine and powers the car's electronics. Even electric cars have one. Heat shortens its lifespan.",
-    },
-    "bateria-alta-tension": {
-        "es": "Batería principal de un eléctrico o híbrido, que mueve el motor eléctrico. Trabaja a cientos de voltios, por lo que solo debe manipularla personal formado y con el equipo adecuado.",
-        "en": "The main battery in an electric or hybrid car, which drives the electric motor. It runs at hundreds of volts, so only trained staff with the right equipment should work on it.",
-    },
-    "bujia": {
-        "es": "Pieza que produce la chispa que enciende la mezcla de aire y combustible en los motores de gasolina. Si está gastada, el motor pierde fuerza y gasta más.",
-        "en": "The part that creates the spark to ignite the air-fuel mixture in petrol engines. When worn, the engine loses power and uses more fuel.",
+    "bicapa": {
+        "es": "Sistema de pintado en dos capas: primero una base que da el color y después un barniz transparente que aporta brillo y protección. Es el sistema más habitual en los coches actuales.",
+        "en": "A two-layer paint system: first a basecoat that provides the colour, then a clear coat that adds gloss and protection. It is the most common system on modern cars.",
     },
     "cabina-de-pintura": {
         "es": "Recinto cerrado, con aire filtrado y control de temperatura, donde se pinta y se seca el coche sin polvo ni suciedad para lograr un acabado limpio.",
         "en": "An enclosed booth with filtered air and temperature control where the car is painted and cured free of dust, for a clean finish.",
     },
-    "calibrado-adas": {
-        "es": "Ajuste de las cámaras y radares de los sistemas de ayuda a la conducción tras cambiar un parabrisas, un paragolpes o tras un golpe, para que vuelvan a «ver» correctamente.",
-        "en": "Re-aligning the cameras and radars of driver assistance systems after replacing a windscreen or bumper, or after a knock, so they 'see' correctly again.",
-    },
     "carroceria": {
         "es": "El «envoltorio» exterior del coche: puertas, aletas, capó, techo, portón y paragolpes. Protege a los ocupantes y da forma al vehículo.",
         "en": "The car's outer shell: doors, wings, bonnet, roof, tailgate and bumpers. It protects the occupants and gives the vehicle its shape.",
     },
-    "catalizador": {
-        "es": "Componente del escape que transforma parte de los gases contaminantes en otros menos dañinos. Es clave para pasar la ITV.",
-        "en": "An exhaust component that converts part of the harmful gases into less harmful ones. It is key to passing the ITV (MOT).",
+    "cataforesis": {
+        "es": "Baño de protección anticorrosiva que recibe la carrocería en la fábrica, antes de cualquier pintura. Al lijar o soldar se pierde en esa zona, y hay que reponer la protección.",
+        "en": "An anti-corrosion dip coat the body receives at the factory, before any paint. Sanding or welding removes it locally, so the protection has to be restored.",
     },
-    "centralita": {
-        "es": "Ordenador del coche que gestiona el motor y otros sistemas. Registra códigos de avería que el taller lee con equipos de diagnosis.",
-        "en": "The car's computer that manages the engine and other systems. It stores fault codes that the workshop reads with diagnostic equipment.",
+    "cera-de-cavidades": {
+        "es": "Protección casi líquida que se pulveriza dentro de largueros, puertas y taloneras. Repele la humedad y evita que el óxido empiece por dentro, donde no se ve.",
+        "en": "An almost liquid protective coating sprayed inside chassis legs, doors and sills. It repels moisture and stops rust starting from the inside, where it can't be seen.",
     },
     "chasis": {
         "es": "Estructura que sostiene el vehículo. En la mayoría de turismos va integrada en la carrocería (monocasco). Si se deforma en un golpe, hay que repararlo en bancada.",
         "en": "The structure that supports the vehicle. In most cars it is built into the body (monocoque). If it is distorted in a crash, it has to be repaired on a chassis jig.",
+    },
+    "codigo-de-color": {
+        "es": "Referencia de fábrica que identifica el color exacto de tu coche. Suele estar en una etiqueta en el marco de la puerta o bajo el capó, y es el punto de partida para igualar el tono.",
+        "en": "The factory reference that identifies your car's exact colour. It is usually on a label in the door frame or under the bonnet, and it is the starting point for matching the shade.",
     },
     "colorimetria": {
         "es": "Técnica para reproducir exactamente el color de tu coche, teniendo en cuenta el código de fábrica y cómo ha envejecido la pintura, para que la reparación no se note.",
@@ -81,69 +57,45 @@ GLOSARIO = {
         "es": "Sustancias que se evaporan de disolventes y pinturas y contaminan el aire. Las pinturas de bajo contenido en COV, como las de base agua, reducen estas emisiones.",
         "en": "Substances that evaporate from solvents and paints and pollute the air. Low-VOC paints, such as water-based ones, cut these emissions.",
     },
-    "correa-auxiliar": {
-        "es": "Correa que mueve el alternador, la bomba de dirección o el compresor del aire acondicionado. Si se rompe, el coche puede quedarse sin carga de batería o sin asistencia.",
-        "en": "The belt that drives the alternator, power steering pump or air conditioning compressor. If it snaps, the battery may stop charging or you may lose assistance.",
-    },
-    "correa-de-distribucion": {
-        "es": "Correa que sincroniza el giro del cigüeñal y los árboles de levas. Se cambia en los kilómetros o años que marca el fabricante: si se rompe, la avería del motor puede ser muy grave.",
-        "en": "The belt that keeps the crankshaft and camshafts in time. It is replaced at the mileage or age the manufacturer sets: if it breaks, engine damage can be severe.",
-    },
     "corrosion": {
         "es": "Deterioro del metal por óxido. El salitre y la humedad del ambiente marino la aceleran, sobre todo en bajos, arcos de rueda y zonas con la pintura dañada.",
         "en": "Deterioration of metal through rust. Sea salt and coastal humidity speed it up, especially on the underbody, wheel arches and areas with damaged paint.",
+    },
+    "corrosion-galvanica": {
+        "es": "Corrosión que aparece cuando dos metales distintos, como aluminio y acero, están en contacto en presencia de humedad. Por eso las piezas de aluminio se trabajan con herramientas y productos específicos.",
+        "en": "Corrosion that occurs when two different metals, such as aluminium and steel, are in contact in the presence of moisture. That is why aluminium parts are worked with dedicated tools and products.",
     },
     "desabollado-sin-pintura": {
         "es": "Técnica que devuelve la chapa a su forma empujándola desde dentro, sin masilla ni pintura. Sirve para bollos pequeños en los que la pintura no se ha dañado.",
         "en": "A technique that pushes the panel back into shape from behind, with no filler or paint. It suits small dents where the paint is undamaged.",
     },
-    "diagnosis-obd": {
-        "es": "Lectura de la información de la centralita a través del conector OBD del coche. Permite ver códigos de avería y datos en tiempo real para localizar el problema.",
-        "en": "Reading information from the ECU through the car's OBD port. It shows fault codes and live data to help pinpoint the problem.",
+    "difuminado": {
+        "es": "Técnica que extiende el color nuevo de forma gradual hacia las piezas vecinas, para que la transición entre la zona reparada y la pintura original no se note.",
+        "en": "A technique that fades the new colour gradually into the neighbouring panels, so the transition between the repaired area and the original paint can't be seen.",
     },
-    "disco-de-freno": {
-        "es": "Disco metálico que gira con la rueda y sobre el que aprietan las pastillas para frenar. Se desgasta con el uso y tiene un grosor mínimo marcado.",
-        "en": "The metal disc that turns with the wheel and that the brake pads clamp to slow the car. It wears with use and has a marked minimum thickness.",
+    "enmascarado": {
+        "es": "Protección con cinta y papel o plástico de las zonas que no se van a pintar, como cristales, gomas, faros o piezas vecinas, para que no les llegue pintura ni polvo de lijado.",
+        "en": "Covering the areas that won't be painted, such as glass, rubbers, lights or neighbouring panels, with tape and paper or plastic so no paint or sanding dust reaches them.",
     },
-    "embrague": {
-        "es": "Mecanismo que conecta y desconecta el motor de la caja de cambios para poder arrancar y cambiar de marcha. Se desgasta más con mucho tráfico urbano y en cuestas.",
-        "en": "The mechanism that connects and disconnects the engine from the gearbox so you can pull away and change gear. It wears faster in stop-start traffic and on hills.",
+    "estructura-deformable": {
+        "es": "Zonas de la carrocería diseñadas para deformarse de forma controlada en un choque y absorber energía antes de que llegue al habitáculo. Tras un golpe fuerte deben repararse o sustituirse según el método del fabricante.",
+        "en": "Areas of the body designed to crumple in a controlled way in a crash, absorbing energy before it reaches the cabin. After a heavy impact they must be repaired or replaced following the manufacturer's method.",
     },
-    "filtro-de-aceite": {
-        "es": "Filtro que retiene la suciedad y partículas metálicas del aceite del motor. Se cambia junto con el aceite.",
-        "en": "The filter that traps dirt and metal particles in the engine oil. It is replaced along with the oil.",
-    },
-    "filtro-de-aire": {
-        "es": "Filtro que limpia el aire que entra al motor. En zonas con polvo o calima se ensucia antes; si está obstruido, el motor rinde menos y gasta más.",
-        "en": "The filter that cleans the air going into the engine. In dusty areas or during calima it clogs sooner; when blocked, the engine performs worse and uses more fuel.",
-    },
-    "filtro-de-habitaculo": {
-        "es": "Filtro que limpia el aire que entra al interior del coche por la ventilación. Retiene polvo y polen y ayuda a evitar malos olores.",
-        "en": "The filter that cleans the air entering the cabin through the ventilation. It traps dust and pollen and helps prevent bad smells.",
-    },
-    "filtro-de-particulas": {
-        "es": "Filtro del escape de los motores diésel que retiene el hollín. Se limpia solo (regenera) en trayectos largos; con muchos recorridos cortos puede obstruirse.",
-        "en": "A filter in diesel exhausts that traps soot. It cleans itself (regenerates) on longer journeys; lots of short trips can clog it.",
+    "flota": {
+        "es": "Conjunto de vehículos que usa una empresa: turismos, furgonetas o vehículos comerciales. Mantener su chapa y pintura en buen estado cuida la imagen de la empresa y evita cargos al devolver vehículos de renting.",
+        "en": "The set of vehicles a business uses: cars, vans or commercial vehicles. Keeping their bodywork and paint in good shape protects the company's image and avoids charges when leased vehicles are returned.",
     },
     "franquicia": {
         "es": "Parte del coste de un siniestro que pagas tú según tu póliza. La aseguradora cubre el resto hasta los límites contratados.",
         "en": "The part of a claim's cost that you pay under your policy. The insurer covers the rest up to the agreed limits.",
     },
-    "frenada-regenerativa": {
-        "es": "Sistema de eléctricos e híbridos que aprovecha la frenada para recargar la batería. Además de ahorrar energía, reduce el desgaste de pastillas y discos.",
-        "en": "A feature of electric and hybrid cars that uses braking to recharge the battery. As well as saving energy, it reduces wear on pads and discs.",
+    "galvanizado": {
+        "es": "Recubrimiento de zinc que llevan muchas chapas de acero de fábrica para protegerlas del óxido. El calor de una soldadura lo destruye en esa zona, por lo que hay que volver a proteger el metal.",
+        "en": "A zinc coating that many steel panels have from the factory to protect them from rust. The heat of welding destroys it locally, so the metal must be protected again.",
     },
     "garantia-de-reparacion": {
         "es": "Cobertura de un trabajo realizado en el taller. En España la normativa fija un mínimo general de 3 meses o 2.000 km para las reparaciones; algunos trabajos pueden tener una garantía mayor.",
         "en": "Cover for work done by the workshop. In Spain the regulations set a general minimum of 3 months or 2,000 km for repairs; some jobs may carry a longer warranty.",
-    },
-    "hibrido": {
-        "es": "Coche que combina un motor de combustión con uno o varios motores eléctricos. La batería se recarga mientras conduces, sin enchufarlo.",
-        "en": "A car that combines a combustion engine with one or more electric motors. The battery recharges as you drive, with no need to plug in.",
-    },
-    "hibrido-enchufable": {
-        "es": "Híbrido con una batería mayor que se recarga en un enchufe. Permite recorrer cierta distancia solo en modo eléctrico.",
-        "en": "A hybrid with a larger battery that you charge from a socket. It can cover a certain distance on electric power alone.",
     },
     "hoja-de-reclamaciones": {
         "es": "Formulario oficial que todo taller debe tener a disposición del cliente para presentar una queja ante la administración de consumo.",
@@ -153,45 +105,57 @@ GLOSARIO = {
         "es": "Capa de preparación que se aplica antes del color. Mejora la adherencia de la pintura y protege el metal frente a la corrosión.",
         "en": "A preparation coat applied before the colour. It helps the paint adhere and protects the metal against corrosion.",
     },
-    "inyector": {
-        "es": "Pieza que pulveriza el combustible dentro del motor en la cantidad y el momento justos. Un inyector sucio o averiado provoca tirones, humo o más consumo.",
-        "en": "The part that sprays fuel into the engine in the right amount at the right moment. A dirty or faulty injector causes hesitation, smoke or higher consumption.",
+    "informe-dgt": {
+        "es": "Informe que emite la Dirección General de Tráfico a partir de la matrícula. Muestra titulares, cargas o embargos, inspecciones de ITV y kilómetros registrados, y es clave antes de comprar un coche usado.",
+        "en": "A report issued by Spain's traffic authority (DGT) from the number plate. It shows keepers, charges or liens, ITV inspections and recorded mileage, and is essential before buying a used car.",
     },
     "itv": {
-        "es": "Inspección Técnica de Vehículos: revisión oficial y obligatoria que comprueba periódicamente que el coche es seguro y cumple los límites de emisiones.",
-        "en": "Spain's official vehicle inspection (similar to the UK MOT). It periodically checks that the car is safe and within emission limits.",
+        "es": "Inspección Técnica de Vehículos: inspección oficial y obligatoria que comprueba periódicamente que el coche cumple los requisitos para circular. El estado de la carrocería, la estructura, las lunas y el alumbrado forma parte de lo que se revisa.",
+        "en": "Spain's official, compulsory vehicle inspection (similar to the UK MOT). It periodically checks that the car is fit for the road, including the condition of the bodywork, structure, glass and lights.",
     },
     "libre-eleccion-de-taller": {
-        "es": "Tu derecho a reparar el coche en el taller que elijas, aunque la avería o el siniestro los cubra el seguro. Conviene revisar las condiciones concretas de tu póliza.",
+        "es": "Tu derecho a reparar el coche en el taller que elijas, aunque el siniestro lo cubra el seguro. Conviene revisar las condiciones concretas de tu póliza.",
         "en": "Your right to have your car repaired at the workshop of your choice, even when the damage is covered by insurance. It is worth checking the specific terms of your policy.",
     },
-    "liquido-de-frenos": {
-        "es": "Líquido que transmite la fuerza del pedal a los frenos. Absorbe humedad con el tiempo y pierde eficacia, por eso se cambia periódicamente.",
-        "en": "The fluid that transmits pedal pressure to the brakes. It absorbs moisture over time and loses effectiveness, so it is replaced periodically.",
+    "lijado": {
+        "es": "Operación que alisa la superficie con abrasivos de grano cada vez más fino. Elimina pintura dañada, iguala la masilla y deja el poro abierto para que la siguiente capa agarre.",
+        "en": "Smoothing the surface with progressively finer abrasives. It removes damaged paint, levels the filler and leaves a keyed surface so the next coat grips.",
     },
     "masilla": {
         "es": "Pasta que se usa en chapa para rellenar pequeñas irregularidades antes de pintar. Se lija para dejar la superficie perfectamente lisa.",
         "en": "A paste used in bodywork to fill small imperfections before painting. It is sanded to leave a perfectly smooth surface.",
     },
+    "matizado": {
+        "es": "Lijado muy suave que quita el brillo de la pintura existente, sin eliminarla, para que la nueva capa o la masilla se adhieran bien.",
+        "en": "Very light sanding that takes the shine off the existing paint, without removing it, so the new coat or filler adheres properly.",
+    },
+    "medidor-de-espesores": {
+        "es": "Aparato que mide el grosor de la capa de pintura sobre la chapa. Una pieza con mucho más espesor que el resto suele estar repintada o llevar masilla, por eso es útil al revisar un coche usado.",
+        "en": "A device that measures how thick the paint is on a panel. A panel with a much thicker coating than the rest has usually been resprayed or filled, which makes it useful when checking a used car.",
+    },
     "metalizado": {
         "es": "Pintura con pequeñas partículas metálicas que reflejan la luz y dan un brillo característico. Es más delicada de igualar en una reparación parcial.",
         "en": "Paint containing tiny metallic particles that reflect light and give a distinctive sparkle. It is trickier to match in a partial repair.",
+    },
+    "monocapa": {
+        "es": "Pintura que aporta color y brillo en una sola capa, sin barniz aparte. Es habitual en colores sólidos, sobre todo en vehículos comerciales y coches más antiguos.",
+        "en": "Paint that provides colour and gloss in a single layer, with no separate clear coat. It is common in solid colours, especially on commercial vehicles and older cars.",
     },
     "nacarado": {
         "es": "Pintura con pigmentos que cambian de tono según el ángulo de la luz. Suele aplicarse en varias capas y exige mucha precisión para igualarla.",
         "en": "Paint with pigments that shift tone depending on the angle of the light. It is usually applied in several layers and needs great precision to match.",
     },
-    "neumatico": {
-        "es": "La única parte del coche que toca el suelo. Hay que vigilar la presión, el dibujo (mínimo legal de 1,6 mm) y su antigüedad, porque el sol y el calor lo envejecen.",
-        "en": "The only part of the car that touches the road. Keep an eye on pressure, tread depth (legal minimum 1.6 mm) and age, as sun and heat make tyres deteriorate.",
+    "orden-de-reparacion": {
+        "es": "Documento que autoriza al taller a hacer unos trabajos concretos. Recoge lo acordado contigo y sirve de referencia si surge cualquier duda.",
+        "en": "The document authorising the workshop to carry out specific work. It records what was agreed with you and serves as a reference if any question arises.",
+    },
+    "paragolpes": {
+        "es": "Pieza, normalmente de plástico, que cubre el frontal y la trasera del coche y recibe los golpes pequeños. Detrás lleva un refuerzo y soportes que conviene revisar tras un impacto.",
+        "en": "The part, usually plastic, covering the front and rear of the car that takes minor knocks. Behind it sit a reinforcement and brackets that should be checked after an impact.",
     },
     "parte-amistoso": {
         "es": "Declaración Amistosa de Accidente: documento que firman los conductores implicados para describir cómo ocurrió el accidente y facilitar la gestión con las aseguradoras.",
         "en": "The Spanish 'Declaración Amistosa de Accidente': a form signed by the drivers involved describing how the accident happened, to help the insurers handle the claim.",
-    },
-    "pastillas-de-freno": {
-        "es": "Piezas con material de fricción que aprietan el disco para frenar. Se desgastan con el uso; si chirrían o se enciende el testigo, toca revisarlas.",
-        "en": "Parts with friction material that clamp the disc to slow the car. They wear with use; if they squeal or the warning light comes on, have them checked.",
     },
     "perdida-total": {
         "es": "Situación en la que reparar el coche cuesta más de lo que vale según la póliza o el criterio del perito. La aseguradora indemniza en lugar de reparar.",
@@ -205,6 +169,10 @@ GLOSARIO = {
         "es": "Profesional que valora los daños y el coste de reparación de un vehículo, normalmente por encargo de la aseguradora. También puedes contratar un perito independiente.",
         "en": "A professional who assesses a vehicle's damage and repair cost, usually on behalf of the insurer. You can also hire an independent adjuster.",
     },
+    "piel-de-naranja": {
+        "es": "Defecto de la pintura que deja una textura ondulada, parecida a la cáscara de una naranja, en lugar de una superficie lisa. Muchas veces se corrige con un lijado fino y pulido.",
+        "en": "A paint defect that leaves a rippled texture, like the skin of an orange, instead of a smooth surface. It can often be corrected with fine sanding and polishing.",
+    },
     "pintura-al-agua": {
         "es": "Pintura cuyo disolvente principal es el agua en lugar de disolventes químicos. Emite muchos menos compuestos orgánicos volátiles y es más respetuosa con el medio ambiente.",
         "en": "Paint that uses water rather than chemical solvents as its main carrier. It releases far fewer volatile organic compounds and is kinder to the environment.",
@@ -213,80 +181,60 @@ GLOSARIO = {
         "es": "Documento que detalla qué trabajos se harán y su coste antes de empezar. Tienes derecho a pedirlo por escrito y a aceptarlo o no.",
         "en": "A document setting out the work to be done and its cost before starting. You are entitled to ask for it in writing and to accept it or not.",
     },
+    "promotor-de-adherencia": {
+        "es": "Producto que se aplica sobre plásticos antes de la masilla o la pintura. Sin él, muchos plásticos no retienen bien la pintura y esta acaba despegándose.",
+        "en": "A product applied to plastics before filler or paint. Without it, many plastics don't hold paint well and it ends up peeling.",
+    },
     "pulido": {
         "es": "Tratamiento que elimina una capa finísima del barniz para quitar arañazos superficiales, marcas y opacidad, devolviendo el brillo a la pintura.",
         "en": "A treatment that removes a very thin layer of clear coat to get rid of light scratches, marks and dullness, bringing the shine back.",
-    },
-    "recambio-original": {
-        "es": "Pieza fabricada por o para la marca del coche, igual a la que llevaba de serie.",
-        "en": "A part made by or for the car manufacturer, identical to the one fitted at the factory.",
     },
     "recambio-de-calidad-equivalente": {
         "es": "Pieza de otro fabricante que cumple la misma calidad y especificaciones que la original. Suele ser una alternativa más económica.",
         "en": "A part from another manufacturer that meets the same quality and specifications as the original. It is often a more affordable option.",
     },
+    "recambio-original": {
+        "es": "Pieza fabricada por o para la marca del coche, igual a la que llevaba de serie.",
+        "en": "A part made by or for the car manufacturer, identical to the one fitted at the factory.",
+    },
+    "remachado": {
+        "es": "Unión de piezas de carrocería mediante remaches, a menudo combinada con adhesivo estructural. Es habitual en carrocerías y piezas de aluminio, donde la soldadura convencional no es adecuada.",
+        "en": "Joining body parts with rivets, often combined with structural adhesive. It is common on aluminium bodies and parts, where conventional welding isn't suitable.",
+    },
+    "renting": {
+        "es": "Alquiler de un vehículo a largo plazo por una cuota mensual. Al devolverlo, la compañía revisa su estado y puede cobrar los golpes, rozaduras o arañazos que superen el desgaste normal.",
+        "en": "Long-term vehicle rental for a monthly fee. When the vehicle is returned, the company inspects it and may charge for dents, scuffs or scratches beyond normal wear.",
+    },
     "resguardo-de-deposito": {
         "es": "Documento que te entrega el taller al dejar el coche, con sus datos y el estado en que queda. Te sirve de justificante para recogerlo.",
         "en": "The document the workshop gives you when you leave the car, with its details and condition. It is your proof for collecting it.",
     },
-    "rotula": {
-        "es": "Articulación de la dirección y la suspensión que permite a la rueda girar y moverse. Si tiene holgura, notarás ruidos y la dirección menos precisa.",
-        "en": "A joint in the steering and suspension that lets the wheel turn and move. If it has play, you will hear knocks and the steering will feel vaguer.",
-    },
-    "silentblock": {
-        "es": "Casquillo de goma que une piezas de la suspensión o del motor y absorbe vibraciones. Con el tiempo y el calor se agrieta y aparecen ruidos.",
-        "en": "A rubber bush that joins suspension or engine parts and absorbs vibration. Over time and with heat it cracks and noises appear.",
+    "sellador": {
+        "es": "Producto flexible que se aplica en juntas, pliegues y uniones de la carrocería para impedir la entrada de agua y polvo. En una reparación se reproduce el cordón original de fábrica.",
+        "en": "A flexible product applied to joints, folds and seams in the body to keep water and dust out. In a repair, the original factory bead is reproduced.",
     },
     "siniestro": {
         "es": "Cualquier hecho cubierto por tu seguro que causa daños: un accidente, un golpe aparcado, una rotura de lunas, un robo, etc.",
         "en": "Any insured event that causes damage: an accident, a knock while parked, broken glass, theft and so on.",
     },
-    "sonda-lambda": {
-        "es": "Sensor del escape que mide el oxígeno de los gases para que la centralita ajuste la mezcla. Si falla, sube el consumo y las emisiones.",
-        "en": "An exhaust sensor that measures oxygen in the gases so the ECU can adjust the mixture. If it fails, consumption and emissions rise.",
-    },
-    "suspension": {
-        "es": "Conjunto de muelles, amortiguadores, brazos y rótulas que une las ruedas a la carrocería. Aporta confort, agarre y estabilidad.",
-        "en": "The springs, shock absorbers, arms and joints that connect the wheels to the body. It provides comfort, grip and stability.",
+    "soldadura-por-puntos": {
+        "es": "Unión de chapas de acero mediante pequeños puntos de soldadura por resistencia, como se hace en fábrica. Los puntos se reparten a la distancia adecuada para no sobrecalentar el metal.",
+        "en": "Joining steel panels with small resistance welds, the way it is done at the factory. The welds are spaced correctly so the metal doesn't overheat.",
     },
     "terceros": {
         "es": "Seguro que cubre, como mínimo, los daños que causas a otras personas y vehículos. Los daños de tu propio coche normalmente no están cubiertos si el accidente es culpa tuya.",
         "en": "Insurance that covers, at minimum, damage you cause to other people and vehicles. Damage to your own car is normally not covered if you are at fault.",
     },
-    "testigo-de-averia": {
-        "es": "Luz del cuadro de mandos que avisa de un problema. Si es roja, para en cuanto sea seguro; si es ámbar, revísalo pronto.",
-        "en": "A dashboard light warning of a problem. If it is red, stop as soon as it is safe; if it is amber, get it checked soon.",
-    },
     "todo-riesgo": {
         "es": "Seguro que, además de los daños a terceros, cubre los de tu propio coche aunque tú tengas la culpa, según las condiciones y la franquicia pactadas.",
         "en": "Insurance that, as well as third-party damage, covers your own car even if you are at fault, subject to the agreed terms and excess.",
     },
-    "turbo": {
-        "es": "Compresor movido por los gases de escape que introduce más aire en el motor para ganar potencia. Agradece un aceite en buen estado y no apagar el motor en caliente tras un uso exigente.",
-        "en": "A compressor driven by exhaust gases that forces more air into the engine for extra power. It appreciates good oil and not switching off straight after hard driving.",
-    },
-    "valvula-egr": {
-        "es": "Válvula que recircula parte de los gases de escape hacia la admisión para reducir emisiones. Con el tiempo acumula carbonilla y puede dar fallos.",
-        "en": "A valve that sends part of the exhaust gases back into the intake to reduce emissions. Over time it builds up carbon and can cause faults.",
+    "valor-venal": {
+        "es": "Valor de un coche justo antes del siniestro, según su antigüedad y estado. Es la referencia que suelen usar las aseguradoras para decidir si hay pérdida total y cuánto indemnizan.",
+        "en": "A car's value just before the claim event, based on its age and condition. Insurers usually use it to decide whether a car is a total loss and how much to pay out.",
     },
     "vehiculo-de-sustitucion": {
         "es": "Coche que te prestan mientras el tuyo está en el taller. Su disponibilidad depende del caso y, en siniestros, de tu póliza.",
         "en": "A car lent to you while yours is in the workshop. Availability depends on the case and, for insurance claims, on your policy.",
-    },
-    "vehiculo-electrico": {
-        "es": "Coche que se mueve solo con motores eléctricos alimentados por una batería que se recarga en un enchufe. Tiene menos piezas de desgaste que uno de combustión.",
-        "en": "A car driven solely by electric motors powered by a battery you charge from a socket. It has fewer wearing parts than a combustion car.",
-    },
-    "volante-bimasa": {
-        "es": "Volante motor de dos piezas unidas por muelles que absorbe vibraciones, habitual en diésel. Cuando se desgasta aparecen golpeteos y vibraciones al arrancar o parar.",
-        "en": "A two-piece flywheel linked by springs that absorbs vibration, common in diesels. When worn, you get knocking and vibration when starting or stopping.",
-    },
-    "conector-de-recarga": {
-        "es": "Toma del coche eléctrico o híbrido enchufable donde se conecta el cable de carga. En Europa, los más habituales son el Tipo 2 y el CCS para carga rápida.",
-        "en": "The socket on an electric or plug-in hybrid car where the charging cable connects. In Europe the most common are Type 2 and CCS for rapid charging.",
-    },
-    "orden-de-reparacion": {
-        "es": "Documento que autoriza al taller a hacer unos trabajos concretos. Recoge lo acordado contigo y sirve de referencia si surge cualquier duda.",
-        "en": "The document authorising the workshop to carry out specific work. It records what was agreed with you and serves as a reference if any question arises.",
     },
 }

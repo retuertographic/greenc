@@ -39,7 +39,7 @@ LEGAL = {
                     ]),
                 ]),
                 ("Carácter informativo de los contenidos", [
-                    ("p", "Las guías, artículos, preguntas frecuentes y el diccionario del motor tienen carácter meramente informativo y general. No constituyen asesoramiento jurídico, técnico ni asegurador sobre un caso concreto."),
+                    ("p", "Las guías, artículos, preguntas frecuentes y el diccionario de chapa y pintura tienen carácter meramente informativo y general. No constituyen asesoramiento jurídico, técnico ni asegurador sobre un caso concreto."),
                     ("p", "Los precios, plazos y condiciones de cada trabajo se confirman en el presupuesto correspondiente. Las coberturas de seguro dependen siempre de la póliza de cada cliente."),
                 ]),
                 ("Propiedad intelectual e industrial", [
