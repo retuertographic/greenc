@@ -134,7 +134,14 @@ def ventajas_cards(lang, n=6, clase="card gold"):
 # ---------------------------------------------------------------- Inicio
 def pagina_inicio(lang):
     L = lambda es, en: t(lang, es, en)
-    hero = f"""<div class="hero"><div class="wrap">
+    v = "../assets/video/" if lang == "en" else "assets/video/"
+    hero = f"""<div class="hero hero-video">
+  <video class="hero-bg" id="heroVideo" autoplay muted loop playsinline preload="metadata" poster="{v}hero-poster.jpg" aria-hidden="true">
+    <source src="{v}hero.webm" type="video/webm">
+    <source src="{v}hero.mp4" type="video/mp4">
+  </video>
+  <button class="hero-pausa" type="button" id="heroPausa" aria-pressed="false" data-pausar="{L("Pausar el vídeo de fondo", "Pause background video")}" data-reanudar="{L("Reproducir el vídeo de fondo", "Play background video")}" aria-label="{L("Pausar el vídeo de fondo", "Pause background video")}" title="{L("Pausar el vídeo de fondo", "Pause background video")}"><svg class="i-pausa" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6.5" y="5" width="3.6" height="14" rx="1"/><rect x="13.9" y="5" width="3.6" height="14" rx="1"/></svg><svg class="i-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.2v13.6a.8.8 0 0 0 1.2.7l10.6-6.8a.8.8 0 0 0 0-1.4L9.2 4.5A.8.8 0 0 0 8 5.2Z"/></svg></button>
+<div class="wrap">
   <span class="eyebrow">{L("Chapa y pintura · Particulares · Empresas · Aseguradoras", "Bodywork & paint · Private · Business · Insurers")}</span>
   <h1>{L("Tu taller de chapa y pintura en el sur de Tenerife", "Your body and paint shop in the south of Tenerife")}</h1>
   <p class="lead">{md(L("Desde 2019 reparamos la [[carroceria|carrocería]] de particulares, empresas y siniestros de compañías de seguros con un servicio integral y sostenible: [[pintura-al-agua|pintura ecológica]], garantía vitalicia en pintura, recogida y entrega a domicilio e información en tiempo real.", "Since 2019 we have repaired the [[carroceria|bodywork]] of private customers, businesses and insurance claims with a complete, sustainable service: [[pintura-al-agua|eco-friendly paint]], a lifetime paint warranty, collection and delivery and real-time updates."), lang)}</p>

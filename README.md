@@ -4,7 +4,7 @@ Sitio web estático y bilingüe de Green Car Service Tenerife (104 páginas en e
 
 - `*.html` — versión en español (raíz del sitio).
 - `en/*.html` — versión en inglés, con los mismos nombres de archivo.
-- `assets/` — estilos, script y logotipos (SVG) compartidos. `site.js` adapta sus textos al idioma de la página (`<html lang>`).
+- `assets/` — estilos, script y logotipos (SVG) compartidos. `assets/video/` guarda el vídeo de fondo de la portada (WebM y MP4 comprimidos a 1280×720) y su imagen fija. `site.js` adapta sus textos al idioma de la página (`<html lang>`).
 - Cada página enlaza a su equivalente con el selector ES · EN de la barra superior y con `hreflang`. Incluye `sitemap.xml` y `robots.txt`.
 - Publicado con GitHub Pages (Deploy from a branch) en https://retuertographic.github.io/greenc/ y https://retuertographic.github.io/greenc/en/
 

@@ -251,3 +251,30 @@ var T = EN ? {
   }
   campo.addEventListener('input', filtrar);
 })();
+
+// Vídeo de fondo de la portada: botón de pausa y respeto a «reducir
+// movimiento» y al ahorro de datos (en esos casos se queda la imagen fija).
+(function () {
+  var v = document.getElementById('heroVideo');
+  var b = document.getElementById('heroPausa');
+  if (!v) return;
+  function estado(pausado) {
+    if (!b) return;
+    b.setAttribute('aria-pressed', String(pausado));
+    var txt = pausado ? b.dataset.reanudar : b.dataset.pausar;
+    b.setAttribute('aria-label', txt);
+    b.title = txt;
+  }
+  var quieto = window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
+    (navigator.connection && navigator.connection.saveData);
+  if (quieto) {
+    v.removeAttribute('autoplay');
+    v.pause();
+    v.preload = 'none';
+    estado(true);
+  }
+  if (b) b.addEventListener('click', function () {
+    if (v.paused) { var p = v.play(); if (p && p.catch) p.catch(function () {}); estado(false); }
+    else { v.pause(); estado(true); }
+  });
+})();
