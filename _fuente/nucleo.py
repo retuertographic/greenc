@@ -5,7 +5,9 @@ import html
 import os
 import re
 
-from comun import EMPRESA as E, GLOSARIO_TERMINOS, CATEGORIAS_SERVICIO
+import json
+
+from comun import EMPRESA as E, GLOSARIO_TERMINOS, CATEGORIAS_SERVICIO, ANALITICA
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 FRAG = os.path.join(AQUI, "fragmentos")
@@ -426,7 +428,7 @@ def topbar(lang, slug):
     else:
         lang_html = (f'<a href="../{slug}.html" hreflang="es" lang="es" title="Español">ES</a> · '
                      f'<a href="{slug}.html" hreflang="en" lang="en" aria-current="true">EN</a>')
-    return f"""<div class="topbar"><div class="wrap">
+    return f"""<div class="topbar" role="region" aria-label="{t(lang, "Contacto rápido", "Quick contact")}"><div class="wrap">
   <div class="tb-items">
     <span>{ico("phone")}<a href="tel:{E["telefono_tel"]}">{E["telefono"]}</a> · <a href="https://wa.me/{E["whatsapp_wa"]}" target="_blank" rel="noopener">WhatsApp {E["whatsapp"]}</a></span>
     <span>{ico("mail")}<a href="mailto:{E["email"]}">{E["email"]}</a></span>
@@ -520,51 +522,155 @@ def pie(lang):
       <p>{L("Taller de chapa y pintura en Las Chafiras, en el sur de Tenerife, desde 2019, para particulares, empresas y compañías de seguros. Un servicio integral y sostenible: más que un simple taller.", "Body and paint shop in Las Chafiras, in the south of Tenerife, since 2019, for private customers, businesses and insurers. A complete, sustainable service: more than just a garage.")}</p>
       <ul class="foot-links">{contacto}</ul>
     </div>
-    <div><h4>{L("Servicios", "Services")}</h4><ul class="foot-links">{servicios}</ul></div>
-    <div><h4>{L("Acceso directo", "Quick links")}</h4><ul class="foot-links">{directo}</ul></div>
+    <div><h2 class="foot-h">{L("Servicios", "Services")}</h2><ul class="foot-links">{servicios}</ul></div>
+    <div><h2 class="foot-h">{L("Acceso directo", "Quick links")}</h2><ul class="foot-links">{directo}</ul></div>
   </div>
   <div class="foot-bottom">
     <p class="foot-legal-text">Copyright © {ANIO} Green Car Service Tenerife. {E["razon_social"]} · CIF {E["cif"]} · {esc(E["direccion"])}, {esc(E["cp_ciudad"])}.</p>
     <p class="foot-credit">{L("Desarrollado por", "Developed by")} Retuerto Graphic Design. Ricardo Retuerto Barrera | Spain-Germany | <a href="tel:0034922971723">0034 922 971 723</a> · <a href="tel:00493031878629">0049 30 31878629</a></p>
   </div>
-</div></footer>
+</div>
 <button class="arriba" type="button" id="irArriba" hidden aria-label="{L("Volver arriba", "Back to top")}" title="{L("Volver arriba", "Back to top")}">{ico("up")}</button>
 <a class="wa" href="https://wa.me/{E["whatsapp_wa"]}" target="_blank" rel="noopener" aria-label="{L("Escríbenos por WhatsApp", "Message us on WhatsApp")}">{WA_SVG}</a>
+</footer>
 """
 
 
-def documento(lang, slug, titulo, descripcion, cuerpo, activo=None, og_tipo="website"):
+def _texto(html_):
+    return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", "", html_))).strip()
+
+
+def datos_estructurados(lang, slug, titulo, descripcion, cuerpo, extra):
+    """JSON-LD: negocio en inicio y contacto, migas de pan, preguntas
+    frecuentes (a partir del HTML de la página) y lo que aporte la página."""
+    base = E["base_url"]
+    pref = base + ("en/" if lang == "en" else "")
+    url = pref + slug + ".html"
+    bloques_ld = []
+    if slug in ("index", "contacto"):
+        bloques_ld.append(negocio_ld(lang))
+    m = re.search(r'<div class="crumbs">(.*?)</div>', cuerpo, re.S)
+    if m:
+        items = []
+        for i, (href, txt) in enumerate(re.findall(r'<a href="([^"]+)">(.*?)</a>', m.group(1)), 1):
+            items.append({"@type": "ListItem", "position": i, "name": _texto(txt), "item": pref + href})
+        ultimo = _texto(m.group(1).split("<span>/</span>")[-1])
+        items.append({"@type": "ListItem", "position": len(items) + 1, "name": ultimo, "item": url})
+        bloques_ld.append({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": items})
+    faqs = re.findall(r'<summary>(.*?)<svg.*?</summary>\s*<div class="faq-r">(.*?)</div>', cuerpo, re.S)
+    if faqs:
+        bloques_ld.append({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+            {"@type": "Question", "name": _texto(q), "acceptedAnswer": {"@type": "Answer", "text": _texto(a)}}
+            for q, a in faqs]})
+    bloques_ld += extra or []
+    return "".join(
+        '<script type="application/ld+json">' + json.dumps(b, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/") + "</script>\n"
+        for b in bloques_ld)
+
+
+def negocio_ld(lang):
+    base = E["base_url"]
+    return {
+        "@context": "https://schema.org",
+        "@type": "AutoBodyShop",
+        "@id": base + "#taller",
+        "name": E["nombre"],
+        "legalName": E["razon_social"],
+        "taxID": E["cif"],
+        "url": base + ("en/" if lang == "en" else ""),
+        "logo": base + "assets/favicon.png",
+        "image": base + "assets/og.png",
+        "description": t(lang, "Taller de chapa y pintura en Las Chafiras (sur de Tenerife) para particulares, empresas y compañías de seguros.",
+                         "Body and paint shop in Las Chafiras (south Tenerife) for private customers, businesses and insurers."),
+        "telephone": E["telefono_tel"],
+        "email": E["email"],
+        "foundingDate": str(E["fundacion"]),
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Avenida Siete Islas Canarias, 34, Pol. Ind. Llano del Camello",
+            "postalCode": "38639",
+            "addressLocality": "Las Chafiras, San Miguel de Abona",
+            "addressRegion": "Santa Cruz de Tenerife",
+            "addressCountry": "ES",
+        },
+        "hasMap": E["google_ficha"],
+        "areaServed": "Tenerife",
+        "openingHoursSpecification": [{
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "07:00", "closes": "16:00",
+        }],
+        "sameAs": [E["instagram"]],
+        "knowsLanguage": ["es", "en"],
+    }
+
+
+def analitica():
+    p, ident = ANALITICA.get("proveedor"), ANALITICA.get("id")
+    if not p or not ident:
+        return ""
+    if p == "plausible":
+        src = ANALITICA.get("script") or "https://plausible.io/js/script.outbound-links.js"
+        return (f'<script defer data-domain="{esc(ident)}" src="{esc(src)}"></script>\n'
+                '<script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}</script>\n')
+    if p == "umami":
+        src = ANALITICA.get("script") or "https://cloud.umami.is/script.js"
+        return f'<script defer data-website-id="{esc(ident)}" src="{esc(src)}"></script>\n'
+    if p == "goatcounter":
+        return f'<script data-goatcounter="https://{esc(ident)}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>\n'
+    return ""
+
+
+def documento(lang, slug, titulo, descripcion, cuerpo, activo=None, og_tipo="website", ld=None, es_404=False):
     base = E["base_url"]
     a = "../" if lang == "en" else ""
     tit = f"{titulo} | Green Car Service Tenerife" if slug != "index" else titulo
     desc = esc(plano(descripcion))
+    url = base + ("en/" if lang == "en" else "") + slug + ".html"
+    if es_404:
+        cabeza_url = (f'<base href="{base}{"en/" if lang == "en" else ""}">\n'
+                      '<meta name="robots" content="noindex">\n')
+        enlaces_idioma = ""
+    else:
+        cabeza_url = f'<link rel="canonical" href="{url}">\n<meta property="og:url" content="{url}">\n'
+        enlaces_idioma = (f'<link rel="alternate" hreflang="es" href="{base}{slug}.html">\n'
+                          f'<link rel="alternate" hreflang="en" href="{base}en/{slug}.html">\n'
+                          f'<link rel="alternate" hreflang="x-default" href="{base}{slug}.html">\n')
+    verif = (f'<meta name="google-site-verification" content="{esc(E["search_console"])}">\n'
+             if E.get("search_console") and slug == "index" and lang == "es" else "")
+    ld_html = "" if es_404 else datos_estructurados(lang, slug, titulo, descripcion, cuerpo, ld)
     return f"""<!DOCTYPE html>
 <html lang="{lang}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{esc(tit)}</title>
+{cabeza_url}<title>{esc(tit)}</title>
 <meta name="description" content="{desc}">
 <meta property="og:title" content="{esc(tit)}">
 <meta property="og:description" content="{desc}">
 <meta property="og:type" content="{og_tipo}">
+<meta property="og:site_name" content="Green Car Service Tenerife">
+<meta property="og:locale" content="{t(lang, "es_ES", "en_GB")}">
+<meta property="og:locale:alternate" content="{t(lang, "en_GB", "es_ES")}">
 <meta property="og:image" content="{base}assets/og.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+{verif}<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Playfair+Display:wght@600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{a}assets/styles.css">
 <link rel="icon" href="{a}assets/favicon.ico" sizes="32x32">
 <link rel="icon" href="{a}assets/isotipo.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="{a}assets/favicon.png">
+<link rel="apple-touch-icon" href="{a}assets/apple-touch-icon.png">
+<link rel="manifest" href="{a}site.webmanifest">
 <meta name="theme-color" content="#3D8625">
-<link rel="alternate" hreflang="es" href="{base}{slug}.html">
-<link rel="alternate" hreflang="en" href="{base}en/{slug}.html">
-<link rel="alternate" hreflang="x-default" href="{base}{slug}.html">
-</head>
+{enlaces_idioma}{ld_html}{analitica()}</head>
 <body>
+<a class="saltar" href="#contenido">{t(lang, "Saltar al contenido", "Skip to content")}</a>
 {topbar(lang, slug)}
 {cabecera(lang, activo)}
-<main>
+<main id="contenido" tabindex="-1">
 
 {cuerpo}
 </main>

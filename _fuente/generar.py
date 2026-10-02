@@ -359,7 +359,8 @@ def pagina_opiniones(lang):
     L = lambda es, en: t(lang, es, en)
     cuerpo = page_head(lang, [(L("Conócenos", "About us"), "conocenos.html")], L("Opiniones de clientes", "Customer reviews"),
                        L("Lo que dicen de nosotros quienes ya han dejado su coche en el taller.", "What people who have already brought their car to us say."))
-    gmaps = "https://www.google.com/maps/search/?api=1&query=Green+Car+Service+Tenerife+Las+Chafiras"
+    gmaps = E["google_ficha"]
+    resena = E.get("google_resena") or gmaps
     cuerpo += seccion(f"""  <div class="valoracion">
     <div class="cifra">{val(lang)}</div>
     <div>{estrellas()}<p>{L(f"Valoración media sobre 5 con {E['resenas']} opiniones en Google.", f"Average rating out of 5 from {E['resenas']} Google reviews.")}</p></div>
@@ -367,7 +368,7 @@ def pagina_opiniones(lang):
   </div>
 {section_head(L("Lo que más destacan", "What they highlight most"), L("Un resumen de lo que más se repite en las opiniones publicadas.", "A summary of what comes up most in published reviews."), lang)}{grid("g3", destacados(lang))}""")
     cuerpo += seccion(section_head(L("¿Ya eres cliente?", "Already a customer?"), L("Tu opinión nos ayuda a mejorar y ayuda a otros conductores a encontrar un taller de confianza. Si te hemos reparado el coche, cuéntanos qué tal en Google.", "Your review helps us improve and helps other drivers find a garage they can trust. If we've repaired your car, tell us how it went on Google."), lang)
-                      + f'  <div class="actions" style="display:flex;gap:12px;flex-wrap:wrap">{boton("btn-primary", gmaps, L("Dejar una opinión", "Leave a review"), "star", True)}</div>\n', "alt")
+                      + f'  <div class="actions" style="display:flex;gap:12px;flex-wrap:wrap">{boton("btn-primary", resena, L("Dejar una opinión", "Leave a review"), "star", True)}</div>\n', "alt")
     cuerpo += panel(lang, L("¿Quieres comprobarlo tú?", "Want to see for yourself?"), L("Pide cita y juzga por ti mismo.", "Book an appointment and judge for yourself."))
     return documento(lang, "opiniones", L("Opiniones de clientes", "Customer reviews"),
                      L(f"Green Car Service Tenerife tiene una valoración de {val(lang)} sobre 5 con {E['resenas']} opiniones en Google.", f"Green Car Service Tenerife is rated {val(lang)} out of 5 from {E['resenas']} Google reviews."),
@@ -530,7 +531,8 @@ def pagina_guia(g, lang):
                       + grid("g3", [card_prod(GUIAS[x][lang]["titulo"], GUIAS[x][lang]["corto"], f"{x}.html", L("Leer", "Read"), lang) for x in otras]))
     cuerpo += seccion_form(lang, L("¿Te ayudamos con tu caso?", "Can we help with your case?"),
                            L("Cuéntanos qué ha pasado y te decimos cómo seguir.", "Tell us what happened and we'll tell you how to proceed."))
-    return documento(lang, g, C["titulo"], C["entradilla"], cuerpo, nav, "article")
+    return documento(lang, g, C["titulo"], C["entradilla"], cuerpo, nav, "article",
+                     ld=[articulo_ld(lang, g, C["titulo"], C["entradilla"], None)])
 
 
 def pagina_telefonos(lang):
@@ -620,7 +622,7 @@ def pagina_categoria(c, lang):
     cuerpo = page_head(lang, [("Blog", "blog.html")], nombre, L(f"{len(arts)} artículos sobre {nombre.lower()}.", f"{len(arts)} articles about {nombre.lower()}."))
     tarjetas = "".join(card_prod(a[lang]["titulo"], a[lang]["resumen"], f"{a['slug']}.html", L("Leer", "Read"), lang, fecha=fecha_txt(a["fecha"], lang)) for a in arts)
     otras = "".join(f'<a class="btn btn-ghost" href="categoria-{x}.html">{esc(v[0 if lang == "es" else 1])}</a>' for x, v in CATEGORIAS_BLOG.items() if x != c)
-    cuerpo += seccion(f'  <div class="grid g3-blog">{tarjetas}</div>\n  <div class="section-head" style="margin-top:44px"><h2>{L("Otras categorías", "Other categories")}</h2></div>\n  <div class="sub-cats">{otras}</div>\n')
+    cuerpo += seccion(f'  <h2 class="sr-only">{L("Artículos", "Articles")}</h2>\n  <div class="grid g3-blog">{tarjetas}</div>\n  <div class="section-head" style="margin-top:44px"><h2>{L("Otras categorías", "Other categories")}</h2></div>\n  <div class="sub-cats">{otras}</div>\n')
     cuerpo += panel(lang, L("¿Te resolvemos una duda concreta?", "Can we answer a specific question?"), L("Escríbenos y te contestamos sin tecnicismos.", "Write to us and we'll answer without jargon."), ("contacto.html", L("Escríbenos", "Get in touch")))
     return documento(lang, f"categoria-{c}", nombre, L(f"Artículos de {nombre.lower()} del blog de Green Car Service Tenerife.", f"{nombre} articles from the Green Car Service Tenerife blog."), cuerpo, "blog")
 
@@ -642,7 +644,49 @@ def pagina_articulo(a, lang):
                       + grid("g3-blog", [card_prod(x[lang]["titulo"], x[lang]["resumen"], f"{x['slug']}.html", L("Leer", "Read"), lang,
                                                    CATEGORIAS_BLOG[x["cat"]][0 if lang == "es" else 1]) for x in rel]), "alt")
     cuerpo += panel(lang, L("¿Tu coche necesita una revisión?", "Does your car need a check-up?"), L("Pide cita y lo vemos sin compromiso.", "Book an appointment and we'll take a look with no obligation."))
-    return documento(lang, a["slug"], C["titulo"], C["resumen"], cuerpo, "blog", "article")
+    return documento(lang, a["slug"], C["titulo"], C["resumen"], cuerpo, "blog", "article",
+                     ld=[articulo_ld(lang, a["slug"], C["titulo"], C["resumen"], a["fecha"], nombre)])
+
+
+def articulo_ld(lang, slug, titulo, resumen, fecha, seccion=None):
+    base = E["base_url"]
+    url = base + ("en/" if lang == "en" else "") + slug + ".html"
+    d = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": plano(titulo)[:110],
+        "description": plano(resumen),
+        "inLanguage": lang,
+        "mainEntityOfPage": url,
+        "url": url,
+        "image": base + "assets/og.png",
+        "author": {"@type": "Organization", "name": E["nombre"], "url": base},
+        "publisher": {"@type": "Organization", "name": E["nombre"],
+                      "logo": {"@type": "ImageObject", "url": base + "assets/favicon.png"}},
+    }
+    if fecha:
+        d["datePublished"] = d["dateModified"] = fecha
+    if seccion:
+        d["articleSection"] = seccion
+    return d
+
+
+def pagina_404(lang):
+    L = lambda es, en: t(lang, es, en)
+    cuerpo = f"""<div class="page-head"><div class="wrap">
+  <div class="crumbs"><a href="index.html">{L("Inicio", "Home")}</a><span>/</span>404</div>
+  <h1>{L("Esta página no existe", "This page doesn't exist")}</h1>
+  <p>{L("Puede que el enlace esté mal escrito o que la página se haya movido. Te dejamos lo más buscado.", "The link may be mistyped or the page may have moved. Here's what people look for most.")}</p>
+  <div class="actions">{boton("btn-primary", "index.html", L("Ir al inicio", "Go to the home page"), "home")}{boton("btn-line", "mapa-web.html", L("Ver el mapa web", "See the sitemap"), "map")}</div>
+</div></div>
+""" + seccion(f'<h2 class="sr-only">{L("Lo más buscado", "Most visited")}</h2>\n' + grid("g4", [
+        card_ico("spray", L("Chapa y pintura", "Bodywork & paint"), L("Todos los servicios del taller.", "All workshop services."), lang, "chapa-y-pintura.html"),
+        card_ico("doc", L("Presupuesto", "Estimate"), L("Sin compromiso y por escrito.", "Written, with no obligation."), lang, "presupuesto.html"),
+        card_ico("alert", L("Siniestros", "Accidents"), L("Qué hacer si has tenido un golpe.", "What to do after a knock."), lang, "siniestros.html"),
+        card_ico("phone", L("Contacto", "Contact"), f"{E['telefono']} · WhatsApp {E['whatsapp']}", lang, "contacto.html"),
+    ]))
+    return documento(lang, "404", L("Página no encontrada", "Page not found"),
+                     L("La página que buscas no existe.", "The page you are looking for doesn't exist."), cuerpo, None, es_404=True)
 
 
 # ---------------------------------------------------------------- Ayuda
@@ -760,9 +804,9 @@ def pagina_legal_doc(slug, lang):
     cuerpo = page_head(lang, [(L("Información legal", "Legal information"), "legal.html")], D["titulo"], D["entradilla"])
     cuerpo += seccion(f"""<div class="legal-layout">
   <aside class="legal-nav">
-    <h3>{L("En esta página", "On this page")}</h3>
+    <h2 class="legal-nav-t">{L("En esta página", "On this page")}</h2>
     <ul class="foot-links dark">{idx}</ul>
-    <h3 style="margin-top:26px">{L("Otros documentos", "Other documents")}</h3>
+    <h2 class="legal-nav-t" style="margin-top:26px">{L("Otros documentos", "Other documents")}</h2>
     <ul class="foot-links dark">{otros}</ul>
   </aside>
   <div class="legal-body">{secs}<p class="legal-version">{L("Última actualización: septiembre de 2026.", "Last updated: September 2026.")}</p></div>
@@ -774,7 +818,7 @@ def pagina_legal_doc(slug, lang):
 def pagina_legal(lang):
     L = lambda es, en: t(lang, es, en)
     cuerpo = page_head(lang, [], L("Información legal", "Legal information"), L("Condiciones de uso del sitio y tratamiento de datos personales.", "Terms of use of the site and processing of personal data."))
-    cuerpo += seccion(grid("g3", [card_ico("doc", v[0] if lang == "es" else v[1], plano(LEGAL[k][lang]["entradilla"]) if k in LEGAL else "", lang, f"{k}.html", L("Leer", "Read")) for k, v in LEGAL_TIT.items()]))
+    cuerpo += seccion(f'<h2 class="sr-only">{L("Documentos", "Documents")}</h2>\n' + grid("g3", [card_ico("doc", v[0] if lang == "es" else v[1], plano(LEGAL[k][lang]["entradilla"]) if k in LEGAL else "", lang, f"{k}.html", L("Leer", "Read")) for k, v in LEGAL_TIT.items()]))
     return documento(lang, "legal", L("Información legal", "Legal information"), L("Aviso legal, política de privacidad y política de cookies de Green Car Service Tenerife.", "Legal notice, privacy policy and cookie policy of Green Car Service Tenerife."), cuerpo, None)
 
 
@@ -792,7 +836,7 @@ def pagina_mapa(lang):
         li = "".join(f'<li><a href="{s}.html">{ico("arrow")}<span>{esc(n)}</span></a></li>' for s, n in items)
         cards += f'<div class="card"><h3>{esc(nombres.get(sec, sec))}</h3><ul class="foot-links dark">{li}</ul></div>'
     cuerpo = page_head(lang, [], L("Mapa web", "Sitemap"), L("Todas las páginas del sitio, ordenadas por sección.", "All the pages on the site, organised by section."))
-    cuerpo += seccion(f'<div class="grid g3">{cards}</div>\n')
+    cuerpo += seccion(f'<h2 class="sr-only">{L("Páginas por sección", "Pages by section")}</h2>\n<div class="grid g3">{cards}</div>\n')
     return documento(lang, "mapa-web", L("Mapa web", "Sitemap"), L("Mapa del sitio web de Green Car Service Tenerife.", "Green Car Service Tenerife sitemap."), cuerpo, None)
 
 
@@ -847,6 +891,9 @@ def main():
         for lang in LANGS:
             escribir(lang, slug, fn(lang))
             n += 1
+    # GitHub Pages sirve /404.html para cualquier ruta inexistente.
+    for lang in LANGS:
+        escribir(lang, "404", pagina_404(lang))
     # sitemap.xml
     base = E["base_url"]
     urls = "".join(

@@ -1,0 +1,17 @@
+{
+  "name": "Green Car Service Tenerife",
+  "short_name": "Green Car",
+  "description": "Taller de chapa y pintura en Las Chafiras, Tenerife.",
+  "lang": "es",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F6F8F3",
+  "theme_color": "#3D8625",
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "assets/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "assets/isotipo.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

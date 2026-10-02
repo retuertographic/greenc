@@ -26,7 +26,24 @@ EMPRESA = {
     "valoracion": "4,8",
     "resenas": "177",
     "base_url": "https://retuertographic.github.io/greenc/",
+    # Ficha de Google del taller. Mientras no se tenga el enlace directo
+    # (Google Maps > ficha > Compartir), se usa una búsqueda exacta.
+    "google_ficha": "https://www.google.com/maps/search/?api=1&query=Green+Car+Service+Tenerife%2C+Av.+7+Islas+Canarias+34%2C+38639+Las+Chafiras",
+    # Enlace para escribir una reseña: https://search.google.com/local/writereview?placeid=ID
+    # (el ID de lugar sale del panel de Google Business > «Pedir reseñas»). Vacío = se usa la ficha.
+    "google_resena": "",
+    # Contenido de la etiqueta de verificación de Google Search Console
+    # (Search Console > Añadir propiedad > Prefijo de URL > Etiqueta HTML). Vacío = no se añade.
+    "search_console": "",
 }
+
+# Analítica sin cookies (no requiere consentimiento). Proveedores admitidos:
+#   "plausible"   -> id = dominio dado de alta en Plausible (p. ej. "greencarservicetenerife.com")
+#   "umami"       -> id = website-id de Umami; script = URL del script (Umami Cloud o propio)
+#   "goatcounter" -> id = código de la cuenta (https://CODIGO.goatcounter.com)
+# Con proveedor vacío no se carga nada. Los clics en teléfono, WhatsApp y correo y
+# el envío de formularios se registran como eventos.
+ANALITICA = {"proveedor": "", "id": "", "script": ""}
 
 # Iconos disponibles (nombre -> se definen en generar.py)
 ICONOS = [

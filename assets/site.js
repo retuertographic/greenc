@@ -278,3 +278,29 @@ var T = EN ? {
     else { v.pause(); estado(true); }
   });
 })();
+
+// Analítica sin cookies: si hay un proveedor configurado (Plausible, Umami o
+// GoatCounter), se registran como eventos las acciones que generan clientes.
+(function () {
+  function evento(nombre) {
+    try {
+      if (typeof window.plausible === 'function') window.plausible(nombre);
+      else if (window.umami && typeof window.umami.track === 'function') window.umami.track(nombre);
+      else if (window.goatcounter && typeof window.goatcounter.count === 'function')
+        window.goatcounter.count({ path: 'evento-' + nombre, title: nombre, event: true });
+    } catch (e) { /* la analítica nunca debe romper la página */ }
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if (!a) return;
+    var h = a.getAttribute('href');
+    if (h.indexOf('tel:') === 0) evento('Llamada');
+    else if (h.indexOf('https://wa.me/') === 0) evento('WhatsApp');
+    else if (h.indexOf('mailto:') === 0) evento('Correo');
+  });
+  document.querySelectorAll('form[data-to]').forEach(function (form) {
+    form.addEventListener('submit', function () {
+      evento('Formulario: ' + (form.dataset.asunto || 'contacto'));
+    });
+  });
+})();

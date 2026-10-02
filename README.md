@@ -20,3 +20,14 @@ Las páginas se generan; no se editan a mano.
 python3 _fuente/validar.py    # comprueba el contenido
 python3 _fuente/generar.py    # regenera todas las páginas
 ```
+
+## Posicionamiento, analítica y accesibilidad
+
+Ya incluido en todas las páginas: etiqueta canónica, `hreflang`, Open Graph y tarjeta de Twitter, datos estructurados JSON-LD (taller `AutoBodyShop` en inicio y contacto, migas de pan, artículos y preguntas frecuentes), `sitemap.xml`, `robots.txt`, página `404.html`, manifiesto web con iconos y enlace «Saltar al contenido». La web pasa la auditoría automática de accesibilidad axe (WCAG 2 A/AA) sin errores.
+
+Pendiente de datos del taller, todo en `_fuente/comun.py` (después, `python3 _fuente/generar.py`):
+
+- **Google Search Console** — añadir la propiedad con la URL de la web, elegir verificación por «Etiqueta HTML» y copiar el valor de `content` en `EMPRESA["search_console"]`. Una vez verificada, enviar `sitemap.xml` desde «Sitemaps».
+- **Ficha de Google** — `EMPRESA["google_ficha"]`: enlace de la ficha (Google Maps > ficha > Compartir). `EMPRESA["google_resena"]`: enlace para dejar reseña (`https://search.google.com/local/writereview?placeid=ID`, el ID sale del panel de Google Business > «Pedir reseñas»).
+- **Analítica sin cookies** — `ANALITICA`: proveedor `plausible`, `umami` o `goatcounter` y su identificador. Se registran como eventos las llamadas, los WhatsApp, los correos y los envíos de formulario.
+- **Dominio propio** — cambiar `EMPRESA["base_url"]` y añadir un archivo `CNAME` con el dominio.
