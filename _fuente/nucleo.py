@@ -116,6 +116,7 @@ def val(lang):
 
 # ---------------------------------------------------------------- Marcado
 GLOSARIO = {}  # clave -> {"es": def, "en": def}; lo rellena generar.py
+META = {}  # pagina -> {"es": descripción, "en": descripción}; contenido/meta.py
 
 
 def md(texto, lang):
@@ -598,10 +599,10 @@ def negocio_ld(lang):
         "foundingDate": str(E["fundacion"]),
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Av. 7 Islas Canarias, 34, Pol. Ind. Llano del Camello",
+            "streetAddress": "Av. 7 Islas Canarias, 32",
             "postalCode": "38639",
-            "addressLocality": "Las Chafiras, San Miguel de Abona",
-            "addressRegion": "Santa Cruz de Tenerife",
+            "addressLocality": "Santa Cruz de Tenerife",
+            "addressRegion": "Islas Canarias",
             "addressCountry": "ES",
         },
         "hasMap": E["google_ficha"],
@@ -638,7 +639,8 @@ def documento(lang, slug, titulo, descripcion, cuerpo, activo=None, og_tipo="web
     a = "../" if lang == "en" else ""
     # Sufijo de marca corto, y solo si el título resultante no pasa de ~60 caracteres.
     tit = titulo if slug == "index" or len(titulo) > 38 else f"{titulo} | Green Car Tenerife"
-    desc = esc(plano(descripcion))
+    # La meta descripción redactada a mano (contenido/meta.py) tiene prioridad.
+    desc = esc(plano(META.get(slug, {}).get(lang) or descripcion))
     url = base + ("en/" if lang == "en" else "") + slug + ".html"
     if es_404:
         cabeza_url = (f'<base href="{base}{"en/" if lang == "en" else ""}">\n'

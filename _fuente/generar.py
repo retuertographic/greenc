@@ -44,6 +44,7 @@ for _f in sorted(os.listdir(os.path.join(AQUI, "contenido"))):
 ARTICULOS.sort(key=lambda a: a["fecha"], reverse=True)
 GLOSARIO = cargar("glosario", "GLOSARIO", {})
 N.GLOSARIO.update(GLOSARIO)
+N.META.update(cargar("meta", "META", {}))
 GUIAS = {g["slug"]: g for g in cargar("guias", "GUIAS", [])}
 FAQ = cargar("faq", "FAQ", [])
 LEGAL = cargar("legal", "LEGAL", {})
@@ -299,7 +300,7 @@ def pagina_conocenos(lang):
 def mapa_iframe(lang, alto=320):
     """Mapa de Google que solo se carga si el visitante lo pide: así Google no
     recibe datos ni instala cookies sin una acción previa del usuario."""
-    q = "Green+Car+Service+Tenerife,+Av.+7+Islas+Canarias,+34,+38639+Las+Chafiras"
+    q = "Green+Car+Service+Tenerife,+Av.+7+Islas+Canarias,+32,+38639,+Santa+Cruz+de+Tenerife"
     src = f"https://www.google.com/maps?q={q}&amp;output=embed"
     return f"""<div class="mapa-diferido" style="height:{alto}px" data-src="{src}" data-titulo="{t(lang, "Mapa del taller", "Map of the workshop")}">
       {ico("map")}
@@ -754,7 +755,7 @@ def pagina_contacto(lang):
     L = lambda es, en: t(lang, es, en)
     cuerpo = page_head(lang, [], L("Contacto", "Contact"), L("Llámanos, escríbenos por WhatsApp o ven a vernos a Las Chafiras. Te respondemos lo antes posible.", "Call us, message us on WhatsApp or come and see us in Las Chafiras. We'll get back to you as soon as possible."))
     cuerpo += seccion(f'<div class="grid g2" style="gap:44px;align-items:start">\n  {formulario(lang, "contacto", None, opciones_servicio(lang))}\n{datos_contacto(lang)}</div>\n')
-    return documento(lang, "contacto", L("Contacto", "Contact"), L(f"Contacta con Green Car Service Tenerife: {E['telefono']}, WhatsApp {E['whatsapp']}, {E['email']}. Av. 7 Islas Canarias, 34, Las Chafiras.", f"Contact Green Car Service Tenerife: {E['telefono']}, WhatsApp {E['whatsapp']}, {E['email']}. Av. 7 Islas Canarias, 34, Las Chafiras."), cuerpo, "contacto")
+    return documento(lang, "contacto", L("Contacto", "Contact"), L(f"Contacta con Green Car Service Tenerife: {E['telefono']}, WhatsApp {E['whatsapp']}, {E['email']}. {E['direccion_corta']}.", f"Contact Green Car Service Tenerife: {E['telefono']}, WhatsApp {E['whatsapp']}, {E['email']}. {E['direccion_corta']}."), cuerpo, "contacto")
 
 
 def pagina_cita(lang):

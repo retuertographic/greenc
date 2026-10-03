@@ -208,6 +208,26 @@ def revisar_legal(mod, nombre):
                                 ("h3", "p", "ul", "tabla"))
 
 
+def revisar_meta(mod, nombre):
+    validas = set(PAGS) | {"404"}
+    vistos = {"es": {}, "en": {}}
+    for slug, d in mod.META.items():
+        if slug not in validas:
+            err(nombre, f"página desconocida: {slug}")
+        for lang in ("es", "en"):
+            t = d.get(lang, "")
+            if not 120 <= len(t) <= 160:
+                err(f"{nombre}:{slug}:{lang}", f"longitud {len(t)} (debe estar entre 120 y 160)")
+            if re.search(r"[\[\]<>*]", t):
+                err(f"{nombre}:{slug}:{lang}", "sin marcado ni HTML")
+            if t in vistos[lang]:
+                err(f"{nombre}:{slug}:{lang}", f"repetida con {vistos[lang][t]}")
+            vistos[lang][t] = slug
+    faltan = validas - set(mod.META)
+    if faltan:
+        err(nombre, f"faltan {len(faltan)} páginas: {sorted(faltan)[:8]}")
+
+
 def main():
     global PAGS
     sys.path.insert(0, os.path.dirname(__file__))
@@ -222,6 +242,7 @@ def main():
         if hasattr(mod, "GUIAS"): revisar_guias(mod, n)
         if hasattr(mod, "FAQ"): revisar_faq_general(mod, n)
         if hasattr(mod, "LEGAL"): revisar_legal(mod, n)
+        if hasattr(mod, "META"): revisar_meta(mod, n)
     if errores:
         print("\n".join(errores))
         print(f"\n{len(errores)} errores")

@@ -3,14 +3,14 @@
 _TITULAR_ES = [
     "Titular: T Mas T Summerfeeling, S.L. (nombre comercial: Green Car Service Tenerife).",
     "CIF: B38553269.",
-    "Domicilio: Av. 7 Islas Canarias, 34, Pol. Ind. Llano del Camello, 38639 Las Chafiras, San Miguel de Abona (Santa Cruz de Tenerife).",
+    "Domicilio: Av. 7 Islas Canarias, 32, 38639, Santa Cruz de Tenerife.",
     "Correo electrónico: info@greencarservicetenerife.com.",
     "Teléfono: 922 73 64 47.",
 ]
 _TITULAR_EN = [
     "Owner: T Mas T Summerfeeling, S.L. (trading as Green Car Service Tenerife).",
     "Tax ID (CIF): B38553269.",
-    "Registered address: Av. 7 Islas Canarias, 34, Pol. Ind. Llano del Camello, 38639 Las Chafiras, San Miguel de Abona (Santa Cruz de Tenerife), Spain.",
+    "Registered address: Av. 7 Islas Canarias, 32, 38639, Santa Cruz de Tenerife, Spain.",
     "Email: info@greencarservicetenerife.com.",
     "Telephone: +34 922 73 64 47.",
 ]

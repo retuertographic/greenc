@@ -15,7 +15,7 @@ Cada texto existe en español (`"es"`) y en inglés (`"en"`). Tras escribir, val
 - Servicios: recogida y entrega a domicilio, garantía vitalicia en pintura, estado del vehículo en tiempo real. Trabajan con tu compañía de seguros. Los clientes destacan que entregan el coche limpio (por dentro también), presupuestos rápidos y vehículo de sustitución.
 - También venden coches de segunda mano.
 - Horario: lunes a viernes 07:00–16:00. Tel. 922 73 64 47 · WhatsApp 674 06 13 71 · info@greencarservicetenerife.com
-- Dirección: Av. Siete Islas Canarias, 34, Pol. Ind. Llano del Camello, 38639 Las Chafiras.
+- Dirección: Av. 7 Islas Canarias, 32, 38639, Santa Cruz de Tenerife (el taller está en Las Chafiras, polígono Llano del Camello).
 - Valoración 4,8/5 con 177 opiniones en Google.
 - Titular web: T Mas T Summerfeeling, S.L., CIF B38553269.
 
