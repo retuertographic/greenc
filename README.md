@@ -4,7 +4,7 @@ Sitio web estático y bilingüe de Green Car Service Tenerife (104 páginas en e
 
 - `*.html` — versión en español (raíz del sitio).
 - `en/*.html` — versión en inglés, con los mismos nombres de archivo.
-- `assets/` — estilos, script y logotipos (SVG) compartidos. `assets/video/` guarda el vídeo de fondo de la portada (WebM y MP4 comprimidos a 1280×720) y su imagen fija. `site.js` adapta sus textos al idioma de la página (`<html lang>`).
+- `assets/` — estilos, script, logotipos (SVG) y fuentes (`assets/fuentes/`, alojadas aquí para no cargar Google Fonts) compartidos. `assets/video/` guarda el vídeo de fondo de la portada (WebM y MP4 comprimidos a 1280×720) y su imagen fija. `site.js` adapta sus textos al idioma de la página (`<html lang>`).
 - Cada página enlaza a su equivalente con el selector ES · EN de la barra superior y con `hreflang`. Incluye `sitemap.xml` y `robots.txt`.
 - Publicado con GitHub Pages (Deploy from a branch) en https://retuertographic.github.io/greenc/ y https://retuertographic.github.io/greenc/en/
 
@@ -31,3 +31,9 @@ Pendiente de datos del taller, todo en `_fuente/comun.py` (después, `python3 _f
 - **Ficha de Google** — `EMPRESA["google_ficha"]`: enlace de la ficha (Google Maps > ficha > Compartir). `EMPRESA["google_resena"]`: enlace para dejar reseña (`https://search.google.com/local/writereview?placeid=ID`, el ID sale del panel de Google Business > «Pedir reseñas»).
 - **Analítica sin cookies** — `ANALITICA`: proveedor `plausible`, `umami` o `goatcounter` y su identificador. Se registran como eventos las llamadas, los WhatsApp, los correos y los envíos de formulario.
 - **Dominio propio** — cambiar `EMPRESA["base_url"]` y añadir un archivo `CNAME` con el dominio.
+
+## Publicación
+
+GitHub Pages construye el sitio con Jekyll. Las páginas no llevan front matter, así que se copian tal cual; `_config.yml` excluye `_fuente/` y este README para que no se publiquen. El generador escribe también `sitemap.xml`, `robots.txt` y `llms.txt` (resumen del negocio para asistentes de IA).
+
+No se carga ningún recurso de terceros al navegar: las fuentes son propias y el mapa de Google Maps solo se carga al pulsar «Ver el mapa».

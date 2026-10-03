@@ -1,0 +1,9 @@
+Fuentes incluidas en esta carpeta, descargadas de Google Fonts y alojadas aquí
+para no transferir datos de los visitantes a terceros:
+
+- Jost (pesos 400–600, variable)  — Copyright The Jost Project Authors.
+- Playfair Display (700)          — Copyright The Playfair Display Project Authors.
+- Caveat (600)                    — Copyright The Caveat Project Authors.
+
+Las tres se distribuyen bajo la SIL Open Font License, versión 1.1:
+https://openfontlicense.org

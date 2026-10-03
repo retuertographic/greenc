@@ -12,7 +12,7 @@ EMPRESA = {
     "nombre": "Green Car Service Tenerife",
     "razon_social": "T Mas T Summerfeeling, S.L.",
     "cif": "B38553269",
-    "direccion": "Avenida Siete Islas Canarias, 34, Pol. Ind. Llano del Camello",
+    "direccion": "Av. 7 Islas Canarias, 34, Pol. Ind. Llano del Camello",
     "cp_ciudad": "38639 Las Chafiras, San Miguel de Abona (Santa Cruz de Tenerife)",
     "direccion_corta": "Av. 7 Islas Canarias, 34 · Pol. Ind. Llano del Camello, 38639 Las Chafiras",
     "telefono": "922 73 64 47",
@@ -28,7 +28,7 @@ EMPRESA = {
     "base_url": "https://retuertographic.github.io/greenc/",
     # Ficha de Google del taller. Mientras no se tenga el enlace directo
     # (Google Maps > ficha > Compartir), se usa una búsqueda exacta.
-    "google_ficha": "https://www.google.com/maps/search/?api=1&query=Green+Car+Service+Tenerife%2C+Av.+7+Islas+Canarias+34%2C+38639+Las+Chafiras",
+    "google_ficha": "https://share.google/SAGGuqSKPtVYnRMBF",
     # Enlace para escribir una reseña: https://search.google.com/local/writereview?placeid=ID
     # (el ID de lugar sale del panel de Google Business > «Pedir reseñas»). Vacío = se usa la ficha.
     "google_resena": "",

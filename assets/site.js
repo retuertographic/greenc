@@ -304,3 +304,19 @@ var T = EN ? {
     });
   });
 })();
+
+// Mapa de Google diferido: el iframe solo se crea cuando el visitante lo pide.
+(function () {
+  document.querySelectorAll('.mapa-diferido button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var c = b.closest('.mapa-diferido');
+      var f = document.createElement('iframe');
+      f.src = c.dataset.src;
+      f.title = c.dataset.titulo;
+      f.referrerPolicy = 'no-referrer-when-downgrade';
+      c.replaceChildren(f);
+      c.classList.add('cargado');
+      f.focus();
+    });
+  });
+})();

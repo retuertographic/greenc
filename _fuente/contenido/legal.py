@@ -3,14 +3,14 @@
 _TITULAR_ES = [
     "Titular: T Mas T Summerfeeling, S.L. (nombre comercial: Green Car Service Tenerife).",
     "CIF: B38553269.",
-    "Domicilio: Av. Siete Islas Canarias, 34, Pol. Ind. Llano del Camello, 38639 Las Chafiras, San Miguel de Abona (Santa Cruz de Tenerife).",
+    "Domicilio: Av. 7 Islas Canarias, 34, Pol. Ind. Llano del Camello, 38639 Las Chafiras, San Miguel de Abona (Santa Cruz de Tenerife).",
     "Correo electrónico: info@greencarservicetenerife.com.",
     "Teléfono: 922 73 64 47.",
 ]
 _TITULAR_EN = [
     "Owner: T Mas T Summerfeeling, S.L. (trading as Green Car Service Tenerife).",
     "Tax ID (CIF): B38553269.",
-    "Registered address: Av. Siete Islas Canarias, 34, Pol. Ind. Llano del Camello, 38639 Las Chafiras, San Miguel de Abona (Santa Cruz de Tenerife), Spain.",
+    "Registered address: Av. 7 Islas Canarias, 34, Pol. Ind. Llano del Camello, 38639 Las Chafiras, San Miguel de Abona (Santa Cruz de Tenerife), Spain.",
     "Email: info@greencarservicetenerife.com.",
     "Telephone: +34 922 73 64 47.",
 ]
@@ -260,12 +260,12 @@ LEGAL = {
                     ("p", "Como mucho, puede guardar en tu navegador alguna preferencia estrictamente técnica, por ejemplo el idioma o el aspecto de la página que has elegido. Esa información se queda en tu dispositivo, no se envía a ningún servidor y no sirve para identificarte. Al ser necesaria para el funcionamiento que tú solicitas, está exenta de consentimiento."),
                 ]),
                 ("Recursos y servicios de terceros", [
-                    ("p", "Algunas páginas cargan recursos de terceros que pueden recibir datos técnicos de tu conexión (como la dirección IP) o instalar sus propias cookies:"),
+                    ("p", "Las tipografías, los estilos y los scripts de la web se sirven desde el propio sitio: al navegar por él no se carga ningún recurso de terceros. La única excepción es opcional y solo ocurre si tú lo pides:"),
                     ("tabla", [
-                        "Servicio | Proveedor | Dónde se usa | Finalidad",
-                        "Google Fonts | Google | Todo el sitio | Mostrar las tipografías de la web",
-                        "Google Maps (mapa incrustado) | Google | Página de contacto | Mostrar la ubicación del taller",
+                        "Servicio | Proveedor | Cuándo se carga | Finalidad",
+                        "Google Maps (mapa incrustado) | Google | Solo al pulsar «Ver el mapa» en Contacto, Instalaciones o Pedir cita | Mostrar la ubicación del taller",
                     ]),
+                    ("p", "Al pulsar ese botón, Google puede recibir datos técnicos de tu conexión (como la dirección IP) e instalar sus propias cookies. Si prefieres no cargarlo, puedes usar el enlace «Abrir en Google Maps», que te lleva a su web, o consultar la dirección en esta misma página."),
                     ("p", "Estos terceros actúan bajo sus propias políticas de privacidad y cookies, que te recomendamos consultar. El titular del sitio no tiene acceso a la información que recogen."),
                 ]),
                 ("Enlaces externos", [
@@ -279,7 +279,7 @@ LEGAL = {
                         "Safari: Ajustes > Privacidad.",
                         "Microsoft Edge: Configuración > Cookies y permisos del sitio.",
                     ]),
-                    ("p", "Si bloqueas los recursos de terceros, es posible que algunas partes de la web, como el mapa, no se muestren correctamente."),
+                    ("p", "Si bloqueas los recursos de terceros, el mapa incrustado no se mostrará; el resto de la web funciona igual."),
                 ]),
                 ("Más información y cambios", [
                     ("p", "Si en el futuro incorporamos cookies que requieran tu consentimiento, te lo pediremos antes de instalarlas y actualizaremos esta política. Para más información sobre el tratamiento de tus datos, consulta la [política de privacidad](politica-de-privacidad.html) y el [aviso legal](aviso-legal.html)."),
@@ -298,12 +298,12 @@ LEGAL = {
                     ("p", "At most, it may store a strictly technical preference in your browser, such as the language or display option you have chosen. That information stays on your device, is not sent to any server and cannot be used to identify you. As it is needed for a feature you request, it is exempt from consent."),
                 ]),
                 ("Third-party resources and services", [
-                    ("p", "Some pages load resources from third parties that may receive technical data about your connection (such as your IP address) or set their own cookies:"),
+                    ("p", "The website's typefaces, styles and scripts are served from the site itself: browsing it does not load any third-party resources. The only exception is optional and only happens if you ask for it:"),
                     ("tabla", [
-                        "Service | Provider | Where it is used | Purpose",
-                        "Google Fonts | Google | Whole site | Displaying the website's typefaces",
-                        "Google Maps (embedded map) | Google | Contact page | Showing the workshop's location",
+                        "Service | Provider | When it loads | Purpose",
+                        "Google Maps (embedded map) | Google | Only when you press 'Show the map' on Contact, Our premises or Book an appointment | Showing the workshop's location",
                     ]),
+                    ("p", "When you press that button, Google may receive technical data about your connection (such as your IP address) and set its own cookies. If you'd rather not load it, you can use the 'Open in Google Maps' link, which takes you to its website, or check the address on this same page."),
                     ("p", "These third parties operate under their own privacy and cookie policies, which we recommend you read. The site owner has no access to the information they collect."),
                 ]),
                 ("External links", [
@@ -317,7 +317,7 @@ LEGAL = {
                         "Safari: Settings > Privacy.",
                         "Microsoft Edge: Settings > Cookies and site permissions.",
                     ]),
-                    ("p", "If you block third-party resources, some parts of the site, such as the map, may not display correctly."),
+                    ("p", "If you block third-party resources, the embedded map won't be shown; the rest of the website works as usual."),
                 ]),
                 ("Further information and changes", [
                     ("p", "If we add cookies that require your consent in future, we will ask for it before setting them and update this policy. For more information about how your data is processed, see the [privacy policy](politica-de-privacidad.html) and the [legal notice](aviso-legal.html)."),

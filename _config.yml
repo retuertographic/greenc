@@ -1,0 +1,7 @@
+# GitHub Pages publica el sitio con Jekyll. Las páginas .html no llevan
+# front matter, así que se copian tal cual; aquí solo se excluye lo interno.
+# Las carpetas que empiezan por «_» (como _fuente) ya se excluyen por defecto.
+exclude:
+  - _fuente
+  - README.md
+  - .gitignore

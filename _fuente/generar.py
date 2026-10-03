@@ -240,7 +240,8 @@ def pagina_inicio(lang):
         L("Pide cita o presupuesto sin compromiso. Si te viene mejor, pasamos a recogerlo.", "Book an appointment or ask for a free estimate. If it suits you, we'll come and collect it."))
     return documento(lang, "index", L("Green Car Service Tenerife | Taller de chapa y pintura en Las Chafiras", "Green Car Service Tenerife | Body & paint shop in Las Chafiras"),
                      L("Taller de chapa y pintura en Las Chafiras (sur de Tenerife) para particulares, empresas y aseguradoras. Pintura ecológica, garantía vitalicia en pintura, recogida y entrega y revisión antes de comprar o vender.", "Body and paint shop in Las Chafiras (south Tenerife) for private customers, businesses and insurers. Eco-friendly paint, lifetime paint warranty, collection and delivery, and pre-purchase checks."),
-                     cuerpo, "index")
+                     cuerpo, "index",
+                     cabeza_extra=f'<link rel="preload" as="image" href="{v}hero-poster.jpg" fetchpriority="high">\n')
 
 
 def destacados(lang):
@@ -296,12 +297,15 @@ def pagina_conocenos(lang):
 
 
 def mapa_iframe(lang, alto=320):
-    q = "Green+Car+Service+Tenerife,+Av.+7+Islas+Canarias+34,+38639+Las+Chafiras"
-    return f"""<div style="border-radius:12px;overflow:hidden;border:1px solid var(--line)">
-      <iframe title="{t(lang, "Mapa del taller", "Map of the workshop")}" width="100%" height="{alto}" style="border:0;display:block" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-        src="https://www.google.com/maps?q={q}&amp;output=embed"></iframe>
+    """Mapa de Google que solo se carga si el visitante lo pide: así Google no
+    recibe datos ni instala cookies sin una acción previa del usuario."""
+    q = "Green+Car+Service+Tenerife,+Av.+7+Islas+Canarias,+34,+38639+Las+Chafiras"
+    src = f"https://www.google.com/maps?q={q}&amp;output=embed"
+    return f"""<div class="mapa-diferido" style="height:{alto}px" data-src="{src}" data-titulo="{t(lang, "Mapa del taller", "Map of the workshop")}">
+      {ico("map")}
+      <p>{t(lang, "Al ver el mapa se conecta con Google Maps, que puede instalar cookies.", "Showing the map connects to Google Maps, which may set cookies.")} <a href="cookies.html">{t(lang, "Más información sobre cookies", "More about cookies")}</a></p>
+      <div class="btn-par"><button type="button" class="btn btn-primary">{t(lang, "Ver el mapa", "Show the map")}</button><a class="btn btn-ghost" href="{E["google_ficha"]}" target="_blank" rel="noopener">{t(lang, "Abrir en Google Maps", "Open in Google Maps")}</a></div>
     </div>"""
-
 
 def pagina_instalaciones(lang):
     L = lambda es, en: t(lang, es, en)
@@ -469,7 +473,7 @@ def pagina_servicio(s, lang):
     cuerpo += seccion(section_head(TIT_OTROS[cat][0 if lang == "es" else 1], "", lang)
                       + grid("g3", tarjetas)
                       + f"""  <div class="pie-seccion">
-    {boton("btn-ghost", hub, L("Ver todos", "See all"))}
+    {boton("btn-ghost", hub, TIT_LISTA[cat][0 if lang == "es" else 1])}
     {compartir(lang)}
   </div>
 """.replace("</a>\n    <div", f" {ico('arrow')}</a>\n    <div", 1), "alt" if cat == "ventajas" else "")
@@ -609,7 +613,7 @@ def pagina_blog(lang):
         tarjetas = "".join(card_prod(a[lang]["titulo"], a[lang]["resumen"], f"{a['slug']}.html", L("Leer", "Read"), lang, fecha=fecha_txt(a["fecha"], lang)) for a in arts[:3])
         secs += (f'  <div class="blog-sec" id="{c}"><div class="section-head" style="margin-bottom:18px"><h2>{esc(v[0 if lang == "es" else 1])} <span class="cuenta">{len(arts)}</span></h2></div>'
                  f'<div class="grid g3-blog">{tarjetas}</div>'
-                 f'<div class="mas-entradas">{boton("btn-ghost", f"categoria-{c}.html", L("Ver todos", "See all"))}</div></div>\n'.replace("</a></div></div>", f" {ico('arrow')}</a></div></div>"))
+                 f'<div class="mas-entradas">{boton("btn-ghost", f"categoria-{c}.html", L(f"Todos los artículos de {v[0].lower()}", f"All {v[1].lower()} articles"))}</div></div>\n'.replace("</a></div></div>", f" {ico('arrow')}</a></div></div>"))
     cuerpo += seccion(f'  <nav class="blog-nav" aria-label="{L("Categorías del blog", "Blog categories")}">{navc}</nav>\n{secs}')
     cuerpo += panel(lang, L("¿Te resolvemos una duda concreta?", "Can we answer a specific question?"), L("Escríbenos y te contestamos sin tecnicismos.", "Write to us and we'll answer without jargon."), ("contacto.html", L("Escríbenos", "Get in touch")))
     return documento(lang, "blog", "Blog", L("Blog de Green Car Service Tenerife: chapa y pintura, particulares, empresas y flotas, seguros y siniestros, compraventa y tu coche en Tenerife.", "Green Car Service Tenerife blog: bodywork and paint, private customers, businesses and fleets, insurance and claims, buying and selling, and your car in Tenerife."), cuerpo, "blog")
@@ -624,7 +628,7 @@ def pagina_categoria(c, lang):
     otras = "".join(f'<a class="btn btn-ghost" href="categoria-{x}.html">{esc(v[0 if lang == "es" else 1])}</a>' for x, v in CATEGORIAS_BLOG.items() if x != c)
     cuerpo += seccion(f'  <h2 class="sr-only">{L("Artículos", "Articles")}</h2>\n  <div class="grid g3-blog">{tarjetas}</div>\n  <div class="section-head" style="margin-top:44px"><h2>{L("Otras categorías", "Other categories")}</h2></div>\n  <div class="sub-cats">{otras}</div>\n')
     cuerpo += panel(lang, L("¿Te resolvemos una duda concreta?", "Can we answer a specific question?"), L("Escríbenos y te contestamos sin tecnicismos.", "Write to us and we'll answer without jargon."), ("contacto.html", L("Escríbenos", "Get in touch")))
-    return documento(lang, f"categoria-{c}", nombre, L(f"Artículos de {nombre.lower()} del blog de Green Car Service Tenerife.", f"{nombre} articles from the Green Car Service Tenerife blog."), cuerpo, "blog")
+    return documento(lang, f"categoria-{c}", L(f"Blog: {nombre}", f"Blog: {nombre}"), L(f"Artículos de {nombre.lower()} del blog de Green Car Service Tenerife.", f"{nombre} articles from the Green Car Service Tenerife blog."), cuerpo, "blog")
 
 
 def pagina_articulo(a, lang):
@@ -750,7 +754,7 @@ def pagina_contacto(lang):
     L = lambda es, en: t(lang, es, en)
     cuerpo = page_head(lang, [], L("Contacto", "Contact"), L("Llámanos, escríbenos por WhatsApp o ven a vernos a Las Chafiras. Te respondemos lo antes posible.", "Call us, message us on WhatsApp or come and see us in Las Chafiras. We'll get back to you as soon as possible."))
     cuerpo += seccion(f'<div class="grid g2" style="gap:44px;align-items:start">\n  {formulario(lang, "contacto", None, opciones_servicio(lang))}\n{datos_contacto(lang)}</div>\n')
-    return documento(lang, "contacto", L("Contacto", "Contact"), L(f"Contacta con Green Car Service Tenerife: {E['telefono']}, WhatsApp {E['whatsapp']}, {E['email']}. Av. 7 Islas Canarias 34, Las Chafiras.", f"Contact Green Car Service Tenerife: {E['telefono']}, WhatsApp {E['whatsapp']}, {E['email']}. Av. 7 Islas Canarias 34, Las Chafiras."), cuerpo, "contacto")
+    return documento(lang, "contacto", L("Contacto", "Contact"), L(f"Contacta con Green Car Service Tenerife: {E['telefono']}, WhatsApp {E['whatsapp']}, {E['email']}. Av. 7 Islas Canarias, 34, Las Chafiras.", f"Contact Green Car Service Tenerife: {E['telefono']}, WhatsApp {E['whatsapp']}, {E['email']}. Av. 7 Islas Canarias, 34, Las Chafiras."), cuerpo, "contacto")
 
 
 def pagina_cita(lang):
@@ -783,7 +787,7 @@ def pagina_presupuesto(lang):
 </div>
 """)
     cuerpo += bloque_aseguradora(lang)
-    return documento(lang, "presupuesto", L("Presupuesto sin compromiso", "Free estimate"), L("Pide presupuesto sin compromiso para chapa y pintura en Green Car Service Tenerife.", "Ask for a free, no-obligation estimate for bodywork and paint at Green Car Service Tenerife."), cuerpo, None)
+    return documento(lang, "presupuesto", L("Pide tu presupuesto de chapa y pintura", "Get a bodywork & paint estimate"), L("Pide presupuesto sin compromiso para chapa y pintura en Green Car Service Tenerife.", "Ask for a free, no-obligation estimate for bodywork and paint at Green Car Service Tenerife."), cuerpo, None)
 
 
 # ---------------------------------------------------------------- Legal y mapa
@@ -841,6 +845,53 @@ def pagina_mapa(lang):
 
 
 # ---------------------------------------------------------------- Principal
+def escribir_llms(base):
+    """llms.txt: resumen citable del negocio para asistentes de IA (formato llmstxt.org)."""
+    def enl(slug, titulo, nota=""):
+        return f"- [{titulo}]({base}{slug}.html)" + (f": {nota}" if nota else "")
+    servicios = "\n".join(enl(x, SERVICIOS[x]["es"]["titulo"], plano(SERVICIOS[x]["es"]["corto"]))
+                           for cat in CATEGORIAS_SERVICIO for x in SERVICIOS_SLUGS[cat] if x in SERVICIOS)
+    guias = "\n".join(enl(g, GUIAS[g]["es"]["titulo"], plano(GUIAS[g]["es"]["corto"])) for g in GUIAS_SLUGS if g in GUIAS)
+    txt = f"""# {E["nombre"]}
+
+> Taller de chapa y pintura en Las Chafiras (San Miguel de Abona, sur de Tenerife), abierto desde {E["fundacion"]}. Repara la carrocería de particulares, de empresas con flotas y vehículos comerciales y de siniestros de compañías de seguros. Usa pintura ecológica, ofrece garantía vitalicia en los trabajos de pintura, recogida y entrega a domicilio e información del estado del vehículo en tiempo real. También revisa coches antes de comprarlos o venderlos y vende coches de ocasión.
+
+- Dirección: {E["direccion"]}, {E["cp_ciudad"]}
+- Teléfono: {E["telefono"]} · WhatsApp: {E["whatsapp"]} · Correo: {E["email"]}
+- Horario: lunes a viernes, de 07:00 a 16:00
+- Valoración en Google: {E["valoracion"]} sobre 5 ({E["resenas"]} opiniones)
+- Titular: {E["razon_social"]}, CIF {E["cif"]}
+- Idiomas de la web: español ({base}) e inglés ({base}en/)
+
+## Páginas principales
+
+{enl("index", "Inicio")}
+{enl("conocenos", "Conócenos", "historia, valores e instalaciones")}
+{enl("particulares", "Particulares")}
+{enl("empresas-y-flotas", "Empresas y flotas")}
+{enl("aseguradoras", "Aseguradoras y peritos")}
+{enl("revision-compraventa", "Revisión antes de comprar o vender un coche")}
+{enl("preguntas-frecuentes", "Preguntas frecuentes")}
+{enl("contacto", "Contacto")}
+
+## Servicios
+
+{servicios}
+
+## Guías
+
+{guias}
+
+## Opcional
+
+{enl("blog", "Blog", f"{len(ARTICULOS)} artículos sobre chapa, pintura, seguros y compraventa")}
+{enl("diccionario-de-chapa-y-pintura", "Diccionario de chapa y pintura")}
+{enl("telefonos-de-asistencia", "Teléfonos de asistencia en carretera de las aseguradoras")}
+"""
+    with open(os.path.join(RAIZ, "llms.txt"), "w", encoding="utf-8") as f:
+        f.write(txt)
+
+
 def main():
     trabajos = []  # (slug, fn, tes, ten, seccion)
     P = lambda slug, fn, tes, ten, sec: trabajos.append((slug, fn, tes, ten, sec))
@@ -905,6 +956,7 @@ def main():
     with open(os.path.join(RAIZ, "sitemap.xml"), "w", encoding="utf-8") as f:
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
                 'xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + urls + "</urlset>\n")
+    escribir_llms(base)
     with open(os.path.join(RAIZ, "robots.txt"), "w", encoding="utf-8") as f:
         f.write(f"User-agent: *\nAllow: /\nSitemap: {base}sitemap.xml\n")
     print(f"{n} páginas generadas ({len(trabajos)} por idioma).")

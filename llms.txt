@@ -1,0 +1,65 @@
+# Green Car Service Tenerife
+
+> Taller de chapa y pintura en Las Chafiras (San Miguel de Abona, sur de Tenerife), abierto desde 2019. Repara la carrocería de particulares, de empresas con flotas y vehículos comerciales y de siniestros de compañías de seguros. Usa pintura ecológica, ofrece garantía vitalicia en los trabajos de pintura, recogida y entrega a domicilio e información del estado del vehículo en tiempo real. También revisa coches antes de comprarlos o venderlos y vende coches de ocasión.
+
+- Dirección: Av. 7 Islas Canarias, 34, Pol. Ind. Llano del Camello, 38639 Las Chafiras, San Miguel de Abona (Santa Cruz de Tenerife)
+- Teléfono: 922 73 64 47 · WhatsApp: 674 06 13 71 · Correo: info@greencarservicetenerife.com
+- Horario: lunes a viernes, de 07:00 a 16:00
+- Valoración en Google: 4,8 sobre 5 (177 opiniones)
+- Titular: T Mas T Summerfeeling, S.L., CIF B38553269
+- Idiomas de la web: español (https://retuertographic.github.io/greenc/) e inglés (https://retuertographic.github.io/greenc/en/)
+
+## Páginas principales
+
+- [Inicio](https://retuertographic.github.io/greenc/index.html)
+- [Conócenos](https://retuertographic.github.io/greenc/conocenos.html): historia, valores e instalaciones
+- [Particulares](https://retuertographic.github.io/greenc/particulares.html)
+- [Empresas y flotas](https://retuertographic.github.io/greenc/empresas-y-flotas.html)
+- [Aseguradoras y peritos](https://retuertographic.github.io/greenc/aseguradoras.html)
+- [Revisión antes de comprar o vender un coche](https://retuertographic.github.io/greenc/revision-compraventa.html)
+- [Preguntas frecuentes](https://retuertographic.github.io/greenc/preguntas-frecuentes.html)
+- [Contacto](https://retuertographic.github.io/greenc/contacto.html)
+
+## Servicios
+
+- [Reparación de chapa](https://retuertographic.github.io/greenc/servicio-reparacion-de-chapa.html): Enderezamos, reparamos o sustituimos piezas de carrocería dañadas y las dejamos listas para pintar.
+- [Golpes y abolladuras](https://retuertographic.github.io/greenc/servicio-golpes-y-abolladuras.html): Bollos de aparcamiento, portazos y pequeños golpes: los quitamos, a menudo sin necesidad de repintar.
+- [Reparación tras accidente](https://retuertographic.github.io/greenc/servicio-reparacion-tras-accidente.html): Del parte a la entrega: reparamos chapa, estructura y pintura después de un accidente y nos coordinamos con tu seguro.
+- [Bancada y estructura](https://retuertographic.github.io/greenc/servicio-bancada-y-estructura.html): Comprobamos y corregimos la estructura del coche en bancada tras golpes fuertes, para que vuelva a sus medidas.
+- [Pintura completa](https://retuertographic.github.io/greenc/servicio-pintura-completa.html): Pintamos el coche entero, en su color original o en uno nuevo, con preparación a fondo y garantía vitalicia en pintura.
+- [Pintura parcial](https://retuertographic.github.io/greenc/servicio-pintura-parcial.html): Pintamos solo la pieza o la zona dañada e igualamos el color para que no se note la diferencia con el resto.
+- [Colores y acabados](https://retuertographic.github.io/greenc/servicio-colores-y-acabados.html): Sólidos, metalizados y nacarados: te explicamos cada acabado y lo reproducimos igualando el tono de tu coche.
+- [Pintura ecológica eco-balance](https://retuertographic.github.io/greenc/servicio-pintura-ecologica.html): Pintamos con pintura ecológica «eco-balance», con beneficios directos para el medio ambiente, en colores sólidos y metalizados.
+- [Paragolpes y plásticos](https://retuertographic.github.io/greenc/servicio-paragolpes-y-plasticos.html): Reparamos paragolpes rajados, rozados o con pestañas rotas, y pintamos los plásticos con la preparación que necesitan.
+- [Pulido y abrillantado](https://retuertographic.github.io/greenc/servicio-pulido-y-abrillantado.html): Devolvemos brillo a pinturas apagadas y eliminamos marcas superficiales, rayas finas y restos de cal o resina.
+- [Restauración de faros](https://retuertographic.github.io/greenc/servicio-restauracion-de-faros.html): Recuperamos faros amarillentos u opacos por el sol para que vuelvan a iluminar bien y el coche gane aspecto.
+- [Tratamiento anticorrosión](https://retuertographic.github.io/greenc/servicio-tratamiento-anticorrosion.html): Tratamos y prevenimos el óxido que provocan el salitre y el sol del sur de Tenerife en bajos, huecos y chapa.
+- [Revisión antes de comprar](https://retuertographic.github.io/greenc/revision-antes-de-comprar.html): Antes de pagar, revisamos la carrocería, la pintura, la estructura y los papeles del coche que te interesa.
+- [Revisión antes de vender](https://retuertographic.github.io/greenc/revision-antes-de-vender.html): Revisamos tu coche antes de ponerlo a la venta para que sepas cómo está y puedas enseñarlo con transparencia.
+- [Informe de carrocería y pintura](https://retuertographic.github.io/greenc/informe-de-carroceria-y-pintura.html): Un informe con fotos y medidas de pintura que describe el estado real de la carrocería, la estructura y la documentación.
+- [Puesta a punto para vender](https://retuertographic.github.io/greenc/puesta-a-punto-para-vender.html): Pulido, faros, retoques, pequeños golpes y limpieza para que tu coche se vea como está: bien cuidado.
+- [Particulares](https://retuertographic.github.io/greenc/particulares.html): Golpes, arañazos, accidentes o pintura: reparamos tu coche con presupuesto por escrito, pague tu seguro o pagues tú.
+- [Empresas y flotas](https://retuertographic.github.io/greenc/empresas-y-flotas.html): Chapa y pintura para flotas, furgonetas, renting y rent a car del sur de Tenerife, con un interlocutor y el mínimo tiempo parado.
+- [Aseguradoras, peritos y mediadores](https://retuertographic.github.io/greenc/aseguradoras.html): Reparamos los siniestros de vuestros asegurados en el sur de Tenerife, coordinados con el perito y con información clara en cada fase.
+- [Recogida y entrega a domicilio](https://retuertographic.github.io/greenc/servicio-recogida-y-entrega.html): Vamos a por tu coche y te lo devolvemos reparado, para que no tengas que cuadrar horarios ni buscar quien te lleve.
+- [Garantía vitalicia en pintura](https://retuertographic.github.io/greenc/servicio-garantia-vitalicia-en-pintura.html): Las reparaciones de pintura que hacemos tienen garantía vitalicia. Te entregamos las condiciones por escrito con cada trabajo.
+- [Estado del vehículo en tiempo real](https://retuertographic.github.io/greenc/servicio-estado-en-tiempo-real.html): Sabes en qué fase está la reparación de tu coche sin tener que llamar para preguntar.
+- [Vehículo de sustitución](https://retuertographic.github.io/greenc/servicio-vehiculo-de-sustitucion.html): Mientras reparamos tu coche, te ayudamos a seguir moviéndote con un vehículo de sustitución, según disponibilidad o tu póliza.
+- [Gestión con aseguradoras](https://retuertographic.github.io/greenc/servicio-gestion-con-aseguradoras.html): Trabajamos con tu compañía de seguros: te acompañamos en la peritación y en los trámites para que tú te ocupes de lo mínimo.
+- [Presupuesto sin compromiso](https://retuertographic.github.io/greenc/servicio-presupuesto-sin-compromiso.html): Presupuesto por escrito y claro antes de reparar. Tú decides si seguimos adelante, sin presiones.
+- [Limpieza del vehículo](https://retuertographic.github.io/greenc/servicio-limpieza-del-vehiculo.html): Te devolvemos el coche limpio por dentro y por fuera. Un detalle que nuestros clientes valoran mucho.
+
+## Guías
+
+- [Qué hacer tras un accidente de tráfico](https://retuertographic.github.io/greenc/guia-que-hacer-tras-un-accidente.html): Los pasos, en orden, para protegerte, avisar a quien corresponde y dejar el siniestro bien documentado.
+- [Cómo rellenar el parte amistoso](https://retuertographic.github.io/greenc/guia-parte-amistoso.html): Casilla a casilla: cómo completar la Declaración Amistosa de Accidente sin errores que luego compliquen tu reclamación.
+- [Libre elección de taller: tus derechos](https://retuertographic.github.io/greenc/guia-libre-eleccion-de-taller.html): Aunque pague el seguro, tú decides dónde se repara tu coche. Te explicamos cómo ejercer ese derecho paso a paso.
+- [La peritación del coche, explicada](https://retuertographic.github.io/greenc/guia-peritacion.html): Quién es el perito, qué revisa, cuánto suele tardar y qué puedes hacer si no estás de acuerdo con su valoración.
+- [Pérdida total: qué significa y qué puedes hacer](https://retuertographic.github.io/greenc/guia-perdida-total.html): Cuándo declara el seguro un siniestro total, cómo se calcula la indemnización y qué opciones tienes con tu coche.
+- [Guía para comprar un coche de ocasión](https://retuertographic.github.io/greenc/guia-comprar-coche-de-ocasion.html): Qué documentos pedir, qué revisar antes de pagar y qué garantía te corresponde al comprar un coche usado.
+
+## Opcional
+
+- [Blog](https://retuertographic.github.io/greenc/blog.html): 41 artículos sobre chapa, pintura, seguros y compraventa
+- [Diccionario de chapa y pintura](https://retuertographic.github.io/greenc/diccionario-de-chapa-y-pintura.html)
+- [Teléfonos de asistencia en carretera de las aseguradoras](https://retuertographic.github.io/greenc/telefonos-de-asistencia.html)

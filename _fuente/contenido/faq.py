@@ -8,7 +8,7 @@ FAQ = [
             "preguntas": [
                 ("¿Qué horario tenéis?", "Abrimos de **lunes a viernes, de 07:00 a 16:00**. Fuera de ese horario puedes escribirnos por WhatsApp o correo y te respondemos en cuanto abramos."),
                 ("¿Cómo puedo pedir cita?", "Llámanos al 922 73 64 47, escríbenos por WhatsApp al 674 06 13 71 o a info@greencarservicetenerife.com. También puedes usar el formulario de [pedir cita](pedir-cita.html) y te contestamos para cerrar el día y la hora."),
-                ("¿Dónde estáis?", "En la Av. Siete Islas Canarias, 34, Pol. Ind. Llano del Camello, 38639 Las Chafiras (San Miguel de Abona), en el sur de Tenerife. Tienes el mapa en la página de [contacto](contacto.html)."),
+                ("¿Dónde estáis?", "En la Av. 7 Islas Canarias, 34, Pol. Ind. Llano del Camello, 38639 Las Chafiras (San Miguel de Abona), en el sur de Tenerife. Tienes el mapa en la página de [contacto](contacto.html)."),
                 ("¿Tengo que llevar yo el coche al taller?", "No necesariamente. Ofrecemos [recogida y entrega a domicilio](servicio-recogida-y-entrega.html): pasamos a por tu coche y te lo devolvemos cuando está listo. Consúltanos la disponibilidad para tu zona."),
                 ("¿Me podéis hacer un presupuesto antes de la reparación?", "Sí. Te preparamos un [[presupuesto|presupuesto]] sin compromiso y no empezamos ningún trabajo sin tu aprobación. Puedes solicitarlo en la página de [presupuesto](presupuesto.html)."),
             ],
@@ -18,7 +18,7 @@ FAQ = [
             "preguntas": [
                 ("What are your opening hours?", "We are open **Monday to Friday, 07:00 to 16:00**. Outside those hours you can message us on WhatsApp or by email and we will reply as soon as we open."),
                 ("How do I book an appointment?", "Call us on +34 922 73 64 47, message us on WhatsApp at +34 674 06 13 71 or email info@greencarservicetenerife.com. You can also use the [booking form](pedir-cita.html) and we will get back to you to confirm the day and time."),
-                ("Where are you?", "At Av. Siete Islas Canarias, 34, Pol. Ind. Llano del Camello, 38639 Las Chafiras (San Miguel de Abona), in the south of Tenerife. There is a map on our [contact page](contacto.html)."),
+                ("Where are you?", "At Av. 7 Islas Canarias, 34, Pol. Ind. Llano del Camello, 38639 Las Chafiras (San Miguel de Abona), in the south of Tenerife. There is a map on our [contact page](contacto.html)."),
                 ("Do I have to bring the car to the workshop myself?", "Not necessarily. We offer [home collection and delivery](servicio-recogida-y-entrega.html): we pick up your car and bring it back when it is ready. Ask us about availability in your area."),
                 ("Can you give me an estimate before the repair?", "Yes. We prepare a no-obligation [[presupuesto|repair estimate]] and do not start any work without your approval. You can request one on our [estimate page](presupuesto.html)."),
             ],

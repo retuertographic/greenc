@@ -385,6 +385,17 @@ def formulario(lang, tipo="contacto", servicio_sel=None, opciones_servicio=()):
 """
     campos += f"""    <div class="field"><label for="msg">{L("Cuéntanos", "Tell us more")}</label><textarea id="msg" name="mensaje" placeholder="{L("Qué le pasa al coche, desde cuándo, dónde está el golpe, cómo ocurrió…", "What happened, where the damage is, since when…")}"></textarea></div>
     <label class="consent"><input type="checkbox" name="consent" required> <span>{L("He leído y acepto la", "I have read and accept the")} <a href="politica-de-privacidad.html">{L("política de privacidad", "privacy policy")}</a> {L("y el tratamiento de mis datos para responder a esta solicitud.", "and the processing of my data to answer this request.")}</span></label>
+    <details class="capa-datos">
+      <summary>{L("Información básica sobre protección de datos", "Basic data protection information")}</summary>
+      <dl>
+        <dt>{L("Responsable", "Controller")}</dt><dd>{E["razon_social"]} (Green Car Service Tenerife), CIF {E["cif"]}.</dd>
+        <dt>{L("Finalidad", "Purpose")}</dt><dd>{L("Responder a tu solicitud y, en su caso, gestionar la cita o el presupuesto.", "Answering your request and, where applicable, managing the appointment or estimate.")}</dd>
+        <dt>{L("Legitimación", "Legal basis")}</dt><dd>{L("Tu consentimiento y, si contratas, la ejecución del servicio.", "Your consent and, if you hire us, performance of the service.")}</dd>
+        <dt>{L("Destinatarios", "Recipients")}</dt><dd>{L("No se ceden datos a terceros, salvo obligación legal o, si lo pides, a tu compañía de seguros.", "No data is shared with third parties, except where required by law or, at your request, with your insurer.")}</dd>
+        <dt>{L("Derechos", "Rights")}</dt><dd>{L("Acceso, rectificación, supresión, oposición, limitación y portabilidad, escribiendo a", "Access, rectification, erasure, objection, restriction and portability, by writing to")} <a href="mailto:{E["email"]}">{E["email"]}</a>.</dd>
+        <dt>{L("Más información", "More information")}</dt><dd><a href="politica-de-privacidad.html">{L("Política de privacidad", "Privacy policy")}</a>.</dd>
+      </dl>
+    </details>
     <button class="btn btn-primary" type="submit">{ico("mail")}{L("Enviar solicitud", "Send request")}</button>
     <p class="form-msg">{L("Se abrirá tu programa de correo con la solicitud ya redactada. Si no ocurre nada, escríbenos a", "Your email program will open with the request ready to send. If nothing happens, write to us at")} <a href="mailto:{E["email"]}">{E["email"]}</a>.</p>
 """
@@ -517,7 +528,7 @@ def pie(lang):
     return f"""<footer class="site"><div class="wrap">
   <div class="foot-grid">
     <div>
-      <img class="foot-logo" src="{a}assets/logo-blanco.svg" alt="Green Car Service Tenerife" width="182" height="74">
+      <img class="foot-logo" src="{a}assets/logo-blanco.svg" alt="Green Car Service Tenerife" width="182" height="74" loading="lazy" decoding="async">
       <div class="foot-social"><a class="foot-social-link" href="{E["instagram"]}" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">{IG_SVG}</a><a class="foot-social-link" href="https://wa.me/{E["whatsapp_wa"]}" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp">{WA_SVG}</a></div>
       <p>{L("Taller de chapa y pintura en Las Chafiras, en el sur de Tenerife, desde 2019, para particulares, empresas y compañías de seguros. Un servicio integral y sostenible: más que un simple taller.", "Body and paint shop in Las Chafiras, in the south of Tenerife, since 2019, for private customers, businesses and insurers. A complete, sustainable service: more than just a garage.")}</p>
       <ul class="foot-links">{contacto}</ul>
@@ -587,7 +598,7 @@ def negocio_ld(lang):
         "foundingDate": str(E["fundacion"]),
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Avenida Siete Islas Canarias, 34, Pol. Ind. Llano del Camello",
+            "streetAddress": "Av. 7 Islas Canarias, 34, Pol. Ind. Llano del Camello",
             "postalCode": "38639",
             "addressLocality": "Las Chafiras, San Miguel de Abona",
             "addressRegion": "Santa Cruz de Tenerife",
@@ -621,10 +632,12 @@ def analitica():
     return ""
 
 
-def documento(lang, slug, titulo, descripcion, cuerpo, activo=None, og_tipo="website", ld=None, es_404=False):
+def documento(lang, slug, titulo, descripcion, cuerpo, activo=None, og_tipo="website", ld=None, es_404=False,
+              cabeza_extra=""):
     base = E["base_url"]
     a = "../" if lang == "en" else ""
-    tit = f"{titulo} | Green Car Service Tenerife" if slug != "index" else titulo
+    # Sufijo de marca corto, y solo si el título resultante no pasa de ~60 caracteres.
+    tit = titulo if slug == "index" or len(titulo) > 38 else f"{titulo} | Green Car Tenerife"
     desc = esc(plano(descripcion))
     url = base + ("en/" if lang == "en" else "") + slug + ".html"
     if es_404:
@@ -656,9 +669,8 @@ def documento(lang, slug, titulo, descripcion, cuerpo, activo=None, og_tipo="web
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-{verif}<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Playfair+Display:wght@600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+{verif}{cabeza_extra}<link rel="preload" href="{a}assets/fuentes/jost-400-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="{a}assets/fuentes/playfair-display-700-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{a}assets/styles.css">
 <link rel="icon" href="{a}assets/favicon.ico" sizes="32x32">
 <link rel="icon" href="{a}assets/isotipo.svg" type="image/svg+xml">
