@@ -83,6 +83,7 @@ _P = {
     "chev": '<path d="m6.5 9.5 5.5 5 5.5-5"/>',
     "book": '<path d="M5 4.5h9.5a2 2 0 0 1 2 2v13H7a2 2 0 0 1-2-2z"/><path d="M16.5 8.5H19v11H7"/>',
     "tag": '<path d="M3.5 12.5V4.5h8l9 9-8 8z"/><circle cx="8" cy="9" r="1.3"/>',
+    "cerrar": '<path d="M6 6l12 12M18 6 6 18"/>',
 }
 
 STAR_FILL = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2.8 2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z"/></svg>'
@@ -559,6 +560,17 @@ def pie(lang):
   </div>
 </div>
 <button class="arriba" type="button" id="irArriba" hidden aria-label="{L("Volver arriba", "Back to top")}" title="{L("Volver arriba", "Back to top")}">{ico("up")}</button>
+<dialog class="modal-rec" id="modalRec" data-src="{E["recepcion_url"]}" data-titulo="{L("Formulario de recepción del vehículo", "Vehicle check-in form")}" aria-labelledby="modalRecTit">
+  <div class="modal-rec-barra">
+    <img src="{a}assets/isotipo.svg" alt="" width="30" height="30">
+    <h2 id="modalRecTit">{L("Recepción online", "Online check-in")}<span>Green Car Service Tenerife</span></h2>
+    <p class="modal-rec-ok" id="modalRecOk" role="status" hidden>{L("¡Recepción enviada! Te contactaremos para confirmar la entrada.", "Check-in sent! We'll contact you to confirm the drop-off.")}</p>
+    <a class="modal-rec-ext" href="{E["recepcion_url"]}" target="_blank" rel="noopener">{L("Abrir en pestaña nueva", "Open in new tab")}</a>
+    <button class="modal-rec-cerrar" type="button" id="modalRecCerrar" aria-label="{L("Cerrar la recepción online", "Close online check-in")}" title="{L("Cerrar", "Close")}">{ico("cerrar")}</button>
+  </div>
+  {L("", '<p class="modal-rec-idioma">The form is in Spanish. Need a hand? Call <a href="tel:' + E["telefono_tel"] + '">' + E["telefono"] + '</a>.</p>')}
+  <div class="modal-rec-cuerpo"><p class="modal-rec-carga">{L("Cargando el formulario…", "Loading the form…")}</p></div>
+</dialog>
 <nav class="barra-movil" aria-label="{L("Acciones rápidas", "Quick actions")}">
   <a class="bm-rec" href="recepcion-online.html">{ico("clipboard")}<span>{L("Recepción online", "Online check-in")}</span></a>
   <a href="tel:{E["telefono_tel"]}">{ico("phone")}<span>{L("Llamar", "Call")}</span></a>

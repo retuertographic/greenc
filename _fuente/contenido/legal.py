@@ -503,7 +503,7 @@ LEGAL = {'aviso-legal': {'es': {'titulo': 'Aviso legal',
                                       'en Contacto, Instalaciones o Pedir cita | Mostrar la ubicación del '
                                       'taller',
                                       'Recepción online | Plataforma de gestión del taller '
-                                      '(app.tallerdechapaypintura.com) | Solo en la página Recepción online '
+                                      '(app.tallerdechapaypintura.com) | Solo al abrir la ventana de recepción online (botones «Recepción online») '
                                       '| Mostrar el formulario de recepción del vehículo y el acceso a tu '
                                       'área de cliente']),
                                     ('p',
@@ -575,7 +575,7 @@ LEGAL = {'aviso-legal': {'es': {'titulo': 'Aviso legal',
                                       "map' on Contact, Our premises or Book an appointment | Showing the "
                                       "workshop's location",
                                       'Online check-in | Workshop management platform '
-                                      '(app.tallerdechapaypintura.com) | Only on the Online check-in page | '
+                                      '(app.tallerdechapaypintura.com) | Only when you open the online check-in window (Online check-in buttons) | '
                                       'Showing the vehicle check-in form and access to your customer area']),
                                     ('p',
                                      "When you press 'Show the map', Google may receive technical data about "

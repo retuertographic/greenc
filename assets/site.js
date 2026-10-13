@@ -322,3 +322,61 @@ var T = EN ? {
     });
   });
 })();
+
+// Recepción online en ventana modal a pantalla completa. Cualquier enlace a
+// recepcion-online.html (o con data-rec-modal) la abre sin salir de la página.
+// El formulario de la plataforma solo se carga la primera vez que se abre.
+// Sin soporte de <dialog>, o con Ctrl/Cmd/Mayús+clic, el enlace funciona normal.
+(function () {
+  var d = document.getElementById('modalRec');
+  if (!d || typeof d.showModal !== 'function') return;
+  var cuerpo = d.querySelector('.modal-rec-cuerpo');
+  var ok = document.getElementById('modalRecOk');
+  var origen = new URL(d.dataset.src).origin;
+  var volverA = null;
+
+  function abrir(desde) {
+    volverA = desde || document.activeElement;
+    if (!cuerpo.querySelector('iframe')) {
+      var f = document.createElement('iframe');
+      f.src = d.dataset.src;
+      f.title = d.dataset.titulo;
+      f.setAttribute('allow', 'clipboard-write; camera');
+      f.addEventListener('load', function () { d.classList.add('cargado'); });
+      cuerpo.appendChild(f);
+    }
+    d.showModal();
+    document.documentElement.classList.add('modal-abierto');
+    if (window.registrarEvento) window.registrarEvento('Recepción online: abierta');
+  }
+  function cerrar() { d.close(); }
+
+  d.addEventListener('close', function () {
+    document.documentElement.classList.remove('modal-abierto');
+    if (volverA && volverA.focus) volverA.focus();
+  });
+  document.getElementById('modalRecCerrar').addEventListener('click', cerrar);
+
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('a[href]') : null;
+    if (!a || e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+    if (d.contains(a)) return;
+    var h = a.getAttribute('href');
+    if (a.hasAttribute('data-rec-modal') || /(^|\/)recepcion-online\.html$/.test(h)) {
+      e.preventDefault();
+      abrir(a);
+    }
+  });
+
+  // Mensajes del formulario: confirmación de envío
+  window.addEventListener('message', function (ev) {
+    if (ev.origin !== origen || !ev.data || !ev.data.__taller_widget) return;
+    if (ev.data.type === 'success') {
+      if (ok) ok.hidden = false;
+      if (window.registrarEvento) window.registrarEvento('Recepción online enviada');
+    }
+  });
+
+  // Enlace directo con #recepcion (por ejemplo, desde una campaña)
+  if (location.hash === '#recepcion-online') abrir();
+})();

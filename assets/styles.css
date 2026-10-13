@@ -877,3 +877,65 @@ main .info-list a,main .tel-lineas a,main .legal-nav a,main .foot-links a,main .
 /* La barra móvil vive dentro del pie: sus enlaces no heredan el color claro del pie */
 footer.site .barra-movil a{color:var(--green-dark);text-decoration:none}
 footer.site .barra-movil a.bm-rec{color:#fff}
+
+/* ---------- Recepción online en ventana modal a pantalla completa ---------- */
+.modal-rec{
+  position:fixed;inset:0;width:100vw;max-width:none;height:100vh;height:100dvh;max-height:none;
+  margin:0;padding:0;border:0;background:#fff;display:none;flex-direction:column;
+}
+.modal-rec[open]{display:flex}
+.modal-rec::backdrop{background:rgba(21,41,15,.6)}
+html.modal-abierto,html.modal-abierto body{overflow:hidden}
+.modal-rec-barra{
+  display:flex;align-items:center;gap:12px;flex:none;flex-wrap:wrap;
+  padding:10px 16px;padding-top:calc(10px + env(safe-area-inset-top));
+  background:var(--green-deep);color:#fff;
+}
+.modal-rec-barra img{width:30px;height:30px;background:#fff;border-radius:8px;padding:3px}
+.modal-rec-barra h2{
+  margin:0;color:#fff;font-family:var(--font);font-size:16px;font-weight:600;letter-spacing:0;
+  display:flex;flex-direction:column;line-height:1.2;margin-right:auto;
+}
+.modal-rec-barra h2 span{font-size:12px;font-weight:400;color:#C3E488}
+.modal-rec-ok{
+  margin:0;padding:6px 12px;border-radius:999px;background:var(--lime);color:var(--green-deep);
+  font-size:13.5px;font-weight:600;
+}
+.modal-rec-ext{color:#DDEBD0;font-size:13.5px;text-decoration:underline;text-underline-offset:2px}
+.modal-rec-ext:hover{color:#fff}
+.modal-rec-cerrar{
+  width:44px;height:44px;border-radius:50%;display:grid;place-items:center;padding:0;cursor:pointer;
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);color:#fff;
+}
+.modal-rec-cerrar:hover{background:rgba(255,255,255,.24)}
+.modal-rec-cerrar svg{width:22px;height:22px}
+.modal-rec-idioma{
+  margin:0;flex:none;padding:8px 16px;font-size:13.5px;background:var(--lime-soft);color:var(--green-dark);
+}
+.modal-rec-cuerpo{position:relative;flex:1;min-height:0;background:var(--bg)}
+.modal-rec-cuerpo iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block;background:#fff}
+.modal-rec-carga{
+  position:absolute;inset:0;display:grid;place-items:center;margin:0;color:var(--muted);font-size:15px;
+}
+.modal-rec.cargado .modal-rec-carga{display:none}
+@media (max-width:560px){
+  .modal-rec-ext{display:none}
+  .modal-rec-barra h2 span{display:none}
+  .modal-rec-ok{order:5;width:100%;text-align:center}
+}
+
+/* Llamada a abrir la recepción en su página */
+.rec-lanzar{
+  display:flex;gap:22px;align-items:flex-start;background:#fff;border:1px solid var(--line);
+  border-left:5px solid var(--green);border-radius:16px;box-shadow:var(--shadow);padding:30px 32px;
+}
+.rec-lanzar .ico{
+  width:60px;height:60px;border-radius:14px;background:var(--lime-soft);color:var(--green);
+  display:grid;place-items:center;flex:none;
+}
+.rec-lanzar .ico svg{width:30px;height:30px}
+.rec-lanzar h2{margin-bottom:8px}
+.rec-lanzar p{color:var(--muted);max-width:62ch}
+.rec-lanzar .btn-par{margin-top:18px}
+.btn-xl{padding:15px 28px;font-size:17px}
+@media (max-width:640px){.rec-lanzar{flex-direction:column;padding:24px 20px}}

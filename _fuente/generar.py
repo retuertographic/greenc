@@ -804,29 +804,28 @@ def pagina_contacto(lang):
 
 def pagina_recepcion(lang):
     L = lambda es, en: t(lang, es, en)
-    embed = "https://app.tallerdechapaypintura.com/embed/green-car-service-tenerife-recepcion"
+    embed = E["recepcion_url"]
     cuerpo = page_head(lang, [], L("Recepción online de tu vehículo", "Online vehicle check-in"),
                        L("Registra tu coche antes de traerlo: tus datos, los del vehículo y las fotos del daño, desde el móvil o el ordenador. Cuando llegues al taller, todo estará listo.",
                          "Check your car in before you bring it: your details, the vehicle's and photos of the damage, from your phone or computer. When you arrive, everything will be ready."),
-                       f'\n  <div class="actions">{boton("btn-primary", "#recepcion", L("Empezar ahora", "Start now"), "clipboard")}{btn_tel()}{btn_wa("btn-line", lang)}</div>')
+                       f'\n  <div class="actions"><a class="btn btn-primary" href="{embed}" target="_blank" rel="noopener" data-rec-modal>{ico("clipboard")}{L("Empezar ahora", "Start now")}</a>{btn_tel()}{btn_wa("btn-line", lang)}</div>')
     cuerpo += seccion(section_head(L("Así funciona", "How it works"), L("Cuatro pasos y listo. Puedes hacerlo con el coche delante y la documentación a mano.", "Four steps and you're done. Best done with the car in front of you and the paperwork to hand."), lang) + pasos_rec(lang))
     nota_en = '' if lang == "es" else '<p class="nota-idioma">The check-in form is in Spanish. If you need a hand, call or WhatsApp us and we\'ll help you fill it in.</p>'
     cuerpo += f"""<section class="alt" id="recepcion"><div class="wrap">
-  <div class="section-head"><span class="eyebrow-dark">{L("Formulario de recepción", "Check-in form")}</span><h2>{L("Empieza tu recepción", "Start your check-in")}</h2>
-  <p>{L("Los campos marcados como opcionales puedes dejarlos para cuando vengas.", "Fields marked as optional can be left until you come in.")}</p>{nota_en}</div>
-  <div class="recepcion-widget">
-    <div data-taller-widget="green-car-service-tenerife-recepcion" data-taller-height="800">
-      <noscript><iframe src="{embed}" style="width:100%;height:800px;border:0" loading="lazy" title="{L("Recepción de vehículo", "Vehicle check-in")}"></iframe></noscript>
+  <div class="rec-lanzar">
+    <span class="ico">{ico("clipboard")}</span>
+    <div>
+      <span class="eyebrow-dark">{L("Formulario de recepción", "Check-in form")}</span>
+      <h2>{L("Empieza tu recepción", "Start your check-in")}</h2>
+      <p>{L("Se abre a pantalla completa para que lo rellenes cómodamente, también desde el móvil. Puedes cerrarlo en cualquier momento.", "It opens full screen so you can fill it in comfortably, on your phone too. You can close it at any time.")}</p>
+      {nota_en}
+      <div class="btn-par">
+        <a class="btn btn-primary btn-xl" href="{embed}" target="_blank" rel="noopener" data-rec-modal>{ico("clipboard")}{L("Abrir la recepción online", "Open the online check-in")}</a>
+        {btn_tel("btn-ghost")}{btn_wa("btn-ghost", lang)}
+      </div>
     </div>
   </div>
-  <div class="rec-ok" id="recepcionOk" hidden role="status"><b>{L("¡Recepción enviada!", "Check-in sent!")}</b> {L("Hemos recibido tus datos. Te contactaremos para confirmar la entrada del coche.", "We've received your details. We'll contact you to confirm when to drop the car off.")}</div>
-  <div class="rec-ayuda">
-    <p>{L("¿No se ve el formulario o prefieres abrirlo aparte?", "Can't see the form, or would you rather open it separately?")}</p>
-    <div class="btn-par">{boton("btn-ghost", embed, L("Abrir la recepción a pantalla completa", "Open the check-in full screen"), "clipboard", True)}{btn_tel("btn-navy")}{btn_wa("btn-ghost", lang)}</div>
-  </div>
 </div></section>
-<script>window.TallerWidget={{onSuccess:function(d){{var ok=document.getElementById('recepcionOk');if(ok){{ok.hidden=false;ok.scrollIntoView({{block:'center'}});}}if(window.registrarEvento)window.registrarEvento('Recepción online enviada');}},onError:function(){{if(window.registrarEvento)window.registrarEvento('Recepción online: error');}}}};</script>
-<script src="https://app.tallerdechapaypintura.com/widget-loader.js" async></script>
 """
     cuerpo += seccion(f"""  <div class="grid g2" style="gap:44px;align-items:start">
     <div>
@@ -848,7 +847,7 @@ def pagina_recepcion(lang):
         (L("¿Qué pasa después de enviarla?", "What happens after I send it?"), L("Revisamos tu solicitud y te contactamos para confirmar cuándo traer el coche. Si va por el seguro, nos coordinamos con tu compañía.", "We review your request and contact you to confirm when to bring the car. If your insurance is paying, we coordinate with your insurer.")),
         (L("¿Puedo usarla si la reparación la paga el seguro?", "Can I use it if my insurance is paying?"), L("Sí. Indícalo en el motivo de entrada y añade los datos de la póliza y del siniestro si los tienes.", "Yes. Say so in the reason for the visit and add the policy and claim details if you have them.")),
         (L("¿Quién trata mis datos?", "Who processes my data?"), L("Green Car Service Tenerife, para gestionar la recepción y la reparación de tu vehículo, a través de su plataforma de gestión del taller. Tienes más detalles en la [política de privacidad](politica-de-privacidad.html).", "Green Car Service Tenerife, to manage your vehicle's check-in and repair, through its workshop management platform. See the [privacy policy](politica-de-privacidad.html) for details.")),
-        (L("No me carga el formulario, ¿qué hago?", "The form won't load. What can I do?"), L("Prueba el botón «Abrir la recepción a pantalla completa» o llámanos al 922 73 64 47 y lo hacemos contigo.", "Try the 'Open the check-in full screen' button, or call us on 922 73 64 47 and we'll do it with you.")),
+        (L("No me carga el formulario, ¿qué hago?", "The form won't load. What can I do?"), L("Usa «Abrir en pestaña nueva», en la parte de arriba de la ventana de recepción, o llámanos al 922 73 64 47 y lo hacemos contigo.", "Use 'Open in new tab' at the top of the check-in window, or call us on 922 73 64 47 and we'll do it with you.")),
     ], lang), "alt")
     return documento(lang, "recepcion-online", L("Recepción online de tu vehículo", "Online vehicle check-in"),
                      L("Recepción online de tu coche en Green Car Service Tenerife.", "Online vehicle check-in at Green Car Service Tenerife."), cuerpo, "recepcion-online")

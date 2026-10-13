@@ -40,6 +40,8 @@ No se carga ningún recurso de terceros al navegar: las fuentes son propias y el
 
 ## Recepción online
 
-La página `recepcion-online.html` incrusta el widget de recepción de la plataforma del taller (`app.tallerdechapaypintura.com`), con el cargador que ajusta la altura automáticamente. Si no hay JavaScript, se muestra el iframe; también hay un enlace para abrirlo a pantalla completa. Es la llamada a la acción principal de toda la web: botón del menú, hero, bloque en la portada, banda final de cada página, avisos junto a los formularios y barra fija en móvil. Al enviarse correctamente se muestra un aviso y se registra el evento «Recepción online enviada» en la analítica.
+La recepción online es la llamada a la acción principal de toda la web: botón del menú, hero, bloque en la portada, banda final de cada página, avisos junto a los formularios, barra superior, pie y barra fija en móvil.
 
-El widget solo funciona en dominios autorizados en la plataforma: hay que autorizar `retuertographic.github.io` y, cuando exista, el dominio definitivo.
+Cualquier enlace a `recepcion-online.html` (o con el atributo `data-rec-modal`) abre una ventana modal a pantalla completa con el formulario de la plataforma del taller (`EMPRESA["recepcion_url"]` en `_fuente/comun.py`), sin salir de la página. El formulario solo se carga la primera vez que se abre la ventana, y se conserva si se cierra y se vuelve a abrir. Sin JavaScript, o con Ctrl/Cmd+clic, los enlaces llevan a la página informativa `recepcion-online.html`. Al enviarse correctamente se muestra un aviso en la ventana y se registra el evento «Recepción online enviada» en la analítica.
+
+El formulario solo acepta envíos desde dominios autorizados en la plataforma: hay que autorizar `retuertographic.github.io` y, cuando exista, el dominio definitivo.
