@@ -813,3 +813,67 @@ main .info-list a,main .tel-lineas a,main .legal-nav a,main .foot-links a,main .
 .capa-datos dt{font-weight:600;color:var(--ink)}
 .capa-datos dd{margin:0}
 @media (max-width:480px){.capa-datos dl{grid-template-columns:1fr}.capa-datos dd{margin-bottom:6px}}
+
+/* ---------- Recepción online ---------- */
+
+/* Bloque destacado (portada y Pedir cita) */
+.bloque-rec{
+  background:linear-gradient(135deg,var(--lime-soft) 0%,var(--green-soft) 100%);
+  border-bottom:1px solid var(--line);
+}
+.bloque-rec h2{font-size:clamp(25px,3.2vw,34px)}
+
+/* Aviso junto a los formularios de presupuesto */
+.aviso-rec{
+  display:flex;gap:14px;align-items:flex-start;margin-top:20px;padding:18px 20px;
+  background:var(--lime-soft);border:1px solid #D3E6C2;border-left:4px solid var(--green);
+  border-radius:12px;
+}
+.aviso-rec .ico{
+  width:40px;height:40px;border-radius:10px;background:#fff;color:var(--green);
+  display:grid;place-items:center;flex:none;
+}
+.aviso-rec .ico svg{width:20px;height:20px}
+.aviso-rec b{display:block;color:var(--ink);font-size:16.5px}
+.aviso-rec p{margin:4px 0 12px;color:var(--muted);font-size:15px}
+
+/* Acceso en la barra superior */
+.topbar .tb-rec a{color:#C3E488;font-weight:600}
+.topbar .tb-rec a:hover{color:#fff}
+
+/* Contenedor del widget */
+.recepcion-widget{
+  background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);
+  padding:8px;min-height:640px;
+}
+.recepcion-widget iframe{border-radius:10px}
+.rec-ok{
+  margin-top:18px;padding:16px 18px;border-radius:12px;font-size:15.5px;
+  background:#EEF7E3;border:1px solid #C9E6A6;color:var(--green-dark);
+}
+.rec-ayuda{margin-top:22px;display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;justify-content:space-between}
+.rec-ayuda p{margin:0;color:var(--muted)}
+.nota-idioma{margin-top:10px !important;font-size:15px;color:var(--green-dark) !important}
+
+/* Barra fija de acciones en móvil */
+.barra-movil{display:none}
+@media (max-width:760px){
+  .barra-movil{
+    display:grid;grid-template-columns:1.6fr 1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:55;
+    background:#fff;border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(21,41,15,.12);
+    padding:8px 8px calc(8px + env(safe-area-inset-bottom));gap:8px;
+  }
+  .barra-movil a{
+    display:flex;align-items:center;justify-content:center;gap:7px;min-height:46px;border-radius:12px;
+    font-weight:600;font-size:14.5px;color:var(--green-dark);background:var(--green-soft);text-decoration:none;
+  }
+  .barra-movil a.bm-rec{background:var(--green);color:#fff}
+  .barra-movil svg{width:18px;height:18px}
+  body{padding-bottom:calc(64px + env(safe-area-inset-bottom))}
+  .wa{display:none}
+  .arriba{bottom:calc(76px + env(safe-area-inset-bottom))}
+}
+@media print{.barra-movil{display:none}}
+/* La barra móvil vive dentro del pie: sus enlaces no heredan el color claro del pie */
+footer.site .barra-movil a{color:var(--green-dark);text-decoration:none}
+footer.site .barra-movil a.bm-rec{color:#fff}

@@ -256,12 +256,26 @@ def btn_wa(clase="btn-line", lang="es", largo=False):
     return boton(clase, f"https://wa.me/{E['whatsapp_wa']}", txt, "whatsapp", externo=True)
 
 
+REC = "recepcion-online.html"
+
+
+def txt_rec(lang, corto=False):
+    if corto:
+        return t(lang, "Recepción online", "Online check-in")
+    return t(lang, "Haz la recepción online", "Check your car in online")
+
+
+def btn_rec(lang, clase="btn-primary", corto=False):
+    return boton(clase, REC, txt_rec(lang, corto), "clipboard")
+
+
 def panel(lang, titulo, texto, primario=("pedir-cita.html", None)):
     href, txt = primario
     txt = txt or t(lang, "Pedir cita", "Book an appointment")
+    segundo = "" if href == REC else boton("btn-line", href, txt, "calendar" if "cita" in href else "doc")
     return (f'<section class="tight"><div class="wrap"><div class="panel">\n  <h2>{esc(titulo)}</h2>\n'
             f"  <p>{md(texto, lang)}</p>\n  <div class=\"actions\">\n    "
-            f"{boton('btn-primary', href, txt, 'calendar')}\n    {btn_tel()}\n    {btn_wa(lang=lang)}\n"
+            f"{btn_rec(lang)}\n    {segundo}\n    {btn_tel()}\n    {btn_wa(lang=lang)}\n"
             "  </div>\n</div></div></section>\n")
 
 
@@ -444,6 +458,7 @@ def topbar(lang, slug):
   <div class="tb-items">
     <span>{ico("phone")}<a href="tel:{E["telefono_tel"]}">{E["telefono"]}</a> · <a href="https://wa.me/{E["whatsapp_wa"]}" target="_blank" rel="noopener">WhatsApp {E["whatsapp"]}</a></span>
     <span>{ico("mail")}<a href="mailto:{E["email"]}">{E["email"]}</a></span>
+    <span class="tb-rec">{ico("clipboard")}<a href="recepcion-online.html">{t(lang, "Recepción online de tu vehículo", "Online vehicle check-in")}</a></span>
   </div>
   <div class="tb-items">
     <span>{ico("pin")}{esc(E["direccion_corta"])}</span>
@@ -476,7 +491,7 @@ def cabecera(lang, activo):
         <button type="button" aria-expanded="false" aria-haspopup="true">{t(lang, "Más", "More")} {ico("chev")}</button>
         <ul class="nav-drop"></ul>
       </li>
-      <li class="cta"><a class="btn btn-primary" href="pedir-cita.html">{ico("calendar")}{t(lang, "Pedir cita", "Book now")}</a></li>
+      <li class="cta"><a class="btn btn-primary" href="recepcion-online.html">{ico("clipboard")}{t(lang, "Recepción online", "Online check-in")}</a></li>
     </ul>
   </nav>
 </div></header>
@@ -513,6 +528,7 @@ def pie(lang):
         _fl("sostenibilidad.html", "recycle", L("Sostenibilidad", "Sustainability")),
     ])
     directo = "".join([
+        _fl("recepcion-online.html", "clipboard", L("Recepción online de tu vehículo", "Online vehicle check-in")),
         _fl("pedir-cita.html", "calendar", L("Pedir cita", "Book an appointment")),
         _fl("presupuesto.html", "doc", L("Presupuesto sin compromiso", "Free estimate")),
         _fl("siniestros.html", "alert", L("¿Has tenido un accidente?", "Had an accident?")),
@@ -543,6 +559,11 @@ def pie(lang):
   </div>
 </div>
 <button class="arriba" type="button" id="irArriba" hidden aria-label="{L("Volver arriba", "Back to top")}" title="{L("Volver arriba", "Back to top")}">{ico("up")}</button>
+<nav class="barra-movil" aria-label="{L("Acciones rápidas", "Quick actions")}">
+  <a class="bm-rec" href="recepcion-online.html">{ico("clipboard")}<span>{L("Recepción online", "Online check-in")}</span></a>
+  <a href="tel:{E["telefono_tel"]}">{ico("phone")}<span>{L("Llamar", "Call")}</span></a>
+  <a href="https://wa.me/{E["whatsapp_wa"]}" target="_blank" rel="noopener">{WA_SVG}<span>WhatsApp</span></a>
+</nav>
 <a class="wa" href="https://wa.me/{E["whatsapp_wa"]}" target="_blank" rel="noopener" aria-label="{L("Escríbenos por WhatsApp", "Message us on WhatsApp")}">{WA_SVG}</a>
 </footer>
 """

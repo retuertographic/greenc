@@ -17,7 +17,7 @@ import nucleo as N  # noqa: E402
 from nucleo import (t, esc, md, plano, ico, bloques, checks_simples, checks_titulados,  # noqa: E402
                     page_head, section_head, card_ico, card_prod, grid, seccion, boton,
                     btn_tel, btn_wa, panel, compartir, faq_html, bloque_aseguradora,
-                    mitos, formulario, documento, estrellas, val)
+                    mitos, formulario, documento, estrellas, val, btn_rec, REC)
 from comun import (EMPRESA as E, GLOSARIO_TERMINOS, CATEGORIAS_SERVICIO,  # noqa: E402
                    SERVICIOS_SLUGS, CATEGORIAS_BLOG, GUIAS_SLUGS)
 
@@ -104,6 +104,7 @@ def seccion_form(lang, titulo, entradilla, tipo="presupuesto", sel=None):
     izq = f"""  <div>
     <h2>{esc(titulo)}</h2>
     <p class="entradilla">{md(entradilla, lang)}</p>
+    {aviso_recepcion(lang)}
     <div class="btn-par" style="margin-top:18px">
   {btn_tel("btn-navy")}
   {btn_wa("btn-ghost", lang)}
@@ -116,6 +117,48 @@ def seccion_form(lang, titulo, entradilla, tipo="presupuesto", sel=None):
   </div>
 """
     return seccion(f'<div class="grid g2" style="gap:44px;align-items:start">\n{izq}  {formulario(lang, tipo, sel, opciones_servicio(lang))}\n</div>', "alt")
+
+
+def aviso_recepcion(lang):
+    L = lambda es, en: t(lang, es, en)
+    return f"""<div class="aviso-rec">
+      <span class="ico">{ico("clipboard")}</span>
+      <div><b>{L("¿Ya vas a traer el coche?", "Already bringing the car in?")}</b>
+      <p>{L("Haz la recepción online: tus datos, el vehículo y las fotos del daño, desde el móvil y antes de venir.", "Do the online check-in: your details, the vehicle and photos of the damage, from your phone before you come.")}</p>
+      {btn_rec(lang)}</div>
+    </div>"""
+
+
+PASOS_REC = [
+    (("Tus datos", "Your details"), ("Nombre, teléfono, email y DNI/NIF.", "Name, phone, email and ID number.")),
+    (("El vehículo", "The vehicle"), ("Matrícula, marca y modelo. Puedes escanear la ficha técnica para rellenarlo solo.", "Registration, make and model. You can scan the vehicle's technical card to fill it in automatically.")),
+    (("Motivo y daños", "Reason and damage"), ("Cuéntanos qué le pasa, marca las zonas dañadas en el plano y adjunta fotos o vídeos.", "Tell us what's wrong, mark the damaged areas on the diagram and attach photos or videos.")),
+    (("Firma y envía", "Sign and send"), ("Si quieres, firmas con el dedo para confirmar los datos. Te contactamos para la entrada del coche.", "If you like, sign with your finger to confirm the details. We'll contact you about dropping off the car.")),
+]
+
+
+def pasos_rec(lang):
+    i = 0 if lang == "es" else 1
+    return '<ol class="pasos">' + "".join(f"<li><b>{esc(a[i])}</b><span>{esc(b[i])}</span></li>" for a, b in PASOS_REC) + "</ol>"
+
+
+def bloque_recepcion(lang, en_cita=False):
+    """Bloque destacado que lleva a la recepción online."""
+    L = lambda es, en: t(lang, es, en)
+    eyebrow = L("La forma más rápida", "The quickest way") if en_cita else L("Nuevo · Recepción online", "New · Online check-in")
+    titulo = L("Registra tu coche online antes de traerlo", "Check your car in online before you bring it")
+    return f"""<section class="bloque-rec"><div class="wrap">
+  <div class="grid g2" style="align-items:center;gap:40px">
+    <div>
+      <span class="eyebrow-dark">{eyebrow}</span>
+      <h2>{titulo}</h2>
+      <p class="entradilla">{L("Rellena la recepción desde el móvil o el ordenador: tus datos, los del vehículo y las fotos del daño. Cuando llegues al taller, tu expediente ya estará abierto y podrás seguir el estado de la reparación.", "Fill in the check-in from your phone or computer: your details, the vehicle's and photos of the damage. When you arrive, your file is already open and you can follow the repair's progress.")}</p>
+      <div class="actions" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:20px">{btn_rec(lang)}{btn_tel("btn-ghost")}</div>
+    </div>
+    {pasos_rec(lang)}
+  </div>
+</div></section>
+"""
 
 
 def ventajas_cards(lang, n=6, clase="card gold"):
@@ -147,8 +190,9 @@ def pagina_inicio(lang):
   <h1>{L("Tu taller de chapa y pintura en el sur de Tenerife", "Your body and paint shop in the south of Tenerife")}</h1>
   <p class="lead">{md(L("Desde 2019 reparamos la [[carroceria|carrocería]] de particulares, empresas y siniestros de compañías de seguros con un servicio integral y sostenible: [[pintura-al-agua|pintura ecológica]], garantía vitalicia en pintura, recogida y entrega a domicilio e información en tiempo real.", "Since 2019 we have repaired the [[carroceria|bodywork]] of private customers, businesses and insurance claims with a complete, sustainable service: [[pintura-al-agua|eco-friendly paint]], a lifetime paint warranty, collection and delivery and real-time updates."), lang)}</p>
   <div class="actions">
-    {boton("btn-primary", "pedir-cita.html", L("Pedir cita", "Book an appointment"), "calendar")}
+    {btn_rec(lang)}
     {boton("btn-line", "presupuesto.html", L("Presupuesto sin compromiso", "Free estimate"), "doc")}
+    {btn_tel()}
   </div>
   <span class="respaldo">{L("Más que un simple taller", "More than just a garage")}</span>
   <div class="hero-stats">
@@ -236,7 +280,7 @@ def pagina_inicio(lang):
     ], lang)}
   </div>
 """, "alt")
-    cuerpo = hero + s1 + s1b + s2.replace('<section class="alt">', '<section>') + s3 + s4 + s5 + s6 + s7 + mitos(lang, "") + panel(
+    cuerpo = hero + bloque_recepcion(lang) + s1 + s1b + s2.replace('<section class="alt">', '<section>') + s3 + s4 + s5 + s6 + s7 + mitos(lang, "") + panel(
         lang, L("¿Le echamos un vistazo a tu coche?", "Shall we take a look at your car?"),
         L("Pide cita o presupuesto sin compromiso. Si te viene mejor, pasamos a recogerlo.", "Book an appointment or ask for a free estimate. If it suits you, we'll come and collect it."))
     return documento(lang, "index", L("Green Car Service Tenerife | Taller de chapa y pintura en Las Chafiras", "Green Car Service Tenerife | Body & paint shop in Las Chafiras"),
@@ -437,7 +481,7 @@ def pagina_hub(cat, lang):
     hub = CATEGORIAS_SERVICIO[cat][0][:-5]
     titulo = HUB_TIT[cat][0 if lang == "es" else 1]
     cuerpo = page_head(lang, [(L("Servicios", "Services"), "servicios.html")], titulo, INTRO_CAT[cat][lang],
-                       f'\n  <div class="actions">{boton("btn-primary", "pedir-cita.html", L("Pedir cita", "Book an appointment"), "calendar")}{boton("btn-line", "presupuesto.html", L("Presupuesto", "Estimate"), "doc")}</div>')
+                       f'\n  <div class="actions">{btn_rec(lang)}{boton("btn-line", "presupuesto.html", L("Presupuesto", "Estimate"), "doc")}</div>')
     tarjetas = [card_prod(serv(s, lang)["titulo"], serv(s, lang)["corto"], f"{s}.html", L("Ver servicio", "See service"), lang)
                 for s in SERVICIOS_SLUGS[cat] if s in SERVICIOS]
     cuerpo += seccion(section_head(TIT_LISTA[cat][0 if lang == "es" else 1],
@@ -758,11 +802,64 @@ def pagina_contacto(lang):
     return documento(lang, "contacto", L("Contacto", "Contact"), L(f"Contacta con Green Car Service Tenerife: {E['telefono']}, WhatsApp {E['whatsapp']}, {E['email']}. {E['direccion_corta']}.", f"Contact Green Car Service Tenerife: {E['telefono']}, WhatsApp {E['whatsapp']}, {E['email']}. {E['direccion_corta']}."), cuerpo, "contacto")
 
 
+def pagina_recepcion(lang):
+    L = lambda es, en: t(lang, es, en)
+    embed = "https://app.tallerdechapaypintura.com/embed/green-car-service-tenerife-recepcion"
+    cuerpo = page_head(lang, [], L("Recepción online de tu vehículo", "Online vehicle check-in"),
+                       L("Registra tu coche antes de traerlo: tus datos, los del vehículo y las fotos del daño, desde el móvil o el ordenador. Cuando llegues al taller, todo estará listo.",
+                         "Check your car in before you bring it: your details, the vehicle's and photos of the damage, from your phone or computer. When you arrive, everything will be ready."),
+                       f'\n  <div class="actions">{boton("btn-primary", "#recepcion", L("Empezar ahora", "Start now"), "clipboard")}{btn_tel()}{btn_wa("btn-line", lang)}</div>')
+    cuerpo += seccion(section_head(L("Así funciona", "How it works"), L("Cuatro pasos y listo. Puedes hacerlo con el coche delante y la documentación a mano.", "Four steps and you're done. Best done with the car in front of you and the paperwork to hand."), lang) + pasos_rec(lang))
+    nota_en = '' if lang == "es" else '<p class="nota-idioma">The check-in form is in Spanish. If you need a hand, call or WhatsApp us and we\'ll help you fill it in.</p>'
+    cuerpo += f"""<section class="alt" id="recepcion"><div class="wrap">
+  <div class="section-head"><span class="eyebrow-dark">{L("Formulario de recepción", "Check-in form")}</span><h2>{L("Empieza tu recepción", "Start your check-in")}</h2>
+  <p>{L("Los campos marcados como opcionales puedes dejarlos para cuando vengas.", "Fields marked as optional can be left until you come in.")}</p>{nota_en}</div>
+  <div class="recepcion-widget">
+    <div data-taller-widget="green-car-service-tenerife-recepcion" data-taller-height="800">
+      <noscript><iframe src="{embed}" style="width:100%;height:800px;border:0" loading="lazy" title="{L("Recepción de vehículo", "Vehicle check-in")}"></iframe></noscript>
+    </div>
+  </div>
+  <div class="rec-ok" id="recepcionOk" hidden role="status"><b>{L("¡Recepción enviada!", "Check-in sent!")}</b> {L("Hemos recibido tus datos. Te contactaremos para confirmar la entrada del coche.", "We've received your details. We'll contact you to confirm when to drop the car off.")}</div>
+  <div class="rec-ayuda">
+    <p>{L("¿No se ve el formulario o prefieres abrirlo aparte?", "Can't see the form, or would you rather open it separately?")}</p>
+    <div class="btn-par">{boton("btn-ghost", embed, L("Abrir la recepción a pantalla completa", "Open the check-in full screen"), "clipboard", True)}{btn_tel("btn-navy")}{btn_wa("btn-ghost", lang)}</div>
+  </div>
+</div></section>
+<script>window.TallerWidget={{onSuccess:function(d){{var ok=document.getElementById('recepcionOk');if(ok){{ok.hidden=false;ok.scrollIntoView({{block:'center'}});}}if(window.registrarEvento)window.registrarEvento('Recepción online enviada');}},onError:function(){{if(window.registrarEvento)window.registrarEvento('Recepción online: error');}}}};</script>
+<script src="https://app.tallerdechapaypintura.com/widget-loader.js" async></script>
+"""
+    cuerpo += seccion(f"""  <div class="grid g2" style="gap:44px;align-items:start">
+    <div>
+      <h2>{L("Ten a mano", "Have to hand")}</h2>
+      {checks_simples([L("Tu DNI o NIF.", "Your ID or tax number."), L("La ficha técnica o el permiso de circulación del coche.", "The car's technical card or registration certificate."), L("Fotos o vídeos del daño, desde varios ángulos.", "Photos or videos of the damage, from several angles."), L("Si va por el seguro: compañía, número de póliza y, si lo tienes, el número de siniestro.", "If your insurance is paying: insurer, policy number and, if you have it, the claim number.")], lang)}
+    </div>
+    <div>
+      <h2>{L("Por qué hacerla online", "Why check in online")}</h2>
+      {checks_titulados([
+          (L("Menos espera", "Less waiting"), L("Llegas, entregas las llaves y listo: el expediente ya está abierto.", "You arrive, hand over the keys and that's it: your file is already open.")),
+          (L("El estado del coche, documentado", "The car's condition, documented"), L("Las fotos y el plano de daños dejan constancia de cómo entra el coche.", "Photos and the damage diagram record the condition the car comes in.")),
+          (L("Sigue la reparación", "Follow the repair"), L("Desde tu área de cliente ves en qué punto está tu coche.", "From your customer area you can see what stage your car is at.")),
+      ], lang)}
+    </div>
+  </div>
+""")
+    cuerpo += seccion(section_head(L("Preguntas frecuentes", "Frequently asked questions"), "", lang) + faq_html([
+        (L("¿Es obligatorio hacer la recepción online?", "Do I have to check in online?"), L("No. Es la forma más cómoda y rápida, pero también puedes llamarnos, escribirnos por WhatsApp o venir al taller.", "No. It's the quickest, most convenient way, but you can also call us, message us on WhatsApp or come to the workshop.")),
+        (L("¿Qué pasa después de enviarla?", "What happens after I send it?"), L("Revisamos tu solicitud y te contactamos para confirmar cuándo traer el coche. Si va por el seguro, nos coordinamos con tu compañía.", "We review your request and contact you to confirm when to bring the car. If your insurance is paying, we coordinate with your insurer.")),
+        (L("¿Puedo usarla si la reparación la paga el seguro?", "Can I use it if my insurance is paying?"), L("Sí. Indícalo en el motivo de entrada y añade los datos de la póliza y del siniestro si los tienes.", "Yes. Say so in the reason for the visit and add the policy and claim details if you have them.")),
+        (L("¿Quién trata mis datos?", "Who processes my data?"), L("Green Car Service Tenerife, para gestionar la recepción y la reparación de tu vehículo, a través de su plataforma de gestión del taller. Tienes más detalles en la [política de privacidad](politica-de-privacidad.html).", "Green Car Service Tenerife, to manage your vehicle's check-in and repair, through its workshop management platform. See the [privacy policy](politica-de-privacidad.html) for details.")),
+        (L("No me carga el formulario, ¿qué hago?", "The form won't load. What can I do?"), L("Prueba el botón «Abrir la recepción a pantalla completa» o llámanos al 922 73 64 47 y lo hacemos contigo.", "Try the 'Open the check-in full screen' button, or call us on 922 73 64 47 and we'll do it with you.")),
+    ], lang), "alt")
+    return documento(lang, "recepcion-online", L("Recepción online de tu vehículo", "Online vehicle check-in"),
+                     L("Recepción online de tu coche en Green Car Service Tenerife.", "Online vehicle check-in at Green Car Service Tenerife."), cuerpo, "recepcion-online")
+
+
 def pagina_cita(lang):
     L = lambda es, en: t(lang, es, en)
     cuerpo = page_head(lang, [(L("Contacto", "Contact"), "contacto.html")], L("Pedir cita", "Book an appointment"),
                        L("Elige el día que te viene bien y te llamamos para confirmarlo. Si lo prefieres, recogemos el coche en tu casa o en tu trabajo.", "Choose a day that suits you and we'll call to confirm. If you prefer, we'll collect the car from your home or workplace."))
-    cuerpo += seccion(f'<div class="grid g2" style="gap:44px;align-items:start">\n  {formulario(lang, "cita", None, opciones_servicio(lang))}\n{datos_contacto(lang)}</div>\n')
+    cuerpo += bloque_recepcion(lang, en_cita=True)
+    cuerpo += seccion(section_head(L("¿Prefieres pedir cita sin hacer la recepción?", "Rather just book a slot?"), L("Déjanos tus datos y te llamamos para cerrar día y hora.", "Leave your details and we'll call you to agree a day and time."), lang) + f'<div class="grid g2" style="gap:44px;align-items:start">\n  {formulario(lang, "cita", None, opciones_servicio(lang))}\n{datos_contacto(lang)}</div>\n')
     cuerpo += seccion(section_head(L("Cómo funciona", "How it works"), "", lang) + f"""  <ol class="pasos">
       <li><b>{L("Nos pides cita", "You request an appointment")}</b><span>{L("Por el formulario, por teléfono o por WhatsApp.", "Via the form, by phone or on WhatsApp.")}</span></li>
       <li><b>{L("Te confirmamos", "We confirm")}</b><span>{L("Te llamamos para cerrar día, hora y, si quieres, la recogida.", "We call to agree the day, time and, if you like, collection.")}</span></li>
@@ -867,6 +964,7 @@ def escribir_llms(base):
 ## Páginas principales
 
 {enl("index", "Inicio")}
+{enl("recepcion-online", "Recepción online del vehículo", "registra el coche antes de traerlo: datos, vehículo, daños con fotos y firma")}
 {enl("conocenos", "Conócenos", "historia, valores e instalaciones")}
 {enl("particulares", "Particulares")}
 {enl("empresas-y-flotas", "Empresas y flotas")}
@@ -903,6 +1001,7 @@ def main():
     P("opiniones", pagina_opiniones, "Opiniones de clientes", "Customer reviews", "principal")
     P("servicios", pagina_servicios, "Servicios", "Services", "principal")
     P("coches-de-ocasion", pagina_ocasion, "Coches de ocasión", "Used cars", "principal")
+    P("recepcion-online", pagina_recepcion, "Recepción online de tu vehículo", "Online vehicle check-in", "principal")
     P("pedir-cita", pagina_cita, "Pedir cita", "Book an appointment", "principal")
     P("presupuesto", pagina_presupuesto, "Presupuesto sin compromiso", "Free estimate", "principal")
     P("contacto", pagina_contacto, "Contacto", "Contact", "principal")

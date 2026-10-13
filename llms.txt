@@ -12,6 +12,7 @@
 ## Páginas principales
 
 - [Inicio](https://retuertographic.github.io/greenc/index.html)
+- [Recepción online del vehículo](https://retuertographic.github.io/greenc/recepcion-online.html): registra el coche antes de traerlo: datos, vehículo, daños con fotos y firma
 - [Conócenos](https://retuertographic.github.io/greenc/conocenos.html): historia, valores e instalaciones
 - [Particulares](https://retuertographic.github.io/greenc/particulares.html)
 - [Empresas y flotas](https://retuertographic.github.io/greenc/empresas-y-flotas.html)

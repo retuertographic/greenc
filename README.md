@@ -37,3 +37,9 @@ Pendiente de datos del taller, todo en `_fuente/comun.py` (después, `python3 _f
 GitHub Pages construye el sitio con Jekyll. Las páginas no llevan front matter, así que se copian tal cual; `_config.yml` excluye `_fuente/` y este README para que no se publiquen. El generador escribe también `sitemap.xml`, `robots.txt` y `llms.txt` (resumen del negocio para asistentes de IA).
 
 No se carga ningún recurso de terceros al navegar: las fuentes son propias y el mapa de Google Maps solo se carga al pulsar «Ver el mapa».
+
+## Recepción online
+
+La página `recepcion-online.html` incrusta el widget de recepción de la plataforma del taller (`app.tallerdechapaypintura.com`), con el cargador que ajusta la altura automáticamente. Si no hay JavaScript, se muestra el iframe; también hay un enlace para abrirlo a pantalla completa. Es la llamada a la acción principal de toda la web: botón del menú, hero, bloque en la portada, banda final de cada página, avisos junto a los formularios y barra fija en móvil. Al enviarse correctamente se muestra un aviso y se registra el evento «Recepción online enviada» en la analítica.
+
+El widget solo funciona en dominios autorizados en la plataforma: hay que autorizar `retuertographic.github.io` y, cuando exista, el dominio definitivo.

@@ -282,6 +282,7 @@ var T = EN ? {
 // Analítica sin cookies: si hay un proveedor configurado (Plausible, Umami o
 // GoatCounter), se registran como eventos las acciones que generan clientes.
 (function () {
+  window.registrarEvento = function (nombre) { evento(nombre); };
   function evento(nombre) {
     try {
       if (typeof window.plausible === 'function') window.plausible(nombre);
@@ -294,7 +295,8 @@ var T = EN ? {
     var a = e.target.closest ? e.target.closest('a[href]') : null;
     if (!a) return;
     var h = a.getAttribute('href');
-    if (h.indexOf('tel:') === 0) evento('Llamada');
+    if (h.indexOf('recepcion-online.html') !== -1 || h.indexOf('tallerdechapaypintura.com') !== -1) evento('Recepción online: clic');
+    else if (h.indexOf('tel:') === 0) evento('Llamada');
     else if (h.indexOf('https://wa.me/') === 0) evento('WhatsApp');
     else if (h.indexOf('mailto:') === 0) evento('Correo');
   });

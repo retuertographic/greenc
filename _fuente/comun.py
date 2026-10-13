@@ -171,7 +171,7 @@ GUIAS_SLUGS = [
 PAGINAS_FIJAS = [
     "index", "conocenos", "instalaciones", "sostenibilidad", "opiniones", "servicios",
     "chapa-y-pintura", "revision-compraventa", "a-quien-servimos", "ventajas", "siniestros", "telefonos-de-asistencia", "coches-de-ocasion", "blog",
-    "diccionario-de-chapa-y-pintura", "preguntas-frecuentes", "pedir-cita", "presupuesto",
+    "diccionario-de-chapa-y-pintura", "preguntas-frecuentes", "recepcion-online", "pedir-cita", "presupuesto",
     "contacto", "mapa-web", "legal", "aviso-legal", "politica-de-privacidad", "cookies",
 ] + ["categoria-" + c for c in CATEGORIAS_BLOG]
 
