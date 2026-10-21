@@ -6,7 +6,7 @@ Sitio web estático y bilingüe de Green Car Service Tenerife (104 páginas en e
 - `en/*.html` — versión en inglés, con los mismos nombres de archivo.
 - `assets/` — estilos, script, logotipos (SVG) y fuentes (`assets/fuentes/`, alojadas aquí para no cargar Google Fonts) compartidos. `assets/video/` guarda el vídeo de fondo de la portada (WebM y MP4 comprimidos a 1280×720) y su imagen fija. `site.js` adapta sus textos al idioma de la página (`<html lang>`).
 - Cada página enlaza a su equivalente con el selector ES · EN de la barra superior y con `hreflang`. Incluye `sitemap.xml` y `robots.txt`.
-- Publicado con GitHub Pages (Deploy from a branch) en https://retuertographic.github.io/greenc/ y https://retuertographic.github.io/greenc/en/
+- Publicado con GitHub Pages (Deploy from a branch) en https://greencarservice.retuertographicdesign.com/ y https://greencarservice.retuertographicdesign.com/en/ (dominio provisional; el archivo `CNAME` lo fija). Para cambiar de dominio: editar `CNAME` y `EMPRESA["base_url"]` en `_fuente/comun.py`, regenerar y autorizar el nuevo dominio en la plataforma de recepción online.
 
 ## Cómo editar
 
@@ -44,4 +44,4 @@ La recepción online es la llamada a la acción principal de toda la web: botón
 
 Cualquier enlace a `recepcion-online.html` (o con el atributo `data-rec-modal`) abre una ventana modal a pantalla completa con el formulario de la plataforma del taller (`EMPRESA["recepcion_url"]` en `_fuente/comun.py`), sin salir de la página. El formulario solo se carga la primera vez que se abre la ventana, y se conserva si se cierra y se vuelve a abrir. Sin JavaScript, o con Ctrl/Cmd+clic, los enlaces llevan a la página informativa `recepcion-online.html`. Al enviarse correctamente se muestra un aviso en la ventana y se registra el evento «Recepción online enviada» en la analítica.
 
-El formulario solo acepta envíos desde dominios autorizados en la plataforma: hay que autorizar `retuertographic.github.io` y, cuando exista, el dominio definitivo.
+El formulario solo acepta envíos desde dominios autorizados en la plataforma: hay que autorizar `greencarservice.retuertographicdesign.com` y, cuando exista, el dominio definitivo.

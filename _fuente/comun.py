@@ -27,7 +27,7 @@ EMPRESA = {
     "fundacion": 2019,
     "valoracion": "4,8",
     "resenas": "177",
-    "base_url": "https://retuertographic.github.io/greenc/",
+    "base_url": "https://greencarservice.retuertographicdesign.com/",
     # Ficha de Google del taller. Mientras no se tenga el enlace directo
     # (Google Maps > ficha > Compartir), se usa una búsqueda exacta.
     "google_ficha": "https://share.google/SAGGuqSKPtVYnRMBF",

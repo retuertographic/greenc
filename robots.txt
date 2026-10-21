@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://retuertographic.github.io/greenc/sitemap.xml
+Sitemap: https://greencarservice.retuertographicdesign.com/sitemap.xml
