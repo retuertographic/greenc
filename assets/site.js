@@ -325,28 +325,73 @@ var T = EN ? {
 
 // Recepción online en ventana modal a pantalla completa. Cualquier enlace a
 // recepcion-online.html (o con data-rec-modal) la abre sin salir de la página.
-// El formulario de la plataforma solo se carga la primera vez que se abre.
+// Dentro se monta el widget del proveedor (<div data-taller-widget> + su
+// widget-loader.js), que se inserta y se carga solo la primera vez que se abre
+// la ventana. El widget ajusta la altura del formulario y la ventana se desplaza.
 // Sin soporte de <dialog>, o con Ctrl/Cmd/Mayús+clic, el enlace funciona normal.
 (function () {
   var d = document.getElementById('modalRec');
   if (!d || typeof d.showModal !== 'function') return;
   var cuerpo = d.querySelector('.modal-rec-cuerpo');
   var ok = document.getElementById('modalRecOk');
-  var origen = new URL(d.dataset.src).origin;
+  var fallo = d.querySelector('.modal-rec-fallo');
   var volverA = null;
+  var montado = false;
+
+  function mostrarFallo() {
+    d.classList.add('cargado');
+    if (fallo) fallo.hidden = false;
+  }
+
+  // Callbacks del widget (los llama widget-loader.js)
+  var previo = window.TallerWidget || {};
+  window.TallerWidget = {
+    onSuccess: function (datos) {
+      if (ok) ok.hidden = false;
+      if (window.registrarEvento) window.registrarEvento('Recepción online enviada');
+      if (typeof previo.onSuccess === 'function') previo.onSuccess(datos);
+    },
+    onError: function (err) {
+      if (window.registrarEvento) window.registrarEvento('Recepción online: error');
+      if (typeof previo.onError === 'function') previo.onError(err);
+    }
+  };
+
+  function montar() {
+    if (montado) return;
+    montado = true;
+    var w = document.createElement('div');
+    w.setAttribute('data-taller-widget', d.dataset.widget);
+    // Altura inicial: la de la ventana, hasta que el widget envíe la suya
+    w.setAttribute('data-taller-height', String(Math.max(600, cuerpo.clientHeight)));
+    cuerpo.appendChild(w);
+    // Cuando el cargador crea el iframe, se le pone un título propio y se
+    // retira el aviso de «Cargando…» al terminar de cargar.
+    var obs = new MutationObserver(function () {
+      var f = w.querySelector('iframe');
+      if (!f) return;
+      obs.disconnect();
+      f.title = d.dataset.titulo;
+      f.addEventListener('load', function () { d.classList.add('cargado'); });
+    });
+    obs.observe(w, { childList: true });
+    if (!document.querySelector('script[data-taller-loader]')) {
+      var s = document.createElement('script');
+      s.src = d.dataset.loader;
+      s.async = true;
+      s.setAttribute('data-taller-loader', '');
+      s.onerror = mostrarFallo;
+      document.head.appendChild(s);
+    }
+    // Si en 20 s no ha aparecido el formulario, se ofrecen alternativas
+    setTimeout(function () { if (!d.classList.contains('cargado')) mostrarFallo(); }, 20000);
+  }
 
   function abrir(desde) {
     volverA = desde || document.activeElement;
-    if (!cuerpo.querySelector('iframe')) {
-      var f = document.createElement('iframe');
-      f.src = d.dataset.src;
-      f.title = d.dataset.titulo;
-      f.setAttribute('allow', 'clipboard-write; camera');
-      f.addEventListener('load', function () { d.classList.add('cargado'); });
-      cuerpo.appendChild(f);
-    }
     d.showModal();
     document.documentElement.classList.add('modal-abierto');
+    montar();
     if (window.registrarEvento) window.registrarEvento('Recepción online: abierta');
   }
   function cerrar() { d.close(); }
@@ -368,15 +413,6 @@ var T = EN ? {
     }
   });
 
-  // Mensajes del formulario: confirmación de envío
-  window.addEventListener('message', function (ev) {
-    if (ev.origin !== origen || !ev.data || !ev.data.__taller_widget) return;
-    if (ev.data.type === 'success') {
-      if (ok) ok.hidden = false;
-      if (window.registrarEvento) window.registrarEvento('Recepción online enviada');
-    }
-  });
-
-  // Enlace directo con #recepcion (por ejemplo, desde una campaña)
+  // Enlace directo con #recepcion-online (por ejemplo, desde una campaña)
   if (location.hash === '#recepcion-online') abrir();
 })();

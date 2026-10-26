@@ -560,7 +560,7 @@ def pie(lang):
   </div>
 </div>
 <button class="arriba" type="button" id="irArriba" hidden aria-label="{L("Volver arriba", "Back to top")}" title="{L("Volver arriba", "Back to top")}">{ico("up")}</button>
-<dialog class="modal-rec" id="modalRec" data-src="{E["recepcion_url"]}" data-titulo="{L("Formulario de recepción del vehículo", "Vehicle check-in form")}" aria-labelledby="modalRecTit">
+<dialog class="modal-rec" id="modalRec" data-widget="{E["recepcion_widget"]}" data-loader="{E["recepcion_loader"]}" data-titulo="{L("Formulario de recepción del vehículo", "Vehicle check-in form")}" aria-labelledby="modalRecTit">
   <div class="modal-rec-barra">
     <img src="{a}assets/isotipo.svg" alt="" width="30" height="30">
     <h2 id="modalRecTit">{L("Recepción online", "Online check-in")}<span>Green Car Service Tenerife</span></h2>
@@ -569,7 +569,13 @@ def pie(lang):
     <button class="modal-rec-cerrar" type="button" id="modalRecCerrar" aria-label="{L("Cerrar la recepción online", "Close online check-in")}" title="{L("Cerrar", "Close")}">{ico("cerrar")}</button>
   </div>
   {L("", '<p class="modal-rec-idioma">The form is in Spanish. Need a hand? Call <a href="tel:' + E["telefono_tel"] + '">' + E["telefono"] + '</a>.</p>')}
-  <div class="modal-rec-cuerpo"><p class="modal-rec-carga">{L("Cargando el formulario…", "Loading the form…")}</p></div>
+  <div class="modal-rec-cuerpo" tabindex="0" role="region" aria-label="{L("Formulario de recepción", "Check-in form")}">
+    <p class="modal-rec-carga">{L("Cargando el formulario…", "Loading the form…")}</p>
+    <div class="modal-rec-fallo" hidden role="alert">
+      <p><b>{L("No hemos podido cargar el formulario.", "We couldn't load the form.")}</b> {L("Prueba a abrirlo en una pestaña nueva o llámanos y hacemos la recepción contigo.", "Try opening it in a new tab, or call us and we'll do the check-in with you.")}</p>
+      <div class="btn-par"><a class="btn btn-primary" href="{E["recepcion_url"]}" target="_blank" rel="noopener">{L("Abrir en pestaña nueva", "Open in new tab")}</a>{btn_tel("btn-ghost")}</div>
+    </div>
+  </div>
 </dialog>
 <nav class="barra-movil" aria-label="{L("Acciones rápidas", "Quick actions")}">
   <a class="bm-rec" href="recepcion-online.html">{ico("clipboard")}<span>{L("Recepción online", "Online check-in")}</span></a>

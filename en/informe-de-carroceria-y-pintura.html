@@ -234,7 +234,7 @@
   </div>
 </div>
 <button class="arriba" type="button" id="irArriba" hidden aria-label="Back to top" title="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V6"/><path d="m5.5 12.5 6.5-6.5 6.5 6.5"/></svg></button>
-<dialog class="modal-rec" id="modalRec" data-src="https://app.tallerdechapaypintura.com/embed/green-car-service-tenerife-recepcion" data-titulo="Vehicle check-in form" aria-labelledby="modalRecTit">
+<dialog class="modal-rec" id="modalRec" data-widget="green-car-service-tenerife-recepcion" data-loader="https://app.tallerdechapaypintura.com/widget-loader.js" data-titulo="Vehicle check-in form" aria-labelledby="modalRecTit">
   <div class="modal-rec-barra">
     <img src="../assets/isotipo.svg" alt="" width="30" height="30">
     <h2 id="modalRecTit">Online check-in<span>Green Car Service Tenerife</span></h2>
@@ -243,7 +243,13 @@
     <button class="modal-rec-cerrar" type="button" id="modalRecCerrar" aria-label="Close online check-in" title="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
   </div>
   <p class="modal-rec-idioma">The form is in Spanish. Need a hand? Call <a href="tel:+34922736447">922 73 64 47</a>.</p>
-  <div class="modal-rec-cuerpo"><p class="modal-rec-carga">Loading the form…</p></div>
+  <div class="modal-rec-cuerpo" tabindex="0" role="region" aria-label="Check-in form">
+    <p class="modal-rec-carga">Loading the form…</p>
+    <div class="modal-rec-fallo" hidden role="alert">
+      <p><b>We couldn't load the form.</b> Try opening it in a new tab, or call us and we'll do the check-in with you.</p>
+      <div class="btn-par"><a class="btn btn-primary" href="https://app.tallerdechapaypintura.com/embed/green-car-service-tenerife-recepcion" target="_blank" rel="noopener">Open in new tab</a><a class="btn btn-ghost" href="tel:+34922736447"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.5 5.7 2 2 0 0 1 6.5 3.5Z"/></svg>922 73 64 47</a></div>
+    </div>
+  </div>
 </dialog>
 <nav class="barra-movil" aria-label="Quick actions">
   <a class="bm-rec" href="recepcion-online.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4.5" width="14" height="16.5" rx="2"/><path d="M9 4.5V3h6v1.5"/><path d="M8.5 11h7M8.5 15h5"/></svg><span>Online check-in</span></a>
