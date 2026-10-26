@@ -22,12 +22,9 @@ EMPRESA = {
     "email": "info@greencarservicetenerife.com",
     "instagram": "https://www.instagram.com/greencarservicetenerife6/",
     "web_actual": "https://www.greencarservicetenerife.com/",
-    # Formulario de recepción online (plataforma de gestión del taller). Se abre en una ventana modal.
+    # Formulario de recepción online (plataforma de gestión del taller). Se abre en un iframe
+    # dentro de una ventana modal a pantalla completa.
     "recepcion_url": "https://app.tallerdechapaypintura.com/embed/green-car-service-tenerife-recepcion",
-    # Widget de recepción (código del proveedor): clave y cargador. Se insertan en la
-    # ventana modal la primera vez que se abre; el cargador ajusta la altura solo.
-    "recepcion_widget": "green-car-service-tenerife-recepcion",
-    "recepcion_loader": "https://app.tallerdechapaypintura.com/widget-loader.js",
     "fundacion": 2019,
     "valoracion": "4,8",
     "resenas": "177",

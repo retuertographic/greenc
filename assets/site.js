@@ -325,9 +325,8 @@ var T = EN ? {
 
 // Recepción online en ventana modal a pantalla completa. Cualquier enlace a
 // recepcion-online.html (o con data-rec-modal) la abre sin salir de la página.
-// Dentro se monta el widget del proveedor (<div data-taller-widget> + su
-// widget-loader.js), que se inserta y se carga solo la primera vez que se abre
-// la ventana. El widget ajusta la altura del formulario y la ventana se desplaza.
+// Dentro va el iframe del formulario de la plataforma, que se crea solo la primera
+// vez que se abre la ventana y se conserva si se cierra y se vuelve a abrir.
 // Sin soporte de <dialog>, o con Ctrl/Cmd/Mayús+clic, el enlace funciona normal.
 (function () {
   var d = document.getElementById('modalRec');
@@ -335,55 +334,24 @@ var T = EN ? {
   var cuerpo = d.querySelector('.modal-rec-cuerpo');
   var ok = document.getElementById('modalRecOk');
   var fallo = d.querySelector('.modal-rec-fallo');
+  var origen = new URL(d.dataset.src).origin;
   var volverA = null;
-  var montado = false;
 
   function mostrarFallo() {
     d.classList.add('cargado');
     if (fallo) fallo.hidden = false;
   }
 
-  // Callbacks del widget (los llama widget-loader.js)
-  var previo = window.TallerWidget || {};
-  window.TallerWidget = {
-    onSuccess: function (datos) {
-      if (ok) ok.hidden = false;
-      if (window.registrarEvento) window.registrarEvento('Recepción online enviada');
-      if (typeof previo.onSuccess === 'function') previo.onSuccess(datos);
-    },
-    onError: function (err) {
-      if (window.registrarEvento) window.registrarEvento('Recepción online: error');
-      if (typeof previo.onError === 'function') previo.onError(err);
-    }
-  };
-
   function montar() {
-    if (montado) return;
-    montado = true;
-    var w = document.createElement('div');
-    w.setAttribute('data-taller-widget', d.dataset.widget);
-    // Altura inicial: la de la ventana, hasta que el widget envíe la suya
-    w.setAttribute('data-taller-height', String(Math.max(600, cuerpo.clientHeight)));
-    cuerpo.appendChild(w);
-    // Cuando el cargador crea el iframe, se le pone un título propio y se
-    // retira el aviso de «Cargando…» al terminar de cargar.
-    var obs = new MutationObserver(function () {
-      var f = w.querySelector('iframe');
-      if (!f) return;
-      obs.disconnect();
-      f.title = d.dataset.titulo;
-      f.addEventListener('load', function () { d.classList.add('cargado'); });
-    });
-    obs.observe(w, { childList: true });
-    if (!document.querySelector('script[data-taller-loader]')) {
-      var s = document.createElement('script');
-      s.src = d.dataset.loader;
-      s.async = true;
-      s.setAttribute('data-taller-loader', '');
-      s.onerror = mostrarFallo;
-      document.head.appendChild(s);
-    }
-    // Si en 20 s no ha aparecido el formulario, se ofrecen alternativas
+    if (cuerpo.querySelector('iframe')) return;
+    var f = document.createElement('iframe');
+    f.src = d.dataset.src;
+    f.title = d.dataset.titulo;
+    f.setAttribute('allow', 'camera; microphone; clipboard-write');
+    f.setAttribute('loading', 'lazy');
+    f.addEventListener('load', function () { d.classList.add('cargado'); });
+    cuerpo.appendChild(f);
+    // Si en 20 s el formulario no ha cargado, se ofrecen alternativas
     setTimeout(function () { if (!d.classList.contains('cargado')) mostrarFallo(); }, 20000);
   }
 
@@ -410,6 +378,17 @@ var T = EN ? {
     if (a.hasAttribute('data-rec-modal') || /(^|\/)recepcion-online\.html$/.test(h)) {
       e.preventDefault();
       abrir(a);
+    }
+  });
+
+  // Mensajes del formulario (solo desde la plataforma): confirmación de envío
+  window.addEventListener('message', function (ev) {
+    if (ev.origin !== origen || !ev.data || !ev.data.__taller_widget) return;
+    if (ev.data.type === 'success') {
+      if (ok) ok.hidden = false;
+      if (window.registrarEvento) window.registrarEvento('Recepción online enviada');
+    } else if (ev.data.type === 'error') {
+      if (window.registrarEvento) window.registrarEvento('Recepción online: error');
     }
   });
 
