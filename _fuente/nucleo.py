@@ -556,7 +556,7 @@ def pie(lang):
   </div>
   <div class="foot-bottom">
     <p class="foot-legal-text">Copyright © {ANIO} Green Car Service Tenerife. {E["razon_social"]} · CIF {E["cif"]} · {esc(E["direccion"])}, {esc(E["cp_ciudad"])}.</p>
-    <p class="foot-credit">{L("Desarrollado por", "Developed by")} Retuerto Graphic Design. Ricardo Retuerto Barrera | Spain-Germany | <a href="tel:0034922971723">0034 922 971 723</a> · <a href="tel:00493031878629">0049 30 31878629</a></p>
+    <p class="foot-credit">{L("Desarrollado por", "Developed by")} <a href="https://retuertographicdesign.com/" target="_blank" rel="noopener">Retuerto Graphic Design</a>. Ricardo Retuerto Barrera | Spain-Germany | <a href="tel:0034922971723">0034 922 971 723</a> · <a href="tel:00493031878629">0049 30 31878629</a></p>
   </div>
 </div>
 <button class="arriba" type="button" id="irArriba" hidden aria-label="{L("Volver arriba", "Back to top")}" title="{L("Volver arriba", "Back to top")}">{ico("up")}</button>
